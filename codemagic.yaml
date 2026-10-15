@@ -4,20 +4,29 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     environment:
-      ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.oldusko.mobileclient
       groups:
         - appstore_credentials
       vars:
+        BUNDLE_ID: com.oldusko.mobileclient
+        APP_STORE_CONNECT_KEY_IDENTIFIER: G9HVGDW8YD
+        APP_STORE_CONNECT_ISSUER_ID: 69a6de7f-1eab-47e3-e053-5b8c7c11a4d1
         UNITY_IOS_DIR: ios
         XCODE_PROJECT: Unity-iPhone.xcodeproj
         XCODE_SCHEME: Unity-iPhone
       xcode: latest
       cocoapods: default
     scripts:
+      - name: Set up keychain
+        script: keychain initialize
+      - name: Fetch or create the App Store profile
+        script: |
+          app-store-connect fetch-signing-files "$BUNDLE_ID" \
+            --type IOS_APP_STORE \
+            --create
+      - name: Add the distribution certificate
+        script: keychain add-certificates
       - name: Apply App Store signing
-        script: xcode-project use-profiles
+        script: xcode-project use-profiles --project "$UNITY_IOS_DIR/$XCODE_PROJECT"
       - name: Build the ipa
         script: |
           xcode-project build-ipa \
