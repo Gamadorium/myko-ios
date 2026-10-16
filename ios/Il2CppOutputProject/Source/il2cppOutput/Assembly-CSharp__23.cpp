@@ -4227,11 +4227,11 @@ inline Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* Component_GetComponent_Ti
 	return ((  Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C (int32_t ___0_zoneId, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252 (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_HidePrompt_m99DC98A29523C427089D62C73C0DB0459DB92380 (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503 (const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_PaintTimer_m8AD203D3A0578A73848149F3CBC46E6EE1A69FFE (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C (int32_t ___0_zoneId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21* KoAudioMgr_Ensure_mC110756D2E10520FE40000CEB647217B0D09C908 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoAudioMgr_PlayUi_m8E8CFBA50EEC183DF9E144037DAD2560D0D40F92 (KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21* __this, int32_t ___0_soundId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_UnhookNet_m03271AEC9745008B3D0855B6F315899CC1600C18 (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, const RuntimeMethod* method) ;
@@ -4239,8 +4239,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoNetSession_t471FE62F2E0D2AAB77A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoNetSession_remove_OnEnteredGame_m987588AC838D2BFB6B6AC1B6D1DD38EF310E3475 (KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_ShowTimer_m54C92DF2FF9730567675CE4BDB45804A41A063E9 (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, uint16_t ___0_seconds, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252 (KoMonsterStoneHud_t2F18D91097C0387E29B634418AEF47806D93EDF8* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline (float ___0_f, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline (KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* __this, const RuntimeMethod* method) ;
@@ -14965,38 +14965,91 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMonsterStoneHud_ShowTimer_m54C92DF2FF9
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	int32_t G_B3_0 = 0;
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_0;
+		L_0 = KoPlayerState_get_Current_mE140DAA9F8476577EEF55B721007907485D38E59_inline(NULL);
+		if (L_0)
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		goto IL_0014;
+	}
+
+IL_000a:
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_1;
+		L_1 = KoPlayerState_get_Current_mE140DAA9F8476577EEF55B721007907485D38E59_inline(NULL);
+		NullCheck(L_1);
+		uint8_t L_2 = L_1->___Zone;
+		G_B3_0 = ((int32_t)(L_2));
+	}
+
+IL_0014:
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(G_B3_0, NULL);
+		if (L_3)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		return;
+	}
+
+IL_001c:
+	{
+		uint16_t L_4 = ___0_seconds;
+		if (L_4)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252(__this, NULL);
+		return;
+	}
+
+IL_0026:
 	{
 		KoMonsterStoneHud_EnsureUi_mFECB6642CBE766E891510FD80B343E1330CF828E(__this, NULL);
 		KoMonsterStoneHud_HidePrompt_m99DC98A29523C427089D62C73C0DB0459DB92380(__this, NULL);
 		__this->____expectTimer = (bool)0;
-		float L_0;
-		L_0 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
-		uint16_t L_1 = ___0_seconds;
-		int32_t L_2;
-		L_2 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_1, NULL);
-		__this->____timerEndsAt = ((float)il2cpp_codegen_add(L_0, ((float)L_2)));
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = __this->____timer;
+		float L_5;
+		L_5 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		uint16_t L_6 = ___0_seconds;
+		__this->____timerEndsAt = ((float)il2cpp_codegen_add(L_5, ((float)L_6)));
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_7 = __this->____timer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_4)
+		bool L_8;
+		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
 		{
-			goto IL_0046;
+			goto IL_0066;
 		}
 	}
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_5 = __this->____timer;
-		NullCheck(L_5);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
-		L_6 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_5, NULL);
-		NullCheck(L_6);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = __this->____timer;
+		NullCheck(L_9);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10;
+		L_10 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_9, NULL);
+		NullCheck(L_10);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)1, NULL);
 	}
 
-IL_0046:
+IL_0066:
 	{
 		KoMonsterStoneHud_PaintTimer_m8AD203D3A0578A73848149F3CBC46E6EE1A69FFE(__this, NULL);
 		return;
@@ -15248,98 +15301,143 @@ IL_001d:
 IL_0027:
 	{
 		V_0 = (uint8_t)G_B5_0;
-		bool L_4 = __this->____expectTimer;
-		if (!L_4)
+		float L_4 = __this->____timerEndsAt;
+		if ((!(((float)L_4) > ((float)(0.0f)))))
 		{
-			goto IL_0050;
+			goto IL_0044;
 		}
 	}
 	{
-		float L_5 = __this->____timerEndsAt;
-		if ((!(((float)L_5) < ((float)(0.0f)))))
-		{
-			goto IL_0050;
-		}
-	}
-	{
-		uint8_t L_6 = V_0;
+		uint8_t L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
-		bool L_7;
-		L_7 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(L_6, NULL);
+		bool L_6;
+		L_6 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(L_5, NULL);
+		if (L_6)
+		{
+			goto IL_0044;
+		}
+	}
+	{
+		KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252(__this, NULL);
+		return;
+	}
+
+IL_0044:
+	{
+		bool L_7 = __this->____expectTimer;
 		if (!L_7)
 		{
-			goto IL_0050;
+			goto IL_006c;
+		}
+	}
+	{
+		float L_8 = __this->____timerEndsAt;
+		if ((!(((float)L_8) < ((float)(0.0f)))))
+		{
+			goto IL_006c;
+		}
+	}
+	{
+		uint8_t L_9 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(L_9, NULL);
+		if (!L_10)
+		{
+			goto IL_006c;
 		}
 	}
 	{
 		KoMonsterStoneHud_ShowTimer_m54C92DF2FF9730567675CE4BDB45804A41A063E9(__this, (uint16_t)((int32_t)1800), NULL);
 	}
 
-IL_0050:
+IL_006c:
 	{
-		float L_8 = __this->____timerEndsAt;
-		if ((!(((float)L_8) > ((float)(0.0f)))))
+		float L_11 = __this->____timerEndsAt;
+		if ((!(((float)L_11) > ((float)(0.0f)))))
 		{
-			goto IL_005e;
+			goto IL_008d;
+		}
+	}
+	{
+		float L_12 = __this->____timerEndsAt;
+		float L_13;
+		L_13 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		if ((!(((float)L_12) <= ((float)L_13))))
+		{
+			goto IL_008d;
+		}
+	}
+	{
+		KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252(__this, NULL);
+		return;
+	}
+
+IL_008d:
+	{
+		float L_14 = __this->____timerEndsAt;
+		if ((!(((float)L_14) > ((float)(0.0f)))))
+		{
+			goto IL_009b;
 		}
 	}
 	{
 		return;
 	}
 
-IL_005e:
+IL_009b:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = __this->____victory;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_15 = __this->____victory;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_10;
-		L_10 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_10)
-		{
-			goto IL_007e;
-		}
-	}
-	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_11 = __this->____victory;
-		NullCheck(L_11);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
-		L_12 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_11, NULL);
-		NullCheck(L_12);
-		bool L_13;
-		L_13 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_12, NULL);
-		if (L_13)
-		{
-			goto IL_007f;
-		}
-	}
-
-IL_007e:
-	{
-		return;
-	}
-
-IL_007f:
-	{
-		uint8_t L_14 = V_0;
-		if (!L_14)
-		{
-			goto IL_0090;
-		}
-	}
-	{
-		uint8_t L_15 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
 		bool L_16;
-		L_16 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(L_15, NULL);
+		L_16 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (L_16)
 		{
-			goto IL_0090;
+			goto IL_00bb;
+		}
+	}
+	{
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_17 = __this->____victory;
+		NullCheck(L_17);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
+		L_18 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_17, NULL);
+		NullCheck(L_18);
+		bool L_19;
+		L_19 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_18, NULL);
+		if (L_19)
+		{
+			goto IL_00bc;
+		}
+	}
+
+IL_00bb:
+	{
+		return;
+	}
+
+IL_00bc:
+	{
+		uint8_t L_20 = V_0;
+		if (!L_20)
+		{
+			goto IL_00cd;
+		}
+	}
+	{
+		uint8_t L_21 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = KoZoneCatalog_IsMonsterStoneZone_m8B96FEE71D95A4837233185677528B2F42AF514C(L_21, NULL);
+		if (L_22)
+		{
+			goto IL_00cd;
 		}
 	}
 	{
 		KoMonsterStoneHud_HideAll_mAC83F2BB5D9C496520689CDF499EDC1CDC907252(__this, NULL);
 	}
 
-IL_0090:
+IL_00cd:
 	{
 		return;
 	}
@@ -27131,42 +27229,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void KoMonsterStoneHud_set_Instan
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	int32_t G_B3_0 = 0;
-	{
-		int32_t L_0 = ___0_a;
-		int32_t L_1 = ___1_b;
-		if ((((int32_t)L_0) > ((int32_t)L_1)))
-		{
-			goto IL_0008;
-		}
-	}
-	{
-		int32_t L_2 = ___1_b;
-		G_B3_0 = L_2;
-		goto IL_0009;
-	}
-
-IL_0008:
-	{
-		int32_t L_3 = ___0_a;
-		G_B3_0 = L_3;
-	}
-
-IL_0009:
-	{
-		V_0 = G_B3_0;
-		goto IL_000c;
-	}
-
-IL_000c:
-	{
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27202,6 +27264,42 @@ IL_000c:
 	{
 		int32_t L_2 = V_0;
 		return L_2;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	int32_t G_B3_0 = 0;
+	{
+		int32_t L_0 = ___0_a;
+		int32_t L_1 = ___1_b;
+		if ((((int32_t)L_0) > ((int32_t)L_1)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		int32_t L_2 = ___1_b;
+		G_B3_0 = L_2;
+		goto IL_0009;
+	}
+
+IL_0008:
+	{
+		int32_t L_3 = ___0_a;
+		G_B3_0 = L_3;
+	}
+
+IL_0009:
+	{
+		V_0 = G_B3_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_4 = V_0;
+		return L_4;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline (KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* __this, const RuntimeMethod* method) 
