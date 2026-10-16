@@ -24392,6 +24392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCoZoneChangeTeleportU3Ed__47_MoveNext
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral749CC6362C1F37573E716C26B67D0F2E7D41DE18);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC7A7939E82BEFEF8DDB755713442AA62963F09F8);
 		s_Il2CppMethodInitialized = true;
@@ -24410,9 +24411,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCoZoneChangeTeleportU3Ed__47_MoveNext
 	U3CCoZoneChangeTeleportU3Ed__47_t28C8143292E02F951D013BF42631866E3CE9DDC4* G_B11_1 = NULL;
 	KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* G_B10_0 = NULL;
 	U3CCoZoneChangeTeleportU3Ed__47_t28C8143292E02F951D013BF42631866E3CE9DDC4* G_B10_1 = NULL;
-	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B25_0 = NULL;
-	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B27_0 = NULL;
-	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B26_0 = NULL;
+	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B29_0 = NULL;
+	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B31_0 = NULL;
+	KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* G_B30_0 = NULL;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
@@ -24423,23 +24424,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCoZoneChangeTeleportU3Ed__47_MoveNext
 		{
 			case 0:
 			{
-				goto IL_002a;
+				goto IL_002e;
 			}
 			case 1:
 			{
-				goto IL_007a;
+				goto IL_007e;
 			}
 			case 2:
 			{
-				goto IL_0091;
+				goto IL_0095;
 			}
 			case 3:
 			{
-				goto IL_01e5;
+				goto IL_01e9;
 			}
 			case 4:
 			{
-				goto IL_0278;
+				goto IL_027e;
+			}
+			case 5:
+			{
+				goto IL_02b5;
 			}
 		}
 	}
@@ -24447,7 +24452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCoZoneChangeTeleportU3Ed__47_MoveNext
 		return (bool)0;
 	}
 
-IL_002a:
+IL_002e:
 	{
 		__this->___U3CU3E1__state = (-1);
 		KoGameUi_t8572A3104EB74AB92D087BCFDD1FE99DD2F016D3* L_3;
@@ -24456,15 +24461,15 @@ IL_002a:
 		if (L_4)
 		{
 			G_B4_0 = L_4;
-			goto IL_003c;
+			goto IL_0040;
 		}
 		G_B3_0 = L_4;
 	}
 	{
-		goto IL_004c;
+		goto IL_0050;
 	}
 
-IL_003c:
+IL_0040:
 	{
 		NullCheck(G_B4_0);
 		KoWarpScreen_t6959AEB6A9B0025E2D115D24E3A08F8A072081F3* L_5;
@@ -24473,21 +24478,21 @@ IL_003c:
 		if (L_6)
 		{
 			G_B6_0 = L_6;
-			goto IL_0047;
+			goto IL_004b;
 		}
 		G_B5_0 = L_6;
 	}
 	{
-		goto IL_004c;
+		goto IL_0050;
 	}
 
-IL_0047:
+IL_004b:
 	{
 		NullCheck(G_B6_0);
 		KoWarpScreen_Hide_mBEB1DD6AF34E3B9709506C793577739B4956C028(G_B6_0, NULL);
 	}
 
-IL_004c:
+IL_0050:
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
 		String_t* L_7;
@@ -24503,7 +24508,7 @@ IL_004c:
 		return (bool)1;
 	}
 
-IL_007a:
+IL_007e:
 	{
 		__this->___U3CU3E1__state = (-1);
 		__this->___U3CU3E2__current = NULL;
@@ -24512,7 +24517,7 @@ IL_007a:
 		return (bool)1;
 	}
 
-IL_0091:
+IL_0095:
 	{
 		__this->___U3CU3E1__state = (-1);
 		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_9;
@@ -24522,7 +24527,7 @@ IL_0091:
 		{
 			G_B11_0 = L_10;
 			G_B11_1 = __this;
-			goto IL_00a7;
+			goto IL_00ab;
 		}
 		G_B10_0 = L_10;
 		G_B10_1 = __this;
@@ -24534,7 +24539,7 @@ IL_0091:
 		G_B11_1 = G_B10_1;
 	}
 
-IL_00a7:
+IL_00ab:
 	{
 		NullCheck(G_B11_1);
 		G_B11_1->___U3CctxU3E5__2 = G_B11_0;
@@ -24582,7 +24587,7 @@ IL_00a7:
 		L_34 = KoPlayerState_get_Current_mE140DAA9F8476577EEF55B721007907485D38E59_inline(NULL);
 		if (!L_34)
 		{
-			goto IL_0167;
+			goto IL_016b;
 		}
 	}
 	{
@@ -24595,7 +24600,7 @@ IL_00a7:
 		L_35->___Channel = L_37;
 	}
 
-IL_0167:
+IL_016b:
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_38;
@@ -24604,7 +24609,7 @@ IL_0167:
 		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_39 = V_2;
 		if (!L_39)
 		{
-			goto IL_01c6;
+			goto IL_01ca;
 		}
 	}
 	{
@@ -24635,7 +24640,7 @@ IL_0167:
 		KoPlayerState_NotifyChanged_m006C027FB706E78A3B1BC4FC98009135FEB933E7(L_53, NULL);
 	}
 
-IL_01c6:
+IL_01ca:
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
 		String_t* L_54;
@@ -24648,7 +24653,7 @@ IL_01c6:
 		return (bool)1;
 	}
 
-IL_01e5:
+IL_01e9:
 	{
 		__this->___U3CU3E1__state = (-1);
 		V_3 = (bool)1;
@@ -24662,7 +24667,7 @@ IL_01e5:
 		L_59 = String_Equals_mCC34895D0DB2AD440C9D8767032215BC86B5C48B(L_56, L_58, 5, NULL);
 		if (L_59)
 		{
-			goto IL_021b;
+			goto IL_021f;
 		}
 	}
 	{
@@ -24674,10 +24679,10 @@ IL_01e5:
 		bool L_63;
 		L_63 = KoWorldBootstrap_LoadMap_m77372047EAEE3843482A4C671D2B7467CE5C14F6(L_60, L_62, NULL);
 		V_3 = L_63;
-		goto IL_0237;
+		goto IL_023b;
 	}
 
-IL_021b:
+IL_021f:
 	{
 		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_64 = V_1;
 		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_65 = __this->___U3CctxU3E5__2;
@@ -24690,12 +24695,12 @@ IL_021b:
 		KoWorldBootstrap_RefreshWarpGates_m608694F3EA6974AA57EFD209DD2BB72124C08238(L_64, L_66, L_68, NULL);
 	}
 
-IL_0237:
+IL_023b:
 	{
 		bool L_69 = V_3;
 		if (L_69)
 		{
-			goto IL_0259;
+			goto IL_0285;
 		}
 	}
 	{
@@ -24706,121 +24711,143 @@ IL_0237:
 		L_72 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral749CC6362C1F37573E716C26B67D0F2E7D41DE18, L_71, _stringLiteralC7A7939E82BEFEF8DDB755713442AA62963F09F8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_72, NULL);
+		goto IL_0296;
 	}
 
-IL_0259:
+IL_025f:
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
 		String_t* L_73;
-		L_73 = KoText_get_LoadingLightmap_mFBDBCE6953020F9F112B69D6337A16D0B529E271(NULL);
+		L_73 = KoText_get_LoadingTerrain_mBE1E1973DA64CCAB2201836993B5BCD4AF413BAB(NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoLoadingOverlay_t76B2C564C9E08EA2017D2CB7EE51813D84531554_il2cpp_TypeInfo_var);
-		KoLoadingOverlay_SetProgress_m219B13F62B6268666201740B847933204B56BCFE((0.720000029f), L_73, NULL);
+		KoLoadingOverlay_SetProgress_m219B13F62B6268666201740B847933204B56BCFE((0.550000012f), L_73, NULL);
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 4;
 		return (bool)1;
 	}
 
-IL_0278:
+IL_027e:
 	{
 		__this->___U3CU3E1__state = (-1);
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_74 = V_1;
-		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_75 = __this->___U3CctxU3E5__2;
-		NullCheck(L_74);
-		KoWorldBootstrap_PlaceOnTerrain_m2034EF06D70809ADFBC28141716BB5C1E7C74437(L_74, L_75, NULL);
+	}
+
+IL_0285:
+	{
+		bool L_74;
+		L_74 = KoMapCollision_PromoteSceneCollision_m4BC82E31B29871FA91419DEACEA2D96A6F6E3266(((int32_t)8000), NULL);
+		if (!L_74)
+		{
+			goto IL_025f;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
+		Physics_SyncTransforms_mB88B6B27C24234D18846F614F9AE674976A5F1CA(NULL);
+	}
+
+IL_0296:
+	{
 		il2cpp_codegen_runtime_class_init_inline(KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
-		String_t* L_76;
-		L_76 = KoText_get_LoadingRiver_mFB2B00D3F0E4042B16A4145611108ED3A61D0AAE(NULL);
+		String_t* L_75;
+		L_75 = KoText_get_LoadingLightmap_mFBDBCE6953020F9F112B69D6337A16D0B529E271(NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoLoadingOverlay_t76B2C564C9E08EA2017D2CB7EE51813D84531554_il2cpp_TypeInfo_var);
-		KoLoadingOverlay_SetProgress_m219B13F62B6268666201740B847933204B56BCFE((0.920000017f), L_76, NULL);
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_77 = V_1;
-		NullCheck(L_77);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_78 = L_77->____player;
+		KoLoadingOverlay_SetProgress_m219B13F62B6268666201740B847933204B56BCFE((0.720000029f), L_75, NULL);
+		__this->___U3CU3E2__current = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
+		__this->___U3CU3E1__state = 5;
+		return (bool)1;
+	}
+
+IL_02b5:
+	{
+		__this->___U3CU3E1__state = (-1);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_76 = V_1;
+		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_77 = __this->___U3CctxU3E5__2;
+		NullCheck(L_76);
+		KoWorldBootstrap_PlaceOnTerrain_m2034EF06D70809ADFBC28141716BB5C1E7C74437(L_76, L_77, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoText_t3118AA614517DD479A4134FD944D1C5B6B40AE46_il2cpp_TypeInfo_var);
+		String_t* L_78;
+		L_78 = KoText_get_LoadingRiver_mFB2B00D3F0E4042B16A4145611108ED3A61D0AAE(NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoLoadingOverlay_t76B2C564C9E08EA2017D2CB7EE51813D84531554_il2cpp_TypeInfo_var);
+		KoLoadingOverlay_SetProgress_m219B13F62B6268666201740B847933204B56BCFE((0.920000017f), L_78, NULL);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_79 = V_1;
+		NullCheck(L_79);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_80 = L_79->____player;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_79;
-		L_79 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_78, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_79)
+		bool L_81;
+		L_81 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_80, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_81)
 		{
-			goto IL_02ab;
+			goto IL_02e8;
 		}
 	}
 	{
-		G_B25_0 = ((KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978*)(NULL));
-		goto IL_02b6;
+		G_B29_0 = ((KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978*)(NULL));
+		goto IL_02f3;
 	}
 
-IL_02ab:
+IL_02e8:
 	{
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_80 = V_1;
-		NullCheck(L_80);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81 = L_80->____player;
-		NullCheck(L_81);
-		KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* L_82;
-		L_82 = GameObject_GetComponent_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m6C37204D803A78A1004D35B42829EEFEA5B838F8(L_81, GameObject_GetComponent_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m6C37204D803A78A1004D35B42829EEFEA5B838F8_RuntimeMethod_var);
-		G_B25_0 = L_82;
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_82 = V_1;
+		NullCheck(L_82);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_83 = L_82->____player;
+		NullCheck(L_83);
+		KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* L_84;
+		L_84 = GameObject_GetComponent_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m6C37204D803A78A1004D35B42829EEFEA5B838F8(L_83, GameObject_GetComponent_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m6C37204D803A78A1004D35B42829EEFEA5B838F8_RuntimeMethod_var);
+		G_B29_0 = L_84;
 	}
 
-IL_02b6:
+IL_02f3:
 	{
-		KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* L_83 = G_B25_0;
-		if (L_83)
+		KoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978* L_85 = G_B29_0;
+		if (L_85)
 		{
-			G_B27_0 = L_83;
-			goto IL_02bc;
+			G_B31_0 = L_85;
+			goto IL_02f9;
 		}
-		G_B26_0 = L_83;
+		G_B30_0 = L_85;
 	}
 	{
-		goto IL_02e2;
+		goto IL_031f;
 	}
 
-IL_02bc:
+IL_02f9:
 	{
-		KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E* L_84 = (KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E*)(&__this->___p);
-		float L_85 = L_84->___X;
 		KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E* L_86 = (KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E*)(&__this->___p);
-		float L_87 = L_86->___Y;
+		float L_87 = L_86->___X;
 		KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E* L_88 = (KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E*)(&__this->___p);
-		float L_89 = L_88->___Z;
-		NullCheck(G_B27_0);
-		KoLocalPlayer_ApplyWarpTeleport_m5A1744AF79B378AFE356E84B46BE000E56B08A9C(G_B27_0, L_85, L_87, L_89, NULL);
+		float L_89 = L_88->___Y;
+		KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E* L_90 = (KoZoneChangeTeleportPacket_tB782202B0740C5081CB9ACA0AD206705B0533D8E*)(&__this->___p);
+		float L_91 = L_90->___Z;
+		NullCheck(G_B31_0);
+		KoLocalPlayer_ApplyWarpTeleport_m5A1744AF79B378AFE356E84B46BE000E56B08A9C(G_B31_0, L_87, L_89, L_91, NULL);
 	}
 
-IL_02e2:
+IL_031f:
 	{
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_90 = V_1;
-		NullCheck(L_90);
-		KoWorldBootstrap_RefreshPlayerEquipment_m3867A7D37819ECA3AA1FFBA0A013A68B5E5570A7(L_90, NULL);
-		KoFxMgr_t1BC1E1AB79F3DEE24FD7569C9D80EAE52A2132AD* L_91;
-		L_91 = KoFxMgr_Ensure_mD2AE480F388536187344DD4B94765EA3D06F67AC(NULL);
-		NullCheck(L_91);
-		KoFxMgr_ReplayStickParticles_m4D39670EB302AF97292CA10A2D5FC711A234440A(L_91, NULL);
-		KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21* L_92;
-		L_92 = KoAudioMgr_Ensure_mC110756D2E10520FE40000CEB647217B0D09C908(NULL);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_92 = V_1;
 		NullCheck(L_92);
-		KoAudioMgr_PlayTownBgm_m9FD7B6B6F979C99F309DE3CD4AAF6592116B67FF(L_92, NULL);
-		il2cpp_codegen_initobj((&V_4), sizeof(Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE));
-		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE L_93 = V_4;
-		KoAudioMgr_Play_m92D7BE8128FFDFD7B8CE447C50E2BFA7DA0AA3DC(((int32_t)400), L_93, NULL);
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_94 = V_1;
+		KoWorldBootstrap_RefreshPlayerEquipment_m3867A7D37819ECA3AA1FFBA0A013A68B5E5570A7(L_92, NULL);
+		KoFxMgr_t1BC1E1AB79F3DEE24FD7569C9D80EAE52A2132AD* L_93;
+		L_93 = KoFxMgr_Ensure_mD2AE480F388536187344DD4B94765EA3D06F67AC(NULL);
+		NullCheck(L_93);
+		KoFxMgr_ReplayStickParticles_m4D39670EB302AF97292CA10A2D5FC711A234440A(L_93, NULL);
+		KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21* L_94;
+		L_94 = KoAudioMgr_Ensure_mC110756D2E10520FE40000CEB647217B0D09C908(NULL);
 		NullCheck(L_94);
-		L_94->____zoneChangePending = (bool)1;
-		bool L_95;
-		L_95 = KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E(NULL);
-		if (!L_95)
-		{
-			goto IL_0349;
-		}
-	}
-	{
-		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_96;
-		L_96 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		KoAudioMgr_PlayTownBgm_m9FD7B6B6F979C99F309DE3CD4AAF6592116B67FF(L_94, NULL);
+		il2cpp_codegen_initobj((&V_4), sizeof(Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE));
+		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE L_95 = V_4;
+		KoAudioMgr_Play_m92D7BE8128FFDFD7B8CE447C50E2BFA7DA0AA3DC(((int32_t)400), L_95, NULL);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_96 = V_1;
 		NullCheck(L_96);
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_97;
-		L_97 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_96, NULL);
+		L_96->____zoneChangePending = (bool)1;
+		bool L_97;
+		L_97 = KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E(NULL);
 		if (!L_97)
 		{
-			goto IL_0349;
+			goto IL_0386;
 		}
 	}
 	{
@@ -24829,23 +24856,34 @@ IL_02e2:
 		NullCheck(L_98);
 		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_99;
 		L_99 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_98, NULL);
-		NullCheck(L_99);
-		KoGameClient_SendKnightsTop10_mDB88BCDF99C22069E314FE7BC1AF7F7C4D6DBB6F(L_99, NULL);
+		if (!L_99)
+		{
+			goto IL_0386;
+		}
+	}
+	{
 		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_100;
 		L_100 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
 		NullCheck(L_100);
 		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_101;
 		L_101 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_100, NULL);
 		NullCheck(L_101);
-		KoGameClient_SendZoneChange_mC47A156CA387C4D49D94EC9B595F29FB2B8B4D1D(L_101, (uint8_t)1, NULL);
+		KoGameClient_SendKnightsTop10_mDB88BCDF99C22069E314FE7BC1AF7F7C4D6DBB6F(L_101, NULL);
+		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_102;
+		L_102 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		NullCheck(L_102);
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_103;
+		L_103 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_102, NULL);
+		NullCheck(L_103);
+		KoGameClient_SendZoneChange_mC47A156CA387C4D49D94EC9B595F29FB2B8B4D1D(L_103, (uint8_t)1, NULL);
 	}
 
-IL_0349:
+IL_0386:
 	{
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_102 = V_1;
-		NullCheck(L_102);
-		L_102->____zoneChangeCo = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&L_102->____zoneChangeCo), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_104 = V_1;
+		NullCheck(L_104);
+		L_104->____zoneChangeCo = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_104->____zoneChangeCo), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 		return (bool)0;
 	}
 }

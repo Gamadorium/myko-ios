@@ -148,6 +148,7 @@ struct Dictionary_2_tFB2AB2466CB69CA8990714DC590F6BCF16682833;
 struct Dictionary_2_t5D222116A23B07EC31967201903ED5BFCC9E2C5A;
 struct Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907;
 struct Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9;
+struct Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520;
 struct Dictionary_2_t94555FAB526816EE96815EF3F2F2D82375B6050D;
 struct Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE;
 struct Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83;
@@ -2743,6 +2744,9 @@ struct CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D  : public MonoBehavio
 	float ____pitch;
 	float ____lookBackwardUntil;
 	HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* ____lookBlocked;
+	HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* ____lookDrag;
+	Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* ____lookOrigin;
+	Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* ____lookLast;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ____camera;
 };
 struct KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -4079,6 +4083,7 @@ struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields
 struct CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_StaticFields
 {
 	CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* ___U3CInstanceU3Ek__BackingField;
+	List_1_t8292C421BBB00D7661DC07462822936152BAB446* ___UiHits;
 };
 struct KoAudioMgr_t6ADDA38CB52020905F415DACF1FBF045CDED1A21_StaticFields
 {
@@ -18016,10 +18021,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoGameplayCamera_get_Yaw_m7F0ACA714A8E0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_0;
 		L_0 = CameraMMO_get_Instance_mF4D9B0239A46B3CF28B8AC45963120B6C1A569C6_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18037,6 +18044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoGameplayCamera_get_Yaw_m7F0ACA714A8E0
 
 IL_0014:
 	{
+		il2cpp_codegen_runtime_class_init_inline(CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_3;
 		L_3 = CameraMMO_get_Instance_mF4D9B0239A46B3CF28B8AC45963120B6C1A569C6_inline(NULL);
 		NullCheck(L_3);
@@ -18183,6 +18191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoGameplayCamera_CycleViewPoint_m346F
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var);
@@ -18248,6 +18257,7 @@ IL_0075:
 
 IL_008b:
 	{
+		il2cpp_codegen_runtime_class_init_inline(CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_4;
 		L_4 = CameraMMO_get_Instance_mF4D9B0239A46B3CF28B8AC45963120B6C1A569C6_inline(NULL);
 		V_0 = L_4;
@@ -32900,6 +32910,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CameraMMO_tF906C0753F8831D86B8455
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var);
 		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_0 = ((CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_StaticFields*)il2cpp_codegen_static_fields_for(CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
