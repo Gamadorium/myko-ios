@@ -21,10 +21,12 @@ extern void AssetBundle_LoadAsset_m021FE0B52DD660E54AE4C225D9AE66147902B8FE (voi
 extern void AssetBundle_LoadAsset_Internal_mD096392756815901FE982C1AF64DDF0846551433 (void);
 extern void AssetBundle_LoadAssetWithSubAssets_m8F1B9E2F3DED19105612E7874487ADEC890480AF (void);
 extern void AssetBundle_LoadAssetWithSubAssets_m664A6B7E93502E26177F6C218FAB79A218DF841F (void);
+extern void AssetBundle_GetAllAssetNames_m44504DB9E055412F0DF2071A769A243219708CC3 (void);
+extern void AssetBundle_GetAllScenePaths_m75D1CD4415067D64A8265A7929B6FF76B91B62FE (void);
 extern void AssetBundle_LoadAssetWithSubAssets_Internal_m14AE2B2D7696182CBDF12087E8D3FEA867290DA8 (void);
 extern void AssetBundleCreateRequest_get_assetBundle_m613FDE589FB86BE1E6920D38ED0706F785D9DB21 (void);
 extern void AssetBundleCreateRequest__ctor_mAD1A6314795AC1B548A29A32E01815D33B6D0B46 (void);
-static Il2CppMethodPointer s_methodPointers[15] = 
+static Il2CppMethodPointer s_methodPointers[17] = 
 {
 	AssetBundle__ctor_m12989CA081324BB49ED893BDA5E3B4E758D61410,
 	AssetBundle_LoadFromFileAsync_Internal_mB3D099E653D4AF91E5EA8CDCC49E8AB1BBAB764B,
@@ -38,27 +40,31 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	NULL,
 	NULL,
 	AssetBundle_LoadAssetWithSubAssets_m664A6B7E93502E26177F6C218FAB79A218DF841F,
+	AssetBundle_GetAllAssetNames_m44504DB9E055412F0DF2071A769A243219708CC3,
+	AssetBundle_GetAllScenePaths_m75D1CD4415067D64A8265A7929B6FF76B91B62FE,
 	AssetBundle_LoadAssetWithSubAssets_Internal_m14AE2B2D7696182CBDF12087E8D3FEA867290DA8,
 	AssetBundleCreateRequest_get_assetBundle_m613FDE589FB86BE1E6920D38ED0706F785D9DB21,
 	AssetBundleCreateRequest__ctor_mAD1A6314795AC1B548A29A32E01815D33B6D0B46,
 };
-static const int32_t s_InvokerIndices[15] = 
+static const int32_t s_InvokerIndices[17] = 
 {
-	8949,
-	10860,
-	12468,
-	10860,
-	12468,
+	8966,
+	10885,
+	12500,
+	10885,
+	12500,
 	0,
-	3166,
-	3166,
-	6399,
+	3176,
+	3176,
+	6413,
 	0,
 	0,
-	3166,
-	3166,
-	8806,
-	8949,
+	3176,
+	8823,
+	8823,
+	3176,
+	8823,
+	8966,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
@@ -89,7 +95,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGe
 const Il2CppCodeGenModule g_UnityEngine_AssetBundleModule_CodeGenModule = 
 {
 	"UnityEngine.AssetBundleModule.dll",
-	15,
+	17,
 	s_methodPointers,
 	0,
 	NULL,

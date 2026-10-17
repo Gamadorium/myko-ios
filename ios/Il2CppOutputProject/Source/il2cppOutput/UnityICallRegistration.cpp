@@ -606,6 +606,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.AssetBundle
 
+		//System.String[] UnityEngine.AssetBundle::GetAllAssetNames()
+		void Register_UnityEngine_AssetBundle_GetAllAssetNames();
+		Register_UnityEngine_AssetBundle_GetAllAssetNames();
+
+		//System.String[] UnityEngine.AssetBundle::GetAllScenePaths()
+		void Register_UnityEngine_AssetBundle_GetAllScenePaths();
+		Register_UnityEngine_AssetBundle_GetAllScenePaths();
+
 		//UnityEngine.AssetBundle UnityEngine.AssetBundle::LoadFromFile_Internal(System.String,System.UInt32,System.UInt64)
 		void Register_UnityEngine_AssetBundle_LoadFromFile_Internal();
 		Register_UnityEngine_AssetBundle_LoadFromFile_Internal();
@@ -1098,10 +1106,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Canvas_set_overrideSorting();
 		Register_UnityEngine_Canvas_set_overrideSorting();
 
-		//System.Void UnityEngine.Canvas::set_pixelPerfect(System.Boolean)
-		void Register_UnityEngine_Canvas_set_pixelPerfect();
-		Register_UnityEngine_Canvas_set_pixelPerfect();
-
 		//System.Void UnityEngine.Canvas::set_referencePixelsPerUnit(System.Single)
 		void Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
 		Register_UnityEngine_Canvas_set_referencePixelsPerUnit();
@@ -1585,6 +1589,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Cursor::set_lockState(UnityEngine.CursorLockMode)
 		void Register_UnityEngine_Cursor_set_lockState();
 		Register_UnityEngine_Cursor_set_lockState();
+
+		//System.Void UnityEngine.Cursor::set_visible(System.Boolean)
+		void Register_UnityEngine_Cursor_set_visible();
+		Register_UnityEngine_Cursor_set_visible();
 
 		//UnityEngine.CursorLockMode UnityEngine.Cursor::get_lockState()
 		void Register_UnityEngine_Cursor_get_lockState();
@@ -3490,6 +3498,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Networking_UnityWebRequest_Release();
 		Register_UnityEngine_Networking_UnityWebRequest_Release();
 
+		//System.Void UnityEngine.Networking.UnityWebRequest::SetRedirectLimitFromScripting(System.Int32)
+		void Register_UnityEngine_Networking_UnityWebRequest_SetRedirectLimitFromScripting();
+		Register_UnityEngine_Networking_UnityWebRequest_SetRedirectLimitFromScripting();
+
 		//UnityEngine.Networking.UnityWebRequest/Result UnityEngine.Networking.UnityWebRequest::get_result()
 		void Register_UnityEngine_Networking_UnityWebRequest_get_result();
 		Register_UnityEngine_Networking_UnityWebRequest_get_result();
@@ -3497,10 +3509,6 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::GetError()
 		void Register_UnityEngine_Networking_UnityWebRequest_GetError();
 		Register_UnityEngine_Networking_UnityWebRequest_GetError();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::InternalSetRequestHeader(System.String,System.String)
-		void Register_UnityEngine_Networking_UnityWebRequest_InternalSetRequestHeader();
-		Register_UnityEngine_Networking_UnityWebRequest_InternalSetRequestHeader();
 
 		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::SetCustomMethod(System.String)
 		void Register_UnityEngine_Networking_UnityWebRequest_SetCustomMethod();
@@ -5298,6 +5306,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_SceneManagement_Scene_GetNameInternal();
 		Register_UnityEngine_SceneManagement_Scene_GetNameInternal();
 
+		//System.String UnityEngine.SceneManagement.Scene::GetPathInternal(System.Int32)
+		void Register_UnityEngine_SceneManagement_Scene_GetPathInternal();
+		Register_UnityEngine_SceneManagement_Scene_GetPathInternal();
+
 		//System.Void UnityEngine.SceneManagement.Scene::GetRootGameObjectsInternal(System.Int32,System.Object)
 		void Register_UnityEngine_SceneManagement_Scene_GetRootGameObjectsInternal();
 		Register_UnityEngine_SceneManagement_Scene_GetRootGameObjectsInternal();
@@ -5325,6 +5337,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.SceneManagement.SceneManager::GetSceneByName_Injected(System.String,UnityEngine.SceneManagement.Scene&)
 		void Register_UnityEngine_SceneManagement_SceneManager_GetSceneByName_Injected();
 		Register_UnityEngine_SceneManagement_SceneManager_GetSceneByName_Injected();
+
+		//System.Void UnityEngine.SceneManagement.SceneManager::GetSceneByPath_Injected(System.String,UnityEngine.SceneManagement.Scene&)
+		void Register_UnityEngine_SceneManagement_SceneManager_GetSceneByPath_Injected();
+		Register_UnityEngine_SceneManagement_SceneManager_GetSceneByPath_Injected();
 
 		//System.Void UnityEngine.SceneManagement.SceneManager::MoveGameObjectToScene_Injected(UnityEngine.GameObject,UnityEngine.SceneManagement.Scene&)
 		void Register_UnityEngine_SceneManagement_SceneManager_MoveGameObjectToScene_Injected();
@@ -5354,6 +5370,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Screen_get_height();
 		Register_UnityEngine_Screen_get_height();
 
+		//System.Int32 UnityEngine.Screen::get_sleepTimeout()
+		void Register_UnityEngine_Screen_get_sleepTimeout();
+		Register_UnityEngine_Screen_get_sleepTimeout();
+
 		//System.Int32 UnityEngine.Screen::get_width()
 		void Register_UnityEngine_Screen_get_width();
 		Register_UnityEngine_Screen_get_width();
@@ -5365,6 +5385,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Screen::get_safeArea_Injected(UnityEngine.Rect&)
 		void Register_UnityEngine_Screen_get_safeArea_Injected();
 		Register_UnityEngine_Screen_get_safeArea_Injected();
+
+		//System.Void UnityEngine.Screen::set_sleepTimeout(System.Int32)
+		void Register_UnityEngine_Screen_set_sleepTimeout();
+		Register_UnityEngine_Screen_set_sleepTimeout();
 
 		//UnityEngine.ScreenOrientation UnityEngine.Screen::GetScreenOrientation()
 		void Register_UnityEngine_Screen_GetScreenOrientation();
@@ -5841,10 +5865,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Terrain::get_detailObjectDistance()
 		void Register_UnityEngine_Terrain_get_detailObjectDistance();
 		Register_UnityEngine_Terrain_get_detailObjectDistance();
-
-		//System.Single UnityEngine.Terrain::get_heightmapPixelError()
-		void Register_UnityEngine_Terrain_get_heightmapPixelError();
-		Register_UnityEngine_Terrain_get_heightmapPixelError();
 
 		//System.Single UnityEngine.Terrain::get_treeDistance()
 		void Register_UnityEngine_Terrain_get_treeDistance();
@@ -6760,27 +6780,27 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.UnityLogWriter
 
-	//Start Registrations for type : UnityEngine.Video.VideoClip
-
-		//System.UInt32 UnityEngine.Video.VideoClip::get_height()
-		void Register_UnityEngine_Video_VideoClip_get_height();
-		Register_UnityEngine_Video_VideoClip_get_height();
-
-		//System.UInt32 UnityEngine.Video.VideoClip::get_width()
-		void Register_UnityEngine_Video_VideoClip_get_width();
-		Register_UnityEngine_Video_VideoClip_get_width();
-
-	//End Registrations for type : UnityEngine.Video.VideoClip
-
 	//Start Registrations for type : UnityEngine.Video.VideoPlayer
 
 		//System.Void UnityEngine.Video.VideoPlayer::Play()
 		void Register_UnityEngine_Video_VideoPlayer_Play();
 		Register_UnityEngine_Video_VideoPlayer_Play();
 
+		//System.Void UnityEngine.Video.VideoPlayer::Prepare()
+		void Register_UnityEngine_Video_VideoPlayer_Prepare();
+		Register_UnityEngine_Video_VideoPlayer_Prepare();
+
+		//System.Void UnityEngine.Video.VideoPlayer::SetTargetAudioSource(System.UInt16,UnityEngine.AudioSource)
+		void Register_UnityEngine_Video_VideoPlayer_SetTargetAudioSource();
+		Register_UnityEngine_Video_VideoPlayer_SetTargetAudioSource();
+
 		//System.Void UnityEngine.Video.VideoPlayer::Stop()
 		void Register_UnityEngine_Video_VideoPlayer_Stop();
 		Register_UnityEngine_Video_VideoPlayer_Stop();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_aspectRatio(UnityEngine.Video.VideoAspectRatio)
+		void Register_UnityEngine_Video_VideoPlayer_set_aspectRatio();
+		Register_UnityEngine_Video_VideoPlayer_set_aspectRatio();
 
 		//System.Void UnityEngine.Video.VideoPlayer::set_audioOutputMode(UnityEngine.Video.VideoAudioOutputMode)
 		void Register_UnityEngine_Video_VideoPlayer_set_audioOutputMode();
@@ -6802,9 +6822,29 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Video_VideoPlayer_set_renderMode();
 		Register_UnityEngine_Video_VideoPlayer_set_renderMode();
 
+		//System.Void UnityEngine.Video.VideoPlayer::set_sendFrameReadyEvents(System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_set_sendFrameReadyEvents();
+		Register_UnityEngine_Video_VideoPlayer_set_sendFrameReadyEvents();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_skipOnDrop(System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_set_skipOnDrop();
+		Register_UnityEngine_Video_VideoPlayer_set_skipOnDrop();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_source(UnityEngine.Video.VideoSource)
+		void Register_UnityEngine_Video_VideoPlayer_set_source();
+		Register_UnityEngine_Video_VideoPlayer_set_source();
+
 		//System.Void UnityEngine.Video.VideoPlayer::set_targetTexture(UnityEngine.RenderTexture)
 		void Register_UnityEngine_Video_VideoPlayer_set_targetTexture();
 		Register_UnityEngine_Video_VideoPlayer_set_targetTexture();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_url(System.String)
+		void Register_UnityEngine_Video_VideoPlayer_set_url();
+		Register_UnityEngine_Video_VideoPlayer_set_url();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_waitForFirstFrame(System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_set_waitForFirstFrame();
+		Register_UnityEngine_Video_VideoPlayer_set_waitForFirstFrame();
 
 	//End Registrations for type : UnityEngine.Video.VideoPlayer
 
