@@ -1040,6 +1040,8 @@ struct Action_1_tB2709B56FDF42792567DCFEFCC8B1E8ABBC91AE2;
 struct Action_1_t3B1026413DE801035424120873775CB128C9A6E0;
 struct Action_1_t80490FAAC42AFC2A393B5800FF1E59FD309902C3;
 struct Action_1_t63507110770541BA8D43F0D63BBC33E7486F99C1;
+struct Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425;
+struct Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C;
 struct Action_1_tCA0808B86A50266FEAC7BEDBD205882E40078178;
 struct Action_1_t530CC8C1599E15F40E5900C44AE46F3E0880F1D9;
 struct Action_1_tB4196E1DCD4A2F5108218D26956FE829982AF857;
@@ -1110,7 +1112,9 @@ struct Action_1_t3812E579164FF88CA491529F6A29F6E0417E9E3C;
 struct Action_1_tA0D3C4F9E27EA0031A31846B7311E79EF7CCF5EF;
 struct Action_1_t795B16E0CC89FDD4D158CC99030EFD8551DEB465;
 struct Action_1_t297464200D6B6F58ECF71C80C303000B754C9E13;
+struct Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B;
 struct Action_1_tE8A1428D2461C09D9EC0F570809026017EEB157B;
+struct Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49;
 struct Action_1_tEEA219112C634BE6F377FD228B439C9E15B85962;
 struct Action_1_t72E548755F4BB43C31EDE2E7DAC9E4AEA03432B0;
 struct Action_1_tCEBA10A27E04AF1981907713C1030E69EC9825E6;
@@ -1216,10 +1220,6 @@ struct Action_3_t838D6B6BB4BFFC6E8430C389747DB008A0B26146;
 struct Action_4_t7D895ADAA7142B1AA2A954C1E193B3CF08D36C48;
 struct Action_4_t2ABD5561A5580D4A0E12BDC44A7274E18C99D081;
 struct Action_4_tD1D5CA5D5BEF409108887A8C8E9A77A89A08E5E2;
-struct Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5;
-struct Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608;
-struct Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146;
-struct Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078;
 struct BasicNode_1_t7B4D545DCD6949B2E1C85D63DF038E44602F7DDB;
 struct Dictionary_2_t403063CE4960B4F46C688912237C6A27E550FF55;
 struct Dictionary_2_t645C7B1DAE2D839B52A5E387C165CE13D5465B00;
@@ -1236,6 +1236,7 @@ struct IEnumerator_1_t43D2E4BA9246755F293DFA74F001FB1A70A648FD;
 struct IEnumerator_1_t75CB2681E18F7F2791528FA2CA60361FDB5DA08D;
 struct IEqualityComparer_1_t84CD58C3582484C691B22BB0E534C8ADD9B22966;
 struct IEqualityComparer_1_t47CC0B235E693652D181B679FF6D61A469ECC122;
+struct IReadOnlyList_1_t427106897EB4C5B1CEBD8204E38B03B6DC909691;
 struct List_1_t60F39D768DAD2345527AD3EE73FAB2667DF4F260;
 struct List_1_t96E9133B70FB6765E6B138E810D33E18901715DA;
 struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
@@ -2959,6 +2960,29 @@ struct KoSkillPtChangePacket_t1042BA21F4C004C04ACADA0F10C269A6E446F5F1_marshaled
 	int32_t ___HasCategory;
 	Il2CppSafeArray* ___AllPoints;
 };
+struct KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4 
+{
+	RuntimeObject* ___Rewards;
+	uint8_t ___MaxSelected;
+	UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ___ItemIds;
+};
+struct KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4_marshaled_pinvoke
+{
+	RuntimeObject* ___Rewards;
+	uint8_t ___MaxSelected;
+	Il2CppSafeArray* ___ItemIds;
+};
+struct KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4_marshaled_com
+{
+	RuntimeObject* ___Rewards;
+	uint8_t ___MaxSelected;
+	Il2CppSafeArray* ___ItemIds;
+};
+struct KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA 
+{
+	uint32_t ___ItemId;
+	int32_t ___Count;
+};
 struct KoTargetHpPacket_t3728095B1D7280A3BD72A7CD5B63E757956DA986 
 {
 	int16_t ___TargetId;
@@ -3657,6 +3681,11 @@ struct CospreFxPart_tD76EC3BEA3289B295CA69EF42D9A39E05D2369D3_marshaled_com
 {
 	Il2CppChar* ___Bundle;
 	int32_t ___Index;
+};
+struct RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604 
+{
+	uint32_t ___ItemId;
+	int32_t ___Count;
 };
 struct TrackEntry_t16E87AD62EE29D63B35CD7A4143CD1BAF4B6A22C 
 {
@@ -4404,6 +4433,7 @@ struct KoTooltipLine_t5925E73ECB7F661AD57F5284907B648B9E0BCDFA
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
 	bool ___Center;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___Icon;
+	bool ___RichText;
 };
 struct KoTooltipLine_t5925E73ECB7F661AD57F5284907B648B9E0BCDFA_marshaled_pinvoke
 {
@@ -4411,6 +4441,7 @@ struct KoTooltipLine_t5925E73ECB7F661AD57F5284907B648B9E0BCDFA_marshaled_pinvoke
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
 	int32_t ___Center;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___Icon;
+	int32_t ___RichText;
 };
 struct KoTooltipLine_t5925E73ECB7F661AD57F5284907B648B9E0BCDFA_marshaled_com
 {
@@ -4418,6 +4449,7 @@ struct KoTooltipLine_t5925E73ECB7F661AD57F5284907B648B9E0BCDFA_marshaled_com
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
 	int32_t ___Center;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___Icon;
+	int32_t ___RichText;
 };
 struct LanguageDirection_t30A3B6BBCEE6A6F57641E4E008E0DCC40603558C 
 {
@@ -4720,6 +4752,21 @@ struct Entry_t1E7673DC5F6777257ED2766696058FB62E04480E_marshaled_com
 	uint8_t ___State;
 	int32_t ___Available;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Accent;
+};
+struct KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580 
+{
+	String_t* ___Text;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
+};
+struct KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580_marshaled_pinvoke
+{
+	char* ___Text;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
+};
+struct KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580_marshaled_com
+{
+	Il2CppChar* ___Text;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Color;
 };
 struct Unit_t7A9C3ABB0618BEBFDC1813D07080CE0C145448ED 
 {
@@ -5717,6 +5764,12 @@ struct Action_1_t80490FAAC42AFC2A393B5800FF1E59FD309902C3  : public MulticastDel
 struct Action_1_t63507110770541BA8D43F0D63BBC33E7486F99C1  : public MulticastDelegate_t
 {
 };
+struct Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425  : public MulticastDelegate_t
+{
+};
+struct Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C  : public MulticastDelegate_t
+{
+};
 struct Action_1_tCA0808B86A50266FEAC7BEDBD205882E40078178  : public MulticastDelegate_t
 {
 };
@@ -5903,7 +5956,13 @@ struct Action_1_t795B16E0CC89FDD4D158CC99030EFD8551DEB465  : public MulticastDel
 struct Action_1_t297464200D6B6F58ECF71C80C303000B754C9E13  : public MulticastDelegate_t
 {
 };
+struct Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B  : public MulticastDelegate_t
+{
+};
 struct Action_1_tE8A1428D2461C09D9EC0F570809026017EEB157B  : public MulticastDelegate_t
+{
+};
+struct Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49  : public MulticastDelegate_t
 {
 };
 struct Action_1_tEEA219112C634BE6F377FD228B439C9E15B85962  : public MulticastDelegate_t
@@ -6207,18 +6266,6 @@ struct Action_4_t2ABD5561A5580D4A0E12BDC44A7274E18C99D081  : public MulticastDel
 {
 };
 struct Action_4_tD1D5CA5D5BEF409108887A8C8E9A77A89A08E5E2  : public MulticastDelegate_t
-{
-};
-struct Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5  : public MulticastDelegate_t
-{
-};
-struct Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608  : public MulticastDelegate_t
-{
-};
-struct Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146  : public MulticastDelegate_t
-{
-};
-struct Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078  : public MulticastDelegate_t
 {
 };
 struct Page_t00291F75278697336C2012AEC6F5682758487EAE 
@@ -15340,6 +15387,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m5594E6723743EDD59145C49
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+void Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_Multicast(Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* __this, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4 ___0_obj, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* currentDelegate = reinterpret_cast<Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_OpenInst(Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* __this, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+void Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_OpenStatic(Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* __this, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m5A320E86E868EB5D8DDA007F8366FB124F54EA49_gshared (Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m0EA2A45BDD62819DDB4D1FDC741189A65D690D0D_gshared (Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* __this, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4 ___0_obj, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, KoStorePackageExchangeList_t42C0DC41E54624D219F5E8D4E6A91B93DBC844A4, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_Multicast(Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* __this, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA ___0_obj, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* currentDelegate = reinterpret_cast<Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_OpenInst(Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* __this, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+void Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_OpenStatic(Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* __this, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m13B4FF13EB23DA4243F19E035B3DB88F82B708F4_gshared (Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m014B3D62AACDD7EA70A9195769E3547A75B204FB_gshared (Action_1_t0A267942B3E2BDD6C1A3BDE68CE0A72E22FC600C* __this, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA ___0_obj, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 void Action_1_Invoke_mFDCC0849FC3D899C5A793E275D6557A200890652_Multicast(Action_1_tCA0808B86A50266FEAC7BEDBD205882E40078178* __this, KoTargetHpPacket_t3728095B1D7280A3BD72A7CD5B63E757956DA986 ___0_obj, const RuntimeMethod* method)
 {
 	il2cpp_array_size_t length = __this->___delegates->max_length;
@@ -19710,6 +19881,68 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_mFC5F4691A03D54F8A547EF3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+void Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_Multicast(Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* __this, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604 ___0_obj, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* currentDelegate = reinterpret_cast<Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_OpenInst(Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* __this, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+void Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_OpenStatic(Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* __this, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m9E4DBF358C7BBF1BB0AA40796A222C4939A9A7EF_gshared (Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m8D60169E7CEB1B530FCDEBAA99F0707252B8D4DD_gshared (Action_1_tAE10CD63B67E2975C22838C5FA0EDEEA02EEC26B* __this, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604 ___0_obj, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, RewardStack_t2CA01D57E380E2A9EC3C6DF83C6F2660F94F6604, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 void Action_1_Invoke_mF6627192D401CCF6E9629DC1A4F333A91E227A41_Multicast(Action_1_tE8A1428D2461C09D9EC0F570809026017EEB157B* __this, TrackEntry_t16E87AD62EE29D63B35CD7A4143CD1BAF4B6A22C ___0_obj, const RuntimeMethod* method)
 {
 	il2cpp_array_size_t length = __this->___delegates->max_length;
@@ -19762,6 +19995,68 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_mF393EA530A8806FE38CA570C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_mF6627192D401CCF6E9629DC1A4F333A91E227A41_gshared (Action_1_tE8A1428D2461C09D9EC0F570809026017EEB157B* __this, TrackEntry_t16E87AD62EE29D63B35CD7A4143CD1BAF4B6A22C ___0_obj, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, TrackEntry_t16E87AD62EE29D63B35CD7A4143CD1BAF4B6A22C, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_Multicast(Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* __this, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580 ___0_obj, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* currentDelegate = reinterpret_cast<Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_OpenInst(Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* __this, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+void Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_OpenStatic(Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* __this, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580 ___0_obj, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m61D2EF59346C646745FD6C87B6E54E3D46284F59_gshared (Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_Multicast;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m2B5C75F4898FA07A9EC6C3B1546D105751FD7923_gshared (Action_1_t0B27C6DB29BBA52D0FFEB0D52931635C6BC5EA49* __this, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580 ___0_obj, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, KoRemarkLine_t00B7FFF25CBC9C351DD8165B88EE77CED8B29580, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
 #ifdef __clang__
@@ -27597,254 +27892,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4__ctor_m3011BC40121B8AC7E7A3E7EA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4_Invoke_m388E53D10FDB4DB5257318BF5797CEAADEFE4EC5_gshared (Action_4_tD1D5CA5D5BEF409108887A8C8E9A77A89A08E5E2* __this, Il2CppFullySharedGenericAny ___0_arg1, Il2CppFullySharedGenericAny ___1_arg2, Il2CppFullySharedGenericAny ___2_arg3, Il2CppFullySharedGenericAny ___3_arg4, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, Il2CppFullySharedGenericAny, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(__this->___method));
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-void Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_Multicast(Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* __this, bool ___0_arg1, uint32_t ___1_arg2, uint16_t ___2_arg3, uint8_t ___3_arg4, const RuntimeMethod* method)
-{
-	il2cpp_array_size_t length = __this->___delegates->max_length;
-	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
-	for (il2cpp_array_size_t i = 0; i < length; i++)
-	{
-		Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* currentDelegate = reinterpret_cast<Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5*>(delegatesToInvoke[i]);
-		typedef void (*FunctionPointerType) (RuntimeObject*, bool, uint32_t, uint16_t, uint8_t, const RuntimeMethod*);
-		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
-	}
-}
-void Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_OpenInst(Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* __this, bool ___0_arg1, uint32_t ___1_arg2, uint16_t ___2_arg3, uint8_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (bool, uint32_t, uint16_t, uint8_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-void Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_OpenStatic(Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* __this, bool ___0_arg1, uint32_t ___1_arg2, uint16_t ___2_arg3, uint8_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (bool, uint32_t, uint16_t, uint8_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4__ctor_m09833ED45CDF5A28DD57BE22DAD7095133A263D8_gshared (Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
-{
-	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
-	__this->___method = ___1_method;
-	__this->___m_target = ___0_object;
-	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
-	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
-	__this->___method_code = (intptr_t)__this;
-	if (MethodIsStatic((RuntimeMethod*)___1_method))
-	{
-		bool isOpen = parameterCount == 4;
-		if (isOpen)
-			__this->___invoke_impl = (intptr_t)&Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_OpenStatic;
-		else
-			{
-				__this->___invoke_impl = __this->___method_ptr;
-				__this->___method_code = (intptr_t)__this->___m_target;
-			}
-	}
-	else
-	{
-		if (___0_object == NULL)
-			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
-		__this->___invoke_impl = __this->___method_ptr;
-		__this->___method_code = (intptr_t)__this->___m_target;
-	}
-	__this->___extra_arg = (intptr_t)&Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_Multicast;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4_Invoke_m78D2F87F1D339E0F2B438A0CD2817635EA309FA6_gshared (Action_4_t76F7F574BBC585FA96A2A157E119469AC75643F5* __this, bool ___0_arg1, uint32_t ___1_arg2, uint16_t ___2_arg3, uint8_t ___3_arg4, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, bool, uint32_t, uint16_t, uint8_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(__this->___method));
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-void Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_Multicast(Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* __this, uint8_t ___0_arg1, bool ___1_arg2, uint16_t ___2_arg3, uint16_t ___3_arg4, const RuntimeMethod* method)
-{
-	il2cpp_array_size_t length = __this->___delegates->max_length;
-	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
-	for (il2cpp_array_size_t i = 0; i < length; i++)
-	{
-		Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* currentDelegate = reinterpret_cast<Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608*>(delegatesToInvoke[i]);
-		typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, bool, uint16_t, uint16_t, const RuntimeMethod*);
-		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
-	}
-}
-void Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_OpenInst(Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* __this, uint8_t ___0_arg1, bool ___1_arg2, uint16_t ___2_arg3, uint16_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (uint8_t, bool, uint16_t, uint16_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-void Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_OpenStatic(Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* __this, uint8_t ___0_arg1, bool ___1_arg2, uint16_t ___2_arg3, uint16_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (uint8_t, bool, uint16_t, uint16_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4__ctor_m922E62B9CAC749919EE24E2B13846A221FF65668_gshared (Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
-{
-	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
-	__this->___method = ___1_method;
-	__this->___m_target = ___0_object;
-	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
-	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
-	__this->___method_code = (intptr_t)__this;
-	if (MethodIsStatic((RuntimeMethod*)___1_method))
-	{
-		bool isOpen = parameterCount == 4;
-		if (isOpen)
-			__this->___invoke_impl = (intptr_t)&Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_OpenStatic;
-		else
-			{
-				__this->___invoke_impl = __this->___method_ptr;
-				__this->___method_code = (intptr_t)__this->___m_target;
-			}
-	}
-	else
-	{
-		if (___0_object == NULL)
-			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
-		__this->___invoke_impl = __this->___method_ptr;
-		__this->___method_code = (intptr_t)__this->___m_target;
-	}
-	__this->___extra_arg = (intptr_t)&Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_Multicast;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4_Invoke_m1D1407E5F997627960C1885ED0BA19B087910E45_gshared (Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608* __this, uint8_t ___0_arg1, bool ___1_arg2, uint16_t ___2_arg3, uint16_t ___3_arg4, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, bool, uint16_t, uint16_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(__this->___method));
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-void Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_Multicast(Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* __this, uint8_t ___0_arg1, uint8_t ___1_arg2, uint32_t ___2_arg3, RuntimeObject* ___3_arg4, const RuntimeMethod* method)
-{
-	il2cpp_array_size_t length = __this->___delegates->max_length;
-	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
-	for (il2cpp_array_size_t i = 0; i < length; i++)
-	{
-		Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* currentDelegate = reinterpret_cast<Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146*>(delegatesToInvoke[i]);
-		typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, uint8_t, uint32_t, RuntimeObject*, const RuntimeMethod*);
-		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
-	}
-}
-void Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_OpenInst(Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* __this, uint8_t ___0_arg1, uint8_t ___1_arg2, uint32_t ___2_arg3, RuntimeObject* ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (uint8_t, uint8_t, uint32_t, RuntimeObject*, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-void Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_OpenStatic(Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* __this, uint8_t ___0_arg1, uint8_t ___1_arg2, uint32_t ___2_arg3, RuntimeObject* ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (uint8_t, uint8_t, uint32_t, RuntimeObject*, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4__ctor_m5DFFDE04477152A39586E1B8D3EFDEB8826BDD4F_gshared (Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
-{
-	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
-	__this->___method = ___1_method;
-	__this->___m_target = ___0_object;
-	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
-	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
-	__this->___method_code = (intptr_t)__this;
-	if (MethodIsStatic((RuntimeMethod*)___1_method))
-	{
-		bool isOpen = parameterCount == 4;
-		if (isOpen)
-			__this->___invoke_impl = (intptr_t)&Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_OpenStatic;
-		else
-			{
-				__this->___invoke_impl = __this->___method_ptr;
-				__this->___method_code = (intptr_t)__this->___m_target;
-			}
-	}
-	else
-	{
-		if (___0_object == NULL)
-			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
-		__this->___invoke_impl = __this->___method_ptr;
-		__this->___method_code = (intptr_t)__this->___m_target;
-	}
-	__this->___extra_arg = (intptr_t)&Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_Multicast;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4_Invoke_m4C8BD9402822763968C6A1152F01C0B4C4AAD052_gshared (Action_4_tAF03654D36BB5583B81CE45DE6B0572970010146* __this, uint8_t ___0_arg1, uint8_t ___1_arg2, uint32_t ___2_arg3, RuntimeObject* ___3_arg4, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, uint8_t, uint8_t, uint32_t, RuntimeObject*, const RuntimeMethod*);
-	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(__this->___method));
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-void Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_Multicast(Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* __this, int16_t ___0_arg1, RuntimeObject* ___1_arg2, uint8_t ___2_arg3, uint32_t ___3_arg4, const RuntimeMethod* method)
-{
-	il2cpp_array_size_t length = __this->___delegates->max_length;
-	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
-	for (il2cpp_array_size_t i = 0; i < length; i++)
-	{
-		Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* currentDelegate = reinterpret_cast<Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078*>(delegatesToInvoke[i]);
-		typedef void (*FunctionPointerType) (RuntimeObject*, int16_t, RuntimeObject*, uint8_t, uint32_t, const RuntimeMethod*);
-		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
-	}
-}
-void Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_OpenInst(Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* __this, int16_t ___0_arg1, RuntimeObject* ___1_arg2, uint8_t ___2_arg3, uint32_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (int16_t, RuntimeObject*, uint8_t, uint32_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-void Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_OpenStatic(Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* __this, int16_t ___0_arg1, RuntimeObject* ___1_arg2, uint8_t ___2_arg3, uint32_t ___3_arg4, const RuntimeMethod* method)
-{
-	typedef void (*FunctionPointerType) (int16_t, RuntimeObject*, uint8_t, uint32_t, const RuntimeMethod*);
-	((FunctionPointerType)__this->___method_ptr)(___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4__ctor_m1B9AC6C34B397737F8E060524C97E8196ACB20E1_gshared (Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
-{
-	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
-	__this->___method = ___1_method;
-	__this->___m_target = ___0_object;
-	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
-	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
-	__this->___method_code = (intptr_t)__this;
-	if (MethodIsStatic((RuntimeMethod*)___1_method))
-	{
-		bool isOpen = parameterCount == 4;
-		if (isOpen)
-			__this->___invoke_impl = (intptr_t)&Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_OpenStatic;
-		else
-			{
-				__this->___invoke_impl = __this->___method_ptr;
-				__this->___method_code = (intptr_t)__this->___m_target;
-			}
-	}
-	else
-	{
-		if (___0_object == NULL)
-			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
-		__this->___invoke_impl = __this->___method_ptr;
-		__this->___method_code = (intptr_t)__this->___m_target;
-	}
-	__this->___extra_arg = (intptr_t)&Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_Multicast;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_4_Invoke_m8A92F0E29AAC81D04ABA751BDE39376B21DC5177_gshared (Action_4_tC8DFBAB28295F91F2C8D7EC3FABD4BFFD12A9078* __this, int16_t ___0_arg1, RuntimeObject* ___1_arg2, uint8_t ___2_arg3, uint32_t ___3_arg4, const RuntimeMethod* method) 
-{
-	typedef void (*FunctionPointerType) (RuntimeObject*, int16_t, RuntimeObject*, uint8_t, uint32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
 #ifdef __clang__

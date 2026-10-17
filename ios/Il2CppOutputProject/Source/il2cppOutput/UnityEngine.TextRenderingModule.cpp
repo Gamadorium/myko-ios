@@ -2464,6 +2464,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Font_HasCharacter_mAB838A26F002CB5E4B4DB
 	bool icallRetVal = _il2cpp_icall_func(__this, ___0_c);
 	return icallRetVal;
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Font_RequestCharactersInTexture_m87509ABBEDF61305BA10B2DC65B565E57FF6DDD4 (Font_tC95270EA3198038970422D78B74A7F2E218A96B6* __this, String_t* ___0_characters, int32_t ___1_size, int32_t ___2_style, const RuntimeMethod* method) 
+{
+	typedef void (*Font_RequestCharactersInTexture_m87509ABBEDF61305BA10B2DC65B565E57FF6DDD4_ftn) (Font_tC95270EA3198038970422D78B74A7F2E218A96B6*, String_t*, int32_t, int32_t);
+	static Font_RequestCharactersInTexture_m87509ABBEDF61305BA10B2DC65B565E57FF6DDD4_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Font_RequestCharactersInTexture_m87509ABBEDF61305BA10B2DC65B565E57FF6DDD4_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Font::RequestCharactersInTexture(System.String,System.Int32,UnityEngine.FontStyle)");
+	_il2cpp_icall_func(__this, ___0_characters, ___1_size, ___2_style);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -1366,9 +1366,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Cloth_get_enabled();
 		Register_UnityEngine_Cloth_get_enabled();
 
+		//System.Void UnityEngine.Cloth::ClearTransformMotion()
+		void Register_UnityEngine_Cloth_ClearTransformMotion();
+		Register_UnityEngine_Cloth_ClearTransformMotion();
+
 		//System.Void UnityEngine.Cloth::set_bendingStiffness(System.Single)
 		void Register_UnityEngine_Cloth_set_bendingStiffness();
 		Register_UnityEngine_Cloth_set_bendingStiffness();
+
+		//System.Void UnityEngine.Cloth::set_capsuleColliders(UnityEngine.CapsuleCollider[])
+		void Register_UnityEngine_Cloth_set_capsuleColliders();
+		Register_UnityEngine_Cloth_set_capsuleColliders();
 
 		//System.Void UnityEngine.Cloth::set_coefficients(UnityEngine.ClothSkinningCoefficient[])
 		void Register_UnityEngine_Cloth_set_coefficients();
@@ -1386,6 +1394,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Cloth_set_externalAcceleration_Injected();
 		Register_UnityEngine_Cloth_set_externalAcceleration_Injected();
 
+		//System.Void UnityEngine.Cloth::set_friction(System.Single)
+		void Register_UnityEngine_Cloth_set_friction();
+		Register_UnityEngine_Cloth_set_friction();
+
 		//System.Void UnityEngine.Cloth::set_randomAcceleration_Injected(UnityEngine.Vector3&)
 		void Register_UnityEngine_Cloth_set_randomAcceleration_Injected();
 		Register_UnityEngine_Cloth_set_randomAcceleration_Injected();
@@ -1401,6 +1413,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Cloth::set_useGravity(System.Boolean)
 		void Register_UnityEngine_Cloth_set_useGravity();
 		Register_UnityEngine_Cloth_set_useGravity();
+
+		//System.Void UnityEngine.Cloth::set_worldAccelerationScale(System.Single)
+		void Register_UnityEngine_Cloth_set_worldAccelerationScale();
+		Register_UnityEngine_Cloth_set_worldAccelerationScale();
 
 		//System.Void UnityEngine.Cloth::set_worldVelocityScale(System.Single)
 		void Register_UnityEngine_Cloth_set_worldVelocityScale();
@@ -1897,6 +1913,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Font::get_fontSize()
 		void Register_UnityEngine_Font_get_fontSize();
 		Register_UnityEngine_Font_get_fontSize();
+
+		//System.Void UnityEngine.Font::RequestCharactersInTexture(System.String,System.Int32,UnityEngine.FontStyle)
+		void Register_UnityEngine_Font_RequestCharactersInTexture();
+		Register_UnityEngine_Font_RequestCharactersInTexture();
 
 		//UnityEngine.Material UnityEngine.Font::get_material()
 		void Register_UnityEngine_Font_get_material();

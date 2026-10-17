@@ -104,6 +104,7 @@ struct Action_1_t80490FAAC42AFC2A393B5800FF1E59FD309902C3;
 struct Action_1_t5CE5AA6DF797AD3264E1980B98ABECFAFB40295F;
 struct Action_1_tC3A21AC7414F8B4C209C22026620383D39377567;
 struct Action_1_t63507110770541BA8D43F0D63BBC33E7486F99C1;
+struct Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425;
 struct Action_1_tCA0808B86A50266FEAC7BEDBD205882E40078178;
 struct Action_1_t9688EC84FEEBAA92115091B8748CB75706822085;
 struct Action_1_tACCB2138A5CD80252E436CDAEF780C60206C7457;
@@ -475,6 +476,7 @@ struct TMP_SpriteAnimator_t2E0F016A61CA343E3222FF51E7CF0E53F9F256E4;
 struct TMP_SpriteAsset_t81F779E6F705CE190DC0D1F93A954CB8B1774B39;
 struct TMP_Style_tA9E5B1B35EBFE24EF980CEA03251B638282E120C;
 struct TMP_StyleSheet_t70C71699F5CB2D855C361DBB78A44C901236C859;
+struct TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9;
 struct TMP_TextElement_t262A55214F712D4274485ABE5676E5254B84D0A5;
 struct TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D;
 struct Terrain_t7F309492F67238DBFBC4566F47385B2A665CF667;
@@ -575,6 +577,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B9
 IL2CPP_EXTERN_C RuntimeClass* KoPazarGosterHud_tFF7BC54BCC65BCA5A0C043F3ECAC5CEE9AE0D8BB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPusStore_t55B63008DCB9A0F7AFA54DE77856C3E562B11056_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSlavePazarHud_t1F5AA9C2277AE9CCD5728A75698DFDB565B9C98F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoUiIcons_tB5EA8774549C65B4C99BFF533B133BED8EE8E86D_il2cpp_TypeInfo_var;
@@ -1412,6 +1415,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnChallenge;
 	Action_1_t1BE9FFD7ABE2F9A84A2AAC659087F565C1B12DDD* ___OnEventSchedule;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnStoreResult;
+	Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* ___OnStorePackageExchangeList;
 	Action_1_t32BC4852D3539E109FDE79548C9D0E6749E7121F* ___OnAllPointChange;
 	Action_3_t13C36FC47644D45AD9F766074A53331CF6C110A6* ___OnAllSkillPtChange;
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnNameChange;
@@ -3726,6 +3730,8 @@ struct KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0  : public MonoBehavio
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____moveTarget;
 	float ____moveSpeed;
 	float ____groundFixAt;
+	float ____pivotAboveFeet;
+	float ____pivotSampleAt;
 	bool ____moving;
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ____anim;
 	String_t* ____idleState;
@@ -4072,9 +4078,11 @@ struct UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3  : public Mono
 	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___ShowObjects;
 	int32_t ___upDownStatus;
 	bool ___ZoomUpdateStatus;
+	bool ___ZoomHeld;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___ZoomButtonStartPoint;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___ZoomButtonCurrentPos;
 	float ___CameraDistanceStart;
+	float ____zoomAtPress;
 };
 struct UIDragAndDropable_t87E8AE9D079BD780354EA9723F1A62F3B6F9FBFB  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -4827,6 +4835,9 @@ struct KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654_StaticFields
 {
 	KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654* ___U3CInstanceU3Ek__BackingField;
 	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___ExtraSlotPos;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___StartFanDeg;
+	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___ExtraFanDeg;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___LegacySkillPos;
 };
 struct KoItemTooltipUi_tE78B634F81A3CD99790FF5BCD48628F6FD770CBB_StaticFields
 {
@@ -6031,6 +6042,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KomPazarUtil_ItemName_m3DB10A71E6C1
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoItemDatabase_t21BF522807320381B8427B4C61709C28987522E3* KoItemDatabase_get_Instance_m072E5549BDA22F155C847F4422E6853970173B76_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* KoItemDatabase_Resolve_m69A531C26727AF319C92B407B1513A7A19C4ED2C (KoItemDatabase_t21BF522807320381B8427B4C61709C28987522E3* __this, uint32_t ___0_itemId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoItemResolved_get_Ok_mBE551396A6AE897E24A70C40EA3F5209C3E9D515 (KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoRexeTables_ToRichText_mE87531883E02D5BC4B3184020D1B1876F28DB731 (String_t* ___0_raw, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_Text_set_richText_mAB3D04F620E13F02117B34BBA2EF7BD30AAE6F0F (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarGosterUI_HideExtraTips_mCA2C4218D97D90F6303CC077F1642846CC99AABB (PazarGosterUI_t8775392F20AEAAFFFA0D9E5C62863B9597E70ACB* __this, const RuntimeMethod* method) ;
@@ -6233,6 +6246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_set_sprite_mC0C248340BA27AAEE56855
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* Image_get_sprite_mB2AA377708722E100574F6F75BC102513BB3BCB1_inline (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_set_preserveAspect_mF465AFD1313C0F002B37C8B86C75F98CB72A4098 (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Text_set_supportRichText_mB4DB141150AEBCCADEFFF4EC7A799F85FD075265 (Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PUS_RefreshBuyTotals_m82CA4947D2D708A66257D5DDBEEF202F89CF2E6D (PUS_tFEED8EFB2F2081069B3F6EF00F4DD87FA3C71972* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPusHud_Hide_mE8FFB5894458BA4ED91DB1ABE45ADFF3AE8951C3 (const RuntimeMethod* method) ;
 inline void Dictionary_2__ctor_m85AB837A51705B9DF96923F388345B9461B9882B (Dictionary_2_t0B15A60B00EC883D4249611C6C641C7BED5A71CE* __this, const RuntimeMethod* method)
@@ -6632,9 +6646,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_UpCamera_mD922C77FCF044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_DownCamera_mE1F03E9C25F7D0FFB510B601F3CD976350D0DB86 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_RotateCamera_m6E16D5EA4A66EF27BF10F0757498FDB50F40C3A6 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_ResetCamera_m580D78B96F4BB375DA6C7CD87DF72DAE4C2C4DC3 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_ZoomUpdate_mCFC082186E76A645D292FFD578C641640709F457 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_startPoint, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_BeginZoomHold_mB8183512587DF037EC6A559B82BAC9B0D7C8CF68 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControlButton_EndHold_m7AAE3E0F5640A2D69BD4C66B466C4D0CE6D56DB7 (UICameraControlButton_tB03DEB11370CD7CA59BA08287F7C09934D0D47B5* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_ApplyZoomNow_mA71B832AC463DD5168ADDB493470D2A5B1D9E706 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_EndZoomHold_mD2BA828B5B4CB8B917B878FEF43F21276611112D (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 inline UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* Component_GetComponentInParent_TisUICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3_m12C538C3D9933C1014D99121FF2CBECCD343BD2F (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
 	return ((  UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentInParent_TisRuntimeObject_m6746D6BB99912B1B509746C993906492F86CD119_gshared)(__this, method);
@@ -6644,10 +6658,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_HideObjectsVoid_m467DA1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* UICameraControls_ResolveCamera_mD04C7DB34CEF546B52B0426447B7C3CA9C910CAF (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoMobileTouchControls_LockCameraPitch_m5E9A1BB3A8970290AC388CEA8CE4FBAE5AF1F351 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_AddPitch_m8B9FED66130E45AD707A6027BB5DDBCF51316899 (CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* __this, float ___0_delta, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_AddDistance_mA171C76E1143E58829813BE1086CA040E0D37C42 (CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* __this, float ___0_delta, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetMouseButton_m4995DD4A2D4F916565C1B1B5AAF7DF17C126B3EA (int32_t ___0_button, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Touch_t03E51455ED508492B3F278903A0114FA0E87B417 Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1 (int32_t ___0_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A (Touch_t03E51455ED508492B3F278903A0114FA0E87B417* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_ApplyZoomNow_mA71B832AC463DD5168ADDB493470D2A5B1D9E706 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_LookBackward_mD9EE930985FE64D1C8CED9D91AB99131A8E7E93F (CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_ResetCamera_mB7E582CDDF341FC94CA3A3F615297B07C2CF9D73 (CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_SetActive_m438C88BD06BB7CC405238827E06E080AF14D38ED (GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___0_list, bool ___1_on, const RuntimeMethod* method) ;
@@ -7951,6 +7967,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazardakiItemTooltip_showMyToolTip_mBB99
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoItemDatabase_t21BF522807320381B8427B4C61709C28987522E3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KomPazarUtil_tBD61C8C6DF6FB6969361023C685CF12E17AE6A8E_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
@@ -7958,14 +7975,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazardakiItemTooltip_showMyToolTip_mBB99
 		s_Il2CppMethodInitialized = true;
 	}
 	KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* V_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B8_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B6_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B7_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B9_0 = NULL;
+	String_t* V_1 = NULL;
 	String_t* G_B11_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B11_1 = NULL;
 	String_t* G_B10_0 = NULL;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* G_B10_1 = NULL;
 	{
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___tooltipPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -8011,7 +8023,7 @@ IL_0039:
 		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_9)
 		{
-			goto IL_008c;
+			goto IL_009f;
 		}
 	}
 	{
@@ -8023,96 +8035,94 @@ IL_0039:
 		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_12;
 		L_12 = KoItemDatabase_Resolve_m69A531C26727AF319C92B407B1513A7A19C4ED2C(L_10, L_11, NULL);
 		V_0 = L_12;
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_13 = __this->___tooltipPanelText;
+		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_13 = V_0;
+		if (!L_13)
+		{
+			goto IL_0066;
+		}
+	}
+	{
 		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_14 = V_0;
-		if (!L_14)
+		NullCheck(L_14);
+		bool L_15;
+		L_15 = KoItemResolved_get_Ok_mBE551396A6AE897E24A70C40EA3F5209C3E9D515(L_14, NULL);
+		if (!L_15)
 		{
-			G_B8_0 = L_13;
-			goto IL_006c;
+			goto IL_0066;
 		}
-		G_B6_0 = L_13;
 	}
 	{
-		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_15 = V_0;
-		NullCheck(L_15);
-		bool L_16;
-		L_16 = KoItemResolved_get_Ok_mBE551396A6AE897E24A70C40EA3F5209C3E9D515(L_15, NULL);
-		if (!L_16)
+		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_16 = V_0;
+		NullCheck(L_16);
+		KoItemBasic_tEB616B4683834097783EC6E55AC019B0935205F2* L_17 = L_16->___Basic;
+		if (L_17)
 		{
-			G_B8_0 = G_B6_0;
-			goto IL_006c;
+			goto IL_006d;
 		}
-		G_B7_0 = G_B6_0;
-	}
-	{
-		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_17 = V_0;
-		NullCheck(L_17);
-		KoItemBasic_tEB616B4683834097783EC6E55AC019B0935205F2* L_18 = L_17->___Basic;
-		if (L_18)
-		{
-			G_B9_0 = G_B7_0;
-			goto IL_0073;
-		}
-		G_B8_0 = G_B7_0;
 	}
 
-IL_006c:
+IL_0066:
 	{
-		String_t* L_19 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B11_0 = L_19;
-		G_B11_1 = G_B8_0;
-		goto IL_0087;
+		String_t* L_18 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B11_0 = L_18;
+		goto IL_0081;
 	}
 
-IL_0073:
+IL_006d:
 	{
-		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_20 = V_0;
+		KoItemResolved_t403A399AD9EBB3D0AE20D642527E6BBF2170B63F* L_19 = V_0;
+		NullCheck(L_19);
+		KoItemBasic_tEB616B4683834097783EC6E55AC019B0935205F2* L_20 = L_19->___Basic;
 		NullCheck(L_20);
-		KoItemBasic_tEB616B4683834097783EC6E55AC019B0935205F2* L_21 = L_20->___Basic;
-		NullCheck(L_21);
-		String_t* L_22 = L_21->___SzRemark;
-		String_t* L_23 = L_22;
-		if (L_23)
+		String_t* L_21 = L_20->___SzRemark;
+		String_t* L_22 = L_21;
+		if (L_22)
 		{
-			G_B11_0 = L_23;
-			G_B11_1 = G_B9_0;
-			goto IL_0087;
+			G_B11_0 = L_22;
+			goto IL_0081;
 		}
-		G_B10_0 = L_23;
-		G_B10_1 = G_B9_0;
+		G_B10_0 = L_22;
 	}
 	{
-		String_t* L_24 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B11_0 = L_24;
-		G_B11_1 = G_B10_1;
+		String_t* L_23 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B11_0 = L_23;
 	}
 
-IL_0087:
+IL_0081:
 	{
-		NullCheck(G_B11_1);
-		VirtualActionInvoker1< String_t* >::Invoke(66, G_B11_1, G_B11_0);
-	}
-
-IL_008c:
-	{
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_25 = __this->___fiyatTXT;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_26;
-		L_26 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_25, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_26)
-		{
-			goto IL_00b1;
-		}
-	}
-	{
-		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_27 = __this->___fiyatTXT;
-		String_t* L_28;
-		L_28 = UInt32_ToString_m6A665131BC9DC1F70D66117712027604B16EB6C6((&___1_fiyat), _stringLiteralA16A5A766620C92E70C8F0C13BC707B1DD24BB40, NULL);
+		V_1 = G_B11_0;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_24 = __this->___tooltipPanelText;
+		String_t* L_25 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var);
+		String_t* L_26;
+		L_26 = KoRexeTables_ToRichText_mE87531883E02D5BC4B3184020D1B1876F28DB731(L_25, NULL);
+		NullCheck(L_24);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_24, L_26);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_27 = __this->___tooltipPanelText;
 		NullCheck(L_27);
-		VirtualActionInvoker1< String_t* >::Invoke(75, L_27, L_28);
+		TMP_Text_set_richText_mAB3D04F620E13F02117B34BBA2EF7BD30AAE6F0F(L_27, (bool)1, NULL);
 	}
 
-IL_00b1:
+IL_009f:
+	{
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_28 = __this->___fiyatTXT;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_29;
+		L_29 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_28, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_29)
+		{
+			goto IL_00c4;
+		}
+	}
+	{
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_30 = __this->___fiyatTXT;
+		String_t* L_31;
+		L_31 = UInt32_ToString_m6A665131BC9DC1F70D66117712027604B16EB6C6((&___1_fiyat), _stringLiteralA16A5A766620C92E70C8F0C13BC707B1DD24BB40, NULL);
+		NullCheck(L_30);
+		VirtualActionInvoker1< String_t* >::Invoke(75, L_30, L_31);
+	}
+
+IL_00c4:
 	{
 		return;
 	}
@@ -12927,6 +12937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PUS_ItemSatinAlShow_mD6B07ABE69990A5E06F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponentInChildren_TisPusSatinAl_t03DD2A06D9E19E27A055893B82C24CECAD0F9802_m60C6A7112C14A79AD33E6D66BD5DC13479602E81_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisPusSatinAl_t03DD2A06D9E19E27A055893B82C24CECAD0F9802_m8C108675F923BFD37853B8BC0F23A7F6B6EFC18E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPusStore_t55B63008DCB9A0F7AFA54DE77856C3E562B11056_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m627AA0BBB4D2666791CDC73A5AB320ECA94B7A70_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m04FD284BEDAE90B68D7E7BC5423D5BC11484F2C8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13264,7 +13275,7 @@ IL_01c2:
 		L_71 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_70, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_71)
 		{
-			goto IL_01e5;
+			goto IL_01f6;
 		}
 	}
 	{
@@ -13288,11 +13299,17 @@ IL_01c2:
 
 IL_01e0:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var);
+		String_t* L_76;
+		L_76 = KoRexeTables_ToRichText_mE87531883E02D5BC4B3184020D1B1876F28DB731(G_B31_0, NULL);
 		NullCheck(G_B31_1);
-		VirtualActionInvoker1< String_t* >::Invoke(75, G_B31_1, G_B31_0);
+		VirtualActionInvoker1< String_t* >::Invoke(75, G_B31_1, L_76);
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_77 = __this->___satinAlAciklama;
+		NullCheck(L_77);
+		Text_set_supportRichText_mB4DB141150AEBCCADEFFF4EC7A799F85FD075265(L_77, (bool)1, NULL);
 	}
 
-IL_01e5:
+IL_01f6:
 	{
 		PUS_RefreshBuyTotals_m82CA4947D2D708A66257D5DDBEEF202F89CF2E6D(__this, NULL);
 		return;
@@ -24432,12 +24449,8 @@ IL_0052:
 IL_0059:
 	{
 		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_9 = V_0;
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_10 = ___0_eventData;
-		NullCheck(L_10);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11;
-		L_11 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_10, NULL);
 		NullCheck(L_9);
-		UICameraControls_ZoomUpdate_mCFC082186E76A645D292FFD578C641640709F457(L_9, L_11, NULL);
+		UICameraControls_BeginZoomHold_mB8183512587DF037EC6A559B82BAC9B0D7C8CF68(L_9, NULL);
 		return;
 	}
 }
@@ -24450,96 +24463,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControlButton_OnPointerUp_m230C4
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControlButton_OnBeginDrag_m516E9BB3FD140E76C8E5802F342D88A95D5C5263 (UICameraControlButton_tB03DEB11370CD7CA59BA08287F7C09934D0D47B5* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
-	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* G_B4_0 = NULL;
-	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* G_B3_0 = NULL;
 	{
-		int32_t L_0 = __this->___type;
-		if ((((int32_t)L_0) == ((int32_t)4)))
-		{
-			goto IL_000a;
-		}
-	}
-	{
-		return;
-	}
-
-IL_000a:
-	{
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_1;
-		L_1 = UICameraControlButton_Resolve_mAA3DBCD4D794A789A7C52F0BBF7D0596C6B60DDF(__this, NULL);
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_2 = L_1;
-		if (L_2)
-		{
-			G_B4_0 = L_2;
-			goto IL_0015;
-		}
-		G_B3_0 = L_2;
-	}
-	{
-		return;
-	}
-
-IL_0015:
-	{
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_3 = ___0_eventData;
-		NullCheck(L_3);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
-		L_4 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_3, NULL);
-		NullCheck(G_B4_0);
-		UICameraControls_ZoomUpdate_mCFC082186E76A645D292FFD578C641640709F457(G_B4_0, L_4, NULL);
 		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControlButton_OnDrag_mA988C0FBB54BB6568DB2D2CB29C2CF974802F33A (UICameraControlButton_tB03DEB11370CD7CA59BA08287F7C09934D0D47B5* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* V_0 = NULL;
-	{
-		int32_t L_0 = __this->___type;
-		if ((((int32_t)L_0) == ((int32_t)4)))
-		{
-			goto IL_000a;
-		}
-	}
-	{
-		return;
-	}
-
-IL_000a:
-	{
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_1;
-		L_1 = UICameraControlButton_Resolve_mAA3DBCD4D794A789A7C52F0BBF7D0596C6B60DDF(__this, NULL);
-		V_0 = L_1;
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_2 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_3)
-		{
-			goto IL_001b;
-		}
-	}
-	{
-		return;
-	}
-
-IL_001b:
-	{
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_4 = V_0;
-		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_eventData;
-		NullCheck(L_5);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6;
-		L_6 = PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline(L_5, NULL);
-		NullCheck(L_4);
-		L_4->___ZoomButtonCurrentPos = L_6;
-		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_7 = V_0;
-		NullCheck(L_7);
-		UICameraControls_ApplyZoomNow_mA71B832AC463DD5168ADDB493470D2A5B1D9E706(L_7, NULL);
 		return;
 	}
 }
@@ -24604,16 +24534,16 @@ IL_0029:
 		int32_t L_6 = __this->___type;
 		if ((!(((uint32_t)L_6) == ((uint32_t)4))))
 		{
-			goto IL_0039;
+			goto IL_0038;
 		}
 	}
 	{
 		UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* L_7 = V_0;
 		NullCheck(L_7);
-		L_7->___ZoomUpdateStatus = (bool)0;
+		UICameraControls_EndZoomHold_mD2BA828B5B4CB8B917B878FEF43F21276611112D(L_7, NULL);
 	}
 
-IL_0039:
+IL_0038:
 	{
 		return;
 	}
@@ -24775,26 +24705,43 @@ IL_0064:
 
 IL_006b:
 	{
-		bool L_10 = __this->___ZoomUpdateStatus;
+		bool L_10 = __this->___ZoomHeld;
 		if (!L_10)
 		{
-			goto IL_00be;
-		}
-	}
-	{
-		bool L_11;
-		L_11 = Input_GetMouseButton_m4995DD4A2D4F916565C1B1B5AAF7DF17C126B3EA(0, NULL);
-		if (L_11)
-		{
 			goto IL_008a;
 		}
 	}
 	{
-		int32_t L_12;
-		L_12 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
-		if (L_12)
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_11 = __this->___cameraMMO;
+		float L_12;
+		L_12 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
+		NullCheck(L_11);
+		CameraMMO_AddDistance_mA171C76E1143E58829813BE1086CA040E0D37C42(L_11, ((float)il2cpp_codegen_multiply((-14.0f), L_12)), NULL);
+		return;
+	}
+
+IL_008a:
+	{
+		bool L_13 = __this->___ZoomUpdateStatus;
+		if (!L_13)
 		{
-			goto IL_008a;
+			goto IL_00dd;
+		}
+	}
+	{
+		bool L_14;
+		L_14 = Input_GetMouseButton_m4995DD4A2D4F916565C1B1B5AAF7DF17C126B3EA(0, NULL);
+		if (L_14)
+		{
+			goto IL_00a9;
+		}
+	}
+	{
+		int32_t L_15;
+		L_15 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
+		if (L_15)
+		{
+			goto IL_00a9;
 		}
 	}
 	{
@@ -24802,40 +24749,154 @@ IL_006b:
 		return;
 	}
 
-IL_008a:
+IL_00a9:
 	{
-		int32_t L_13;
-		L_13 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
-		if ((((int32_t)L_13) <= ((int32_t)0)))
+		int32_t L_16;
+		L_16 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
+		if ((((int32_t)L_16) <= ((int32_t)0)))
 		{
-			goto IL_00a8;
+			goto IL_00c7;
 		}
 	}
 	{
-		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_14;
-		L_14 = Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1(0, NULL);
-		V_0 = L_14;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15;
-		L_15 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_0), NULL);
-		__this->___ZoomButtonCurrentPos = L_15;
-		goto IL_00b8;
+		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_17;
+		L_17 = Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1(0, NULL);
+		V_0 = L_17;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_18;
+		L_18 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_0), NULL);
+		__this->___ZoomButtonCurrentPos = L_18;
+		goto IL_00d7;
 	}
 
-IL_00a8:
+IL_00c7:
 	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		L_16 = Input_get_mousePosition_mFF21FBD2647DAE2A23BD4C45571CA95D05A0A42C(NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17;
-		L_17 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_16, NULL);
-		__this->___ZoomButtonCurrentPos = L_17;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
+		L_19 = Input_get_mousePosition_mFF21FBD2647DAE2A23BD4C45571CA95D05A0A42C(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_20;
+		L_20 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_19, NULL);
+		__this->___ZoomButtonCurrentPos = L_20;
 	}
 
-IL_00b8:
+IL_00d7:
 	{
 		UICameraControls_ApplyZoomNow_mA71B832AC463DD5168ADDB493470D2A5B1D9E706(__this, NULL);
 	}
 
-IL_00be:
+IL_00dd:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_BeginZoomHold_mB8183512587DF037EC6A559B82BAC9B0D7C8CF68 (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* G_B2_0 = NULL;
+	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* G_B1_0 = NULL;
+	float G_B3_0 = 0.0f;
+	UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* G_B3_1 = NULL;
+	{
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_0;
+		L_0 = UICameraControls_ResolveCamera_mD04C7DB34CEF546B52B0426447B7C3CA9C910CAF(__this, NULL);
+		__this->___cameraMMO = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___cameraMMO), (void*)L_0);
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_1 = __this->___cameraMMO;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_2)
+		{
+			G_B2_0 = __this;
+			goto IL_0022;
+		}
+		G_B1_0 = __this;
+	}
+	{
+		G_B3_0 = (12.0f);
+		G_B3_1 = G_B1_0;
+		goto IL_002d;
+	}
+
+IL_0022:
+	{
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_3 = __this->___cameraMMO;
+		NullCheck(L_3);
+		float L_4 = L_3->___distance;
+		G_B3_0 = L_4;
+		G_B3_1 = G_B2_0;
+	}
+
+IL_002d:
+	{
+		NullCheck(G_B3_1);
+		G_B3_1->____zoomAtPress = G_B3_0;
+		__this->___ZoomHeld = (bool)1;
+		__this->___ZoomUpdateStatus = (bool)0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_EndZoomHold_mD2BA828B5B4CB8B917B878FEF43F21276611112D (UICameraControls_t88F19FCAFB0E40AB7C193A547D91F8A5F1AE15A3* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		bool L_0 = __this->___ZoomHeld;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0009:
+	{
+		__this->___ZoomHeld = (bool)0;
+		__this->___ZoomUpdateStatus = (bool)0;
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_1;
+		L_1 = UICameraControls_ResolveCamera_mD04C7DB34CEF546B52B0426447B7C3CA9C910CAF(__this, NULL);
+		__this->___cameraMMO = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___cameraMMO), (void*)L_1);
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_2 = __this->___cameraMMO;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_3)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0032:
+	{
+		float L_4 = __this->____zoomAtPress;
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_5 = __this->___cameraMMO;
+		NullCheck(L_5);
+		float L_6 = L_5->___distance;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_4, L_6))) < ((float)(1.60000002f)))))
+		{
+			goto IL_005b;
+		}
+	}
+	{
+		CameraMMO_tF906C0753F8831D86B8455BEC9411DB13D371A6D* L_7 = __this->___cameraMMO;
+		NullCheck(L_7);
+		CameraMMO_AddDistance_mA171C76E1143E58829813BE1086CA040E0D37C42(L_7, (-3.4000001f), NULL);
+	}
+
+IL_005b:
 	{
 		return;
 	}
@@ -25038,6 +25099,7 @@ IL_002d:
 IL_0032:
 	{
 		__this->___upDownStatus = 0;
+		__this->___ZoomHeld = (bool)0;
 		__this->___ZoomUpdateStatus = (bool)0;
 		return;
 	}
@@ -25060,6 +25122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UICameraControls_HideObjectsVoid_m467DA1
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___HideObjects;
 		UICameraControls_SetActive_m438C88BD06BB7CC405238827E06E080AF14D38ED(L_1, (bool)1, NULL);
 		__this->___upDownStatus = 0;
+		__this->___ZoomHeld = (bool)0;
 		__this->___ZoomUpdateStatus = (bool)0;
 		return;
 	}

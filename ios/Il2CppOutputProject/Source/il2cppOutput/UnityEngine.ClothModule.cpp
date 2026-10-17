@@ -11,12 +11,15 @@
 
 
 
+struct CapsuleColliderU5BU5D_t812EDDF9927ACFDDA87D5D99C525FCDDDCB4D1BC;
 struct ClothSkinningCoefficientU5BU5D_t50CC51EBDF127E5A0F67CCEEFE4CF620D902D1AF;
+struct CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808;
 struct Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948;
 struct String_t;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 
 
+struct CapsuleColliderU5BU5D_t812EDDF9927ACFDDA87D5D99C525FCDDDCB4D1BC;
 struct ClothSkinningCoefficientU5BU5D_t50CC51EBDF127E5A0F67CCEEFE4CF620D902D1AF;
 
 IL2CPP_EXTERN_C_BEGIN
@@ -92,6 +95,12 @@ struct Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948  : public Component_t39FB
 	float ___U3CuseContinuousCollisionU3Ek__BackingField;
 	bool ___U3CselfCollisionU3Ek__BackingField;
 };
+struct Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808  : public Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76
+{
+};
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
 {
 	String_t* ___TrueString;
@@ -145,6 +154,40 @@ struct ClothSkinningCoefficientU5BU5D_t50CC51EBDF127E5A0F67CCEEFE4CF620D902D1AF 
 		m_Items[index] = value;
 	}
 };
+struct CapsuleColliderU5BU5D_t812EDDF9927ACFDDA87D5D99C525FCDDDCB4D1BC  : public RuntimeArray
+{
+	ALIGN_FIELD (8) CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* m_Items[1];
+
+	inline CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 
 
 
@@ -177,6 +220,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_coefficients_m3F62405E90C802A2
 	static Cloth_set_coefficients_m3F62405E90C802A2B9761A4E131CD5C8412E029A_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Cloth_set_coefficients_m3F62405E90C802A2B9761A4E131CD5C8412E029A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_coefficients(UnityEngine.ClothSkinningCoefficient[])");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_capsuleColliders_m3235BE8A0E6B9108D6A8A3F7D11991571562D83D (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, CapsuleColliderU5BU5D_t812EDDF9927ACFDDA87D5D99C525FCDDDCB4D1BC* ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Cloth_set_capsuleColliders_m3235BE8A0E6B9108D6A8A3F7D11991571562D83D_ftn) (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948*, CapsuleColliderU5BU5D_t812EDDF9927ACFDDA87D5D99C525FCDDDCB4D1BC*);
+	static Cloth_set_capsuleColliders_m3235BE8A0E6B9108D6A8A3F7D11991571562D83D_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Cloth_set_capsuleColliders_m3235BE8A0E6B9108D6A8A3F7D11991571562D83D_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_capsuleColliders(UnityEngine.CapsuleCollider[])");
 	_il2cpp_icall_func(__this, ___0_value);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_sleepThreshold_m4151FE84347318B1CCF6E05D5D2970091DBB7034 (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, float ___0_value, const RuntimeMethod* method) 
@@ -250,6 +301,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_enabled_m314D18DBB1943E9984694
 	_il2cpp_icall_func = (Cloth_set_enabled_m314D18DBB1943E9984694DBAD2535EFDA393B3DB_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_enabled(System.Boolean)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_friction_m176B626212006C70AB17F2A25074356DD43C2F27 (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Cloth_set_friction_m176B626212006C70AB17F2A25074356DD43C2F27_ftn) (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948*, float);
+	static Cloth_set_friction_m176B626212006C70AB17F2A25074356DD43C2F27_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Cloth_set_friction_m176B626212006C70AB17F2A25074356DD43C2F27_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_friction(System.Single)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_worldVelocityScale_m560E8BACD096D26085410D5CBA2EA65E7E995108 (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	typedef void (*Cloth_set_worldVelocityScale_m560E8BACD096D26085410D5CBA2EA65E7E995108_ftn) (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948*, float);
@@ -257,6 +316,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_worldVelocityScale_m560E8BACD0
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Cloth_set_worldVelocityScale_m560E8BACD096D26085410D5CBA2EA65E7E995108_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_worldVelocityScale(System.Single)");
 	_il2cpp_icall_func(__this, ___0_value);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_worldAccelerationScale_m9191999C9886FECEB8C89E01D95E9E309D60E984 (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*Cloth_set_worldAccelerationScale_m9191999C9886FECEB8C89E01D95E9E309D60E984_ftn) (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948*, float);
+	static Cloth_set_worldAccelerationScale_m9191999C9886FECEB8C89E01D95E9E309D60E984_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Cloth_set_worldAccelerationScale_m9191999C9886FECEB8C89E01D95E9E309D60E984_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::set_worldAccelerationScale(System.Single)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_ClearTransformMotion_m753025BD5BC096D05442CD608B7A92E5F50C5EAB (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, const RuntimeMethod* method) 
+{
+	typedef void (*Cloth_ClearTransformMotion_m753025BD5BC096D05442CD608B7A92E5F50C5EAB_ftn) (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948*);
+	static Cloth_ClearTransformMotion_m753025BD5BC096D05442CD608B7A92E5F50C5EAB_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Cloth_ClearTransformMotion_m753025BD5BC096D05442CD608B7A92E5F50C5EAB_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Cloth::ClearTransformMotion()");
+	_il2cpp_icall_func(__this);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Cloth_set_externalAcceleration_Injected_m7D6915CC37E94AA29764A5B02BC19D27D41998AD (Cloth_t42A539800D474B2BBC00D5847BCE3D46B0850948* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
 {
