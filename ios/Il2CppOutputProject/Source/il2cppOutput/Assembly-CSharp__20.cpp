@@ -1090,6 +1090,10 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_3_t15B37496C2CB3D3A55E4B23E7ED0C817EB8A5136* ___OnBuyingMerchantBrought;
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnMerchantOfficialFail;
 	List_1_tC93418EEBDF534A484DB56D2C8B5ED16402EC652* ____merchantSearch;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ____killParts;
+	int32_t ____upgradeEchoId;
+	String_t* ____upgradeEchoName;
+	float ____upgradeEchoUntil;
 	Action_3_t36F385A3E3FAA1ED9A9E7BAFF96348B54C59FEB1* ___OnKnightsInviteReq;
 	uint16_t ___U3CConcurrentUsersU3Ek__BackingField;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnConcurrentUsers;
@@ -1420,6 +1424,11 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	uint32_t ___Channel;
 	uint16_t ___ServerIndex;
 	uint8_t ___Authority;
+	int16_t ___RivalSocket;
+	String_t* ___RivalName;
+	uint16_t ___RivalClanId;
+	uint8_t ___AngerGauge;
+	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Died;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Revived;
@@ -2556,6 +2565,9 @@ struct KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6  : public MonoBeha
 	float ____lastHotkeySaveAt;
 	String_t* ____liveCharName;
 	bool ____characterSelected;
+	bool ____explicitReturnToSelect;
+	bool ____pendingSessionRestore;
+	String_t* ____restoreCharName;
 	bool ____pendingGameDisconnectUi;
 	bool ___U3CSuppressNextDisconnectUiU3Ek__BackingField;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___OnStatus;

@@ -257,6 +257,7 @@ struct TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 struct UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F;
 struct UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83;
+struct UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA;
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
 struct AllianceClanU5BU5D_t2AE2CB656BA52C7CD927FDB4E4DC133C82B4573B;
@@ -473,6 +474,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoKnightsState_tDBEB35618AE9A137F12AA66E4580714331
 IL2CPP_EXTERN_C RuntimeClass* KoLoadingOverlay_t76B2C564C9E08EA2017D2CB7EE51813D84531554_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMerchantRegistry_tE5D8CA6411CC593027F201ECB2C4439F59B7A40B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoNoticeColors_t667632BAF44CCC8B6E512999FE840C9D94C35FAA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNoticeTable_t750993652C762235992517DBA593A8033E7C4729_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPack_t2221576D497529D3669E782E54866F96B2665B13_il2cpp_TypeInfo_var;
@@ -1244,6 +1246,10 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_3_t15B37496C2CB3D3A55E4B23E7ED0C817EB8A5136* ___OnBuyingMerchantBrought;
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnMerchantOfficialFail;
 	List_1_tC93418EEBDF534A484DB56D2C8B5ED16402EC652* ____merchantSearch;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ____killParts;
+	int32_t ____upgradeEchoId;
+	String_t* ____upgradeEchoName;
+	float ____upgradeEchoUntil;
 	Action_3_t36F385A3E3FAA1ED9A9E7BAFF96348B54C59FEB1* ___OnKnightsInviteReq;
 	uint16_t ___U3CConcurrentUsersU3Ek__BackingField;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnConcurrentUsers;
@@ -1442,6 +1448,11 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	uint32_t ___Channel;
 	uint16_t ___ServerIndex;
 	uint8_t ___Authority;
+	int16_t ___RivalSocket;
+	String_t* ___RivalName;
+	uint16_t ___RivalClanId;
+	uint8_t ___AngerGauge;
+	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Died;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Revived;
@@ -2823,6 +2834,9 @@ struct KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6  : public MonoBeha
 	float ____lastHotkeySaveAt;
 	String_t* ____liveCharName;
 	bool ____characterSelected;
+	bool ____explicitReturnToSelect;
+	bool ____pendingSessionRestore;
+	String_t* ____restoreCharName;
 	bool ____pendingGameDisconnectUi;
 	bool ___U3CSuppressNextDisconnectUiU3Ek__BackingField;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___OnStatus;
@@ -2857,6 +2871,7 @@ struct KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117  : public Mon
 	KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* ____stashedSelectMsg;
 	uint32_t ____pendingTradeGroup;
 	bool ____pendingTradeRepair;
+	UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ____npcSellPrices;
 	int16_t ____activeNpcSid;
 	int32_t ____npcTalkGen;
 	int32_t ____acceptedTradeGen;
@@ -4448,6 +4463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoChatHud_StripRich_mB00A31834D2C82
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_IndexOf_m490810CB7ADA9230AC0F8D78E213A8EFED129F55 (String_t* __this, String_t* ___0_value, int32_t ___1_comparisonType, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Substring_mB1D94F47935D22E130FF2C01DBB6A4135FBB76CE (String_t* __this, int32_t ___0_startIndex, int32_t ___1_length, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChatHud_SelectWhisperTarget_m39FC18DB14FED5A215C914E94337A4F37918601B (KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2* __this, String_t* ___0_name, String_t* ___1_firstMessage, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoNoticeColors_Unwrap_m0DE3427EED059F3425DE8877511F7D9E07BA7DBC (String_t* ___0_text, bool* ___1_rich, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ColorUtility_ToHtmlStringRGB_m50D59301FF2736B78C95C1FD5619D429358B7433 (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_color, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoChatHud_Escape_m7FD094D27A937C2525F1003C08A1A88AFEDEBFC9 (String_t* ___0_s, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_values, const RuntimeMethod* method) ;
@@ -9705,6 +9721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChatHud_AppendLogLine_mE7F2CA32A8FE201
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoNoticeColors_t667632BAF44CCC8B6E512999FE840C9D94C35FAA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_Dequeue_mD1CC66D4AA0E4AA615FBD01B897BCB42EE89E9DB_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Queue_1_Enqueue_mE91EF674187E035F117B16FDF3B5F0815BD67832_RuntimeMethod_var);
@@ -9716,7 +9733,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChatHud_AppendLogLine_mE7F2CA32A8FE201
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	String_t* V_1 = NULL;
+	bool V_1 = false;
+	String_t* V_2 = NULL;
+	String_t* V_3 = NULL;
+	int32_t G_B5_0 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_1 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_2 = NULL;
+	int32_t G_B4_0 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_1 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
+	String_t* G_B6_0 = NULL;
+	int32_t G_B6_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
 	{
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->____logsText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -9744,58 +9773,94 @@ IL_0016:
 
 IL_0017:
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = ___1_color;
+		String_t* L_4 = ___0_text;
+		il2cpp_codegen_runtime_class_init_inline(KoNoticeColors_t667632BAF44CCC8B6E512999FE840C9D94C35FAA_il2cpp_TypeInfo_var);
 		String_t* L_5;
-		L_5 = ColorUtility_ToHtmlStringRGB_m50D59301FF2736B78C95C1FD5619D429358B7433(L_4, NULL);
+		L_5 = KoNoticeColors_Unwrap_m0DE3427EED059F3425DE8877511F7D9E07BA7DBC(L_4, (&V_1), NULL);
 		V_0 = L_5;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
-		NullCheck(L_7);
-		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral9E27E42993FA8B5B3DE893DAD1F70F3DFC0BCA2B);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = L_7;
-		String_t* L_9 = V_0;
-		NullCheck(L_8);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_9);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_8;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ___1_color;
+		String_t* L_7;
+		L_7 = ColorUtility_ToHtmlStringRGB_m50D59301FF2736B78C95C1FD5619D429358B7433(L_6, NULL);
+		V_2 = L_7;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = L_8;
+		NullCheck(L_9);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral9E27E42993FA8B5B3DE893DAD1F70F3DFC0BCA2B);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
+		String_t* L_11 = V_2;
 		NullCheck(L_10);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralEF8AE9E6CBCFDABA932FBEB4C85964F450F724F5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
-		String_t* L_12 = ___0_text;
-		il2cpp_codegen_runtime_class_init_inline(KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_il2cpp_TypeInfo_var);
-		String_t* L_13;
-		L_13 = KoChatHud_Escape_m7FD094D27A937C2525F1003C08A1A88AFEDEBFC9(L_12, NULL);
-		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_13);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_11;
-		NullCheck(L_14);
-		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-		String_t* L_15;
-		L_15 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_14, NULL);
-		V_1 = L_15;
-		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_16 = __this->____msgOutputLines;
-		String_t* L_17 = V_1;
-		NullCheck(L_16);
-		Queue_1_Enqueue_mE91EF674187E035F117B16FDF3B5F0815BD67832(L_16, L_17, Queue_1_Enqueue_mE91EF674187E035F117B16FDF3B5F0815BD67832_RuntimeMethod_var);
-		goto IL_0069;
-	}
-
-IL_005d:
-	{
-		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_18 = __this->____msgOutputLines;
-		NullCheck(L_18);
-		String_t* L_19;
-		L_19 = Queue_1_Dequeue_mD1CC66D4AA0E4AA615FBD01B897BCB42EE89E9DB(L_18, Queue_1_Dequeue_mD1CC66D4AA0E4AA615FBD01B897BCB42EE89E9DB_RuntimeMethod_var);
-	}
-
-IL_0069:
-	{
-		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_20 = __this->____msgOutputLines;
-		NullCheck(L_20);
-		int32_t L_21;
-		L_21 = Queue_1_get_Count_m4764E86DDE9F43FD517EF8675D1240B9B4A41B5D_inline(L_20, Queue_1_get_Count_m4764E86DDE9F43FD517EF8675D1240B9B4A41B5D_RuntimeMethod_var);
-		if ((((int32_t)L_21) > ((int32_t)((int32_t)60))))
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_11);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = L_10;
+		NullCheck(L_12);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralEF8AE9E6CBCFDABA932FBEB4C85964F450F724F5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = L_12;
+		bool L_14 = V_1;
+		if (L_14)
 		{
-			goto IL_005d;
+			G_B5_0 = 3;
+			G_B5_1 = L_13;
+			G_B5_2 = L_13;
+			goto IL_004e;
+		}
+		G_B4_0 = 3;
+		G_B4_1 = L_13;
+		G_B4_2 = L_13;
+	}
+	{
+		String_t* L_15 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_il2cpp_TypeInfo_var);
+		String_t* L_16;
+		L_16 = KoChatHud_Escape_m7FD094D27A937C2525F1003C08A1A88AFEDEBFC9(L_15, NULL);
+		G_B6_0 = L_16;
+		G_B6_1 = G_B4_0;
+		G_B6_2 = G_B4_1;
+		G_B6_3 = G_B4_2;
+		goto IL_004f;
+	}
+
+IL_004e:
+	{
+		String_t* L_17 = V_0;
+		G_B6_0 = L_17;
+		G_B6_1 = G_B5_0;
+		G_B6_2 = G_B5_1;
+		G_B6_3 = G_B5_2;
+	}
+
+IL_004f:
+	{
+		NullCheck(G_B6_2);
+		(G_B6_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B6_1), (String_t*)G_B6_0);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = G_B6_3;
+		NullCheck(L_18);
+		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+		String_t* L_19;
+		L_19 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_18, NULL);
+		V_3 = L_19;
+		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_20 = __this->____msgOutputLines;
+		String_t* L_21 = V_3;
+		NullCheck(L_20);
+		Queue_1_Enqueue_mE91EF674187E035F117B16FDF3B5F0815BD67832(L_20, L_21, Queue_1_Enqueue_mE91EF674187E035F117B16FDF3B5F0815BD67832_RuntimeMethod_var);
+		goto IL_0078;
+	}
+
+IL_006c:
+	{
+		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_22 = __this->____msgOutputLines;
+		NullCheck(L_22);
+		String_t* L_23;
+		L_23 = Queue_1_Dequeue_mD1CC66D4AA0E4AA615FBD01B897BCB42EE89E9DB(L_22, Queue_1_Dequeue_mD1CC66D4AA0E4AA615FBD01B897BCB42EE89E9DB_RuntimeMethod_var);
+	}
+
+IL_0078:
+	{
+		Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* L_24 = __this->____msgOutputLines;
+		NullCheck(L_24);
+		int32_t L_25;
+		L_25 = Queue_1_get_Count_m4764E86DDE9F43FD517EF8675D1240B9B4A41B5D_inline(L_24, Queue_1_get_Count_m4764E86DDE9F43FD517EF8675D1240B9B4A41B5D_RuntimeMethod_var);
+		if ((((int32_t)L_25) > ((int32_t)((int32_t)60))))
+		{
+			goto IL_006c;
 		}
 	}
 	{
@@ -13468,6 +13533,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChatHud_AppendColored_m4AD1D708FD73813
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoNoticeColors_t667632BAF44CCC8B6E512999FE840C9D94C35FAA_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoNoticeTable_t750993652C762235992517DBA593A8033E7C4729_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9E27E42993FA8B5B3DE893DAD1F70F3DFC0BCA2B);
@@ -13476,65 +13542,113 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChatHud_AppendColored_m4AD1D708FD73813
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	String_t* V_1 = NULL;
+	bool V_1 = false;
+	String_t* V_2 = NULL;
+	String_t* V_3 = NULL;
+	int32_t G_B5_0 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_1 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B5_2 = NULL;
+	int32_t G_B4_0 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_1 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
+	String_t* G_B6_0 = NULL;
+	int32_t G_B6_1 = 0;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
 	{
 		String_t* L_0 = ___0_text;
+		il2cpp_codegen_runtime_class_init_inline(KoNoticeColors_t667632BAF44CCC8B6E512999FE840C9D94C35FAA_il2cpp_TypeInfo_var);
+		String_t* L_1;
+		L_1 = KoNoticeColors_Unwrap_m0DE3427EED059F3425DE8877511F7D9E07BA7DBC(L_0, (&V_1), NULL);
+		V_0 = L_1;
+		String_t* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(KoNoticeTable_t750993652C762235992517DBA593A8033E7C4729_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = KoNoticeTable_IsChatSuppressed_m0A5573FC140D99FB3F5F9279FF0C12CFC980AA90(L_0, NULL);
-		if (L_1)
+		bool L_3;
+		L_3 = KoNoticeTable_IsChatSuppressed_m0A5573FC140D99FB3F5F9279FF0C12CFC980AA90(L_2, NULL);
+		if (L_3)
 		{
-			goto IL_0011;
+			goto IL_001a;
 		}
 	}
 	{
-		uint8_t L_2 = ___2_chatType;
-		bool L_3;
-		L_3 = KoChatHud_IsListening_mA6ACE84198F2A854F669088719496C9E7FCDBE8D(__this, L_2, NULL);
-		if (L_3)
+		uint8_t L_4 = ___2_chatType;
+		bool L_5;
+		L_5 = KoChatHud_IsListening_mA6ACE84198F2A854F669088719496C9E7FCDBE8D(__this, L_4, NULL);
+		if (L_5)
 		{
-			goto IL_0012;
+			goto IL_001b;
 		}
 	}
 
-IL_0011:
+IL_001a:
 	{
 		return;
 	}
 
-IL_0012:
+IL_001b:
 	{
-		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = ___1_color;
-		String_t* L_5;
-		L_5 = ColorUtility_ToHtmlStringRGB_m50D59301FF2736B78C95C1FD5619D429358B7433(L_4, NULL);
-		V_0 = L_5;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
-		NullCheck(L_7);
-		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral9E27E42993FA8B5B3DE893DAD1F70F3DFC0BCA2B);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = L_7;
-		String_t* L_9 = V_0;
-		NullCheck(L_8);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_9);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_8;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6 = ___1_color;
+		String_t* L_7;
+		L_7 = ColorUtility_ToHtmlStringRGB_m50D59301FF2736B78C95C1FD5619D429358B7433(L_6, NULL);
+		V_2 = L_7;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = L_8;
+		NullCheck(L_9);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral9E27E42993FA8B5B3DE893DAD1F70F3DFC0BCA2B);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
+		String_t* L_11 = V_2;
 		NullCheck(L_10);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralEF8AE9E6CBCFDABA932FBEB4C85964F450F724F5);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
-		String_t* L_12 = ___0_text;
+		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_11);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = L_10;
+		NullCheck(L_12);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralEF8AE9E6CBCFDABA932FBEB4C85964F450F724F5);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = L_12;
+		bool L_14 = V_1;
+		if (L_14)
+		{
+			G_B5_0 = 3;
+			G_B5_1 = L_13;
+			G_B5_2 = L_13;
+			goto IL_0049;
+		}
+		G_B4_0 = 3;
+		G_B4_1 = L_13;
+		G_B4_2 = L_13;
+	}
+	{
+		String_t* L_15 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_il2cpp_TypeInfo_var);
-		String_t* L_13;
-		L_13 = KoChatHud_Escape_m7FD094D27A937C2525F1003C08A1A88AFEDEBFC9(L_12, NULL);
-		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_13);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_11;
-		NullCheck(L_14);
-		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-		String_t* L_15;
-		L_15 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_14, NULL);
-		V_1 = L_15;
-		String_t* L_16 = V_1;
-		uint8_t L_17 = ___2_chatType;
-		KoChatHud_EnqueueLine_m02E0AC355959ADF838AC428C7669C8B45CC08727(__this, L_16, L_17, NULL);
+		String_t* L_16;
+		L_16 = KoChatHud_Escape_m7FD094D27A937C2525F1003C08A1A88AFEDEBFC9(L_15, NULL);
+		G_B6_0 = L_16;
+		G_B6_1 = G_B4_0;
+		G_B6_2 = G_B4_1;
+		G_B6_3 = G_B4_2;
+		goto IL_004a;
+	}
+
+IL_0049:
+	{
+		String_t* L_17 = V_0;
+		G_B6_0 = L_17;
+		G_B6_1 = G_B5_0;
+		G_B6_2 = G_B5_1;
+		G_B6_3 = G_B5_2;
+	}
+
+IL_004a:
+	{
+		NullCheck(G_B6_2);
+		(G_B6_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B6_1), (String_t*)G_B6_0);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = G_B6_3;
+		NullCheck(L_18);
+		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+		String_t* L_19;
+		L_19 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_18, NULL);
+		V_3 = L_19;
+		String_t* L_20 = V_3;
+		uint8_t L_21 = ___2_chatType;
+		KoChatHud_EnqueueLine_m02E0AC355959ADF838AC428C7669C8B45CC08727(__this, L_20, L_21, NULL);
 		return;
 	}
 }

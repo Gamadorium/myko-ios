@@ -250,6 +250,7 @@ struct List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237;
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 struct List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93;
 struct List_1_t7BE9C297880B5B41D1E6B89174D4394BF535D206;
+struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
 struct List_1_t9B68833848E4C4D7F623C05F6B77F0449396354A;
 struct List_1_t0FAAD87F665A31FCA5952A1C625A8953FCE80D48;
 struct List_1_t10ADCFA4FAA7C9CBC99A001FEC203C746B5A20BA;
@@ -442,6 +443,7 @@ IL2CPP_EXTERN_C RuntimeClass* Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175_il
 IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoEAni_t1FCE6E65B316A3D89DC784A18F7151766581633D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoGameDatabaseLoader_t4A7E33BF587479915BD66A1B84A45BF003CE523D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoGenieFx_tC24096349FBC63458D3C8A417E35EC4C47B487A8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoGroundProbe_tA45ECE4C2AF57EA3C26B6442214F044186FB2033_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMapShapeVisual_t71C44A02FD982D9B4FF9AA181245BEBF4F6C71B9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMaterialProps_t732C605E3A23810C1D09D3421D284637D4764360_il2cpp_TypeInfo_var;
@@ -1178,6 +1180,10 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_3_t15B37496C2CB3D3A55E4B23E7ED0C817EB8A5136* ___OnBuyingMerchantBrought;
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnMerchantOfficialFail;
 	List_1_tC93418EEBDF534A484DB56D2C8B5ED16402EC652* ____merchantSearch;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ____killParts;
+	int32_t ____upgradeEchoId;
+	String_t* ____upgradeEchoName;
+	float ____upgradeEchoUntil;
 	Action_3_t36F385A3E3FAA1ED9A9E7BAFF96348B54C59FEB1* ___OnKnightsInviteReq;
 	uint16_t ___U3CConcurrentUsersU3Ek__BackingField;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnConcurrentUsers;
@@ -1463,6 +1469,11 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	uint32_t ___Channel;
 	uint16_t ___ServerIndex;
 	uint8_t ___Authority;
+	int16_t ___RivalSocket;
+	String_t* ___RivalName;
+	uint16_t ___RivalClanId;
+	uint8_t ___AngerGauge;
+	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Died;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Revived;
@@ -2688,6 +2699,9 @@ struct KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6  : public MonoBeha
 	float ____lastHotkeySaveAt;
 	String_t* ____liveCharName;
 	bool ____characterSelected;
+	bool ____explicitReturnToSelect;
+	bool ____pendingSessionRestore;
+	String_t* ____restoreCharName;
 	bool ____pendingGameDisconnectUi;
 	bool ___U3CSuppressNextDisconnectUiU3Ek__BackingField;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___OnStatus;
@@ -4489,6 +4503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerAnimDriver_PlayDeath_m1405A71E41
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetInvisibility_m83E9B7DE12684FC6A707EBB966971358F138FED4 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, uint8_t ___0_type, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_ResnapGround_m6DF329765211C8BEEA6D3A427D54E56F963CE8AF (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_RefreshNameplate_m3C2B9BF374BDA033EB980DA0BA81B9686C346AF0 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetGenieVisible_mAD27846A01B769D6EAFF1A9DEBE4D980EA31EA62 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, bool ___0_on, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_ApplyEquipVisuals_m1FB3AC7CAC1E15DB8861BF1C5E5659C719AB6472 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoUserInfoPacket_get_CapeR_m47F2F27BB829D67D911A428C0F652DF47869CAA9 (KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoUserInfoPacket_get_CapeG_m526F8448CA43F105B330C25292C5A587FD2AB085 (KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* __this, const RuntimeMethod* method) ;
@@ -4496,6 +4511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoUserInfoPacket_get_CapeB_m572E06206
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t KoOtherPlayer_get_Level_m39613F15CAD33BA4AEE81D6710897D8BE69E1BCF_inline (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerEquipApplier_ApplyClanVisuals_m77CF557D9040B98868385421CD16DE605E46C250 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_avatar, String_t* ___1_avatarId, int16_t ___2_knightsId, uint8_t ___3_nation, uint8_t ___4_knightsGrade, uint8_t ___5_knightsRank, int16_t ___6_capeId, uint8_t ___7_capeR, uint8_t ___8_capeG, uint8_t ___9_capeB, uint8_t ___10_capeType, uint8_t ___11_capeAnim, String_t* ___12_knightsName, uint8_t ___13_level, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_ApplyLodVisuals_m360B5C551647F46C1D3CA1CA49F11494BFCF0626 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* KoOtherPlayer_get_Tag_m5CB02B973F012FCD0AA7D86E81C9989E35842427_inline (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* KoOtherPlayer_get_KnightsName_m44B87FFE7A2CF3DA37BAF09714F8FCFFD326F7CF_inline (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t KoOtherPlayer_get_Fame_m7552A1AF1F901A90ECC7F93FDDD0969CCD2635DE_inline (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* KoUserInfoPacket_ToEquippedSlots_mA3F133767D16A6E85DE679CF6564E2FAB866447E (KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* __this, const RuntimeMethod* method) ;
@@ -4505,6 +4521,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6ED
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerEquipApplier_ApplyFromPlayer_m4CC8F3A649D8BAF6C36883770E13014768DE60F0 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_avatar, String_t* ___1_avatarId, uint8_t ___2_race, KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* ___3_equipped, bool ___4_applyLocalClan, KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* ___5_cospre, bool ___6_hideWings, bool ___7_hidePathos, bool ___8_hideFairy, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KoOtherPlayer_SlotToVisualIndex_m4A29FAF597E6A502B48A0F16E4BEBE35AC70882A (uint8_t ___0_pos, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_RequestRedress_m638F0F506E0ADF3BDA3E356615D09D59B5222E1B (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieFx_Show_m6397F474D963F71D1DF149ECD37FD5536A519E02 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_host, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieFx_Hide_m54C8C61F3AE5289FEAA660FF0F110DAC65E954FF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_host, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 KoOtherPlayer_ResolveAttackLook_m7E788B7D7D49B9F6CD40D4B61C8AF42A4CE8193F (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, int16_t ___0_targetId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_FaceToward_mA69FD19EB458893A89CF25CD77A63961DEF5F29A (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lookWorld, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoPlayerAnimDriver_NextAttackState_m9034909EDD80AD7EBBF126F0EAEB669F923F3267 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, KoWeaponHands_t2CE0A351D86E5E0D7793D6B642E00D4D6D433AA3* ___0_hands, const RuntimeMethod* method) ;
@@ -15798,6 +15816,10 @@ IL_034e:
 		KoOtherPlayer_SetInvisibility_m83E9B7DE12684FC6A707EBB966971358F138FED4(__this, L_126, NULL);
 		KoOtherPlayer_ResnapGround_m6DF329765211C8BEEA6D3A427D54E56F963CE8AF(__this, NULL);
 		KoOtherPlayer_RefreshNameplate_m3C2B9BF374BDA033EB980DA0BA81B9686C346AF0(__this, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_127 = ___0_info;
+		NullCheck(L_127);
+		bool L_128 = L_127->___GenieStatus;
+		KoOtherPlayer_SetGenieVisible_mAD27846A01B769D6EAFF1A9DEBE4D980EA31EA62(__this, L_128, NULL);
 		return;
 	}
 }
@@ -15971,6 +15993,85 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetFame_m926E4F108FA8B42B9
 	{
 		uint8_t L_0 = ___0_fame;
 		KoOtherPlayer_set_Fame_mA158227499FF6DEAA30409612F2674D5CB979595_inline(__this, L_0, NULL);
+		KoOtherPlayer_RefreshNameplate_m3C2B9BF374BDA033EB980DA0BA81B9686C346AF0(__this, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetTag_m46DF544A017AC972B1816E4E3D2205EFF5BA46DD (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, String_t* ___0_tag, uint8_t ___1_r, uint8_t ___2_g, uint8_t ___3_b, uint8_t ___4_a, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* G_B2_0 = NULL;
+	KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* G_B2_1 = NULL;
+	String_t* G_B1_0 = NULL;
+	KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* G_B1_1 = NULL;
+	{
+		String_t* L_0 = ___0_tag;
+		String_t* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			G_B2_1 = __this;
+			goto IL_000b;
+		}
+		G_B1_0 = L_1;
+		G_B1_1 = __this;
+	}
+	{
+		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B2_0 = L_2;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_000b:
+	{
+		NullCheck(G_B2_1);
+		KoOtherPlayer_set_Tag_m9BE9EA1CED3A9678C841D404522696A8F6493F51_inline(G_B2_1, G_B2_0, NULL);
+		uint8_t L_3 = ___1_r;
+		KoOtherPlayer_set_TagR_mB50FD571B97D47EDFF2DA4DB18E3A9F7538D9D6E_inline(__this, L_3, NULL);
+		uint8_t L_4 = ___2_g;
+		KoOtherPlayer_set_TagG_mDA91D1E959FBBDCE98D05DC53E34CA19181415C6_inline(__this, L_4, NULL);
+		uint8_t L_5 = ___3_b;
+		KoOtherPlayer_set_TagB_mB6E94CAA676DAE67EAA4CC8A49952B9056AEA349_inline(__this, L_5, NULL);
+		uint8_t L_6 = ___4_a;
+		KoOtherPlayer_set_TagA_m92460AC9FD7F392DA4DEB48E466A670E61503D4F_inline(__this, L_6, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_7 = __this->____info;
+		if (!L_7)
+		{
+			goto IL_0079;
+		}
+	}
+	{
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_8 = __this->____info;
+		String_t* L_9;
+		L_9 = KoOtherPlayer_get_Tag_m5CB02B973F012FCD0AA7D86E81C9989E35842427_inline(__this, NULL);
+		NullCheck(L_8);
+		L_8->___Tag = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&L_8->___Tag), (void*)L_9);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_10 = __this->____info;
+		uint8_t L_11 = ___1_r;
+		NullCheck(L_10);
+		L_10->___TagR = L_11;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_12 = __this->____info;
+		uint8_t L_13 = ___2_g;
+		NullCheck(L_12);
+		L_12->___TagG = L_13;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_14 = __this->____info;
+		uint8_t L_15 = ___3_b;
+		NullCheck(L_14);
+		L_14->___TagB = L_15;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_16 = __this->____info;
+		uint8_t L_17 = ___4_a;
+		NullCheck(L_16);
+		L_16->___TagA = L_17;
+	}
+
+IL_0079:
+	{
 		KoOtherPlayer_RefreshNameplate_m3C2B9BF374BDA033EB980DA0BA81B9686C346AF0(__this, NULL);
 		return;
 	}
@@ -16746,9 +16847,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_set_GenieActive_mECBEE51D6
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetGenieVisible_mAD27846A01B769D6EAFF1A9DEBE4D980EA31EA62 (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, bool ___0_on, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoGenieFx_tC24096349FBC63458D3C8A417E35EC4C47B487A8_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		bool L_0 = ___0_on;
 		KoOtherPlayer_set_GenieActive_mECBEE51D65D29042AAC4DBF9B09570957792307D_inline(__this, L_0, NULL);
+		bool L_1 = ___0_on;
+		if (!L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoGenieFx_tC24096349FBC63458D3C8A417E35EC4C47B487A8_il2cpp_TypeInfo_var);
+		KoGenieFx_Show_m6397F474D963F71D1DF149ECD37FD5536A519E02(L_2, NULL);
+		return;
+	}
+
+IL_0016:
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoGenieFx_tC24096349FBC63458D3C8A417E35EC4C47B487A8_il2cpp_TypeInfo_var);
+		KoGenieFx_Hide_m54C8C61F3AE5289FEAA660FF0F110DAC65E954FF(L_3, NULL);
 		return;
 	}
 }
@@ -16787,143 +16914,188 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KoOtherPlayer_SlotToVisualIndex_m4A29
 		{
 			case 0:
 			{
-				goto IL_0042;
+				goto IL_0077;
 			}
 			case 1:
 			{
-				goto IL_004e;
+				goto IL_0098;
 			}
 			case 2:
 			{
-				goto IL_004e;
+				goto IL_0098;
 			}
 			case 3:
 			{
-				goto IL_003e;
+				goto IL_0073;
 			}
 			case 4:
 			{
-				goto IL_0048;
+				goto IL_0098;
 			}
 			case 5:
 			{
-				goto IL_004a;
+				goto IL_007d;
 			}
 			case 6:
 			{
-				goto IL_004e;
+				goto IL_0098;
 			}
 			case 7:
 			{
-				goto IL_004c;
+				goto IL_007f;
 			}
 			case 8:
 			{
-				goto IL_004e;
+				goto IL_0098;
 			}
 			case 9:
 			{
-				goto IL_0040;
+				goto IL_0075;
 			}
 			case 10:
 			{
-				goto IL_004e;
+				goto IL_0098;
 			}
 			case 11:
 			{
-				goto IL_0044;
+				goto IL_0079;
 			}
 			case 12:
 			{
-				goto IL_0046;
+				goto IL_007b;
 			}
 		}
 	}
 	{
-		goto IL_004e;
+		uint8_t L_1 = ___0_pos;
+		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_1, ((int32_t)42))))
+		{
+			case 0:
+			{
+				goto IL_0081;
+			}
+			case 1:
+			{
+				goto IL_0083;
+			}
+			case 2:
+			{
+				goto IL_0086;
+			}
+			case 3:
+			{
+				goto IL_0089;
+			}
+			case 4:
+			{
+				goto IL_008c;
+			}
+			case 5:
+			{
+				goto IL_0098;
+			}
+			case 6:
+			{
+				goto IL_0098;
+			}
+			case 7:
+			{
+				goto IL_008f;
+			}
+			case 8:
+			{
+				goto IL_0098;
+			}
+			case 9:
+			{
+				goto IL_0092;
+			}
+			case 10:
+			{
+				goto IL_0095;
+			}
+		}
+	}
+	{
+		goto IL_0098;
 	}
 
-IL_003e:
+IL_0073:
 	{
 		return 0;
 	}
 
-IL_0040:
+IL_0075:
 	{
 		return 1;
 	}
 
-IL_0042:
+IL_0077:
 	{
 		return 2;
 	}
 
-IL_0044:
+IL_0079:
 	{
 		return 3;
 	}
 
-IL_0046:
+IL_007b:
 	{
 		return 4;
 	}
 
-IL_0048:
-	{
-		return 5;
-	}
-
-IL_004a:
+IL_007d:
 	{
 		return 6;
 	}
 
-IL_004c:
+IL_007f:
 	{
 		return 7;
 	}
 
-IL_004e:
+IL_0081:
 	{
-		uint8_t L_1 = ___0_pos;
-		if ((((int32_t)L_1) < ((int32_t)((int32_t)42))))
-		{
-			goto IL_005f;
-		}
-	}
-	{
-		uint8_t L_2 = ___0_pos;
-		if ((((int32_t)L_2) >= ((int32_t)((int32_t)53))))
-		{
-			goto IL_005f;
-		}
-	}
-	{
-		uint8_t L_3 = ___0_pos;
-		return ((int32_t)il2cpp_codegen_add(8, ((int32_t)il2cpp_codegen_subtract((int32_t)L_3, ((int32_t)42)))));
+		return 8;
 	}
 
-IL_005f:
+IL_0083:
 	{
-		uint8_t L_4 = ___0_pos;
-		if ((((int32_t)L_4) < ((int32_t)((int32_t)42))))
-		{
-			goto IL_0070;
-		}
-	}
-	{
-		uint8_t L_5 = ___0_pos;
-		if ((((int32_t)L_5) > ((int32_t)((int32_t)48))))
-		{
-			goto IL_0070;
-		}
-	}
-	{
-		uint8_t L_6 = ___0_pos;
-		return ((int32_t)il2cpp_codegen_add(8, ((int32_t)il2cpp_codegen_subtract((int32_t)L_6, ((int32_t)42)))));
+		return ((int32_t)9);
 	}
 
-IL_0070:
+IL_0086:
+	{
+		return ((int32_t)10);
+	}
+
+IL_0089:
+	{
+		return ((int32_t)11);
+	}
+
+IL_008c:
+	{
+		return ((int32_t)12);
+	}
+
+IL_008f:
+	{
+		return ((int32_t)13);
+	}
+
+IL_0092:
+	{
+		return ((int32_t)14);
+	}
+
+IL_0095:
+	{
+		return ((int32_t)15);
+	}
+
+IL_0098:
 	{
 		return (-1);
 	}
@@ -30266,6 +30438,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t KoOtherPlayer_get_Level_m
 {
 	{
 		uint8_t L_0 = __this->___U3CLevelU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* KoOtherPlayer_get_Tag_m5CB02B973F012FCD0AA7D86E81C9989E35842427_inline (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, const RuntimeMethod* method) 
+{
+	{
+		String_t* L_0 = __this->___U3CTagU3Ek__BackingField;
 		return L_0;
 	}
 }

@@ -982,6 +982,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_set_fieldOfView();
 		Register_UnityEngine_Camera_set_fieldOfView();
 
+		//System.Void UnityEngine.Camera::set_forceIntoRenderTexture(System.Boolean)
+		void Register_UnityEngine_Camera_set_forceIntoRenderTexture();
+		Register_UnityEngine_Camera_set_forceIntoRenderTexture();
+
 		//System.Void UnityEngine.Camera::set_nearClipPlane(System.Single)
 		void Register_UnityEngine_Camera_set_nearClipPlane();
 		Register_UnityEngine_Camera_set_nearClipPlane();
@@ -3710,6 +3714,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
 
+		//System.Void UnityEngine.ParticleSystem/EmissionModule::get_rateOverTime_Injected(UnityEngine.ParticleSystem/EmissionModule&,UnityEngine.ParticleSystem/MinMaxCurve&)
+		void Register_UnityEngine_ParticleSystem_EmissionModule_get_rateOverTime_Injected();
+		Register_UnityEngine_ParticleSystem_EmissionModule_get_rateOverTime_Injected();
+
 		//System.Void UnityEngine.ParticleSystem/EmissionModule::set_enabled_Injected(UnityEngine.ParticleSystem/EmissionModule&,System.Boolean)
 		void Register_UnityEngine_ParticleSystem_EmissionModule_set_enabled_Injected();
 		Register_UnityEngine_ParticleSystem_EmissionModule_set_enabled_Injected();
@@ -5102,6 +5110,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_RenderTexture_get_antiAliasing();
 		Register_UnityEngine_RenderTexture_get_antiAliasing();
 
+		//System.Int32 UnityEngine.RenderTexture::get_depth()
+		void Register_UnityEngine_RenderTexture_get_depth();
+		Register_UnityEngine_RenderTexture_get_depth();
+
 		//System.Int32 UnityEngine.RenderTexture::get_height()
 		void Register_UnityEngine_RenderTexture_get_height();
 		Register_UnityEngine_RenderTexture_get_height();
@@ -5693,6 +5705,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Sprite::GetPadding_Injected(UnityEngine.Vector4&)
 		void Register_UnityEngine_Sprite_GetPadding_Injected();
 		Register_UnityEngine_Sprite_GetPadding_Injected();
+
+		//System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.Rect&)
+		void Register_UnityEngine_Sprite_GetTextureRect_Injected();
+		Register_UnityEngine_Sprite_GetTextureRect_Injected();
 
 		//System.Void UnityEngine.Sprite::get_border_Injected(UnityEngine.Vector4&)
 		void Register_UnityEngine_Sprite_get_border_Injected();
@@ -6357,10 +6373,6 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.Texture3D
 
 	//Start Registrations for type : UnityEngine.Time
-
-		//System.Double UnityEngine.Time::get_realtimeSinceStartupAsDouble()
-		void Register_UnityEngine_Time_get_realtimeSinceStartupAsDouble();
-		Register_UnityEngine_Time_get_realtimeSinceStartupAsDouble();
 
 		//System.Double UnityEngine.Time::get_timeAsDouble()
 		void Register_UnityEngine_Time_get_timeAsDouble();

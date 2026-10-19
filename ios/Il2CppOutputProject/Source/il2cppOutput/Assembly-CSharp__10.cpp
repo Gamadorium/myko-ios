@@ -1466,6 +1466,11 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	uint32_t ___Channel;
 	uint16_t ___ServerIndex;
 	uint8_t ___Authority;
+	int16_t ___RivalSocket;
+	String_t* ___RivalName;
+	uint16_t ___RivalClanId;
+	uint8_t ___AngerGauge;
+	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Died;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Revived;
