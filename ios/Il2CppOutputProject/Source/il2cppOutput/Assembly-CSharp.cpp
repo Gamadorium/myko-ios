@@ -480,6 +480,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoNpcCatalog_t5E2B9A00763061AF3D7BC52348A061633BDA
 IL2CPP_EXTERN_C RuntimeClass* KoNpcWorld_t7BF02816BB7DCCB6F3B09B0A91F3A8D9E8D15547_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPack_t2221576D497529D3669E782E54866F96B2665B13_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoSettingsHud_tFDA52832AC77B1BA8EC5035BBC93437EC91BDBFD_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoUiIcons_tB5EA8774549C65B4C99BFF533B133BED8EE8E86D_il2cpp_TypeInfo_var;
@@ -20449,7 +20450,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CWireNamedSwitchesU3Eb__58_4_m
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CWireUtilityButtonsU3Eb__61_0_mFC96EE20104046970EC6F7FA317A47D1C4A09058 (U3CU3Ec_t75F7CFEA55817CACECCCCBCB17894717DCCC2601* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSettingsHud_tFDA52832AC77B1BA8EC5035BBC93437EC91BDBFD_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoSettingsHud_tFDA52832AC77B1BA8EC5035BBC93437EC91BDBFD_il2cpp_TypeInfo_var);
 		KoSettingsHud_Hide_m41B4ADE830D29879A71F79E1342C49DD8972DE39(NULL);
 		return;
 	}
@@ -20460,11 +20468,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CWireUtilityButtonsU3Eb__61_1_
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSettingsHud_tFDA52832AC77B1BA8EC5035BBC93437EC91BDBFD_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654* G_B2_0 = NULL;
 	KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654* G_B1_0 = NULL;
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoSettingsHud_tFDA52832AC77B1BA8EC5035BBC93437EC91BDBFD_il2cpp_TypeInfo_var);
 		KoSettingsHud_Hide_m41B4ADE830D29879A71F79E1342C49DD8972DE39(NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654_il2cpp_TypeInfo_var);
 		KoHotkeyHud_t5500AC40C2B783EA3128717B4E2656BC76EC8654* L_0;

@@ -201,6 +201,7 @@ struct List_1_tF03564C6425947E41A5759A82D7FA4B588150E7C;
 struct List_1_tF34AB4416035B29964A1C670E37CF23DC7111D4F;
 struct List_1_t36E42819B02068374864CF0FCF18D51CB65F079D;
 struct List_1_tFCD393B14EAC2A1A9DB7FBC3003C6F7802E80CD1;
+struct List_1_t9F51BC0832C9F855508FE22E86FA6A35BF170A0B;
 struct List_1_t81C1A2F017B9EB323CD0FD3345B43F3A59B6607D;
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 struct List_1_t5ED555E220A2C0CA4F1CC393401AF0D7BA5B456B;
@@ -309,6 +310,7 @@ struct KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18;
 struct KoNpcOpenButtonHud_tCF46770DE50A17033B30BF51D3823D8A1BDD7484;
 struct KoNpcQuestLookScreen_tC9F67279A3F27B2C70F4E9148BEF9109FA744A1A;
 struct KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117;
+struct KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0;
 struct KoPageQuestScreen_t27F0620A8D9E00268070AEA933908FD7122D6B30;
 struct KoPartyBoardScreen_tD2602D26353807B8D41AF53211D5561FD5CF2F7B;
 struct KoPartyHud_t1CBDFF47DA24555ECBA16E7A2608A7152A834DA6;
@@ -524,7 +526,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral40E83ACCE0D042A519B971EC5FA530E519DEAD8E
 IL2CPP_EXTERN_C String_t* _stringLiteral427A76EA43EAC795D62A8B5D5F31F8B301E85883;
 IL2CPP_EXTERN_C String_t* _stringLiteral44EE6C16B361AF984DE871897FDED43002CA0C67;
 IL2CPP_EXTERN_C String_t* _stringLiteral451CC56F4AC05151B827884F0BF405C8F1F45834;
-IL2CPP_EXTERN_C String_t* _stringLiteral45A78494F90C9A16D7159CE2FA73DFCA3C2B2D4E;
 IL2CPP_EXTERN_C String_t* _stringLiteral462AF83F210B970CB64141AC06D387D0286791DF;
 IL2CPP_EXTERN_C String_t* _stringLiteral464AE99C449176A4FD37759FAA8A79DFAFD8DE7B;
 IL2CPP_EXTERN_C String_t* _stringLiteral4713CC50E8FDF43BE68997831275F594EDF1BDA2;
@@ -548,7 +549,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral629A98775896F76F40F234F40F9DD6099237AB15
 IL2CPP_EXTERN_C String_t* _stringLiteral6300916A85512959619F46FD5C2A514B64E7CCC5;
 IL2CPP_EXTERN_C String_t* _stringLiteral6366FDE1AFCB9CC74EF4D16123F60CFC3B3F7B55;
 IL2CPP_EXTERN_C String_t* _stringLiteral67A970F42286E6DF26F8C03DD5454D5C6EADDF1B;
-IL2CPP_EXTERN_C String_t* _stringLiteral68F5BFF54B11DBE47438D22C9D181F5A87CEF408;
 IL2CPP_EXTERN_C String_t* _stringLiteral690C9FCF9BAFA97BBAB8675B5FDA1A80AE0B22FA;
 IL2CPP_EXTERN_C String_t* _stringLiteral6CE02DBF10772951A436ED08602B6C21AF7A06F2;
 IL2CPP_EXTERN_C String_t* _stringLiteral6E1CB7C6103F25079BE1A6F61D75875BD47F5068;
@@ -597,7 +597,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA4D4F9D38D1D1042B2A4EFE743CAB7B723707585
 IL2CPP_EXTERN_C String_t* _stringLiteralA5CB83F9994A54A3151CA945573C89E5D4A8D003;
 IL2CPP_EXTERN_C String_t* _stringLiteralA63F1D4CE3204384C3501CA151DD98FA3B5D49A9;
 IL2CPP_EXTERN_C String_t* _stringLiteralA67F891B8F8A7E4297AF74F478E35A2A0986BC84;
-IL2CPP_EXTERN_C String_t* _stringLiteralA837679D81432C1885C8DA641B14A6A615DDC669;
 IL2CPP_EXTERN_C String_t* _stringLiteralAA8377C0E73B7693B2561A3D923BAA006D1A5E37;
 IL2CPP_EXTERN_C String_t* _stringLiteralAB94F79AF99EB1F84056002952B39BFDEA97D447;
 IL2CPP_EXTERN_C String_t* _stringLiteralABC5E362632AFF20EFFD35F1706CEDB79B08A74F;
@@ -770,6 +769,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE8DBE527F24D9CFED839C34216
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mEF89EFADDE2F7EE639FAD1FBA51CCC196D6F24FC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mFDD78673D0AEC29F4B2E46BF4C2B16BFE5B31301_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m4AD0E4AD3F779EA1CBA37403B0244126814EA6D1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisKoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_mD18C0856086A5E502194341968C7741BC61A1ECD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mCE536F8736F04AC3C46EED6FD5FA02F5D22A84C6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CBuildBasketU3Eb__59_0_mCFE38AF88A2711715696CB796C2E7B7907094B36_RuntimeMethod_var;
@@ -2287,6 +2287,36 @@ struct KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6  : public MonoBeha
 	bool ___U3CReconnectSupportedU3Ek__BackingField;
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ____reconnectCo;
 };
+struct KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	KoQuestSelectMsgScreen_t745042B8A087FD61D62D803ECC494E03AF0904D9* ____selectMsg;
+	KoQuestTalkScreen_t4D59EE0602A0682F95B5565E42D1C2052375FDAE* ____talk;
+	KoTransactionScreen_t9D11EBF68A870DE2A7149D7D56BE2CC70927745F* ____shop;
+	KoWarehouseScreen_t3B41555F567546763380C41B82D936E91AE8585B* ____warehouse;
+	KoInnScreen_tC6F5317CEC341B45D966BD189F54716A952BCC35* ____inn;
+	KoPageQuestScreen_t27F0620A8D9E00268070AEA933908FD7122D6B30* ____pageQuest;
+	KoItemUpgradeScreen_t179DDC74BDE590E4BC1184D5F717FDFA1E00E108* ____upgrade;
+	KoUpgradeSelectScreen_t83B243D879AE0A5CF8A18406B86F1C2AC5317089* ____upgradeSelect;
+	KoChaoticExchangeScreen_tD898CEDD06589F30BF69C3EE0AFB2600792FE1A2* ____chaotic;
+	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* ____dialogue;
+	KoNpcQuestLookScreen_tC9F67279A3F27B2C70F4E9148BEF9109FA744A1A* ____questLook;
+	KoLocalCommandScreens_tE2AB7BE52B320671D6F64DEEEF6EEE5953E26EFF* ____localCommands;
+	KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* ____stashedSelectMsg;
+	uint32_t ____pendingTradeGroup;
+	bool ____pendingTradeRepair;
+	UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ____npcSellPrices;
+	int16_t ____activeNpcSid;
+	int32_t ____npcTalkGen;
+	int32_t ____acceptedTradeGen;
+	KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* ____activeNpc;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ____questFallbackCo;
+	uint32_t ____awaitSelectAfterHelper;
+	uint16_t ____awaitSelectNpcProto;
+	bool ____selectMsgReceived;
+	List_1_t9F51BC0832C9F855508FE22E86FA6A35BF170A0B* ____lastRewards;
+	KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* ____lastSelectMsg;
+	String_t* ____lastSelectNpcName;
+};
 struct KoPmAreaHud_t2367C6C6A16258BDBF8309458837145535AE3F74  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____root;
@@ -2839,6 +2869,10 @@ struct KoHudPanelDrag_tBD43B350C7546137A5D76284838108AD1E801A0C_StaticFields
 struct KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6_StaticFields
 {
 	KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* ___U3CInstanceU3Ek__BackingField;
+};
+struct KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_StaticFields
+{
+	KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* ___U3CInstanceU3Ek__BackingField;
 };
 struct KoPmAreaHud_t2367C6C6A16258BDBF8309458837145535AE3F74_StaticFields
 {
@@ -3933,13 +3967,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestSelectMsgScreen_SetMenuButtonsInt
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* KoQuestSelectMsgScreen_EnableMenuClicksSoon_m5EEB3C85E37F5D544E94ADECA7D38F412E4C3C3F (KoQuestSelectMsgScreen_t745042B8A087FD61D62D803ECC494E03AF0904D9* __this, int32_t ___0_serial, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestDatabase_EnsureLoaded_m07375FA3789255E3266F4D6EF3DE85A825739CCC (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+inline KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* Object_FindObjectOfType_TisKoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_mD18C0856086A5E502194341968C7741BC61A1ECD (const RuntimeMethod* method)
+{
+	return ((  KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoNpcUiController_OpenCraftWindow_m4700C62A0F9D1A27FC92867608FE4938E5141381 (KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6* KoQuestDatabase_get_Instance_m4EDDD199A20AE1D2C6D50704D4AE29FAF331FBCC_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoQuestDatabase_ResolveHeader_m8522AB2FDA7804CEBD705300EE9F540EAC91B1EC (KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6* __this, int32_t ___0_id, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestSelectMsgScreen_EnsureClassicExtraRows_m3B222A71D8490ADF5E31FC83C6793A57DD98BA03 (KoQuestSelectMsgScreen_t745042B8A087FD61D62D803ECC494E03AF0904D9* __this, KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* ___0_pkt, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KoQuestSelectMsgScreen_CountActiveButtons_mFC541528850711DBEB2F57C22C05D1F2835AE7F4 (KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* ___0_pkt, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoQuestSelectMsgScreen_ResolveMenuLabel_mFA8D8835C187CC9556D9508553C09E78D5DF0926 (int32_t ___0_id, int32_t ___1_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA (StringBuilder_t* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CEnableMenuClicksSoonU3Ed__19__ctor_m529CAADBC86867255B41A90E2B7B36AE6ECA5878 (U3CEnableMenuClicksSoonU3Ed__19_tAE1D2D0132B28263FFE8F9D72626A4E4D30A3555* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 inline KoUiElementU5BU5D_t66B3859EDA33F91E92A6024BD0545192A63EF12B* Component_GetComponentsInChildren_TisKoUiElement_tA149A59A825343401F1D81D5E0B7D67BEF089162_m44F45A419205568566D352C738B659E064C5934E (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, bool ___0_includeInactive, const RuntimeMethod* method)
 {
@@ -17572,21 +17611,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestSelectMsgScreen_Open_mF086A97EC8D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoNpcPortrait_tA038CC8CCB21402F3317ECF3873E2DB161FEDD26_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisKoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_mD18C0856086A5E502194341968C7741BC61A1ECD_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringBuilder_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1D9652EE408694C32C11E9850E74B46E17DF12D4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C37DC3E15F592A04725B0258FFDA31A686F9D9A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3C29C26CD4F2F11604498775D49D38396C59E060);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral45A78494F90C9A16D7159CE2FA73DFCA3C2B2D4E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5A53850ED8F4E25CDF6D9E4F7C4E89061E40A9A8);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5E49837D2FEED6568F3446F2EC769D9782837A5C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral60421DBFD5CB2922D5D10E373F6ACEFDD711927C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral61BC5FD2C01DB6A900E1E65CF7B970480EA9FAB0);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral68F5BFF54B11DBE47438D22C9D181F5A87CEF408);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9290CBB3F3EF61ABFB7631916FE704FBB2622EC4);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA837679D81432C1885C8DA641B14A6A615DDC669);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD33A0ED8AFDB9962ABC2EB4D7CA3D6302361C1E5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD6FDC5542A404C2C1D914657AED96755C90103A7);
@@ -17611,35 +17648,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestSelectMsgScreen_Open_mF086A97EC8D
 	KoQuestSelectMsgScreen_t745042B8A087FD61D62D803ECC494E03AF0904D9* G_B2_1 = NULL;
 	String_t* G_B1_0 = NULL;
 	KoQuestSelectMsgScreen_t745042B8A087FD61D62D803ECC494E03AF0904D9* G_B1_1 = NULL;
-	String_t* G_B16_0 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B16_1 = NULL;
-	String_t* G_B15_0 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B15_1 = NULL;
-	String_t* G_B17_0 = NULL;
-	String_t* G_B17_1 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B17_2 = NULL;
-	int32_t G_B22_0 = 0;
-	int32_t G_B26_0 = 0;
+	KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* G_B12_0 = NULL;
+	KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* G_B11_0 = NULL;
+	String_t* G_B19_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B19_1 = NULL;
+	String_t* G_B18_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B18_1 = NULL;
+	String_t* G_B20_0 = NULL;
+	String_t* G_B20_1 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B20_2 = NULL;
+	int32_t G_B25_0 = 0;
 	int32_t G_B29_0 = 0;
-	String_t* G_B32_0 = NULL;
-	StringBuilder_t* G_B35_0 = NULL;
-	StringBuilder_t* G_B34_0 = NULL;
-	String_t* G_B36_0 = NULL;
-	StringBuilder_t* G_B36_1 = NULL;
-	String_t* G_B40_0 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B40_1 = NULL;
+	int32_t G_B32_0 = 0;
+	String_t* G_B35_0 = NULL;
+	StringBuilder_t* G_B38_0 = NULL;
+	StringBuilder_t* G_B37_0 = NULL;
 	String_t* G_B39_0 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B39_1 = NULL;
-	String_t* G_B41_0 = NULL;
-	String_t* G_B41_1 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B41_2 = NULL;
-	String_t* G_B44_0 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B44_1 = NULL;
+	StringBuilder_t* G_B39_1 = NULL;
 	String_t* G_B43_0 = NULL;
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B43_1 = NULL;
-	String_t* G_B45_0 = NULL;
-	String_t* G_B45_1 = NULL;
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B45_2 = NULL;
+	String_t* G_B42_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B42_1 = NULL;
+	String_t* G_B44_0 = NULL;
+	String_t* G_B44_1 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B44_2 = NULL;
 	String_t* G_B47_0 = NULL;
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B47_1 = NULL;
 	String_t* G_B46_0 = NULL;
@@ -17647,6 +17679,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoQuestSelectMsgScreen_Open_mF086A97EC8D
 	String_t* G_B48_0 = NULL;
 	String_t* G_B48_1 = NULL;
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B48_2 = NULL;
+	String_t* G_B50_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B50_1 = NULL;
+	String_t* G_B49_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B49_1 = NULL;
+	String_t* G_B51_0 = NULL;
+	String_t* G_B51_1 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B51_2 = NULL;
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6_il2cpp_TypeInfo_var);
 		KoQuestDatabase_EnsureLoaded_m07375FA3789255E3266F4D6EF3DE85A825739CCC(NULL);
@@ -17750,35 +17789,50 @@ IL_00b0:
 		uint8_t L_22 = L_21->___Flag;
 		if ((!(((uint32_t)L_22) == ((uint32_t)((int32_t)18)))))
 		{
-			goto IL_00e5;
+			goto IL_00d1;
 		}
 	}
 	{
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_23 = ___0_pkt;
-		NullCheck(L_23);
-		String_t* L_24 = L_23->___LuaFilename;
-		String_t* L_25;
-		L_25 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral45A78494F90C9A16D7159CE2FA73DFCA3C2B2D4E, L_24, _stringLiteral68F5BFF54B11DBE47438D22C9D181F5A87CEF408, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_25, NULL);
-		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralA837679D81432C1885C8DA641B14A6A615DDC669, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* L_23;
+		L_23 = Object_FindObjectOfType_TisKoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_mD18C0856086A5E502194341968C7741BC61A1ECD(Object_FindObjectOfType_TisKoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_mD18C0856086A5E502194341968C7741BC61A1ECD_RuntimeMethod_var);
+		KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* L_24 = L_23;
+		if (L_24)
+		{
+			G_B12_0 = L_24;
+			goto IL_00c5;
+		}
+		G_B11_0 = L_24;
+	}
+	{
+		goto IL_00ca;
+	}
+
+IL_00c5:
+	{
+		NullCheck(G_B12_0);
+		KoNpcUiController_OpenCraftWindow_m4700C62A0F9D1A27FC92867608FE4938E5141381(G_B12_0, NULL);
+	}
+
+IL_00ca:
+	{
 		KoQuestSelectMsgScreen_Hide_mCA957B9EE1D2DDE227C793E66CD9A82A7F5184D2(__this, NULL);
 		return;
 	}
 
-IL_00e5:
+IL_00d1:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26;
-		L_26 = KoQuestSelectMsgScreen_ResolveListRoot_m4230F0CEB30520BC30CADCB356F373B5A42E359C(__this, NULL);
-		__this->____root = L_26;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____root), (void*)L_26);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_27 = __this->____root;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_25;
+		L_25 = KoQuestSelectMsgScreen_ResolveListRoot_m4230F0CEB30520BC30CADCB356F373B5A42E359C(__this, NULL);
+		__this->____root = L_25;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____root), (void*)L_25);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26 = __this->____root;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_28;
-		L_28 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_27, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_28)
+		bool L_27;
+		L_27 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_27)
 		{
-			goto IL_010a;
+			goto IL_00f6;
 		}
 	}
 	{
@@ -17787,502 +17841,502 @@ IL_00e5:
 		return;
 	}
 
-IL_010a:
+IL_00f6:
 	{
 		KoQuestSelectMsgScreen_HideUnusedRoots_m4004D4344296664D08305ECB8ECD801D6869BB28(__this, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_29 = __this->____root;
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_30 = __this->____classic;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_28 = __this->____root;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_29 = __this->____classic;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_31;
-		L_31 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_29, L_30, NULL);
-		V_0 = L_31;
+		bool L_30;
+		L_30 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_28, L_29, NULL);
+		V_0 = L_30;
 		il2cpp_codegen_runtime_class_init_inline(KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6_il2cpp_TypeInfo_var);
-		KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6* L_32;
-		L_32 = KoQuestDatabase_get_Instance_m4EDDD199A20AE1D2C6D50704D4AE29FAF331FBCC_inline(NULL);
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_33 = ___0_pkt;
-		NullCheck(L_33);
-		int32_t L_34 = L_33->___HeaderTextId;
+		KoQuestDatabase_t542FEBA86A9393D46639ABDCA12DD9F63209A5A6* L_31;
+		L_31 = KoQuestDatabase_get_Instance_m4EDDD199A20AE1D2C6D50704D4AE29FAF331FBCC_inline(NULL);
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_32 = ___0_pkt;
 		NullCheck(L_32);
+		int32_t L_33 = L_32->___HeaderTextId;
+		NullCheck(L_31);
+		String_t* L_34;
+		L_34 = KoQuestDatabase_ResolveHeader_m8522AB2FDA7804CEBD705300EE9F540EAC91B1EC(L_31, L_33, NULL);
 		String_t* L_35;
-		L_35 = KoQuestDatabase_ResolveHeader_m8522AB2FDA7804CEBD705300EE9F540EAC91B1EC(L_32, L_34, NULL);
-		String_t* L_36;
-		L_36 = KoQuestSelectMsgScreen_SanitizeUiText_m7EFA404E42CB056FBFD294B1151C8463CCD04DCE(L_35, NULL);
-		V_1 = L_36;
-		String_t* L_37 = __this->____npcName;
-		String_t* L_38;
-		L_38 = KoQuestSelectMsgScreen_SanitizeUiText_m7EFA404E42CB056FBFD294B1151C8463CCD04DCE(L_37, NULL);
-		V_2 = L_38;
+		L_35 = KoQuestSelectMsgScreen_SanitizeUiText_m7EFA404E42CB056FBFD294B1151C8463CCD04DCE(L_34, NULL);
+		V_1 = L_35;
+		String_t* L_36 = __this->____npcName;
+		String_t* L_37;
+		L_37 = KoQuestSelectMsgScreen_SanitizeUiText_m7EFA404E42CB056FBFD294B1151C8463CCD04DCE(L_36, NULL);
+		V_2 = L_37;
 		KoQuestSelectMsgScreen_ClearClones_m3A3FED277980FB05F07B444AD54448DA12BC0B46(__this, NULL);
-		bool L_39 = V_0;
-		if (!L_39)
+		bool L_38 = V_0;
+		if (!L_38)
 		{
-			goto IL_0194;
+			goto IL_0180;
 		}
 	}
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_40 = __this->____root;
-		String_t* L_41 = V_1;
-		bool L_42;
-		L_42 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_41, NULL);
-		if (!L_42)
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_39 = __this->____root;
+		String_t* L_40 = V_1;
+		bool L_41;
+		L_41 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_40, NULL);
+		if (!L_41)
 		{
-			G_B16_0 = _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A;
-			G_B16_1 = L_40;
-			goto IL_0163;
+			G_B19_0 = _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A;
+			G_B19_1 = L_39;
+			goto IL_014f;
 		}
-		G_B15_0 = _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A;
-		G_B15_1 = L_40;
+		G_B18_0 = _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A;
+		G_B18_1 = L_39;
 	}
 	{
-		String_t* L_43 = V_2;
-		G_B17_0 = L_43;
-		G_B17_1 = G_B15_0;
-		G_B17_2 = G_B15_1;
-		goto IL_0164;
-	}
-
-IL_0163:
-	{
-		String_t* L_44 = V_1;
-		G_B17_0 = L_44;
-		G_B17_1 = G_B16_0;
-		G_B17_2 = G_B16_1;
+		String_t* L_42 = V_2;
+		G_B20_0 = L_42;
+		G_B20_1 = G_B18_0;
+		G_B20_2 = G_B18_1;
+		goto IL_0150;
 	}
 
-IL_0164:
+IL_014f:
 	{
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B17_2, G_B17_1, G_B17_0, 0, NULL);
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_45 = ___0_pkt;
-		KoQuestSelectMsgScreen_EnsureClassicExtraRows_m3B222A71D8490ADF5E31FC83C6793A57DD98BA03(__this, L_45, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_46 = __this->____root;
-		String_t* L_47 = __this->____npcName;
+		String_t* L_43 = V_1;
+		G_B20_0 = L_43;
+		G_B20_1 = G_B19_0;
+		G_B20_2 = G_B19_1;
+	}
+
+IL_0150:
+	{
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B20_2, G_B20_1, G_B20_0, 0, NULL);
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_44 = ___0_pkt;
+		KoQuestSelectMsgScreen_EnsureClassicExtraRows_m3B222A71D8490ADF5E31FC83C6793A57DD98BA03(__this, L_44, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_45 = __this->____root;
+		String_t* L_46 = __this->____npcName;
 		il2cpp_codegen_runtime_class_init_inline(KoNpcPortrait_tA038CC8CCB21402F3317ECF3873E2DB161FEDD26_il2cpp_TypeInfo_var);
-		KoNpcPortrait_Apply_m337B7322CAF327D03C2D4E17480308DA8D8074C3(L_46, L_47, _stringLiteral2C37DC3E15F592A04725B0258FFDA31A686F9D9A, NULL);
+		KoNpcPortrait_Apply_m337B7322CAF327D03C2D4E17480308DA8D8074C3(L_45, L_46, _stringLiteral2C37DC3E15F592A04725B0258FFDA31A686F9D9A, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_47 = __this->____root;
+		KoQuestSelectMsgScreen_BoostClassicChrome_mEB6EB3B7B57EA27E56CA04D4002E7E122F821E39(L_47, NULL);
+		goto IL_01c8;
+	}
+
+IL_0180:
+	{
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_48 = __this->____root;
-		KoQuestSelectMsgScreen_BoostClassicChrome_mEB6EB3B7B57EA27E56CA04D4002E7E122F821E39(L_48, NULL);
-		goto IL_01dc;
+		String_t* L_49 = V_2;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_48, _stringLiteral60421DBFD5CB2922D5D10E373F6ACEFDD711927C, L_49, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_50 = __this->____root;
+		String_t* L_51 = V_2;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_50, _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A, L_51, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_52 = __this->____root;
+		String_t* L_53 = V_1;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_52, _stringLiteral1D9652EE408694C32C11E9850E74B46E17DF12D4, L_53, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_54 = __this->____root;
+		String_t* L_55 = V_1;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_54, _stringLiteralD6FDC5542A404C2C1D914657AED96755C90103A7, L_55, 4, NULL);
 	}
 
-IL_0194:
+IL_01c8:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_49 = __this->____root;
-		String_t* L_50 = V_2;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_49, _stringLiteral60421DBFD5CB2922D5D10E373F6ACEFDD711927C, L_50, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_51 = __this->____root;
-		String_t* L_52 = V_2;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_51, _stringLiteralD200B8157EC954583F5D73FA1589054BD5793D9A, L_52, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_53 = __this->____root;
-		String_t* L_54 = V_1;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_53, _stringLiteral1D9652EE408694C32C11E9850E74B46E17DF12D4, L_54, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_55 = __this->____root;
-		String_t* L_56 = V_1;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_55, _stringLiteralD6FDC5542A404C2C1D914657AED96755C90103A7, L_56, 4, NULL);
-	}
-
-IL_01dc:
-	{
-		StringBuilder_t* L_57 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
-		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_57, NULL);
-		V_3 = L_57;
-		StringBuilder_t* L_58 = V_3;
-		NullCheck(L_58);
-		StringBuilder_t* L_59;
-		L_59 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_58, _stringLiteral5A53850ED8F4E25CDF6D9E4F7C4E89061E40A9A8, NULL);
-		bool L_60 = V_0;
-		if (L_60)
+		StringBuilder_t* L_56 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
+		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_56, NULL);
+		V_3 = L_56;
+		StringBuilder_t* L_57 = V_3;
+		NullCheck(L_57);
+		StringBuilder_t* L_58;
+		L_58 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_57, _stringLiteral5A53850ED8F4E25CDF6D9E4F7C4E89061E40A9A8, NULL);
+		bool L_59 = V_0;
+		if (L_59)
 		{
-			goto IL_01f5;
+			goto IL_01e1;
 		}
 	}
 	{
-		G_B22_0 = ((int32_t)14);
-		goto IL_0203;
+		G_B25_0 = ((int32_t)14);
+		goto IL_01ef;
 	}
 
-IL_01f5:
+IL_01e1:
 	{
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_61 = ___0_pkt;
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_60 = ___0_pkt;
+		int32_t L_61;
+		L_61 = KoQuestSelectMsgScreen_CountActiveButtons_mFC541528850711DBEB2F57C22C05D1F2835AE7F4(L_60, NULL);
 		int32_t L_62;
-		L_62 = KoQuestSelectMsgScreen_CountActiveButtons_mFC541528850711DBEB2F57C22C05D1F2835AE7F4(L_61, NULL);
-		int32_t L_63;
-		L_63 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(7, ((int32_t)il2cpp_codegen_add(L_62, 2)), NULL);
-		G_B22_0 = L_63;
+		L_62 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(7, ((int32_t)il2cpp_codegen_add(L_61, 2)), NULL);
+		G_B25_0 = L_62;
 	}
 
-IL_0203:
+IL_01ef:
 	{
-		V_4 = G_B22_0;
+		V_4 = G_B25_0;
 		V_6 = 0;
-		goto IL_0372;
+		goto IL_035e;
 	}
 
-IL_020d:
+IL_01f9:
 	{
-		int32_t L_64 = V_6;
-		if ((((int32_t)L_64) < ((int32_t)((int32_t)12))))
+		int32_t L_63 = V_6;
+		if ((((int32_t)L_63) < ((int32_t)((int32_t)12))))
 		{
-			goto IL_0216;
+			goto IL_0202;
 		}
 	}
 	{
-		G_B26_0 = (-1);
-		goto IL_021f;
+		G_B29_0 = (-1);
+		goto IL_020b;
 	}
 
-IL_0216:
+IL_0202:
 	{
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_65 = ___0_pkt;
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_64 = ___0_pkt;
+		NullCheck(L_64);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_65 = L_64->___ButtonTextIds;
+		int32_t L_66 = V_6;
 		NullCheck(L_65);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_66 = L_65->___ButtonTextIds;
-		int32_t L_67 = V_6;
-		NullCheck(L_66);
-		int32_t L_68 = L_67;
-		int32_t L_69 = (L_66)->GetAt(static_cast<il2cpp_array_size_t>(L_68));
-		G_B26_0 = L_69;
+		int32_t L_67 = L_66;
+		int32_t L_68 = (L_65)->GetAt(static_cast<il2cpp_array_size_t>(L_67));
+		G_B29_0 = L_68;
 	}
 
-IL_021f:
+IL_020b:
 	{
-		V_7 = G_B26_0;
-		int32_t L_70 = V_6;
-		if ((((int32_t)L_70) >= ((int32_t)((int32_t)12))))
+		V_7 = G_B29_0;
+		int32_t L_69 = V_6;
+		if ((((int32_t)L_69) >= ((int32_t)((int32_t)12))))
 		{
-			goto IL_022e;
+			goto IL_021a;
 		}
 	}
 	{
-		int32_t L_71 = V_7;
-		G_B29_0 = ((((int32_t)L_71) > ((int32_t)0))? 1 : 0);
-		goto IL_022f;
+		int32_t L_70 = V_7;
+		G_B32_0 = ((((int32_t)L_70) > ((int32_t)0))? 1 : 0);
+		goto IL_021b;
 	}
 
-IL_022e:
+IL_021a:
 	{
-		G_B29_0 = 0;
+		G_B32_0 = 0;
 	}
 
-IL_022f:
+IL_021b:
 	{
-		V_8 = (bool)G_B29_0;
-		bool L_72 = V_8;
-		if (L_72)
+		V_8 = (bool)G_B32_0;
+		bool L_71 = V_8;
+		if (L_71)
 		{
-			goto IL_023c;
+			goto IL_0228;
 		}
 	}
 	{
-		String_t* L_73 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B32_0 = L_73;
-		goto IL_0245;
+		String_t* L_72 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B35_0 = L_72;
+		goto IL_0231;
 	}
 
-IL_023c:
+IL_0228:
 	{
-		int32_t L_74 = V_7;
-		int32_t L_75 = V_6;
-		String_t* L_76;
-		L_76 = KoQuestSelectMsgScreen_ResolveMenuLabel_mFA8D8835C187CC9556D9508553C09E78D5DF0926(L_74, L_75, NULL);
-		G_B32_0 = L_76;
+		int32_t L_73 = V_7;
+		int32_t L_74 = V_6;
+		String_t* L_75;
+		L_75 = KoQuestSelectMsgScreen_ResolveMenuLabel_mFA8D8835C187CC9556D9508553C09E78D5DF0926(L_73, L_74, NULL);
+		G_B35_0 = L_75;
 	}
 
-IL_0245:
+IL_0231:
 	{
-		V_9 = G_B32_0;
-		bool L_77 = V_8;
-		if (!L_77)
+		V_9 = G_B35_0;
+		bool L_76 = V_8;
+		if (!L_76)
 		{
-			goto IL_0287;
+			goto IL_0273;
 		}
 	}
 	{
-		StringBuilder_t* L_78 = V_3;
+		StringBuilder_t* L_77 = V_3;
+		NullCheck(L_77);
+		StringBuilder_t* L_78;
+		L_78 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_77, ((int32_t)32), NULL);
+		int32_t L_79 = V_6;
 		NullCheck(L_78);
-		StringBuilder_t* L_79;
-		L_79 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_78, ((int32_t)32), NULL);
-		int32_t L_80 = V_6;
-		NullCheck(L_79);
+		StringBuilder_t* L_80;
+		L_80 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_78, L_79, NULL);
+		NullCheck(L_80);
 		StringBuilder_t* L_81;
-		L_81 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_79, L_80, NULL);
+		L_81 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_80, ((int32_t)61), NULL);
+		int32_t L_82 = V_7;
 		NullCheck(L_81);
-		StringBuilder_t* L_82;
-		L_82 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_81, ((int32_t)61), NULL);
-		int32_t L_83 = V_7;
-		NullCheck(L_82);
+		StringBuilder_t* L_83;
+		L_83 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_81, L_82, NULL);
+		NullCheck(L_83);
 		StringBuilder_t* L_84;
-		L_84 = StringBuilder_Append_m283B617AC29FB0DD6F3A7D8C01D385C25A5F0FAA(L_82, L_83, NULL);
-		NullCheck(L_84);
-		StringBuilder_t* L_85;
-		L_85 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_84, ((int32_t)58), NULL);
-		String_t* L_86 = V_9;
-		bool L_87;
-		L_87 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_86, NULL);
-		if (L_87)
+		L_84 = StringBuilder_Append_m71228B30F05724CD2CD96D9611DCD61BFB96A6E1(L_83, ((int32_t)58), NULL);
+		String_t* L_85 = V_9;
+		bool L_86;
+		L_86 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_85, NULL);
+		if (L_86)
 		{
-			G_B35_0 = L_85;
-			goto IL_027c;
+			G_B38_0 = L_84;
+			goto IL_0268;
 		}
-		G_B34_0 = L_85;
+		G_B37_0 = L_84;
 	}
 	{
-		String_t* L_88 = V_9;
-		G_B36_0 = L_88;
-		G_B36_1 = G_B34_0;
-		goto IL_0281;
-	}
-
-IL_027c:
-	{
-		G_B36_0 = _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
-		G_B36_1 = G_B35_0;
+		String_t* L_87 = V_9;
+		G_B39_0 = L_87;
+		G_B39_1 = G_B37_0;
+		goto IL_026d;
 	}
 
-IL_0281:
+IL_0268:
 	{
-		NullCheck(G_B36_1);
-		StringBuilder_t* L_89;
-		L_89 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(G_B36_1, G_B36_0, NULL);
+		G_B39_0 = _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
+		G_B39_1 = G_B38_0;
 	}
 
-IL_0287:
+IL_026d:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_90 = __this->____root;
-		int32_t L_91 = V_6;
-		bool L_92 = V_8;
-		KoQuestSelectMsgScreen_SetMenuGroupActive_m0C7896C7C7AD53DE1F85DEDC9171A7C5800A59AD(L_90, L_91, L_92, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_93 = __this->____root;
-		int32_t L_94 = V_6;
-		bool L_95 = V_8;
-		KoQuestSelectMsgScreen_SetMenuButtonInteractable_mD5105B322AEB2E0C3293EEB442E604EDF2226B8F(L_93, L_94, L_95, NULL);
-		bool L_96 = V_0;
-		if (!L_96)
+		NullCheck(G_B39_1);
+		StringBuilder_t* L_88;
+		L_88 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(G_B39_1, G_B39_0, NULL);
+	}
+
+IL_0273:
+	{
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_89 = __this->____root;
+		int32_t L_90 = V_6;
+		bool L_91 = V_8;
+		KoQuestSelectMsgScreen_SetMenuGroupActive_m0C7896C7C7AD53DE1F85DEDC9171A7C5800A59AD(L_89, L_90, L_91, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_92 = __this->____root;
+		int32_t L_93 = V_6;
+		bool L_94 = V_8;
+		KoQuestSelectMsgScreen_SetMenuButtonInteractable_mD5105B322AEB2E0C3293EEB442E604EDF2226B8F(L_92, L_93, L_94, NULL);
+		bool L_95 = V_0;
+		if (!L_95)
 		{
-			goto IL_02f6;
+			goto IL_02e2;
 		}
 	}
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_97 = __this->____root;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_96 = __this->____root;
+		String_t* L_97;
+		L_97 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
 		String_t* L_98;
-		L_98 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
-		String_t* L_99;
-		L_99 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3C29C26CD4F2F11604498775D49D38396C59E060, L_98, NULL);
-		String_t* L_100 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_97, L_99, L_100, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_101 = __this->____root;
+		L_98 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3C29C26CD4F2F11604498775D49D38396C59E060, L_97, NULL);
+		String_t* L_99 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_96, L_98, L_99, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_100 = __this->____root;
+		String_t* L_101;
+		L_101 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
 		String_t* L_102;
-		L_102 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
-		String_t* L_103;
-		L_103 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF05C4EE6EC7D268093CBD0AFCE1A0FC8B1785D08, L_102, NULL);
-		bool L_104 = V_8;
-		if (L_104)
+		L_102 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF05C4EE6EC7D268093CBD0AFCE1A0FC8B1785D08, L_101, NULL);
+		bool L_103 = V_8;
+		if (L_103)
 		{
-			G_B40_0 = L_103;
-			G_B40_1 = L_101;
-			goto IL_02ec;
+			G_B43_0 = L_102;
+			G_B43_1 = L_100;
+			goto IL_02d8;
 		}
-		G_B39_0 = L_103;
-		G_B39_1 = L_101;
+		G_B42_0 = L_102;
+		G_B42_1 = L_100;
 	}
 	{
-		String_t* L_105 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B41_0 = L_105;
-		G_B41_1 = G_B39_0;
-		G_B41_2 = G_B39_1;
-		goto IL_02ee;
-	}
-
-IL_02ec:
-	{
-		String_t* L_106 = V_9;
-		G_B41_0 = L_106;
-		G_B41_1 = G_B40_0;
-		G_B41_2 = G_B40_1;
+		String_t* L_104 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B44_0 = L_104;
+		G_B44_1 = G_B42_0;
+		G_B44_2 = G_B42_1;
+		goto IL_02da;
 	}
 
-IL_02ee:
+IL_02d8:
 	{
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B41_2, G_B41_1, G_B41_0, 4, NULL);
-		goto IL_036c;
+		String_t* L_105 = V_9;
+		G_B44_0 = L_105;
+		G_B44_1 = G_B43_0;
+		G_B44_2 = G_B43_1;
 	}
 
-IL_02f6:
+IL_02da:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_107 = __this->____root;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B44_2, G_B44_1, G_B44_0, 4, NULL);
+		goto IL_0358;
+	}
+
+IL_02e2:
+	{
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_106 = __this->____root;
+		String_t* L_107;
+		L_107 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
 		String_t* L_108;
-		L_108 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
-		String_t* L_109;
-		L_109 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral61BC5FD2C01DB6A900E1E65CF7B970480EA9FAB0, L_108, NULL);
-		bool L_110 = V_8;
-		if (L_110)
+		L_108 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral61BC5FD2C01DB6A900E1E65CF7B970480EA9FAB0, L_107, NULL);
+		bool L_109 = V_8;
+		if (L_109)
 		{
-			G_B44_0 = L_109;
-			G_B44_1 = L_107;
-			goto IL_0318;
+			G_B47_0 = L_108;
+			G_B47_1 = L_106;
+			goto IL_0304;
 		}
-		G_B43_0 = L_109;
-		G_B43_1 = L_107;
+		G_B46_0 = L_108;
+		G_B46_1 = L_106;
 	}
 	{
-		String_t* L_111 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B45_0 = L_111;
-		G_B45_1 = G_B43_0;
-		G_B45_2 = G_B43_1;
-		goto IL_031a;
-	}
-
-IL_0318:
-	{
-		String_t* L_112 = V_9;
-		G_B45_0 = L_112;
-		G_B45_1 = G_B44_0;
-		G_B45_2 = G_B44_1;
-	}
-
-IL_031a:
-	{
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B45_2, G_B45_1, G_B45_0, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_113 = __this->____root;
-		String_t* L_114;
-		L_114 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
-		String_t* L_115;
-		L_115 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF05C4EE6EC7D268093CBD0AFCE1A0FC8B1785D08, L_114, NULL);
-		bool L_116 = V_8;
-		if (L_116)
-		{
-			G_B47_0 = L_115;
-			G_B47_1 = L_113;
-			goto IL_0342;
-		}
-		G_B46_0 = L_115;
-		G_B46_1 = L_113;
-	}
-	{
-		String_t* L_117 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B48_0 = L_117;
+		String_t* L_110 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B48_0 = L_110;
 		G_B48_1 = G_B46_0;
 		G_B48_2 = G_B46_1;
-		goto IL_0344;
+		goto IL_0306;
 	}
 
-IL_0342:
+IL_0304:
 	{
-		String_t* L_118 = V_9;
-		G_B48_0 = L_118;
+		String_t* L_111 = V_9;
+		G_B48_0 = L_111;
 		G_B48_1 = G_B47_0;
 		G_B48_2 = G_B47_1;
 	}
 
-IL_0344:
+IL_0306:
 	{
 		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B48_2, G_B48_1, G_B48_0, 4, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_119 = __this->____root;
-		String_t* L_120;
-		L_120 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
-		String_t* L_121;
-		L_121 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3C29C26CD4F2F11604498775D49D38396C59E060, L_120, NULL);
-		String_t* L_122 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_119, L_121, L_122, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_112 = __this->____root;
+		String_t* L_113;
+		L_113 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
+		String_t* L_114;
+		L_114 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF05C4EE6EC7D268093CBD0AFCE1A0FC8B1785D08, L_113, NULL);
+		bool L_115 = V_8;
+		if (L_115)
+		{
+			G_B50_0 = L_114;
+			G_B50_1 = L_112;
+			goto IL_032e;
+		}
+		G_B49_0 = L_114;
+		G_B49_1 = L_112;
+	}
+	{
+		String_t* L_116 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B51_0 = L_116;
+		G_B51_1 = G_B49_0;
+		G_B51_2 = G_B49_1;
+		goto IL_0330;
 	}
 
-IL_036c:
+IL_032e:
+	{
+		String_t* L_117 = V_9;
+		G_B51_0 = L_117;
+		G_B51_1 = G_B50_0;
+		G_B51_2 = G_B50_1;
+	}
+
+IL_0330:
+	{
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(G_B51_2, G_B51_1, G_B51_0, 4, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_118 = __this->____root;
+		String_t* L_119;
+		L_119 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_6), NULL);
+		String_t* L_120;
+		L_120 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3C29C26CD4F2F11604498775D49D38396C59E060, L_119, NULL);
+		String_t* L_121 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		KoQuestSelectMsgScreen_SetButtonCaption_m24BF69A09C0C6F61CDC6D4FB6261757ABE8A6C7B(L_118, L_120, L_121, 4, NULL);
+	}
+
+IL_0358:
+	{
+		int32_t L_122 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_122, 1));
+	}
+
+IL_035e:
 	{
 		int32_t L_123 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_123, 1));
-	}
-
-IL_0372:
-	{
-		int32_t L_124 = V_6;
-		int32_t L_125 = V_4;
-		if ((((int32_t)L_124) < ((int32_t)L_125)))
+		int32_t L_124 = V_4;
+		if ((((int32_t)L_123) < ((int32_t)L_124)))
 		{
-			goto IL_020d;
+			goto IL_01f9;
 		}
 	}
 	{
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_126 = ___0_pkt;
-		int32_t L_127;
-		L_127 = KoQuestSelectMsgScreen_CountActiveButtons_mFC541528850711DBEB2F57C22C05D1F2835AE7F4(L_126, NULL);
-		if (L_127)
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_125 = ___0_pkt;
+		int32_t L_126;
+		L_126 = KoQuestSelectMsgScreen_CountActiveButtons_mFC541528850711DBEB2F57C22C05D1F2835AE7F4(L_125, NULL);
+		if (L_126)
+		{
+			goto IL_03bb;
+		}
+	}
+	{
+		StringBuilder_t* L_127 = V_3;
+		NullCheck(L_127);
+		StringBuilder_t* L_128;
+		L_128 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_127, _stringLiteral9290CBB3F3EF61ABFB7631916FE704FBB2622EC4, NULL);
+		String_t* L_129 = __this->____npcName;
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_130 = ___0_pkt;
+		NullCheck(L_130);
+		int32_t L_131 = L_130->___QuestId;
+		int32_t L_132 = L_131;
+		RuntimeObject* L_133 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_132);
+		String_t* L_134;
+		L_134 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralE20019AE6892D82F8646B71F4950793AF8494FC2, L_129, L_133, NULL);
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_135 = ___0_pkt;
+		NullCheck(L_135);
+		int32_t L_136 = L_135->___HeaderTextId;
+		int32_t L_137 = L_136;
+		RuntimeObject* L_138 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_137);
+		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_139 = ___0_pkt;
+		NullCheck(L_139);
+		String_t* L_140 = L_139->___LuaFilename;
+		String_t* L_141;
+		L_141 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralECFD03EE6C3B77C7FCB4BBB8674A97317C11EB08, L_138, L_140, NULL);
+		String_t* L_142;
+		L_142 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_134, L_141, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_142, NULL);
+	}
+
+IL_03bb:
+	{
+		StringBuilder_t* L_143 = V_3;
+		NullCheck(L_143);
+		String_t* L_144;
+		L_144 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_143);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_144, NULL);
+		bool L_145 = V_0;
+		if (!L_145)
 		{
 			goto IL_03cf;
-		}
-	}
-	{
-		StringBuilder_t* L_128 = V_3;
-		NullCheck(L_128);
-		StringBuilder_t* L_129;
-		L_129 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_128, _stringLiteral9290CBB3F3EF61ABFB7631916FE704FBB2622EC4, NULL);
-		String_t* L_130 = __this->____npcName;
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_131 = ___0_pkt;
-		NullCheck(L_131);
-		int32_t L_132 = L_131->___QuestId;
-		int32_t L_133 = L_132;
-		RuntimeObject* L_134 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_133);
-		String_t* L_135;
-		L_135 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralE20019AE6892D82F8646B71F4950793AF8494FC2, L_130, L_134, NULL);
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_136 = ___0_pkt;
-		NullCheck(L_136);
-		int32_t L_137 = L_136->___HeaderTextId;
-		int32_t L_138 = L_137;
-		RuntimeObject* L_139 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_138);
-		KoSelectMsgPacket_tE12AF4DC2E5A8494B8B7492CD6EFF14B4A313AF4* L_140 = ___0_pkt;
-		NullCheck(L_140);
-		String_t* L_141 = L_140->___LuaFilename;
-		String_t* L_142;
-		L_142 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralECFD03EE6C3B77C7FCB4BBB8674A97317C11EB08, L_139, L_141, NULL);
-		String_t* L_143;
-		L_143 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_135, L_142, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_143, NULL);
-	}
-
-IL_03cf:
-	{
-		StringBuilder_t* L_144 = V_3;
-		NullCheck(L_144);
-		String_t* L_145;
-		L_145 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_144);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_145, NULL);
-		bool L_146 = V_0;
-		if (!L_146)
-		{
-			goto IL_03e3;
 		}
 	}
 	{
 		KoQuestSelectMsgScreen_RelayoutClassicBottom_m161C1918548D96E04D5F70BB1B21D0283270D391(__this, NULL);
 	}
 
-IL_03e3:
+IL_03cf:
 	{
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_147 = __this->____root;
-		KoQuestSelectMsgScreen_FitTalkText_mB90460C900F50083D0ED15A7B691DD6967A343C5(L_147, NULL);
-		float L_148;
-		L_148 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
-		__this->____ignoreClicksUntil = ((float)il2cpp_codegen_add(L_148, (0.400000006f)));
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_146 = __this->____root;
+		KoQuestSelectMsgScreen_FitTalkText_mB90460C900F50083D0ED15A7B691DD6967A343C5(L_146, NULL);
+		float L_147;
+		L_147 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		__this->____ignoreClicksUntil = ((float)il2cpp_codegen_add(L_147, (0.400000006f)));
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_148 = __this->____root;
+		KoQuestSelectMsgScreen_SetMenuButtonsInteractable_m29444A542BCF10DD12936DEC0C6D21684F5D6426(L_148, (bool)0, NULL);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_149 = __this->____root;
-		KoQuestSelectMsgScreen_SetMenuButtonsInteractable_m29444A542BCF10DD12936DEC0C6D21684F5D6426(L_149, (bool)0, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_150 = __this->____root;
+		NullCheck(L_149);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_150;
+		L_150 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_149, NULL);
 		NullCheck(L_150);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_151;
-		L_151 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_150, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_150, (bool)1, NULL);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_151 = __this->____root;
 		NullCheck(L_151);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_151, (bool)1, NULL);
-		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_152 = __this->____root;
-		NullCheck(L_152);
-		Transform_SetAsLastSibling_m848AF1A0B4C7912FE88D8CBCF92B83D57B2B917E(L_152, NULL);
-		int32_t L_153 = __this->____menuOpenSerial;
-		V_10 = ((int32_t)il2cpp_codegen_add(L_153, 1));
+		Transform_SetAsLastSibling_m848AF1A0B4C7912FE88D8CBCF92B83D57B2B917E(L_151, NULL);
+		int32_t L_152 = __this->____menuOpenSerial;
+		V_10 = ((int32_t)il2cpp_codegen_add(L_152, 1));
+		int32_t L_153 = V_10;
+		__this->____menuOpenSerial = L_153;
 		int32_t L_154 = V_10;
-		__this->____menuOpenSerial = L_154;
-		int32_t L_155 = V_10;
-		V_5 = L_155;
-		int32_t L_156 = V_5;
-		RuntimeObject* L_157;
-		L_157 = KoQuestSelectMsgScreen_EnableMenuClicksSoon_m5EEB3C85E37F5D544E94ADECA7D38F412E4C3C3F(__this, L_156, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_158;
-		L_158 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_157, NULL);
+		V_5 = L_154;
+		int32_t L_155 = V_5;
+		RuntimeObject* L_156;
+		L_156 = KoQuestSelectMsgScreen_EnableMenuClicksSoon_m5EEB3C85E37F5D544E94ADECA7D38F412E4C3C3F(__this, L_155, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_157;
+		L_157 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_156, NULL);
 		return;
 	}
 }

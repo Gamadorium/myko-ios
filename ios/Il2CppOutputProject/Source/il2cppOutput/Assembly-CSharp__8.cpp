@@ -587,6 +587,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E18
 IL2CPP_EXTERN_C RuntimeClass* KoNpcWorld_t7BF02816BB7DCCB6F3B09B0A91F3A8D9E8D15547_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPack_t2221576D497529D3669E782E54866F96B2665B13_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPartyState_t9834F0A951BFA0616BE9606C5A4653F6EC0CD6F4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoQuestGoto_t58F097C2430EE6616D38ED40984060AD29B9F235_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var;
@@ -1585,6 +1586,9 @@ struct KoPartyState_t9834F0A951BFA0616BE9606C5A4653F6EC0CD6F4  : public RuntimeO
 	bool ___AwaitingRosterAsJoiner;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___InvitePrompt;
+};
+struct KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2  : public RuntimeObject
+{
 };
 struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public RuntimeObject
 {
@@ -3164,6 +3168,7 @@ struct KoCombatSync_t40A61F4A9D462AB19D6E9E304CF2BF4718699C82  : public MonoBeha
 	int16_t ____mySid;
 	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* ____subscribed;
 	bool ____deathPresented;
+	float ____deathUiRetry;
 };
 struct KoFrameHitchWatch_t5042E22F79A740988798111C52AD4CE56A6C6B22  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3257,6 +3262,11 @@ struct KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20  : public Mono
 	float ___openRange;
 	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* ____hud;
 	bool ____autoCollect;
+	float ____nextAutoLoot;
+	float ____autoSentAt;
+	uint32_t ____autoBundle;
+	uint32_t ____doneBundle;
+	float ____doneUntil;
 };
 struct KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3644,6 +3654,7 @@ struct KoSkillUse_tCCD2CA7145841FF46775030AE59D8CDD5707CDCB  : public MonoBehavi
 	Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE ____queuedRegionPos;
 	float ____type1AnimStartedAt;
 	Action_1_t831946BFD83EBA9DE498D3E682F1D4F14D17878D* ___OnMagicFail;
+	bool ____stickHeldAtCast;
 	KoRegionAim_tE28835CD2482B5AD800C55C1EF0AEE42D253D3FE* ____regionAim;
 	Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE ____autoRegionPos;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____pendingTargetPos;
@@ -4089,6 +4100,12 @@ struct KoMobilePerf_t63FD7C6DECF620547C8D3A1967C39C99590B3A3A_StaticFields
 struct KoPartyState_t9834F0A951BFA0616BE9606C5A4653F6EC0CD6F4_StaticFields
 {
 	KoPartyState_t9834F0A951BFA0616BE9606C5A4653F6EC0CD6F4* ___U3CCurrentU3Ek__BackingField;
+};
+struct KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2_StaticFields
+{
+	KoItemData_t975C9A0B4D4F450767300F9D9F336C9933B57E0C ___Item;
+	bool ___U3CAutoLootU3Ek__BackingField;
+	bool ____asked;
 };
 struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_StaticFields
 {
@@ -5758,15 +5775,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoLootController_t373E0CA787A1AA7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryOpenSelected_mA6EA2C04F89EF9487517B1C77827866F71D22C05 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGameClient_SendBundleOpen_m94663B6906A734C4C1FF8064785F7EE9EF126561 (KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* __this, uint32_t ___0_bundleId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_IsUiTyping_mA19EC9A7A5C7B7D0C03F90195C511E99527DC585 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootController_TickAutoLoot_mD7C189452A7602C2F06096C84C64ED592374D031 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool KoPetLoot_get_AutoLoot_m36CFD1AC86698465B007E484F202CCD48E3093EE_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryCollectNearby_m1EB1A107AE6A0DDB73D399165D83E71DC32EBEDF (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_HasNearbyOwnLoot_mE28E87DCF90EFE008002C5B14C233A5C7AF568A8 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) ;
 inline KoLootChestU5BU5D_tFB95B44C1AC685BC6F6EDF9EB8539B4523393476* Object_FindObjectsOfType_TisKoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A_mE0714FC8E459B2DB634B25A600299A648F9F9BB3 (const RuntimeMethod* method)
 {
 	return ((  KoLootChestU5BU5D_tFB95B44C1AC685BC6F6EDF9EB8539B4523393476* (*) (const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m0B4DF4B8AB4C71E0F471BC9D0440B40844DA221D_gshared)(method);
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryOpenSelected_mCEF98C5184C8BF54E73CE244F98291E655CCF5F1 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* KoTargetable_get_Current_m6286E83D3EFAA3C7E226AB9211BFE8508A083091_inline (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* KoLootController_FindNearestLoot_m909AF713F7A0470DD9FA3D5020EB2626E62E1C32 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* KoLootController_FindNearestChest_mF6CEDE229D943AA75D753B7595DB0F946B3F0D66 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* KoLootController_FindNearestLoot_mEC6CC7E2A901DF2CD812A7DB2E36806A92FF851D (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* KoLootController_FindNearestChest_mC5E213092CF5E1A5CD67C331DCA3C8EF41C544B5 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootHud_Hide_mCAEE2F4270872372250A765D3CB49C0BA3871432 (KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootController_CollectBundle_m37454A8750092259E89F62F9355DE73392FA3B73 (KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 ___0_p, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootHud_ShowBundle_m1E9D770E448B2BCACEC917A22C3FA7CBD99BDC54 (KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* __this, KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 ___0_bundle, const RuntimeMethod* method) ;
@@ -16638,6 +16659,84 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootController_Update_m92C826700AA1D04
 
 IL_0017:
 	{
+		KoLootController_TickAutoLoot_mD7C189452A7602C2F06096C84C64ED592374D031(__this, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootController_TickAutoLoot_mD7C189452A7602C2F06096C84C64ED592374D031 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0;
+		L_0 = KoPetLoot_get_AutoLoot_m36CFD1AC86698465B007E484F202CCD48E3093EE_inline(NULL);
+		if (L_0)
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0008:
+	{
+		bool L_1 = __this->____autoCollect;
+		if (!L_1)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		float L_2;
+		L_2 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		float L_3 = __this->____autoSentAt;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_2, L_3))) > ((float)(2.5f)))))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		__this->____autoCollect = (bool)0;
+	}
+
+IL_002a:
+	{
+		return;
+	}
+
+IL_002b:
+	{
+		float L_4;
+		L_4 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		float L_5 = __this->____nextAutoLoot;
+		if ((!(((float)L_4) < ((float)L_5))))
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0039:
+	{
+		float L_6;
+		L_6 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		__this->____nextAutoLoot = ((float)il2cpp_codegen_add(L_6, (0.5f)));
+		bool L_7;
+		L_7 = KoLootController_TryCollectNearby_m1EB1A107AE6A0DDB73D399165D83E71DC32EBEDF(__this, (12.0f), NULL);
+		if (!L_7)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		float L_8;
+		L_8 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		__this->____autoSentAt = L_8;
+	}
+
+IL_0062:
+	{
 		return;
 	}
 }
@@ -16744,25 +16843,44 @@ IL_0048:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryCollectNearby_mA88E7C56A274FA08A77F57B86E1AB5E5B0FE4BDD (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) 
 {
 	{
+		float L_0 = __this->___openRange;
+		bool L_1;
+		L_1 = KoLootController_TryCollectNearby_m1EB1A107AE6A0DDB73D399165D83E71DC32EBEDF(__this, L_0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryCollectNearby_m1EB1A107AE6A0DDB73D399165D83E71DC32EBEDF (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) 
+{
+	{
 		__this->____autoCollect = (bool)1;
-		bool L_0;
-		L_0 = KoLootController_TryOpenSelected_mA6EA2C04F89EF9487517B1C77827866F71D22C05(__this, NULL);
-		if (!L_0)
+		float L_0 = ___0_range;
+		bool L_1;
+		L_1 = KoLootController_TryOpenSelected_mCEF98C5184C8BF54E73CE244F98291E655CCF5F1(__this, L_0, NULL);
+		if (!L_1)
 		{
-			goto IL_0011;
+			goto IL_0012;
 		}
 	}
 	{
 		return (bool)1;
 	}
 
-IL_0011:
+IL_0012:
 	{
 		__this->____autoCollect = (bool)0;
 		return (bool)0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryOpenSelected_mA6EA2C04F89EF9487517B1C77827866F71D22C05 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___openRange;
+		bool L_1;
+		L_1 = KoLootController_TryOpenSelected_mCEF98C5184C8BF54E73CE244F98291E655CCF5F1(__this, L_0, NULL);
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryOpenSelected_mCEF98C5184C8BF54E73CE244F98291E655CCF5F1 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -16775,316 +16893,425 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoLootController_TryOpenSelected_mA6EA2C
 	uint32_t V_1 = 0;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* V_3 = NULL;
-	uint32_t G_B6_0 = 0;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B9_0;
-	memset((&G_B9_0), 0, sizeof(G_B9_0));
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B21_0 = NULL;
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B23_0 = NULL;
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B23_1 = NULL;
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B22_0 = NULL;
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B22_1 = NULL;
-	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B24_0 = NULL;
+	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* V_3 = NULL;
+	KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* V_4 = NULL;
+	KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* V_5 = NULL;
+	uint32_t G_B8_0 = 0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B11_0;
+	memset((&G_B11_0), 0, sizeof(G_B11_0));
+	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* G_B27_0 = NULL;
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846_il2cpp_TypeInfo_var);
 		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_0;
 		L_0 = KoTargetable_get_Current_m6286E83D3EFAA3C7E226AB9211BFE8508A083091_inline(NULL);
 		V_0 = L_0;
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_1 = V_0;
+		bool L_1 = __this->____autoCollect;
+		if (L_1)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_2;
-		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_2)
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_3)
 		{
-			goto IL_0017;
+			goto IL_001f;
 		}
 	}
 	{
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_3 = V_0;
-		NullCheck(L_3);
-		uint32_t L_4 = L_3->___BundleId;
-		if (L_4)
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_4 = V_0;
+		NullCheck(L_4);
+		uint32_t L_5 = L_4->___BundleId;
+		if (L_5)
 		{
-			goto IL_001e;
+			goto IL_0035;
 		}
 	}
 
-IL_0017:
+IL_001f:
 	{
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_5;
-		L_5 = KoLootController_FindNearestLoot_m909AF713F7A0470DD9FA3D5020EB2626E62E1C32(__this, NULL);
-		V_0 = L_5;
-	}
-
-IL_001e:
-	{
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_6 = V_0;
+		float L_6 = ___0_range;
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_7;
+		L_7 = KoLootController_FindNearestLoot_mEC6CC7E2A901DF2CD812A7DB2E36806A92FF851D(__this, L_6, NULL);
+		V_4 = L_7;
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_8 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_7;
-		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_7)
+		bool L_9;
+		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_9)
 		{
-			goto IL_002a;
+			goto IL_0035;
 		}
 	}
 	{
-		G_B6_0 = ((uint32_t)(0));
-		goto IL_0030;
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_10 = V_4;
+		V_0 = L_10;
 	}
 
-IL_002a:
+IL_0035:
 	{
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_8 = V_0;
-		NullCheck(L_8);
-		uint32_t L_9 = L_8->___BundleId;
-		G_B6_0 = L_9;
-	}
-
-IL_0030:
-	{
-		V_1 = G_B6_0;
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_10 = V_0;
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_11 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_11;
-		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_11)
+		bool L_12;
+		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_12)
 		{
-			goto IL_0047;
+			goto IL_0041;
 		}
 	}
 	{
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
-		L_12 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_12);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_12, NULL);
-		G_B9_0 = L_13;
-		goto IL_0052;
+		G_B8_0 = ((uint32_t)(0));
+		goto IL_0047;
+	}
+
+IL_0041:
+	{
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_13 = V_0;
+		NullCheck(L_13);
+		uint32_t L_14 = L_13->___BundleId;
+		G_B8_0 = L_14;
 	}
 
 IL_0047:
 	{
-		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_14 = V_0;
-		NullCheck(L_14);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
-		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_14, NULL);
-		NullCheck(L_15);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
-		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
-		G_B9_0 = L_16;
-	}
-
-IL_0052:
-	{
-		V_2 = G_B9_0;
-		uint32_t L_17 = V_1;
-		if (L_17)
-		{
-			goto IL_0079;
-		}
-	}
-	{
-		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_18;
-		L_18 = KoLootController_FindNearestChest_mF6CEDE229D943AA75D753B7595DB0F946B3F0D66(__this, NULL);
-		V_3 = L_18;
-		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_19 = V_3;
+		V_1 = G_B8_0;
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_15 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_20;
-		L_20 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_20)
+		bool L_16;
+		L_16 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_16)
 		{
-			goto IL_0079;
+			goto IL_005e;
 		}
 	}
 	{
-		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_21 = V_3;
-		NullCheck(L_21);
-		uint32_t L_22 = L_21->___BundleId;
-		V_1 = L_22;
-		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_23 = V_3;
-		NullCheck(L_23);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
-		L_24 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_23, NULL);
-		NullCheck(L_24);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
-		L_25 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_24, NULL);
-		V_2 = L_25;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_17);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
+		L_18 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_17, NULL);
+		G_B11_0 = L_18;
+		goto IL_0069;
 	}
 
-IL_0079:
+IL_005e:
 	{
-		uint32_t L_26 = V_1;
-		if (L_26)
+		KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* L_19 = V_0;
+		NullCheck(L_19);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_19, NULL);
+		NullCheck(L_20);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
+		L_21 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_20, NULL);
+		G_B11_0 = L_21;
+	}
+
+IL_0069:
+	{
+		V_2 = G_B11_0;
+		uint32_t L_22 = V_1;
+		if (L_22)
 		{
-			goto IL_007e;
+			goto IL_0095;
 		}
 	}
 	{
-		return (bool)0;
+		float L_23 = ___0_range;
+		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_24;
+		L_24 = KoLootController_FindNearestChest_mC5E213092CF5E1A5CD67C331DCA3C8EF41C544B5(__this, L_23, NULL);
+		V_5 = L_24;
+		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_25 = V_5;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_26;
+		L_26 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_25, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_26)
+		{
+			goto IL_0095;
+		}
 	}
-
-IL_007e:
 	{
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
-		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_27 = V_5;
 		NullCheck(L_27);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
-		L_28 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_27, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = V_2;
-		float L_30;
-		L_30 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_28, L_29, NULL);
-		float L_31 = __this->___openRange;
-		if ((!(((float)L_30) > ((float)L_31))))
-		{
-			goto IL_0099;
-		}
-	}
-	{
-		return (bool)0;
+		uint32_t L_28 = L_27->___BundleId;
+		V_1 = L_28;
+		KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* L_29 = V_5;
+		NullCheck(L_29);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
+		L_30 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_29, NULL);
+		NullCheck(L_30);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
+		L_31 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_30, NULL);
+		V_2 = L_31;
 	}
 
-IL_0099:
+IL_0095:
 	{
-		bool L_32;
-		L_32 = KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E(NULL);
+		uint32_t L_32 = V_1;
 		if (L_32)
 		{
-			goto IL_00a2;
+			goto IL_009a;
 		}
 	}
 	{
 		return (bool)0;
 	}
 
-IL_00a2:
+IL_009a:
 	{
-		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_33;
-		L_33 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		bool L_33 = __this->____autoCollect;
+		if (!L_33)
+		{
+			goto IL_00ba;
+		}
+	}
+	{
+		uint32_t L_34 = V_1;
+		uint32_t L_35 = __this->____doneBundle;
+		if ((!(((uint32_t)L_34) == ((uint32_t)L_35))))
+		{
+			goto IL_00ba;
+		}
+	}
+	{
+		float L_36;
+		L_36 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		float L_37 = __this->____doneUntil;
+		if ((!(((float)L_36) < ((float)L_37))))
+		{
+			goto IL_00ba;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_00ba:
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_38;
+		L_38 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_38);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39;
+		L_39 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_38, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_2;
+		float L_41;
+		L_41 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_39, L_40, NULL);
+		float L_42 = ___0_range;
+		if ((!(((float)L_41) > ((float)L_42))))
+		{
+			goto IL_00d0;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_00d0:
+	{
+		bool L_43;
+		L_43 = KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E(NULL);
+		if (L_43)
+		{
+			goto IL_00d9;
+		}
+	}
+	{
+		return (bool)0;
+	}
+
+IL_00d9:
+	{
+		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_44;
+		L_44 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_34;
-		L_34 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_33, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (L_34)
+		bool L_45;
+		L_45 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_44, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_45)
 		{
-			goto IL_00b2;
+			goto IL_00e9;
 		}
 	}
 	{
-		G_B21_0 = ((KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55*)(NULL));
-		goto IL_00bc;
+		G_B27_0 = ((KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55*)(NULL));
+		goto IL_00f3;
 	}
 
-IL_00b2:
+IL_00e9:
 	{
-		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_35;
-		L_35 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
-		NullCheck(L_35);
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_36;
-		L_36 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_35, NULL);
-		G_B21_0 = L_36;
+		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_46;
+		L_46 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		NullCheck(L_46);
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_47;
+		L_47 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_46, NULL);
+		G_B27_0 = L_47;
 	}
 
-IL_00bc:
+IL_00f3:
 	{
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_37 = G_B21_0;
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_38 = L_37;
-		if (L_38)
+		V_3 = G_B27_0;
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_48 = V_3;
+		if (L_48)
 		{
-			G_B23_0 = L_38;
-			G_B23_1 = L_37;
-			goto IL_00c3;
+			goto IL_00f9;
 		}
-		G_B22_0 = L_38;
-		G_B22_1 = L_37;
 	}
 	{
-		G_B24_0 = G_B22_1;
-		goto IL_00c9;
+		return (bool)0;
 	}
 
-IL_00c3:
+IL_00f9:
 	{
-		uint32_t L_39 = V_1;
-		NullCheck(G_B23_0);
-		KoGameClient_SendBundleOpen_m94663B6906A734C4C1FF8064785F7EE9EF126561(G_B23_0, L_39, NULL);
-		G_B24_0 = G_B23_1;
+		bool L_49 = __this->____autoCollect;
+		if (!L_49)
+		{
+			goto IL_0108;
+		}
+	}
+	{
+		uint32_t L_50 = V_1;
+		__this->____autoBundle = L_50;
 	}
 
-IL_00c9:
+IL_0108:
 	{
-		return (bool)((!(((RuntimeObject*)(KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55*)G_B24_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_51 = V_3;
+		uint32_t L_52 = V_1;
+		NullCheck(L_51);
+		KoGameClient_SendBundleOpen_m94663B6906A734C4C1FF8064785F7EE9EF126561(L_51, L_52, NULL);
+		return (bool)1;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootController_OnBundleOpen_m646053A3841ADD8D1CF46FD7B585422B0963F78C (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 ___0_p, const RuntimeMethod* method) 
 {
-	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B3_0 = NULL;
-	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B2_0 = NULL;
-	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B8_0 = NULL;
-	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B7_0 = NULL;
+	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B6_0 = NULL;
+	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B5_0 = NULL;
+	KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* G_B10_0 = NULL;
+	KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* G_B9_0 = NULL;
+	uint32_t G_B11_0 = 0;
+	KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* G_B11_1 = NULL;
+	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B14_0 = NULL;
+	KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* G_B13_0 = NULL;
 	{
 		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_0 = ___0_p;
 		uint8_t L_1 = L_0.___Ok;
 		if (L_1)
 		{
-			goto IL_0020;
+			goto IL_004d;
 		}
 	}
+	{
+		bool L_2 = __this->____autoCollect;
+		if (!L_2)
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		uint32_t L_3 = __this->____autoBundle;
+		if (!L_3)
+		{
+			goto IL_0035;
+		}
+	}
+	{
+		uint32_t L_4 = __this->____autoBundle;
+		__this->____doneBundle = L_4;
+		float L_5;
+		L_5 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		__this->____doneUntil = ((float)il2cpp_codegen_add(L_5, (8.0f)));
+	}
+
+IL_0035:
 	{
 		__this->____autoCollect = (bool)0;
-		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_2 = __this->____hud;
-		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_3 = L_2;
-		if (L_3)
-		{
-			G_B3_0 = L_3;
-			goto IL_001a;
-		}
-		G_B2_0 = L_3;
-	}
-	{
-		return;
-	}
-
-IL_001a:
-	{
-		NullCheck(G_B3_0);
-		KoLootHud_Hide_mCAEE2F4270872372250A765D3CB49C0BA3871432(G_B3_0, NULL);
-		return;
-	}
-
-IL_0020:
-	{
-		bool L_4 = __this->____autoCollect;
-		if (!L_4)
-		{
-			goto IL_0036;
-		}
-	}
-	{
-		__this->____autoCollect = (bool)0;
-		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_5 = ___0_p;
-		KoLootController_CollectBundle_m37454A8750092259E89F62F9355DE73392FA3B73(L_5, NULL);
-		return;
-	}
-
-IL_0036:
-	{
 		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_6 = __this->____hud;
 		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_7 = L_6;
 		if (L_7)
 		{
-			G_B8_0 = L_7;
-			goto IL_0041;
+			G_B6_0 = L_7;
+			goto IL_0047;
 		}
-		G_B7_0 = L_7;
+		G_B5_0 = L_7;
 	}
 	{
 		return;
 	}
 
-IL_0041:
+IL_0047:
 	{
-		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_8 = ___0_p;
-		NullCheck(G_B8_0);
-		KoLootHud_ShowBundle_m1E9D770E448B2BCACEC917A22C3FA7CBD99BDC54(G_B8_0, L_8, NULL);
+		NullCheck(G_B6_0);
+		KoLootHud_Hide_mCAEE2F4270872372250A765D3CB49C0BA3871432(G_B6_0, NULL);
+		return;
+	}
+
+IL_004d:
+	{
+		bool L_8 = __this->____autoCollect;
+		if (!L_8)
+		{
+			goto IL_0090;
+		}
+	}
+	{
+		__this->____autoCollect = (bool)0;
+		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_9 = ___0_p;
+		KoLootController_CollectBundle_m37454A8750092259E89F62F9355DE73392FA3B73(L_9, NULL);
+		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_10 = ___0_p;
+		uint32_t L_11 = L_10.___BundleId;
+		if (L_11)
+		{
+			G_B10_0 = __this;
+			goto IL_0073;
+		}
+		G_B9_0 = __this;
+	}
+	{
+		uint32_t L_12 = __this->____autoBundle;
+		G_B11_0 = L_12;
+		G_B11_1 = G_B9_0;
+		goto IL_0079;
+	}
+
+IL_0073:
+	{
+		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_13 = ___0_p;
+		uint32_t L_14 = L_13.___BundleId;
+		G_B11_0 = L_14;
+		G_B11_1 = G_B10_0;
+	}
+
+IL_0079:
+	{
+		NullCheck(G_B11_1);
+		G_B11_1->____doneBundle = G_B11_0;
+		float L_15;
+		L_15 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		__this->____doneUntil = ((float)il2cpp_codegen_add(L_15, (8.0f)));
+		return;
+	}
+
+IL_0090:
+	{
+		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_16 = __this->____hud;
+		KoLootHud_t2FF682DF2BAA1E058D993196D8EF8EC7C8FE591E* L_17 = L_16;
+		if (L_17)
+		{
+			G_B14_0 = L_17;
+			goto IL_009b;
+		}
+		G_B13_0 = L_17;
+	}
+	{
+		return;
+	}
+
+IL_009b:
+	{
+		KoBundleOpenPacket_t70FD6D50676A18EF5E8A521E313CC460882B9749 L_18 = ___0_p;
+		NullCheck(G_B14_0);
+		KoLootHud_ShowBundle_m1E9D770E448B2BCACEC917A22C3FA7CBD99BDC54(G_B14_0, L_18, NULL);
 		return;
 	}
 }
@@ -17238,7 +17465,7 @@ IL_007a:
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* KoLootController_FindNearestLoot_m909AF713F7A0470DD9FA3D5020EB2626E62E1C32 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846* KoLootController_FindNearestLoot_mEC6CC7E2A901DF2CD812A7DB2E36806A92FF851D (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17257,17 +17484,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoTargetable_t396CAEA1BE040ACE29797C5D37A65B3
 	float V_5 = 0.0f;
 	{
 		V_0 = (KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846*)NULL;
-		float L_0 = __this->___openRange;
+		float L_0 = ___0_range;
 		V_1 = L_0;
 		il2cpp_codegen_runtime_class_init_inline(KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846_il2cpp_TypeInfo_var);
 		List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237* L_1;
 		L_1 = KoTargetable_get_Live_m222FF2AAA8CB2EA091EEE7A9C8988C6D8610DB8B_inline(NULL);
 		V_2 = L_1;
 		V_3 = 0;
-		goto IL_005c;
+		goto IL_0057;
 	}
 
-IL_0013:
+IL_000e:
 	{
 		List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237* L_2 = V_2;
 		int32_t L_3 = V_3;
@@ -17281,7 +17508,7 @@ IL_0013:
 		L_6 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (L_6)
 		{
-			goto IL_0058;
+			goto IL_0053;
 		}
 	}
 	{
@@ -17290,7 +17517,7 @@ IL_0013:
 		uint32_t L_8 = L_7->___BundleId;
 		if (!L_8)
 		{
-			goto IL_0058;
+			goto IL_0053;
 		}
 	}
 	{
@@ -17313,7 +17540,7 @@ IL_0013:
 		float L_16 = V_1;
 		if ((!(((float)L_15) < ((float)L_16))))
 		{
-			goto IL_0058;
+			goto IL_0053;
 		}
 	}
 	{
@@ -17323,13 +17550,13 @@ IL_0013:
 		V_0 = L_18;
 	}
 
-IL_0058:
+IL_0053:
 	{
 		int32_t L_19 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_19, 1));
 	}
 
-IL_005c:
+IL_0057:
 	{
 		int32_t L_20 = V_3;
 		List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237* L_21 = V_2;
@@ -17338,7 +17565,7 @@ IL_005c:
 		L_22 = List_1_get_Count_m6F23BB9F6827068D656E17874033D49E37C1B43F_inline(L_21, List_1_get_Count_m6F23BB9F6827068D656E17874033D49E37C1B43F_RuntimeMethod_var);
 		if ((((int32_t)L_20) < ((int32_t)L_22)))
 		{
-			goto IL_0013;
+			goto IL_000e;
 		}
 	}
 	{
@@ -17346,7 +17573,7 @@ IL_005c:
 		return L_23;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* KoLootController_FindNearestChest_mF6CEDE229D943AA75D753B7595DB0F946B3F0D66 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A* KoLootController_FindNearestChest_mC5E213092CF5E1A5CD67C331DCA3C8EF41C544B5 (KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* __this, float ___0_range, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -17363,17 +17590,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoLootChest_tA11AD2023331ED84B26F092743ABC34C
 	float V_5 = 0.0f;
 	{
 		V_0 = (KoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A*)NULL;
-		float L_0 = __this->___openRange;
+		float L_0 = ___0_range;
 		V_1 = L_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		KoLootChestU5BU5D_tFB95B44C1AC685BC6F6EDF9EB8539B4523393476* L_1;
 		L_1 = Object_FindObjectsOfType_TisKoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A_mE0714FC8E459B2DB634B25A600299A648F9F9BB3(Object_FindObjectsOfType_TisKoLootChest_tA11AD2023331ED84B26F092743ABC34C942C315A_mE0714FC8E459B2DB634B25A600299A648F9F9BB3_RuntimeMethod_var);
 		V_2 = L_1;
 		V_3 = 0;
-		goto IL_0058;
+		goto IL_0053;
 	}
 
-IL_0013:
+IL_000e:
 	{
 		KoLootChestU5BU5D_tFB95B44C1AC685BC6F6EDF9EB8539B4523393476* L_2 = V_2;
 		int32_t L_3 = V_3;
@@ -17387,7 +17614,7 @@ IL_0013:
 		L_7 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (L_7)
 		{
-			goto IL_0054;
+			goto IL_004f;
 		}
 	}
 	{
@@ -17396,7 +17623,7 @@ IL_0013:
 		uint32_t L_9 = L_8->___BundleId;
 		if (!L_9)
 		{
-			goto IL_0054;
+			goto IL_004f;
 		}
 	}
 	{
@@ -17419,7 +17646,7 @@ IL_0013:
 		float L_17 = V_1;
 		if ((!(((float)L_16) < ((float)L_17))))
 		{
-			goto IL_0054;
+			goto IL_004f;
 		}
 	}
 	{
@@ -17429,20 +17656,20 @@ IL_0013:
 		V_0 = L_19;
 	}
 
-IL_0054:
+IL_004f:
 	{
 		int32_t L_20 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_20, 1));
 	}
 
-IL_0058:
+IL_0053:
 	{
 		int32_t L_21 = V_3;
 		KoLootChestU5BU5D_tFB95B44C1AC685BC6F6EDF9EB8539B4523393476* L_22 = V_2;
 		NullCheck(L_22);
 		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
 		{
-			goto IL_0013;
+			goto IL_000e;
 		}
 	}
 	{
@@ -25630,6 +25857,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoNameplate_get_DisplayName_m068302
 {
 	{
 		String_t* L_0 = __this->____displayName;
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoNameplate_get_HeadLocalY_m85DAB559518746160435E7E30DF3A9C7E9545E30 (KoNameplate_t33D033A59BDBCBBDB86567B6A1C8300C682E0BB7* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->____cachedHeadLocalY;
 		return L_0;
 	}
 }
@@ -34791,6 +35025,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoLootController_t373E0CA787A1AA7
 {
 	{
 		KoLootController_t373E0CA787A1AA73CD9BC0126106FB4990635C20* L_0 = __this->____loot;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool KoPetLoot_get_AutoLoot_m36CFD1AC86698465B007E484F202CCD48E3093EE_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		bool L_0 = ((KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2_StaticFields*)il2cpp_codegen_static_fields_for(KoPetLoot_t896BBF802C25CAE584C48ABB9DA04AB88BAE08C2_il2cpp_TypeInfo_var))->___U3CAutoLootU3Ek__BackingField;
 		return L_0;
 	}
 }

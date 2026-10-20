@@ -2702,6 +2702,7 @@ struct KoRemotePlayerState_tE9F0363D5C16150F039C5E3116A70DE22538F42C  : public R
 	uint8_t ___PendingType;
 	uint32_t ___PendingBuff;
 	float ___LastCombatAt;
+	int16_t ___LastAttackTarget;
 	uint8_t ___Tier;
 	uint8_t ___WantTier;
 	KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* ___Visual;
@@ -3054,6 +3055,7 @@ struct KoInventoryScreen_t0626F81B1091718E2C308E623ABF6E55590E3DF9  : public Mon
 	List_1_t8BF4257BDCDEBF18D9D2DB4F9E4432D540C5D918* ____bagSlots;
 	List_1_t8BF4257BDCDEBF18D9D2DB4F9E4432D540C5D918* ____cospSlots;
 	List_1_t8BF4257BDCDEBF18D9D2DB4F9E4432D540C5D918* ____mbagSlots;
+	List_1_t8BF4257BDCDEBF18D9D2DB4F9E4432D540C5D918* ____petLootSlots;
 	bool ____slotsReady;
 	int32_t ____selectedBag;
 	int32_t ____lastDblBagSlot;
