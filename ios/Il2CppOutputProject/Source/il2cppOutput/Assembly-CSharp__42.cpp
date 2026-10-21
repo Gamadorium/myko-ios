@@ -6337,7 +6337,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoPlayerAnimDriver_ResolveType1Stat
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoEAni_ToStateName_m48487846B673227E2AEBFDDEF4EA033395528ECA (int32_t ___0_eAni, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoPlayerAnimDriver_HasAnimState_mB290BEE2FC5232615E41AB26AC80FA69F7004078 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, String_t* ___0_stateName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoPlayerAnimDriver_NextAttackState_mDCD4C9B50E3B366403749D7C26B9FA6F3E76CF43 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoWeaponAnimResolve_EffectiveWeaponClass_mDE3F24C6E0ED7C2BD3A5CB4E63399C5C9CC05CE5 (KoWeaponHands_t2CE0A351D86E5E0D7793D6B642E00D4D6D433AA3* ___0_h, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoPlayerAnimDriver_PlayType1Hit_m1E3101C22283D2983AB628931F313430C515B8F5 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, String_t* ___0_stateName, bool ___1_holdPose, String_t** ___2_playedState, KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* ___3_info, float ___4_castSec, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerAnimDriver_MarkStretchedCast_mDCEAB497C477DFEF88BE24AA99CB5A04562F44F5 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, uint32_t ___0_skillId, String_t* ___1_state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoSkillRow_get_CastSeconds_mF3D26EDDE76A9B39BC325904930FF7C9B572D3E9 (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* __this, const RuntimeMethod* method) ;
@@ -11956,7 +11955,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillDirector_PlayType1Act_mC930DDBFC5
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoEAni_t1FCE6E65B316A3D89DC784A18F7151766581633D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSkillTiming_t9C7815705BEA4AEC540404F374B001E5EB25620C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var);
@@ -11968,29 +11966,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillDirector_PlayType1Act_mC930DDBFC5
 	String_t* V_0 = NULL;
 	int32_t V_1 = 0;
 	float V_2 = 0.0f;
-	KoWeaponHands_t2CE0A351D86E5E0D7793D6B642E00D4D6D433AA3 V_3;
-	memset((&V_3), 0, sizeof(V_3));
-	float V_4 = 0.0f;
+	float V_3 = 0.0f;
+	String_t* V_4 = NULL;
 	String_t* V_5 = NULL;
-	String_t* V_6 = NULL;
+	String_t* G_B22_0 = NULL;
+	uint32_t G_B22_1 = 0;
+	KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* G_B22_2 = NULL;
+	String_t* G_B21_0 = NULL;
+	uint32_t G_B21_1 = 0;
+	KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* G_B21_2 = NULL;
 	String_t* G_B25_0 = NULL;
-	uint32_t G_B25_1 = 0;
-	KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* G_B25_2 = NULL;
+	int32_t G_B25_1 = 0;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B25_2 = NULL;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B25_3 = NULL;
+	String_t* G_B25_4 = NULL;
+	String_t* G_B25_5 = NULL;
 	String_t* G_B24_0 = NULL;
-	uint32_t G_B24_1 = 0;
-	KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* G_B24_2 = NULL;
-	String_t* G_B28_0 = NULL;
-	int32_t G_B28_1 = 0;
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B28_2 = NULL;
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B28_3 = NULL;
-	String_t* G_B28_4 = NULL;
-	String_t* G_B28_5 = NULL;
-	String_t* G_B27_0 = NULL;
-	int32_t G_B27_1 = 0;
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B27_2 = NULL;
-	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B27_3 = NULL;
-	String_t* G_B27_4 = NULL;
-	String_t* G_B27_5 = NULL;
+	int32_t G_B24_1 = 0;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B24_2 = NULL;
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* G_B24_3 = NULL;
+	String_t* G_B24_4 = NULL;
+	String_t* G_B24_5 = NULL;
 	{
 		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_0 = ___4_play;
 		il2cpp_codegen_initobj(L_0, sizeof(KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE));
@@ -12069,8 +12065,8 @@ IL_0021:
 		il2cpp_codegen_runtime_class_init_inline(KoEAni_t1FCE6E65B316A3D89DC784A18F7151766581633D_il2cpp_TypeInfo_var);
 		String_t* L_21;
 		L_21 = KoEAni_ToStateName_m48487846B673227E2AEBFDDEF4EA033395528ECA(L_20, NULL);
-		V_5 = L_21;
-		String_t* L_22 = V_5;
+		V_4 = L_21;
+		String_t* L_22 = V_4;
 		bool L_23;
 		L_23 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_22, NULL);
 		if (L_23)
@@ -12080,7 +12076,7 @@ IL_0021:
 	}
 	{
 		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_24 = ___1_anim;
-		String_t* L_25 = V_5;
+		String_t* L_25 = V_4;
 		NullCheck(L_24);
 		bool L_26;
 		L_26 = KoPlayerAnimDriver_HasAnimState_mB290BEE2FC5232615E41AB26AC80FA69F7004078(L_24, L_25, NULL);
@@ -12090,7 +12086,7 @@ IL_0021:
 		}
 	}
 	{
-		String_t* L_27 = V_5;
+		String_t* L_27 = V_4;
 		V_0 = L_27;
 	}
 
@@ -12120,8 +12116,8 @@ IL_0070:
 		il2cpp_codegen_runtime_class_init_inline(KoEAni_t1FCE6E65B316A3D89DC784A18F7151766581633D_il2cpp_TypeInfo_var);
 		String_t* L_34;
 		L_34 = KoEAni_ToStateName_m48487846B673227E2AEBFDDEF4EA033395528ECA(L_33, NULL);
-		V_6 = L_34;
-		String_t* L_35 = V_6;
+		V_5 = L_34;
+		String_t* L_35 = V_5;
 		bool L_36;
 		L_36 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_35, NULL);
 		if (L_36)
@@ -12131,7 +12127,7 @@ IL_0070:
 	}
 	{
 		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_37 = ___1_anim;
-		String_t* L_38 = V_6;
+		String_t* L_38 = V_5;
 		NullCheck(L_37);
 		bool L_39;
 		L_39 = KoPlayerAnimDriver_HasAnimState_mB290BEE2FC5232615E41AB26AC80FA69F7004078(L_37, L_38, NULL);
@@ -12141,7 +12137,7 @@ IL_0070:
 		}
 	}
 	{
-		String_t* L_40 = V_6;
+		String_t* L_40 = V_5;
 		V_0 = L_40;
 	}
 
@@ -12186,223 +12182,195 @@ IL_00bd:
 		L_50 = KoSkillDirector_BodyFitSeconds_m11DA402EA9DCC41DAC59DF0BA5F705A929632C2A(L_47, L_48, L_49, NULL);
 		V_2 = L_50;
 		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_51 = ___1_anim;
+		String_t* L_52 = V_0;
+		String_t** L_53 = ___3_playedState;
+		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_54 = ___4_play;
+		float L_55 = V_2;
 		NullCheck(L_51);
-		KoWeaponHands_t2CE0A351D86E5E0D7793D6B642E00D4D6D433AA3 L_52;
-		L_52 = KoPlayerAnimDriver_get_Hands_m091A0A684B3C2CDD8E0402D7E8AB1244F3F08395(L_51, NULL);
-		V_3 = L_52;
-		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_53 = ___0_skill;
-		il2cpp_codegen_runtime_class_init_inline(KoSkillTiming_t9C7815705BEA4AEC540404F374B001E5EB25620C_il2cpp_TypeInfo_var);
-		float L_54;
-		L_54 = KoSkillTiming_CastSeconds_m8F780739C1331CCCB1B899E60A97CFB46491217E(L_53, NULL);
-		if ((!(((float)L_54) <= ((float)(0.0500000007f)))))
+		float L_56;
+		L_56 = KoPlayerAnimDriver_PlayType1Hit_m1E3101C22283D2983AB628931F313430C515B8F5(L_51, L_52, (bool)1, L_53, L_54, L_55, NULL);
+		V_3 = L_56;
+		float L_57 = V_2;
+		___2_castSec = L_57;
+		float L_58 = ___2_castSec;
+		if ((!(((float)L_58) > ((float)(0.0500000007f)))))
 		{
-			goto IL_00eb;
+			goto IL_00fa;
 		}
 	}
 	{
-		uint8_t L_55;
-		L_55 = KoWeaponAnimResolve_EffectiveWeaponClass_mDE3F24C6E0ED7C2BD3A5CB4E63399C5C9CC05CE5((&V_3), NULL);
-		if ((!(((uint32_t)L_55) == ((uint32_t)((int32_t)110)))))
-		{
-			goto IL_00eb;
-		}
-	}
-	{
-		V_2 = (0.699999988f);
-	}
-
-IL_00eb:
-	{
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_56 = ___1_anim;
-		String_t* L_57 = V_0;
-		String_t** L_58 = ___3_playedState;
 		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_59 = ___4_play;
-		float L_60 = V_2;
-		NullCheck(L_56);
-		float L_61;
-		L_61 = KoPlayerAnimDriver_PlayType1Hit_m1E3101C22283D2983AB628931F313430C515B8F5(L_56, L_57, (bool)1, L_58, L_59, L_60, NULL);
-		V_4 = L_61;
-		float L_62 = V_2;
-		___2_castSec = L_62;
-		float L_63 = ___2_castSec;
-		if ((!(((float)L_63) > ((float)(0.0500000007f)))))
+		bool L_60 = L_59->___Ok;
+		if (!L_60)
 		{
-			goto IL_0120;
+			goto IL_00fa;
 		}
 	}
 	{
-		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_64 = ___4_play;
-		bool L_65 = L_64->___Ok;
-		if (!L_65)
+		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_61 = ___1_anim;
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_62 = ___0_skill;
+		NullCheck(L_62);
+		uint32_t L_63 = L_62->___dwID;
+		String_t** L_64 = ___3_playedState;
+		String_t* L_65 = *((String_t**)L_64);
+		String_t* L_66 = L_65;
+		if (L_66)
 		{
-			goto IL_0120;
+			G_B22_0 = L_66;
+			G_B22_1 = L_63;
+			G_B22_2 = L_61;
+			goto IL_00f5;
 		}
+		G_B21_0 = L_66;
+		G_B21_1 = L_63;
+		G_B21_2 = L_61;
 	}
 	{
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_66 = ___1_anim;
-		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_67 = ___0_skill;
-		NullCheck(L_67);
-		uint32_t L_68 = L_67->___dwID;
-		String_t** L_69 = ___3_playedState;
-		String_t* L_70 = *((String_t**)L_69);
-		String_t* L_71 = L_70;
-		if (L_71)
-		{
-			G_B25_0 = L_71;
-			G_B25_1 = L_68;
-			G_B25_2 = L_66;
-			goto IL_011b;
-		}
-		G_B24_0 = L_71;
-		G_B24_1 = L_68;
-		G_B24_2 = L_66;
-	}
-	{
-		String_t* L_72 = V_0;
-		G_B25_0 = L_72;
-		G_B25_1 = G_B24_1;
-		G_B25_2 = G_B24_2;
+		String_t* L_67 = V_0;
+		G_B22_0 = L_67;
+		G_B22_1 = G_B21_1;
+		G_B22_2 = G_B21_2;
 	}
 
-IL_011b:
+IL_00f5:
 	{
-		NullCheck(G_B25_2);
-		KoPlayerAnimDriver_MarkStretchedCast_mDCEAB497C477DFEF88BE24AA99CB5A04562F44F5(G_B25_2, G_B25_1, G_B25_0, NULL);
+		NullCheck(G_B22_2);
+		KoPlayerAnimDriver_MarkStretchedCast_mDCEAB497C477DFEF88BE24AA99CB5A04562F44F5(G_B22_2, G_B22_1, G_B22_0, NULL);
 	}
 
-IL_0120:
+IL_00fa:
 	{
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_73 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_74 = L_73;
-		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_75 = ___0_skill;
-		NullCheck(L_75);
-		String_t* L_76 = L_75->___szName;
-		NullCheck(L_74);
-		ArrayElementTypeCheck (L_74, L_76);
-		(L_74)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_76);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_77 = L_74;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_68 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_69 = L_68;
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_70 = ___0_skill;
+		NullCheck(L_70);
+		String_t* L_71 = L_70->___szName;
+		NullCheck(L_69);
+		ArrayElementTypeCheck (L_69, L_71);
+		(L_69)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_71);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_72 = L_69;
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_73 = ___0_skill;
+		NullCheck(L_73);
+		int32_t L_74 = L_73->___iAct1;
+		int32_t L_75 = L_74;
+		RuntimeObject* L_76 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_75);
+		NullCheck(L_72);
+		ArrayElementTypeCheck (L_72, L_76);
+		(L_72)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_76);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_77 = L_72;
 		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_78 = ___0_skill;
 		NullCheck(L_78);
-		int32_t L_79 = L_78->___iAct1;
+		int32_t L_79 = L_78->___iAct2;
 		int32_t L_80 = L_79;
 		RuntimeObject* L_81 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_80);
 		NullCheck(L_77);
 		ArrayElementTypeCheck (L_77, L_81);
-		(L_77)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_81);
+		(L_77)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_81);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_82 = L_77;
 		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_83 = ___0_skill;
 		NullCheck(L_83);
-		int32_t L_84 = L_83->___iAct2;
+		int32_t L_84 = L_83->___iAct3;
 		int32_t L_85 = L_84;
 		RuntimeObject* L_86 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_85);
 		NullCheck(L_82);
 		ArrayElementTypeCheck (L_82, L_86);
-		(L_82)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_86);
+		(L_82)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_86);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_87 = L_82;
-		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_88 = ___0_skill;
-		NullCheck(L_88);
-		int32_t L_89 = L_88->___iAct3;
-		int32_t L_90 = L_89;
-		RuntimeObject* L_91 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_90);
+		int32_t L_88 = V_1;
+		int32_t L_89 = L_88;
+		RuntimeObject* L_90 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_89);
 		NullCheck(L_87);
-		ArrayElementTypeCheck (L_87, L_91);
-		(L_87)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_91);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_92 = L_87;
-		int32_t L_93 = V_1;
-		int32_t L_94 = L_93;
-		RuntimeObject* L_95 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_94);
-		NullCheck(L_92);
-		ArrayElementTypeCheck (L_92, L_95);
-		(L_92)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_95);
-		String_t* L_96;
-		L_96 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralE7BB0EE55B74E334B62A2FAD9EEE2840FEB2C3DF, L_92, NULL);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_97 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_98 = L_97;
-		String_t** L_99 = ___3_playedState;
-		String_t* L_100 = *((String_t**)L_99);
-		String_t* L_101 = L_100;
-		if (L_101)
+		ArrayElementTypeCheck (L_87, L_90);
+		(L_87)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_90);
+		String_t* L_91;
+		L_91 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralE7BB0EE55B74E334B62A2FAD9EEE2840FEB2C3DF, L_87, NULL);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_92 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_93 = L_92;
+		String_t** L_94 = ___3_playedState;
+		String_t* L_95 = *((String_t**)L_94);
+		String_t* L_96 = L_95;
+		if (L_96)
 		{
-			G_B28_0 = L_101;
-			G_B28_1 = 0;
-			G_B28_2 = L_98;
-			G_B28_3 = L_98;
-			G_B28_4 = _stringLiteral54AF531420393C4F78A3AE74F58360AF65147731;
-			G_B28_5 = L_96;
-			goto IL_0180;
+			G_B25_0 = L_96;
+			G_B25_1 = 0;
+			G_B25_2 = L_93;
+			G_B25_3 = L_93;
+			G_B25_4 = _stringLiteral54AF531420393C4F78A3AE74F58360AF65147731;
+			G_B25_5 = L_91;
+			goto IL_015a;
 		}
-		G_B27_0 = L_101;
-		G_B27_1 = 0;
-		G_B27_2 = L_98;
-		G_B27_3 = L_98;
-		G_B27_4 = _stringLiteral54AF531420393C4F78A3AE74F58360AF65147731;
-		G_B27_5 = L_96;
+		G_B24_0 = L_96;
+		G_B24_1 = 0;
+		G_B24_2 = L_93;
+		G_B24_3 = L_93;
+		G_B24_4 = _stringLiteral54AF531420393C4F78A3AE74F58360AF65147731;
+		G_B24_5 = L_91;
 	}
 	{
-		String_t* L_102 = V_0;
-		G_B28_0 = L_102;
-		G_B28_1 = G_B27_1;
-		G_B28_2 = G_B27_2;
-		G_B28_3 = G_B27_3;
-		G_B28_4 = G_B27_4;
-		G_B28_5 = G_B27_5;
+		String_t* L_97 = V_0;
+		G_B25_0 = L_97;
+		G_B25_1 = G_B24_1;
+		G_B25_2 = G_B24_2;
+		G_B25_3 = G_B24_3;
+		G_B25_4 = G_B24_4;
+		G_B25_5 = G_B24_5;
 	}
 
-IL_0180:
+IL_015a:
 	{
-		NullCheck(G_B28_2);
-		ArrayElementTypeCheck (G_B28_2, G_B28_0);
-		(G_B28_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B28_1), (RuntimeObject*)G_B28_0);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_103 = G_B28_3;
-		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_104 = ___0_skill;
-		NullCheck(L_104);
-		float L_105;
-		L_105 = KoSkillRow_get_CastSeconds_mF3D26EDDE76A9B39BC325904930FF7C9B572D3E9(L_104, NULL);
-		float L_106 = L_105;
-		RuntimeObject* L_107 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_106);
+		NullCheck(G_B25_2);
+		ArrayElementTypeCheck (G_B25_2, G_B25_0);
+		(G_B25_2)->SetAt(static_cast<il2cpp_array_size_t>(G_B25_1), (RuntimeObject*)G_B25_0);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_98 = G_B25_3;
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_99 = ___0_skill;
+		NullCheck(L_99);
+		float L_100;
+		L_100 = KoSkillRow_get_CastSeconds_mF3D26EDDE76A9B39BC325904930FF7C9B572D3E9(L_99, NULL);
+		float L_101 = L_100;
+		RuntimeObject* L_102 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_101);
+		NullCheck(L_98);
+		ArrayElementTypeCheck (L_98, L_102);
+		(L_98)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_102);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_103 = L_98;
+		float L_104 = ___2_castSec;
+		float L_105 = L_104;
+		RuntimeObject* L_106 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_105);
 		NullCheck(L_103);
-		ArrayElementTypeCheck (L_103, L_107);
-		(L_103)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_107);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_108 = L_103;
-		float L_109 = ___2_castSec;
+		ArrayElementTypeCheck (L_103, L_106);
+		(L_103)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_106);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_107 = L_103;
+		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_108 = ___4_play;
+		float L_109 = L_108->___Speed;
 		float L_110 = L_109;
 		RuntimeObject* L_111 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_110);
-		NullCheck(L_108);
-		ArrayElementTypeCheck (L_108, L_111);
-		(L_108)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_111);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_112 = L_108;
-		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_113 = ___4_play;
-		float L_114 = L_113->___Speed;
-		float L_115 = L_114;
-		RuntimeObject* L_116 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_115);
+		NullCheck(L_107);
+		ArrayElementTypeCheck (L_107, L_111);
+		(L_107)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_111);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_112 = L_107;
+		float L_113 = V_3;
+		float L_114 = L_113;
+		RuntimeObject* L_115 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_114);
 		NullCheck(L_112);
-		ArrayElementTypeCheck (L_112, L_116);
-		(L_112)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_116);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_117 = L_112;
-		float L_118 = V_4;
+		ArrayElementTypeCheck (L_112, L_115);
+		(L_112)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_115);
+		String_t* L_116;
+		L_116 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(G_B25_4, L_112, NULL);
+		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_117 = ___4_play;
+		float L_118 = L_117->___Strike0;
 		float L_119 = L_118;
 		RuntimeObject* L_120 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_119);
-		NullCheck(L_117);
-		ArrayElementTypeCheck (L_117, L_120);
-		(L_117)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_120);
-		String_t* L_121;
-		L_121 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(G_B28_4, L_117, NULL);
-		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_122 = ___4_play;
-		float L_123 = L_122->___Strike0;
-		float L_124 = L_123;
-		RuntimeObject* L_125 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_124);
-		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_126 = ___4_play;
-		float L_127 = L_126->___StrikeAt;
-		float L_128 = L_127;
-		RuntimeObject* L_129 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_128);
-		String_t* L_130;
-		L_130 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralF3AEEEAE52CCCBDC7C0FBB66365EA819243A8C1E, L_125, L_129, NULL);
-		String_t* L_131;
-		L_131 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(G_B28_5, L_121, L_130, NULL);
+		KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* L_121 = ___4_play;
+		float L_122 = L_121->___StrikeAt;
+		float L_123 = L_122;
+		RuntimeObject* L_124 = Box(Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_il2cpp_TypeInfo_var, &L_123);
+		String_t* L_125;
+		L_125 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralF3AEEEAE52CCCBDC7C0FBB66365EA819243A8C1E, L_120, L_124, NULL);
+		String_t* L_126;
+		L_126 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(G_B25_5, L_116, L_125, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_131, NULL);
-		float L_132 = V_4;
-		return (bool)((((float)L_132) > ((float)(0.00999999978f)))? 1 : 0);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_126, NULL);
+		float L_127 = V_3;
+		return (bool)((((float)L_127) > ((float)(0.00999999978f)))? 1 : 0);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillDirector_PlayType1Act_m2A83552B6506C0BF4CE8B25F068EB80C492B1A5B (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* ___1_anim, String_t** ___2_playedState, KoAnimPlayInfo_tF5A98E49E16BFCE8F09FEE109E6B1949453540DE* ___3_play, const RuntimeMethod* method) 

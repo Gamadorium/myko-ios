@@ -4561,6 +4561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerAnimDriver_PlaySitDown_mADF0BAEE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerAnimDriver_PlayStandUp_mB7D9856C02CC328506E2173D68B3F9D477A2B26D (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_MoveTowards_m0363264647799F3173AC37F8E819F98298249B08_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_current, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_maxDistanceDelta, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoCharacterGroundSnap_EffectiveFloorHint_mA1F700716E25BD4E29A5249223756F911096C8D0 (float ___0_packetY, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KoCharacterGroundSnap_SmoothToward_m47710EA053514E1BAA4C150FB1ED5967A3FAEB02 (float ___0_current, float ___1_ground, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, float ___2_t, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerAnimDriver_UpdateLocomotion_m731DADCAFC428A2D01AA299EA4E6A0F8521DD185 (KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* __this, float ___0_planarSpeed, bool ___1_wantRun, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
@@ -18134,8 +18135,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_TickMotion_mC3D711ECC41DCD
 	float V_9 = 0.0f;
 	float V_10 = 0.0f;
 	float V_11 = 0.0f;
-	bool V_12 = false;
+	float V_12 = 0.0f;
 	bool V_13 = false;
+	bool V_14 = false;
 	int32_t G_B17_0 = 0;
 	int32_t G_B20_0 = 0;
 	KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* G_B22_0 = NULL;
@@ -18156,7 +18158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_TickMotion_mC3D711ECC41DCD
 		bool L_1 = __this->____hasTarget;
 		if (!L_1)
 		{
-			goto IL_0110;
+			goto IL_011b;
 		}
 	}
 	{
@@ -18199,264 +18201,269 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_TickMotion_mC3D711ECC41DCD
 		float L_27;
 		L_27 = KoCharacterGroundSnap_ResolveSurfaceY_m0226160CFD05394352041C5C6DB8D043A49F1955(L_23, L_25, L_26, NULL);
 		V_10 = L_27;
-		float L_28 = V_10;
-		float L_29 = V_8;
-		(&V_6)->___y = ((float)il2cpp_codegen_add(L_28, L_29));
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30 = V_0;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_6;
-		NullCheck(L_30);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_30, L_31, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32 = V_0;
+		float L_28 = V_7;
+		float L_29 = V_10;
+		float L_30;
+		L_30 = KoCharacterGroundSnap_SmoothToward_m47710EA053514E1BAA4C150FB1ED5967A3FAEB02(L_28, L_29, NULL);
+		V_11 = L_30;
+		float L_31 = V_11;
+		float L_32 = V_8;
+		(&V_6)->___y = ((float)il2cpp_codegen_add(L_31, L_32));
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34 = V_6;
 		NullCheck(L_33);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_34;
-		L_34 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_33, NULL);
-		float L_35 = __this->____yaw;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36;
-		L_36 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), L_35, (0.0f), NULL);
-		float L_37 = ___0_dt;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38;
-		L_38 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15(L_34, L_36, ((float)il2cpp_codegen_multiply((10.0f), L_37)), NULL);
-		NullCheck(L_32);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_32, L_38, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_39 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____targetPos);
-		float L_40 = L_39->___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41 = V_6;
-		float L_42 = L_41.___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_43 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____targetPos);
-		float L_44 = L_43->___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = V_6;
-		float L_46 = L_45.___z;
-		V_11 = ((float)il2cpp_codegen_subtract(L_44, L_46));
-		float L_47 = ((float)il2cpp_codegen_subtract(L_40, L_42));
-		float L_48 = V_11;
-		float L_49 = V_11;
-		if ((!(((float)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_47, L_47)), ((float)il2cpp_codegen_multiply(L_48, L_49))))) < ((float)(0.0399999991f)))))
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_33, L_34, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = V_0;
+		NullCheck(L_36);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_37;
+		L_37 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_36, NULL);
+		float L_38 = __this->____yaw;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_39;
+		L_39 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), L_38, (0.0f), NULL);
+		float L_40 = ___0_dt;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_41;
+		L_41 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15(L_37, L_39, ((float)il2cpp_codegen_multiply((10.0f), L_40)), NULL);
+		NullCheck(L_35);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_35, L_41, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_42 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____targetPos);
+		float L_43 = L_42->___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44 = V_6;
+		float L_45 = L_44.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_46 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____targetPos);
+		float L_47 = L_46->___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48 = V_6;
+		float L_49 = L_48.___z;
+		V_12 = ((float)il2cpp_codegen_subtract(L_47, L_49));
+		float L_50 = ((float)il2cpp_codegen_subtract(L_43, L_45));
+		float L_51 = V_12;
+		float L_52 = V_12;
+		if ((!(((float)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_50, L_50)), ((float)il2cpp_codegen_multiply(L_51, L_52))))) < ((float)(0.0399999991f)))))
 		{
-			goto IL_015d;
+			goto IL_0168;
 		}
 	}
 	{
 		__this->____hasTarget = (bool)0;
 		KoOtherPlayer_ResnapGround_m6DF329765211C8BEEA6D3A427D54E56F963CE8AF(__this, NULL);
-		goto IL_015d;
+		goto IL_0168;
 	}
 
-IL_0110:
+IL_011b:
 	{
-		float L_50 = __this->____planarSpeed;
-		if ((!(((float)L_50) <= ((float)(0.00100000005f)))))
+		float L_53 = __this->____planarSpeed;
+		if ((!(((float)L_53) <= ((float)(0.00100000005f)))))
 		{
-			goto IL_015d;
+			goto IL_0168;
 		}
 	}
 	{
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_51 = __this->____anim;
+		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_54 = __this->____anim;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_52;
-		L_52 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_51, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_52)
+		bool L_55;
+		L_55 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_54, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_55)
 		{
-			goto IL_0149;
+			goto IL_0154;
 		}
 	}
-	{
-		int32_t L_53 = ___1_frameCount;
-		int16_t L_54;
-		L_54 = KoOtherPlayer_get_ServerId_mB0F3BDDB98999C9B097F455DE27FC6D9576A1440_inline(__this, NULL);
-		if (((int32_t)(((int32_t)il2cpp_codegen_add(L_53, (int32_t)L_54))&((int32_t)31))))
-		{
-			goto IL_0149;
-		}
-	}
-	{
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_55 = __this->____anim;
-		NullCheck(L_55);
-		KoPlayerAnimDriver_UpdateLocomotion_m731DADCAFC428A2D01AA299EA4E6A0F8521DD185(L_55, (0.0f), (bool)0, NULL);
-	}
-
-IL_0149:
 	{
 		int32_t L_56 = ___1_frameCount;
 		int16_t L_57;
 		L_57 = KoOtherPlayer_get_ServerId_mB0F3BDDB98999C9B097F455DE27FC6D9576A1440_inline(__this, NULL);
-		if (((int32_t)(((int32_t)il2cpp_codegen_add(L_56, (int32_t)L_57))&((int32_t)63))))
+		if (((int32_t)(((int32_t)il2cpp_codegen_add(L_56, (int32_t)L_57))&((int32_t)31))))
 		{
-			goto IL_015c;
+			goto IL_0154;
+		}
+	}
+	{
+		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_58 = __this->____anim;
+		NullCheck(L_58);
+		KoPlayerAnimDriver_UpdateLocomotion_m731DADCAFC428A2D01AA299EA4E6A0F8521DD185(L_58, (0.0f), (bool)0, NULL);
+	}
+
+IL_0154:
+	{
+		int32_t L_59 = ___1_frameCount;
+		int16_t L_60;
+		L_60 = KoOtherPlayer_get_ServerId_mB0F3BDDB98999C9B097F455DE27FC6D9576A1440_inline(__this, NULL);
+		if (((int32_t)(((int32_t)il2cpp_codegen_add(L_59, (int32_t)L_60))&((int32_t)63))))
+		{
+			goto IL_0167;
 		}
 	}
 	{
 		KoOtherPlayer_ResnapGround_m6DF329765211C8BEEA6D3A427D54E56F963CE8AF(__this, NULL);
 	}
 
-IL_015c:
+IL_0167:
 	{
 		return;
 	}
 
-IL_015d:
+IL_0168:
 	{
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_58 = V_0;
-		NullCheck(L_58);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59;
-		L_59 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_58, NULL);
-		V_1 = L_59;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_60 = V_1;
-		float L_61 = L_60.___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_62 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____lastPos);
-		float L_63 = L_62->___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64 = V_1;
-		float L_65 = L_64.___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_66 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____lastPos);
-		float L_67 = L_66->___z;
-		V_2 = ((float)il2cpp_codegen_subtract(L_65, L_67));
-		float L_68 = ((float)il2cpp_codegen_subtract(L_61, L_63));
-		float L_69 = V_2;
-		float L_70 = V_2;
-		float L_71;
-		L_71 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_68, L_68)), ((float)il2cpp_codegen_multiply(L_69, L_70)))));
-		float L_72 = ___0_dt;
-		float L_73;
-		L_73 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_72, (9.99999975E-05f), NULL);
-		V_3 = ((float)(L_71/L_73));
-		float L_74 = __this->____planarSpeed;
-		float L_75 = V_3;
-		float L_76 = ___0_dt;
-		float L_77;
-		L_77 = expf(((float)il2cpp_codegen_multiply((-10.0f), L_76)));
-		float L_78;
-		L_78 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_74, L_75, ((float)il2cpp_codegen_subtract((1.0f), L_77)), NULL);
-		__this->____planarSpeed = L_78;
-		float L_79 = __this->____planarSpeed;
-		if ((!(((float)L_79) < ((float)(0.0199999996f)))))
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_61 = V_0;
+		NullCheck(L_61);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_62;
+		L_62 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_61, NULL);
+		V_1 = L_62;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63 = V_1;
+		float L_64 = L_63.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_65 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____lastPos);
+		float L_66 = L_65->___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_67 = V_1;
+		float L_68 = L_67.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_69 = (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(&__this->____lastPos);
+		float L_70 = L_69->___z;
+		V_2 = ((float)il2cpp_codegen_subtract(L_68, L_70));
+		float L_71 = ((float)il2cpp_codegen_subtract(L_64, L_66));
+		float L_72 = V_2;
+		float L_73 = V_2;
+		float L_74;
+		L_74 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_71, L_71)), ((float)il2cpp_codegen_multiply(L_72, L_73)))));
+		float L_75 = ___0_dt;
+		float L_76;
+		L_76 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_75, (9.99999975E-05f), NULL);
+		V_3 = ((float)(L_74/L_76));
+		float L_77 = __this->____planarSpeed;
+		float L_78 = V_3;
+		float L_79 = ___0_dt;
+		float L_80;
+		L_80 = expf(((float)il2cpp_codegen_multiply((-10.0f), L_79)));
+		float L_81;
+		L_81 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_77, L_78, ((float)il2cpp_codegen_subtract((1.0f), L_80)), NULL);
+		__this->____planarSpeed = L_81;
+		float L_82 = __this->____planarSpeed;
+		if ((!(((float)L_82) < ((float)(0.0199999996f)))))
 		{
-			goto IL_01e5;
+			goto IL_01f0;
 		}
 	}
 	{
-		bool L_80 = __this->____hasTarget;
-		if (L_80)
+		bool L_83 = __this->____hasTarget;
+		if (L_83)
 		{
-			goto IL_01e5;
+			goto IL_01f0;
 		}
 	}
 	{
 		__this->____planarSpeed = (0.0f);
 	}
 
-IL_01e5:
+IL_01f0:
 	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_81 = V_1;
-		__this->____lastPos = L_81;
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_82 = __this->____anim;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_84 = V_1;
+		__this->____lastPos = L_84;
+		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_85 = __this->____anim;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_83;
-		L_83 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_82, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_83)
+		bool L_86;
+		L_86 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_85, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_86)
 		{
-			goto IL_026e;
+			goto IL_0279;
 		}
 	}
 	{
-		bool L_84 = __this->____hasTarget;
-		if (L_84)
+		bool L_87 = __this->____hasTarget;
+		if (L_87)
 		{
-			goto IL_0211;
+			goto IL_021c;
 		}
 	}
 	{
-		float L_85 = __this->____planarSpeed;
-		G_B17_0 = ((((float)L_85) > ((float)(0.349999994f)))? 1 : 0);
-		goto IL_0212;
+		float L_88 = __this->____planarSpeed;
+		G_B17_0 = ((((float)L_88) > ((float)(0.349999994f)))? 1 : 0);
+		goto IL_021d;
 	}
 
-IL_0211:
+IL_021c:
 	{
 		G_B17_0 = 1;
 	}
 
-IL_0212:
+IL_021d:
 	{
-		V_12 = (bool)G_B17_0;
-		float L_86 = __this->____moveSpeed;
-		if ((((float)L_86) >= ((float)(4.5f))))
+		V_13 = (bool)G_B17_0;
+		float L_89 = __this->____moveSpeed;
+		if ((((float)L_89) >= ((float)(4.5f))))
 		{
-			goto IL_0233;
+			goto IL_023e;
 		}
 	}
 	{
-		float L_87 = __this->____planarSpeed;
-		G_B20_0 = ((((int32_t)((!(((float)L_87) >= ((float)(4.19999981f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0234;
+		float L_90 = __this->____planarSpeed;
+		G_B20_0 = ((((int32_t)((!(((float)L_90) >= ((float)(4.19999981f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_023f;
 	}
 
-IL_0233:
+IL_023e:
 	{
 		G_B20_0 = 1;
 	}
 
-IL_0234:
+IL_023f:
 	{
-		V_13 = (bool)G_B20_0;
-		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_88 = __this->____anim;
-		bool L_89 = V_12;
-		if (L_89)
+		V_14 = (bool)G_B20_0;
+		KoPlayerAnimDriver_t6A0E6219D122508FD643C97D7FFB9D109A190011* L_91 = __this->____anim;
+		bool L_92 = V_13;
+		if (L_92)
 		{
-			G_B22_0 = L_88;
-			goto IL_0247;
+			G_B22_0 = L_91;
+			goto IL_0252;
 		}
-		G_B21_0 = L_88;
+		G_B21_0 = L_91;
 	}
 	{
 		G_B26_0 = (0.0f);
 		G_B26_1 = G_B21_0;
-		goto IL_0267;
+		goto IL_0272;
 	}
 
-IL_0247:
+IL_0252:
 	{
-		float L_90 = __this->____planarSpeed;
-		bool L_91 = __this->____hasTarget;
-		if (L_91)
+		float L_93 = __this->____planarSpeed;
+		bool L_94 = __this->____hasTarget;
+		if (L_94)
 		{
-			G_B24_0 = L_90;
+			G_B24_0 = L_93;
 			G_B24_1 = G_B22_0;
-			goto IL_025c;
+			goto IL_0267;
 		}
-		G_B23_0 = L_90;
+		G_B23_0 = L_93;
 		G_B23_1 = G_B22_0;
 	}
 	{
 		G_B25_0 = (0.0f);
 		G_B25_1 = G_B23_0;
 		G_B25_2 = G_B23_1;
-		goto IL_0262;
-	}
-
-IL_025c:
-	{
-		float L_92 = __this->____moveSpeed;
-		G_B25_0 = L_92;
-		G_B25_1 = G_B24_0;
-		G_B25_2 = G_B24_1;
-	}
-
-IL_0262:
-	{
-		float L_93;
-		L_93 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(G_B25_1, G_B25_0, NULL);
-		G_B26_0 = L_93;
-		G_B26_1 = G_B25_2;
+		goto IL_026d;
 	}
 
 IL_0267:
 	{
-		bool L_94 = V_13;
-		NullCheck(G_B26_1);
-		KoPlayerAnimDriver_UpdateLocomotion_m731DADCAFC428A2D01AA299EA4E6A0F8521DD185(G_B26_1, G_B26_0, L_94, NULL);
+		float L_95 = __this->____moveSpeed;
+		G_B25_0 = L_95;
+		G_B25_1 = G_B24_0;
+		G_B25_2 = G_B24_1;
 	}
 
-IL_026e:
+IL_026d:
+	{
+		float L_96;
+		L_96 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(G_B25_1, G_B25_0, NULL);
+		G_B26_0 = L_96;
+		G_B26_1 = G_B25_2;
+	}
+
+IL_0272:
+	{
+		bool L_97 = V_14;
+		NullCheck(G_B26_1);
+		KoPlayerAnimDriver_UpdateLocomotion_m731DADCAFC428A2D01AA299EA4E6A0F8521DD185(G_B26_1, G_B26_0, L_97, NULL);
+	}
+
+IL_0279:
 	{
 		return;
 	}

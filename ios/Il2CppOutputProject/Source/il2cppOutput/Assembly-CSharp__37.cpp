@@ -3605,6 +3605,13 @@ struct KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2  : public MonoBehavio
 	Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* ____msgOutputLines;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____lastNotice;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____lastNoticeText;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeRt;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeTextRt;
+	bool ____noticeOn;
+	float ____noticeFromX;
+	float ____noticeToX;
+	float ____noticeT;
+	float ____noticeDur;
 	String_t* ____pendingPmBody;
 	bool ____autoScroll;
 	int32_t ____filterTab;

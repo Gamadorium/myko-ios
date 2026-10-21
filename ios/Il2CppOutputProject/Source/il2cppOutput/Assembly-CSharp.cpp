@@ -3427,6 +3427,13 @@ struct KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2  : public MonoBehavio
 	Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* ____msgOutputLines;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____lastNotice;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____lastNoticeText;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeRt;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeTextRt;
+	bool ____noticeOn;
+	float ____noticeFromX;
+	float ____noticeToX;
+	float ____noticeT;
+	float ____noticeDur;
 	String_t* ____pendingPmBody;
 	bool ____autoScroll;
 	int32_t ____filterTab;
@@ -5727,6 +5734,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CameraMMO_tF906C0753F8831D86B8455
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* KoWorldBootstrap_get_Instance_mC4897CE1CD2C781A37DD7A8E8BCDD30B5CBC368B_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* KoWorldBootstrap_get_LocalPlayer_mE51CD588A740C1B174666336C48AAD0E18816EB4_inline (KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoMobileTouchControls_get_IsStickHeld_mD13FF3E02D82555E96F789D45E798F96D9341842 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoMobileTouchControls_HoldWorldLook_m7164919111A251A680055CF3B83E8EB4A28717CE (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Input_get_mousePosition_mFF21FBD2647DAE2A23BD4C45571CA95D05A0A42C (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7 (int32_t ___0_fingerId, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_screen, const RuntimeMethod* method) ;
@@ -9647,7 +9655,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_LateUpdate_mD032EA4BD8192235ED
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral16DD21BE77B115D392226EB71A2D3A9FDC29E3F0);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0);
 		s_Il2CppMethodInitialized = true;
@@ -9673,6 +9680,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CameraMMO_LateUpdate_mD032EA4BD8192235ED
 	memset((&V_13), 0, sizeof(V_13));
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_14;
 	memset((&V_14), 0, sizeof(V_14));
+	bool G_B13_0 = false;
+	bool G_B7_0 = false;
+	bool G_B8_0 = false;
+	bool G_B9_0 = false;
+	bool G_B10_0 = false;
+	bool G_B11_0 = false;
+	bool G_B12_0 = false;
 	int32_t G_B23_0 = 0;
 	int32_t G_B33_0 = 0;
 	float G_B51_0 = 0.0f;
@@ -9727,198 +9741,205 @@ IL_0034:
 	{
 		bool L_7 = V_0;
 		__this->____stickWasActive = L_7;
-		bool L_8 = __this->___GMPCMODE;
-		if (L_8)
-		{
-			goto IL_00f1;
-		}
-	}
-	{
-		bool L_9 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = KoMobileTouchControls_HoldWorldLook_m7164919111A251A680055CF3B83E8EB4A28717CE(NULL);
+		bool L_9 = L_8;
 		if (L_9)
 		{
-			goto IL_00f1;
+			G_B13_0 = L_9;
+			goto IL_00a5;
 		}
+		G_B7_0 = L_9;
 	}
 	{
-		int32_t L_10 = __this->___mouseButton;
-		bool L_11;
-		L_11 = Input_GetMouseButton_m4995DD4A2D4F916565C1B1B5AAF7DF17C126B3EA(L_10, NULL);
-		if (!L_11)
+		bool L_10 = __this->___GMPCMODE;
+		if (L_10)
 		{
-			goto IL_00f1;
+			G_B13_0 = G_B7_0;
+			goto IL_00a5;
 		}
+		G_B8_0 = G_B7_0;
 	}
 	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
-		L_12 = Input_get_mousePosition_mFF21FBD2647DAE2A23BD4C45571CA95D05A0A42C(NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
-		L_13 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_12, NULL);
+		bool L_11 = V_0;
+		if (L_11)
+		{
+			G_B13_0 = G_B8_0;
+			goto IL_00a5;
+		}
+		G_B9_0 = G_B8_0;
+	}
+	{
+		int32_t L_12 = __this->___mouseButton;
+		bool L_13;
+		L_13 = Input_GetMouseButton_m4995DD4A2D4F916565C1B1B5AAF7DF17C126B3EA(L_12, NULL);
+		if (!L_13)
+		{
+			G_B13_0 = G_B9_0;
+			goto IL_00a5;
+		}
+		G_B10_0 = G_B9_0;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Input_get_mousePosition_mFF21FBD2647DAE2A23BD4C45571CA95D05A0A42C(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15;
+		L_15 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_14, NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
-		bool L_14;
-		L_14 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7((-1), L_13, NULL);
-		if (L_14)
+		bool L_16;
+		L_16 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7((-1), L_15, NULL);
+		if (L_16)
 		{
-			goto IL_00f1;
+			G_B13_0 = G_B10_0;
+			goto IL_00a5;
 		}
+		G_B11_0 = G_B10_0;
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
-		bool L_15;
-		L_15 = KoMobileTouchControls_ShouldSuppressCameraLook_m67DF0BBA73166B794BEB13C897F397135CA73EC6(NULL);
-		if (L_15)
+		bool L_17;
+		L_17 = KoMobileTouchControls_ShouldSuppressCameraLook_m67DF0BBA73166B794BEB13C897F397135CA73EC6(NULL);
+		if (L_17)
 		{
-			goto IL_00a9;
+			G_B13_0 = G_B11_0;
+			goto IL_00a5;
 		}
+		G_B12_0 = G_B11_0;
 	}
 	{
-		float L_16 = __this->____yaw;
-		float L_17;
-		L_17 = Input_GetAxis_m10372E6C5FF591668D2DC5F58C58D213CC598A62(_stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7, NULL);
-		float L_18 = __this->___rotationSpeed;
+		float L_18 = __this->____yaw;
 		float L_19;
-		L_19 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
-		float L_20 = __this->___carpanSensitivity;
-		__this->____yaw = ((float)il2cpp_codegen_add(L_16, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_17, L_18)), (40.0f))), L_19)), L_20))));
+		L_19 = Input_GetAxis_m10372E6C5FF591668D2DC5F58C58D213CC598A62(_stringLiteral88BEE283254D7094E258B3A88730F4CC4F1E4AC7, NULL);
+		float L_20 = __this->___rotationSpeed;
+		float L_21;
+		L_21 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
+		float L_22 = __this->___carpanSensitivity;
+		__this->____yaw = ((float)il2cpp_codegen_add(L_18, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_19, L_20)), (40.0f))), L_21)), L_22))));
+		G_B13_0 = G_B12_0;
 	}
 
-IL_00a9:
+IL_00a5:
 	{
-		bool L_21 = V_0;
-		if (L_21)
+		if (G_B13_0)
 		{
-			goto IL_00f1;
+			goto IL_0342;
 		}
 	}
 	{
-		float L_22 = __this->____pitch;
-		float L_23;
-		L_23 = Input_GetAxis_m10372E6C5FF591668D2DC5F58C58D213CC598A62(_stringLiteral16DD21BE77B115D392226EB71A2D3A9FDC29E3F0, NULL);
-		float L_24 = __this->___rotationSpeed;
+		il2cpp_codegen_runtime_class_init_inline(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var);
+		bool L_23 = ((KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields*)il2cpp_codegen_static_fields_for(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var))->___FingerCamera;
+		if (!L_23)
+		{
+			goto IL_0342;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var);
+		float L_24 = ((KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields*)il2cpp_codegen_static_fields_for(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var))->___AreaSkillsCameraRotateSensitivity;
 		float L_25;
-		L_25 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
-		__this->____pitch = ((float)il2cpp_codegen_subtract(L_22, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_23, L_24)), (18.0f))), L_25))));
-		float L_26 = __this->____pitch;
-		float L_27;
-		L_27 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_26, (8.0f), (75.0f), NULL);
-		__this->____pitch = L_27;
-	}
-
-IL_00f1:
-	{
-		il2cpp_codegen_runtime_class_init_inline(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var);
-		bool L_28 = ((KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields*)il2cpp_codegen_static_fields_for(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var))->___FingerCamera;
-		if (!L_28)
-		{
-			goto IL_0389;
-		}
-	}
-	{
-		il2cpp_codegen_runtime_class_init_inline(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var);
-		float L_29 = ((KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields*)il2cpp_codegen_static_fields_for(KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var))->___AreaSkillsCameraRotateSensitivity;
-		float L_30;
-		L_30 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.200000003f), L_29, NULL);
-		V_6 = L_30;
+		L_25 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.200000003f), L_24, NULL);
+		V_6 = L_25;
 		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
-		bool L_31;
-		L_31 = KoMobileTouchControls_ShouldSuppressCameraLook_m67DF0BBA73166B794BEB13C897F397135CA73EC6(NULL);
-		V_7 = L_31;
+		bool L_26;
+		L_26 = KoMobileTouchControls_ShouldSuppressCameraLook_m67DF0BBA73166B794BEB13C897F397135CA73EC6(NULL);
+		V_7 = L_26;
 		V_8 = (400.0f);
 		V_9 = 0;
-		goto IL_037d;
+		goto IL_0336;
 	}
 
-IL_0122:
+IL_00db:
 	{
-		int32_t L_32 = V_9;
-		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_33;
-		L_33 = Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1(L_32, NULL);
-		V_10 = L_33;
-		int32_t L_34;
-		L_34 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
-		if ((((int32_t)L_34) == ((int32_t)3)))
+		int32_t L_27 = V_9;
+		Touch_t03E51455ED508492B3F278903A0114FA0E87B417 L_28;
+		L_28 = Input_GetTouch_m75D99FE801A94279874FA8DC6B6ADAD35F5123B1(L_27, NULL);
+		V_10 = L_28;
+		int32_t L_29;
+		L_29 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
+		if ((((int32_t)L_29) == ((int32_t)3)))
 		{
-			goto IL_013f;
+			goto IL_00f8;
 		}
 	}
 	{
+		int32_t L_30;
+		L_30 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
+		if ((!(((uint32_t)L_30) == ((uint32_t)4))))
+		{
+			goto IL_0136;
+		}
+	}
+
+IL_00f8:
+	{
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_31 = __this->____lookBlocked;
+		int32_t L_32;
+		L_32 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_31);
+		bool L_33;
+		L_33 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_31, L_32, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_34 = __this->____lookOrigin;
 		int32_t L_35;
-		L_35 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
-		if ((!(((uint32_t)L_35) == ((uint32_t)4))))
-		{
-			goto IL_017d;
-		}
+		L_35 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_34);
+		bool L_36;
+		L_36 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_34, L_35, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_37 = __this->____lookDragging;
+		int32_t L_38;
+		L_38 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_37);
+		bool L_39;
+		L_39 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_37, L_38, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
+		goto IL_0330;
 	}
 
-IL_013f:
+IL_0136:
 	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_36 = __this->____lookBlocked;
-		int32_t L_37;
-		L_37 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_36);
-		bool L_38;
-		L_38 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_36, L_37, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_39 = __this->____lookOrigin;
 		int32_t L_40;
-		L_40 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_39);
-		bool L_41;
-		L_41 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_39, L_40, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_42 = __this->____lookDragging;
-		int32_t L_43;
-		L_43 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_42);
-		bool L_44;
-		L_44 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_42, L_43, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		goto IL_0377;
-	}
-
-IL_017d:
-	{
-		int32_t L_45;
-		L_45 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
-		if (L_45)
+		L_40 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
+		if (L_40)
 		{
-			goto IL_0241;
+			goto IL_01fa;
 		}
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
-		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_46;
-		L_46 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
+		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_41;
+		L_41 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_47;
-		L_47 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_46, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_47)
+		bool L_42;
+		L_42 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_41, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_42)
 		{
-			goto IL_01a9;
+			goto IL_0162;
 		}
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
-		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_48;
-		L_48 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
-		int32_t L_49;
-		L_49 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_48);
-		bool L_50;
-		L_50 = EventSystem_IsPointerOverGameObject_m238732B4FDEA343976D798FF04DB34C3221243C2(L_48, L_49, NULL);
-		G_B23_0 = ((int32_t)(L_50));
-		goto IL_01aa;
+		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_43;
+		L_43 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
+		int32_t L_44;
+		L_44 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_43);
+		bool L_45;
+		L_45 = EventSystem_IsPointerOverGameObject_m238732B4FDEA343976D798FF04DB34C3221243C2(L_43, L_44, NULL);
+		G_B23_0 = ((int32_t)(L_45));
+		goto IL_0163;
 	}
 
-IL_01a9:
+IL_0162:
 	{
 		G_B23_0 = 0;
 	}
 
-IL_01aa:
+IL_0163:
 	{
 		V_12 = (bool)G_B23_0;
-		bool L_51 = V_12;
-		if (!L_51)
+		bool L_46 = V_12;
+		if (!L_46)
 		{
-			goto IL_01ba;
+			goto IL_0173;
 		}
 	}
 	{
@@ -9926,340 +9947,340 @@ IL_01aa:
 		KoMobileTouchControls_NotifyUiCameraSuppress_mD9DD4A0C41DD157C0F2F0E052AA8C44D048B6837((0.449999988f), NULL);
 	}
 
-IL_01ba:
+IL_0173:
 	{
-		int32_t L_52;
-		L_52 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53;
-		L_53 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
+		int32_t L_47;
+		L_47 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_48;
+		L_48 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
-		bool L_54;
-		L_54 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7(L_52, L_53, NULL);
-		bool L_55 = V_12;
-		if (!((int32_t)((int32_t)L_54|(int32_t)L_55)))
+		bool L_49;
+		L_49 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7(L_47, L_48, NULL);
+		bool L_50 = V_12;
+		if (!((int32_t)((int32_t)L_49|(int32_t)L_50)))
 		{
-			goto IL_0210;
+			goto IL_01c9;
 		}
 	}
 	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_56 = __this->____lookBlocked;
-		int32_t L_57;
-		L_57 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_56);
-		bool L_58;
-		L_58 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_56, L_57, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_59 = __this->____lookOrigin;
-		int32_t L_60;
-		L_60 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_59);
-		bool L_61;
-		L_61 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_59, L_60, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_62 = __this->____lookDragging;
-		int32_t L_63;
-		L_63 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_62);
-		bool L_64;
-		L_64 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_62, L_63, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		goto IL_0377;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_51 = __this->____lookBlocked;
+		int32_t L_52;
+		L_52 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_51);
+		bool L_53;
+		L_53 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_51, L_52, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_54 = __this->____lookOrigin;
+		int32_t L_55;
+		L_55 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_54);
+		bool L_56;
+		L_56 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_54, L_55, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_57 = __this->____lookDragging;
+		int32_t L_58;
+		L_58 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_57);
+		bool L_59;
+		L_59 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_57, L_58, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
+		goto IL_0330;
 	}
 
-IL_0210:
+IL_01c9:
 	{
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_65 = __this->____lookOrigin;
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_60 = __this->____lookOrigin;
+		int32_t L_61;
+		L_61 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_62;
+		L_62 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
+		NullCheck(L_60);
+		Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43(L_60, L_61, L_62, Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43_RuntimeMethod_var);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_63 = __this->____lookDragging;
+		int32_t L_64;
+		L_64 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_63);
+		bool L_65;
+		L_65 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_63, L_64, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
+		goto IL_0330;
+	}
+
+IL_01fa:
+	{
 		int32_t L_66;
 		L_66 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_67;
 		L_67 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
-		NullCheck(L_65);
-		Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43(L_65, L_66, L_67, Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43_RuntimeMethod_var);
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_68 = __this->____lookDragging;
-		int32_t L_69;
-		L_69 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_68);
-		bool L_70;
-		L_70 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_68, L_69, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		goto IL_0377;
-	}
-
-IL_0241:
-	{
-		int32_t L_71;
-		L_71 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_72;
-		L_72 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
 		il2cpp_codegen_runtime_class_init_inline(KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var);
-		bool L_73;
-		L_73 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7(L_71, L_72, NULL);
-		if (!L_73)
+		bool L_68;
+		L_68 = KoMobileTouchControls_BlocksCamera_m890FB06495848774BA35BE4E065757E791C19DB7(L_66, L_67, NULL);
+		if (!L_68)
 		{
-			goto IL_0294;
+			goto IL_024d;
 		}
 	}
 	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_74 = __this->____lookBlocked;
-		int32_t L_75;
-		L_75 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_74);
-		bool L_76;
-		L_76 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_74, L_75, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_77 = __this->____lookOrigin;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_69 = __this->____lookBlocked;
+		int32_t L_70;
+		L_70 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_69);
+		bool L_71;
+		L_71 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_69, L_70, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_72 = __this->____lookOrigin;
+		int32_t L_73;
+		L_73 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_72);
+		bool L_74;
+		L_74 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_72, L_73, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_75 = __this->____lookDragging;
+		int32_t L_76;
+		L_76 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_75);
+		bool L_77;
+		L_77 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_75, L_76, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
+		goto IL_0330;
+	}
+
+IL_024d:
+	{
 		int32_t L_78;
-		L_78 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_77);
-		bool L_79;
-		L_79 = Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269(L_77, L_78, Dictionary_2_Remove_m8AAAFC55B2438542D29F1EDCDEEE6AE631082269_RuntimeMethod_var);
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_80 = __this->____lookDragging;
-		int32_t L_81;
-		L_81 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_80);
-		bool L_82;
-		L_82 = HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65(L_80, L_81, HashSet_1_Remove_mF4C8539185EBCAAE0803DF227E006B701007DD65_RuntimeMethod_var);
-		goto IL_0377;
-	}
-
-IL_0294:
-	{
-		int32_t L_83;
-		L_83 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
-		if ((!(((uint32_t)L_83) == ((uint32_t)1))))
+		L_78 = Touch_get_phase_mB82409FB2BE1C32ABDBA6A72E52A099D28AB70B0((&V_10), NULL);
+		if ((!(((uint32_t)L_78) == ((uint32_t)1))))
 		{
-			goto IL_02b2;
+			goto IL_026b;
 		}
 	}
 	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_84 = __this->____lookBlocked;
-		int32_t L_85;
-		L_85 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_84);
-		bool L_86;
-		L_86 = HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1(L_84, L_85, HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
-		G_B33_0 = ((int32_t)(L_86));
-		goto IL_02b3;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_79 = __this->____lookBlocked;
+		int32_t L_80;
+		L_80 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_79);
+		bool L_81;
+		L_81 = HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1(L_79, L_80, HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
+		G_B33_0 = ((int32_t)(L_81));
+		goto IL_026c;
 	}
 
-IL_02b2:
+IL_026b:
 	{
 		G_B33_0 = 1;
 	}
 
-IL_02b3:
+IL_026c:
 	{
-		bool L_87 = V_7;
-		if (((int32_t)(G_B33_0|(int32_t)L_87)))
-		{
-			goto IL_0377;
-		}
-	}
-	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_88 = __this->____lookDragging;
-		int32_t L_89;
-		L_89 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_88);
-		bool L_90;
-		L_90 = HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1(L_88, L_89, HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
-		if (L_90)
+		bool L_82 = V_7;
+		if (((int32_t)(G_B33_0|(int32_t)L_82)))
 		{
 			goto IL_0330;
 		}
 	}
 	{
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_91 = __this->____lookOrigin;
-		int32_t L_92;
-		L_92 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_91);
-		bool L_93;
-		L_93 = Dictionary_2_TryGetValue_mE6EF1B118635E2FA408C0DF6925CE3D1571C3085(L_91, L_92, (&V_13), Dictionary_2_TryGetValue_mE6EF1B118635E2FA408C0DF6925CE3D1571C3085_RuntimeMethod_var);
-		if (L_93)
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_83 = __this->____lookDragging;
+		int32_t L_84;
+		L_84 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_83);
+		bool L_85;
+		L_85 = HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1(L_83, L_84, HashSet_1_Contains_m98A9F88FF94538B5EECB0F87E1E3B3572E02ACA1_RuntimeMethod_var);
+		if (L_85)
 		{
-			goto IL_0300;
+			goto IL_02e9;
 		}
 	}
 	{
-		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_94 = __this->____lookOrigin;
-		int32_t L_95;
-		L_95 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_96;
-		L_96 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
-		NullCheck(L_94);
-		Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43(L_94, L_95, L_96, Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43_RuntimeMethod_var);
-		goto IL_0377;
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_86 = __this->____lookOrigin;
+		int32_t L_87;
+		L_87 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_86);
+		bool L_88;
+		L_88 = Dictionary_2_TryGetValue_mE6EF1B118635E2FA408C0DF6925CE3D1571C3085(L_86, L_87, (&V_13), Dictionary_2_TryGetValue_mE6EF1B118635E2FA408C0DF6925CE3D1571C3085_RuntimeMethod_var);
+		if (L_88)
+		{
+			goto IL_02b9;
+		}
+	}
+	{
+		Dictionary_2_t150F4DEDF234511FA356EE5425B26AEB9A3A3520* L_89 = __this->____lookOrigin;
+		int32_t L_90;
+		L_90 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_91;
+		L_91 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
+		NullCheck(L_89);
+		Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43(L_89, L_90, L_91, Dictionary_2_set_Item_mF199FD9CBA6731B2C2BA73B3D0813832DD116C43_RuntimeMethod_var);
+		goto IL_0330;
 	}
 
-IL_0300:
+IL_02b9:
 	{
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_97;
-		L_97 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_98 = V_13;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_99;
-		L_99 = Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline(L_97, L_98, NULL);
-		V_14 = L_99;
-		float L_100;
-		L_100 = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline((&V_14), NULL);
-		float L_101 = V_8;
-		if ((((float)L_100) < ((float)L_101)))
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_92;
+		L_92 = Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A((&V_10), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_93 = V_13;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_94;
+		L_94 = Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline(L_92, L_93, NULL);
+		V_14 = L_94;
+		float L_95;
+		L_95 = Vector2_get_sqrMagnitude_mA16336720C14EEF8BA9B55AE33B98C9EE2082BDC_inline((&V_14), NULL);
+		float L_96 = V_8;
+		if ((((float)L_95) < ((float)L_96)))
 		{
-			goto IL_0377;
+			goto IL_0330;
 		}
 	}
 	{
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_102 = __this->____lookDragging;
-		int32_t L_103;
-		L_103 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
-		NullCheck(L_102);
-		bool L_104;
-		L_104 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_102, L_103, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
-		goto IL_0377;
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_97 = __this->____lookDragging;
+		int32_t L_98;
+		L_98 = Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD((&V_10), NULL);
+		NullCheck(L_97);
+		bool L_99;
+		L_99 = HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB(L_97, L_98, HashSet_1_Add_m9B0DD9902395EE95D3DC522264BE1EBBBD3513EB_RuntimeMethod_var);
+		goto IL_0330;
+	}
+
+IL_02e9:
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_100;
+		L_100 = Touch_get_deltaPosition_m2D51F960B74C94821ED0F6A09E44C80FD796D299((&V_10), NULL);
+		float L_101 = L_100.___x;
+		float L_102 = __this->___rotationSpeed;
+		float L_103 = __this->___carpanSensitivity;
+		float L_104 = V_6;
+		V_11 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_101, L_102)), (0.119999997f))), L_103)), L_104));
+		float L_105 = V_11;
+		float L_106;
+		L_106 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_105, (-12.0f), (12.0f), NULL);
+		V_11 = L_106;
+		float L_107 = __this->____yaw;
+		float L_108 = V_11;
+		__this->____yaw = ((float)il2cpp_codegen_add(L_107, L_108));
 	}
 
 IL_0330:
 	{
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_105;
-		L_105 = Touch_get_deltaPosition_m2D51F960B74C94821ED0F6A09E44C80FD796D299((&V_10), NULL);
-		float L_106 = L_105.___x;
-		float L_107 = __this->___rotationSpeed;
-		float L_108 = __this->___carpanSensitivity;
-		float L_109 = V_6;
-		V_11 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_106, L_107)), (0.119999997f))), L_108)), L_109));
-		float L_110 = V_11;
-		float L_111;
-		L_111 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_110, (-12.0f), (12.0f), NULL);
-		V_11 = L_111;
-		float L_112 = __this->____yaw;
-		float L_113 = V_11;
-		__this->____yaw = ((float)il2cpp_codegen_add(L_112, L_113));
+		int32_t L_109 = V_9;
+		V_9 = ((int32_t)il2cpp_codegen_add(L_109, 1));
 	}
 
-IL_0377:
+IL_0336:
 	{
-		int32_t L_114 = V_9;
-		V_9 = ((int32_t)il2cpp_codegen_add(L_114, 1));
-	}
-
-IL_037d:
-	{
-		int32_t L_115 = V_9;
-		int32_t L_116;
-		L_116 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
-		if ((((int32_t)L_115) < ((int32_t)L_116)))
+		int32_t L_110 = V_9;
+		int32_t L_111;
+		L_111 = Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39(NULL);
+		if ((((int32_t)L_110) < ((int32_t)L_111)))
 		{
-			goto IL_0122;
+			goto IL_00db;
 		}
 	}
 
-IL_0389:
+IL_0342:
 	{
-		bool L_117 = V_0;
-		if (!L_117)
+		bool L_112 = V_0;
+		if (!L_112)
 		{
-			goto IL_0398;
+			goto IL_0351;
 		}
 	}
 	{
-		float L_118 = __this->____pitchLockedWhileStick;
-		__this->____pitch = L_118;
+		float L_113 = __this->____pitchLockedWhileStick;
+		__this->____pitch = L_113;
 	}
 
-IL_0398:
+IL_0351:
 	{
-		float L_119;
-		L_119 = Input_GetAxis_m10372E6C5FF591668D2DC5F58C58D213CC598A62(_stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0, NULL);
-		V_1 = L_119;
-		float L_120 = V_1;
-		float L_121;
-		L_121 = fabsf(L_120);
-		if ((!(((float)L_121) > ((float)(9.99999975E-05f)))))
+		float L_114;
+		L_114 = Input_GetAxis_m10372E6C5FF591668D2DC5F58C58D213CC598A62(_stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0, NULL);
+		V_1 = L_114;
+		float L_115 = V_1;
+		float L_116;
+		L_116 = fabsf(L_115);
+		if ((!(((float)L_116) > ((float)(9.99999975E-05f)))))
 		{
-			goto IL_03dc;
+			goto IL_0395;
 		}
 	}
 	{
-		float L_122 = __this->___distance;
-		float L_123 = V_1;
-		float L_124 = __this->___zoomSpeedMouse;
-		float L_125 = __this->___minDistance;
-		float L_126 = __this->___maxDistance;
-		float L_127;
-		L_127 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)il2cpp_codegen_subtract(L_122, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_123, L_124)), (8.0f))))), L_125, L_126, NULL);
-		__this->___distance = L_127;
+		float L_117 = __this->___distance;
+		float L_118 = V_1;
+		float L_119 = __this->___zoomSpeedMouse;
+		float L_120 = __this->___minDistance;
+		float L_121 = __this->___maxDistance;
+		float L_122;
+		L_122 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)il2cpp_codegen_subtract(L_117, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_118, L_119)), (8.0f))))), L_120, L_121, NULL);
+		__this->___distance = L_122;
 	}
 
-IL_03dc:
+IL_0395:
 	{
-		bool L_128 = __this->___RotateAround;
-		if (!L_128)
+		bool L_123 = __this->___RotateAround;
+		if (!L_123)
 		{
-			goto IL_03fe;
+			goto IL_03b7;
 		}
 	}
 	{
-		float L_129 = __this->____yaw;
-		int32_t L_130 = __this->___RotateAroundSpeed;
+		float L_124 = __this->____yaw;
+		int32_t L_125 = __this->___RotateAroundSpeed;
+		float L_126;
+		L_126 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
+		__this->____yaw = ((float)il2cpp_codegen_add(L_124, ((float)il2cpp_codegen_multiply(((float)L_125), L_126))));
+	}
+
+IL_03b7:
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_127 = __this->___target;
+		NullCheck(L_127);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_128;
+		L_128 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_127, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_129 = __this->___offset;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_130;
+		L_130 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_128, L_129, NULL);
+		V_2 = L_130;
 		float L_131;
-		L_131 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
-		__this->____yaw = ((float)il2cpp_codegen_add(L_129, ((float)il2cpp_codegen_multiply(((float)L_130), L_131))));
-	}
-
-IL_03fe:
-	{
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_132 = __this->___target;
-		NullCheck(L_132);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_133;
-		L_133 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_132, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_134 = __this->___offset;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_135;
-		L_135 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_133, L_134, NULL);
-		V_2 = L_135;
-		float L_136;
-		L_136 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
-		float L_137 = __this->____lookBackwardUntil;
-		if ((((float)L_136) < ((float)L_137)))
+		L_131 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
+		float L_132 = __this->____lookBackwardUntil;
+		if ((((float)L_131) < ((float)L_132)))
 		{
-			goto IL_042a;
+			goto IL_03e3;
 		}
 	}
 	{
-		float L_138 = __this->____yaw;
-		G_B51_0 = L_138;
-		goto IL_0436;
+		float L_133 = __this->____yaw;
+		G_B51_0 = L_133;
+		goto IL_03ef;
 	}
 
-IL_042a:
+IL_03e3:
 	{
-		float L_139 = __this->____yaw;
-		G_B51_0 = ((float)il2cpp_codegen_add(L_139, (180.0f)));
+		float L_134 = __this->____yaw;
+		G_B51_0 = ((float)il2cpp_codegen_add(L_134, (180.0f)));
 	}
 
-IL_0436:
+IL_03ef:
 	{
 		V_3 = G_B51_0;
-		float L_140 = __this->____pitch;
-		float L_141 = V_3;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_142;
-		L_142 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline(L_140, L_141, (0.0f), NULL);
-		V_4 = L_142;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_143 = V_2;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_144 = V_4;
-		float L_145 = __this->___distance;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_146;
-		memset((&L_146), 0, sizeof(L_146));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_146), (0.0f), (0.0f), ((-L_145)), NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_147;
-		L_147 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_144, L_146, NULL);
+		float L_135 = __this->____pitch;
+		float L_136 = V_3;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_137;
+		L_137 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline(L_135, L_136, (0.0f), NULL);
+		V_4 = L_137;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_138 = V_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_139 = V_4;
+		float L_140 = __this->___distance;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_141;
+		memset((&L_141), 0, sizeof(L_141));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_141), (0.0f), (0.0f), ((-L_140)), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_142;
+		L_142 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_139, L_141, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_143;
+		L_143 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_138, L_142, NULL);
+		V_5 = L_143;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_144;
+		L_144 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_145 = V_5;
+		NullCheck(L_144);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_144, L_145, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_146;
+		L_146 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_147 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_148;
-		L_148 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_143, L_147, NULL);
-		V_5 = L_148;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_149;
-		L_149 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_150 = V_5;
-		NullCheck(L_149);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_149, L_150, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_151;
-		L_151 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_152 = V_2;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_153;
-		L_153 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
-		NullCheck(L_151);
-		Transform_LookAt_mBD38EDB5E915C5DA6C5A79D191DEE2C826A9FC2C(L_151, L_152, L_153, NULL);
+		L_148 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
+		NullCheck(L_146);
+		Transform_LookAt_mBD38EDB5E915C5DA6C5A79D191DEE2C826A9FC2C(L_146, L_147, L_148, NULL);
 		return;
 	}
 }

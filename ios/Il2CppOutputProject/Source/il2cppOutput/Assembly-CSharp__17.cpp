@@ -2624,6 +2624,13 @@ struct KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2  : public MonoBehavio
 	Queue_1_t55768C6731D974992BF9775CEA33AAFE7F51CF31* ____msgOutputLines;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____lastNotice;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ____lastNoticeText;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeRt;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeTextRt;
+	bool ____noticeOn;
+	float ____noticeFromX;
+	float ____noticeToX;
+	float ____noticeT;
+	float ____noticeDur;
 	String_t* ____pendingPmBody;
 	bool ____autoScroll;
 	int32_t ____filterTab;
@@ -2646,7 +2653,6 @@ struct KoCmdBar_tEA124E07C27B78BD5D4EB54A4387792B5E17E49C  : public MonoBehaviou
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ____onCharacter;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ____onSkill;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ____onMiniMap;
-	bool ____slotsSwapped;
 };
 struct KoCmdListScreen_t2986CF00D9F8AE2A2333D676EECD57AED9585500  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {

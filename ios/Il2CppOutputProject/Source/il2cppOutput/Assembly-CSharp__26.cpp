@@ -675,6 +675,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral9844B9F0D8AFD2B57D4F1E3DDF302105F768F0C6
 IL2CPP_EXTERN_C String_t* _stringLiteral984BBE7F50EB990DF41AE391461A428F518F69F7;
 IL2CPP_EXTERN_C String_t* _stringLiteral98E4C3AF62705D306A1CC6400AE6614C48FF1226;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A7B2AE2DF7B2D24C7DA41C84EA2CCC4D2FF2C96;
+IL2CPP_EXTERN_C String_t* _stringLiteral9D0751D387710076DE8DFA26EB501E865898579F;
 IL2CPP_EXTERN_C String_t* _stringLiteral9D15C66A7A5AF9DCEC11B06AF08088E0CA9D22F4;
 IL2CPP_EXTERN_C String_t* _stringLiteral9DCE083EE15CDA3B6D7506A3B8AAFB79F4C2F558;
 IL2CPP_EXTERN_C String_t* _stringLiteral9E79FFDCF2AC799944D7D17AC01D4B9BFC4F7E14;
@@ -4410,7 +4411,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoNpcUiController_SetActiveNpc_mC4E82318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline (KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNpcUiController_AnvilUiAlreadyOpen_m97E37EE4158732C033B1AE53C2A855B7CB5BF4EA (KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* __this, int16_t ___0_serverId, KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* ___1_unit, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C (String_t* ___0_text, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoNpcUiController_CancelQuestFallback_m849BA2387B21F36E28342DECF2E1C637D04628A1 (KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGameClient_SendNpcEvent_mBADEBE2C7A3F667FB382838DEA5CFA9D1D5AC576 (KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* __this, int16_t ___0_npcServerId, int32_t ___1_questId, uint8_t ___2_unknown, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNpcSpecial_IsAnvil_m806C19EDC2B1972182A769628BEC9051671D9D5A (KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* ___0_unit, const RuntimeMethod* method) ;
@@ -4431,7 +4432,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChaoticExchangeScreen_Open_mA2B0F401F5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoChaoticExchangeScreen_Hide_mA81A59F3E014E87D2FCD97B7DE472A78B7B661CC (KoChaoticExchangeScreen_tD898CEDD06589F30BF69C3EE0AFB2600792FE1A2* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPieceExchangeHud_Hide_m5A3F84373F6CE4D59EB3BB0F92137BBA6FF8EBE1 (KoPieceExchangeHud_t75B5E6E25D96DFA962AEAAEEFE096FDAFC513E88* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGameClient_SendAllPointChange_mC3D4BEA63411ED15666E9997A3888D09C34D058B (KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C (String_t* ___0_text, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGameClient_SendAllSkillPtChange_m1C441E94A200276BAAA110CD9A04A135943CB00C (KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLocalCommandScreens_RequestNation_m78EFD633AD71C574E7A15C2CECFAF3959F930EE0 (KoLocalCommandScreens_tE2AB7BE52B320671D6F64DEEEF6EEE5953E26EFF* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLocalCommandScreens_RequestName_mF0229AF1658C30FBB824CC2B164B0214AB483647 (KoLocalCommandScreens_tE2AB7BE52B320671D6F64DEEEF6EEE5953E26EFF* __this, const RuntimeMethod* method) ;
@@ -7107,69 +7107,69 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoNpcUiController_BeginNpcInteraction_m6
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoObjectEventTable_tDAAA5CAD820D66CEE5C54F0AB18464F1A3DED251_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9D0751D387710076DE8DFA26EB501E865898579F);
 		s_Il2CppMethodInitialized = true;
 	}
 	KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* V_0 = NULL;
 	int16_t V_1 = 0;
 	int16_t V_2 = 0;
-	int32_t G_B10_0 = 0;
-	int32_t G_B13_0 = 0;
-	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B19_0 = NULL;
-	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B18_0 = NULL;
-	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B24_0 = NULL;
-	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B23_0 = NULL;
-	KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* G_B27_0 = NULL;
-	KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* G_B26_0 = NULL;
+	int32_t G_B8_0 = 0;
+	int32_t G_B11_0 = 0;
+	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B17_0 = NULL;
+	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B16_0 = NULL;
+	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B22_0 = NULL;
+	KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* G_B21_0 = NULL;
+	KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* G_B25_0 = NULL;
+	KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* G_B24_0 = NULL;
 	{
 		int16_t L_0 = ___0_serverId;
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_1 = ___1_unit;
 		KoNpcUiController_SetActiveNpc_mC4E8231875D009349ED17E53CACC0AB37D91DA87(__this, L_0, L_1, NULL);
 		bool L_2;
 		L_2 = KoNetSession_CanSendGameplay_m12745A33993537A03043447F8AB40EF6E515AB3E(NULL);
-		if (L_2)
+		if (!L_2)
 		{
-			goto IL_0010;
+			goto IL_0028;
 		}
 	}
-	{
-		return;
-	}
-
-IL_0010:
 	{
 		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_3;
 		L_3 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
-		NullCheck(L_3);
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_4;
-		L_4 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_3, NULL);
-		V_0 = L_4;
-		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_5 = V_0;
-		if (L_5)
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (L_4)
 		{
-			goto IL_001f;
+			goto IL_0028;
 		}
 	}
 	{
-		return;
-	}
-
-IL_001f:
-	{
-		int16_t L_6 = ___0_serverId;
-		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_7 = ___1_unit;
-		bool L_8;
-		L_8 = KoNpcUiController_AnvilUiAlreadyOpen_m97E37EE4158732C033B1AE53C2A855B7CB5BF4EA(__this, L_6, L_7, NULL);
-		if (!L_8)
+		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_5;
+		L_5 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		NullCheck(L_5);
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_6;
+		L_6 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_5, NULL);
+		if (L_6)
 		{
-			goto IL_002a;
+			goto IL_0033;
 		}
 	}
+
+IL_0028:
 	{
+		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral9D0751D387710076DE8DFA26EB501E865898579F, NULL);
 		return;
 	}
 
-IL_002a:
+IL_0033:
 	{
+		KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6* L_7;
+		L_7 = KoNetSession_get_Instance_m82299A90007AC71E9A016FEC5C395206EC7AE5A9_inline(NULL);
+		NullCheck(L_7);
+		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_8;
+		L_8 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_7, NULL);
+		V_0 = L_8;
 		KoNpcUiController_CloseAll_m4C24D7BD6CD99572390FEAEE44A82387DE8338F2(__this, NULL);
 		KoNpcUiController_CancelQuestFallback_m849BA2387B21F36E28342DECF2E1C637D04628A1(__this, NULL);
 		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_9 = V_0;
@@ -7181,7 +7181,7 @@ IL_002a:
 		L_12 = KoNpcSpecial_IsAnvil_m806C19EDC2B1972182A769628BEC9051671D9D5A(L_11, NULL);
 		if (!L_12)
 		{
-			goto IL_0088;
+			goto IL_009c;
 		}
 	}
 	{
@@ -7190,49 +7190,49 @@ IL_002a:
 		int32_t L_14 = L_13->___ProtoId;
 		if ((((int32_t)L_14) > ((int32_t)0)))
 		{
-			goto IL_0057;
+			goto IL_006b;
 		}
 	}
 	{
-		G_B10_0 = ((int32_t)5001);
-		goto IL_005e;
+		G_B8_0 = ((int32_t)5001);
+		goto IL_0072;
 	}
 
-IL_0057:
+IL_006b:
 	{
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_15 = ___1_unit;
 		NullCheck(L_15);
 		int32_t L_16 = L_15->___ProtoId;
-		G_B10_0 = ((int32_t)(((int16_t)L_16)));
+		G_B8_0 = ((int32_t)(((int16_t)L_16)));
 	}
 
-IL_005e:
+IL_0072:
 	{
-		V_1 = (int16_t)G_B10_0;
+		V_1 = (int16_t)G_B8_0;
 		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_17;
 		L_17 = KoPlayerState_get_Current_mE140DAA9F8476577EEF55B721007907485D38E59_inline(NULL);
 		if (L_17)
 		{
-			goto IL_0069;
+			goto IL_007d;
 		}
 	}
 	{
-		G_B13_0 = 0;
-		goto IL_0073;
+		G_B11_0 = 0;
+		goto IL_0087;
 	}
 
-IL_0069:
+IL_007d:
 	{
 		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_18;
 		L_18 = KoPlayerState_get_Current_mE140DAA9F8476577EEF55B721007907485D38E59_inline(NULL);
 		NullCheck(L_18);
 		uint8_t L_19 = L_18->___Zone;
-		G_B13_0 = ((int32_t)(L_19));
+		G_B11_0 = ((int32_t)(L_19));
 	}
 
-IL_0073:
+IL_0087:
 	{
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_20 = ___1_unit;
 		NullCheck(L_20);
@@ -7240,7 +7240,7 @@ IL_0073:
 		int16_t L_22 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(KoObjectEventTable_tDAAA5CAD820D66CEE5C54F0AB18464F1A3DED251_il2cpp_TypeInfo_var);
 		int16_t L_23;
-		L_23 = KoObjectEventTable_Resolve_m98952669B2CB6C86B64258F2C95C11F66F83949A(G_B13_0, L_21, L_22, NULL);
+		L_23 = KoObjectEventTable_Resolve_m98952669B2CB6C86B64258F2C95C11F66F83949A(G_B11_0, L_21, L_22, NULL);
 		V_2 = L_23;
 		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_24 = V_0;
 		int16_t L_25 = V_2;
@@ -7249,14 +7249,14 @@ IL_0073:
 		KoGameClient_SendObjectEvent_m3E65653E50D623D0F81E8FF185C54FE76BE05C32(L_24, L_25, L_26, NULL);
 	}
 
-IL_0088:
+IL_009c:
 	{
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_27 = ___1_unit;
 		bool L_28;
 		L_28 = KoNpcSpecial_IsChaotic_m73F7163D0B6C22F52672ABEE105AD6FF6961C5FC(L_27, NULL);
 		if (!L_28)
 		{
-			goto IL_0097;
+			goto IL_00ab;
 		}
 	}
 	{
@@ -7264,14 +7264,14 @@ IL_0088:
 		KoNpcUiController_OpenChaoticDirect_m654F20135B01E350EFA2AF094901DBA0E22A460D(__this, L_29, NULL);
 	}
 
-IL_0097:
+IL_00ab:
 	{
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_30 = ___1_unit;
 		bool L_31;
 		L_31 = KoNpcSpecial_IsWarehouse_mDFC101382160B3F3228EFBE292CD656D8592D778(L_30, NULL);
 		if (!L_31)
 		{
-			goto IL_00b8;
+			goto IL_00cc;
 		}
 	}
 	{
@@ -7279,22 +7279,22 @@ IL_0097:
 		KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* L_33 = L_32;
 		if (L_33)
 		{
-			G_B19_0 = L_33;
-			goto IL_00ab;
+			G_B17_0 = L_33;
+			goto IL_00bf;
 		}
-		G_B18_0 = L_33;
+		G_B16_0 = L_33;
 	}
 	{
-		goto IL_00b0;
+		goto IL_00c4;
 	}
 
-IL_00ab:
+IL_00bf:
 	{
-		NullCheck(G_B19_0);
-		KoNpcDialogueScreen_Hide_m1E465237AB7D303B128C06E370DC5FA0A1877EE3(G_B19_0, NULL);
+		NullCheck(G_B17_0);
+		KoNpcDialogueScreen_Hide_m1E465237AB7D303B128C06E370DC5FA0A1877EE3(G_B17_0, NULL);
 	}
 
-IL_00b0:
+IL_00c4:
 	{
 		KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55* L_34 = V_0;
 		int16_t L_35 = ___0_serverId;
@@ -7302,14 +7302,14 @@ IL_00b0:
 		KoGameClient_SendTargetHp_mEBDAE3A32973D844650822F5E1AE02BE195A43CA(L_34, L_35, (uint8_t)1, NULL);
 	}
 
-IL_00b8:
+IL_00cc:
 	{
 		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_36 = ___1_unit;
 		bool L_37;
 		L_37 = KoNpcSpecial_IsNarki_m70CD2A41AAF1F6F5AE5DE2578E75118CAD7BDC63(L_36, NULL);
 		if (!L_37)
 		{
-			goto IL_00e1;
+			goto IL_00f5;
 		}
 	}
 	{
@@ -7317,45 +7317,45 @@ IL_00b8:
 		KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* L_39 = L_38;
 		if (L_39)
 		{
-			G_B24_0 = L_39;
-			goto IL_00cc;
+			G_B22_0 = L_39;
+			goto IL_00e0;
 		}
-		G_B23_0 = L_39;
+		G_B21_0 = L_39;
 	}
 	{
-		goto IL_00d1;
+		goto IL_00e5;
 	}
 
-IL_00cc:
+IL_00e0:
 	{
-		NullCheck(G_B24_0);
-		KoNpcDialogueScreen_Hide_m1E465237AB7D303B128C06E370DC5FA0A1877EE3(G_B24_0, NULL);
+		NullCheck(G_B22_0);
+		KoNpcDialogueScreen_Hide_m1E465237AB7D303B128C06E370DC5FA0A1877EE3(G_B22_0, NULL);
 	}
 
-IL_00d1:
+IL_00e5:
 	{
 		KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* L_40;
 		L_40 = KoItemCrashHud_Ensure_m8A7E89FD972655269507809CE98EBF9206F652EE(NULL);
 		KoItemCrashHud_t432794520F86A562604B64F067190BAD574CB37E* L_41 = L_40;
 		if (L_41)
 		{
-			G_B27_0 = L_41;
-			goto IL_00db;
+			G_B25_0 = L_41;
+			goto IL_00ef;
 		}
-		G_B26_0 = L_41;
+		G_B24_0 = L_41;
 	}
 	{
 		return;
 	}
 
-IL_00db:
+IL_00ef:
 	{
 		int16_t L_42 = ___0_serverId;
-		NullCheck(G_B27_0);
-		KoItemCrashHud_Open_mEFC67A5C213820A2CEF6E8E95709A8C04795289E(G_B27_0, L_42, NULL);
+		NullCheck(G_B25_0);
+		KoItemCrashHud_Open_mEFC67A5C213820A2CEF6E8E95709A8C04795289E(G_B25_0, L_42, NULL);
 	}
 
-IL_00e1:
+IL_00f5:
 	{
 		return;
 	}
@@ -15664,147 +15664,6 @@ IL_00fd:
 		String_t* L_50;
 		L_50 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral27BBFB18417B3E63D17D9E7041F1239CD593EEB3, L_49, NULL);
 		return L_50;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNpcUiController_AnvilUiAlreadyOpen_m97E37EE4158732C033B1AE53C2A855B7CB5BF4EA (KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* __this, int16_t ___0_serverId, KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* ___1_unit, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t G_B3_0 = 0;
-	{
-		KoNpcUnit_t4F8B7B7FBE6FBF09682FA371A707865A97FCCAC0* L_0 = ___1_unit;
-		bool L_1;
-		L_1 = KoNpcSpecial_IsAnvil_m806C19EDC2B1972182A769628BEC9051671D9D5A(L_0, NULL);
-		if (L_1)
-		{
-			goto IL_0010;
-		}
-	}
-	{
-		bool L_2;
-		L_2 = KoNpcUiController_IsActiveNpcAnvil_mE4DE026DBE234D6E6396E2DE903BC754DD92E23E(__this, NULL);
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_0011;
-	}
-
-IL_0010:
-	{
-		G_B3_0 = 1;
-	}
-
-IL_0011:
-	{
-		if (G_B3_0)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		return (bool)0;
-	}
-
-IL_0015:
-	{
-		int16_t L_3 = ___0_serverId;
-		if ((((int32_t)L_3) <= ((int32_t)0)))
-		{
-			goto IL_002d;
-		}
-	}
-	{
-		int16_t L_4 = __this->____activeNpcSid;
-		if ((((int32_t)L_4) <= ((int32_t)0)))
-		{
-			goto IL_002d;
-		}
-	}
-	{
-		int16_t L_5 = ___0_serverId;
-		int16_t L_6 = __this->____activeNpcSid;
-		if ((((int32_t)L_5) == ((int32_t)L_6)))
-		{
-			goto IL_002d;
-		}
-	}
-	{
-		return (bool)0;
-	}
-
-IL_002d:
-	{
-		KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* L_7 = __this->____dialogue;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_8;
-		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_8)
-		{
-			goto IL_0048;
-		}
-	}
-	{
-		KoNpcDialogueScreen_tBF32037155987EA3524F14025926FD31B53A6A18* L_9 = __this->____dialogue;
-		NullCheck(L_9);
-		bool L_10;
-		L_10 = KoNpcDialogueScreen_get_IsVisible_m262C1027B8121DA1588F280368C7D446A3E328C3(L_9, NULL);
-		if (L_10)
-		{
-			goto IL_007f;
-		}
-	}
-
-IL_0048:
-	{
-		KoItemUpgradeScreen_t179DDC74BDE590E4BC1184D5F717FDFA1E00E108* L_11 = __this->____upgrade;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_12;
-		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_12)
-		{
-			goto IL_0063;
-		}
-	}
-	{
-		KoItemUpgradeScreen_t179DDC74BDE590E4BC1184D5F717FDFA1E00E108* L_13 = __this->____upgrade;
-		NullCheck(L_13);
-		bool L_14;
-		L_14 = KoItemUpgradeScreen_get_IsVisible_m2C3326682DD23B747FFB6988B14A1E0474FBEAAF(L_13, NULL);
-		if (L_14)
-		{
-			goto IL_007f;
-		}
-	}
-
-IL_0063:
-	{
-		KoUpgradeSelectScreen_t83B243D879AE0A5CF8A18406B86F1C2AC5317089* L_15 = __this->____upgradeSelect;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_16;
-		L_16 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_16)
-		{
-			goto IL_007d;
-		}
-	}
-	{
-		KoUpgradeSelectScreen_t83B243D879AE0A5CF8A18406B86F1C2AC5317089* L_17 = __this->____upgradeSelect;
-		NullCheck(L_17);
-		bool L_18;
-		L_18 = KoUpgradeSelectScreen_get_IsVisible_m7A382F706E96E2816B0901C43EB4E8BAA027C39D(L_17, NULL);
-		return L_18;
-	}
-
-IL_007d:
-	{
-		return (bool)0;
-	}
-
-IL_007f:
-	{
-		return (bool)1;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoNpcUiController_IsActiveNpcAnvil_mE4DE026DBE234D6E6396E2DE903BC754DD92E23E (KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117* __this, const RuntimeMethod* method) 
