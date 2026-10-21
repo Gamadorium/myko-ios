@@ -122,6 +122,7 @@ struct Action_2_tDD3370150B88824CEF2484F5BBF181DE3AAC0FCE;
 struct Action_2_t32B56BF7F936AEF9DDEA8298489B2CD41E2D985A;
 struct Action_2_t525594B032B7A51D06785FF1F108CF09C15FF495;
 struct Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8;
+struct Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6;
 struct Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F;
 struct Action_2_t4195ED8D681728C29103F36BCD591C0F089C9132;
 struct Action_2_t02AAD53A1C99EAA4247F8BB13BF08193EDE2E76F;
@@ -146,6 +147,7 @@ struct Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608;
 struct Action_4_tF4C031EE347DF8ED16F73CE0495EADC5CC8DF81D;
 struct Action_4_t275F526A047ACDFDD89D73B6605209C1A1F1F0DF;
 struct Action_4_tBBBD9590618F66561D2340A393C5EAC7883C00F9;
+struct Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144;
 struct Action_6_t6782B69C2D91D145050753D50439CA266E7CABF8;
 struct Action_6_t64FB3100462539F42F498B60368F7B767B0B6192;
 struct Comparison_1_t1BFD2CA67F0D44ACC0D42361241607E7BA6E7DC8;
@@ -166,6 +168,7 @@ struct Dictionary_2_tF1FF5CE662FB439B7285666EA79ECE403F16BBB2;
 struct Dictionary_2_tB48B5F458E5B3A690BD4AF799142AEC3E145098D;
 struct Dictionary_2_tDEBC674AD72DAEB8F8EAEF2C6B45C80937993158;
 struct Dictionary_2_t945315C9A7F7FDAD46828901FE0C1B2EF503BAB0;
+struct Dictionary_2_t8275B658682222A9A6B8745CF3074B8C92FF0BF0;
 struct Dictionary_2_tC8FA8E0C06C3A9584490723EC95DC65E5AFFF71A;
 struct Dictionary_2_tAFFD9199FD4229376878036F1EBB33CE2FFAAE14;
 struct Dictionary_2_t014D65E426E53EF3707FDF6DDB730E93A3E9368F;
@@ -211,6 +214,7 @@ struct List_1_t0DDBC85C1AB07270070DFBB4160907A7C6D1BF89;
 struct List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B;
 struct List_1_tFCD393B14EAC2A1A9DB7FBC3003C6F7802E80CD1;
 struct List_1_t81C1A2F017B9EB323CD0FD3345B43F3A59B6607D;
+struct List_1_t7CEE329CCF08FD89C1239AAD52EC859A39A61778;
 struct List_1_t0B9A5C5E269D9FCF3A40902726F5669946D6AEE5;
 struct List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237;
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
@@ -343,6 +347,8 @@ struct KoPremiumEntry_t3DC3CD5E771D2B3381C35B38A8A683583E241D06;
 struct KoQuestCatalog_t03229CE44E257CC5B50E1BBA48681613B46C1DA4;
 struct KoQuestState_tB68E73C1FE37BF2F50AE6EFECFDE3EB662E75D7A;
 struct KoSelCharResult_t8EAB6CBCB1F325857DC2850AB38B68EA50FC0D3C;
+struct KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3;
+struct KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380;
 struct KoSocket_t9E911D6A90C85753D6486B05E196BB41C2F11999;
 struct KoTargetable_t396CAEA1BE040ACE29797C5D37A65B38E87D6846;
 struct LODGroup_tA4C4F98D3F698143BC7529146AB31A3D2EF24D9A;
@@ -369,10 +375,11 @@ struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
 struct _TABLE_NPC_t5F9E53116AD1F08F1DCED4D399B6433C7CA427BA;
+struct _TABLE_SKILL_MAGIC_MAIN_tB904E965D8ECAD6292D59409E7DFA28497A2667F;
 struct _TABLE_WARP_LIST_t4F74D7864C6CC8291433EFFF236A93E5E2F7BBE7;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 struct U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C;
-struct U3CU3Ec__DisplayClass823_0_t99E9FF2AA47A23A06AF871B9482BFF569B87AAFC;
+struct U3CU3Ec__DisplayClass832_0_tDDF0804240A655B01396DF8A704F8BDC614CDA0D;
 struct PackageRowReader_t5036B68160C012253F1DCDF12FF18528F9D8AF0A;
 struct AllianceClan_tA98DE4E564BA89508EF6AF766FB92B5A10AD3209;
 struct AllianceList_t28BB2F9BD010825F086F4EE29BBD1E2D2D763592;
@@ -449,6 +456,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoQuestCatalog_t03229CE44E257CC5B50E1BBA48681613B4
 IL2CPP_EXTERN_C RuntimeClass* KoQuestState_tB68E73C1FE37BF2F50AE6EFECFDE3EB662E75D7A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoStorePackageReward_t5EFF8F93C9A9258C967D19BC934EFBCBD6D1B6EA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoWarpTable_tBCDC28BDB2016D854D3E08ABF15504C4B6EF08DD_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoZoneCatalog_t65A85C47A0CE854E68315E4A301B7B197C589930_il2cpp_TypeInfo_var;
@@ -490,6 +498,7 @@ IL2CPP_EXTERN_C RuntimeField* KoItemMoveResult_t2C9F22B3694AA1F60CB1776CCE921689
 IL2CPP_EXTERN_C RuntimeField* LodEntry_tA0B9344EF5BED83263C7F5149B34E1D5B9E7EB2C____Go_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____00E631815C996F39A6F59AF5A20B090C832EB0E9DBF6F81330D23E147061AD39_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____6DA17E477BD491EE17F20B42CC7669458BC3D798DD5E41A42C06C23DF1179348_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____AE84B7CAA47CE4024F7EF0F223F26DDF042C2C2A060EFD242179C5E2E38F47A6_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral004F5EE4642E3F59F064AB97C8BAFB68C52B3D41;
 IL2CPP_EXTERN_C String_t* _stringLiteral01E7AD7DF9F6784947E9E79AF4196F180FC8A891;
@@ -1183,6 +1192,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnChallenge;
 	Action_1_t1BE9FFD7ABE2F9A84A2AAC659087F565C1B12DDD* ___OnEventSchedule;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnStoreResult;
+	Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144* ___OnPersonalCapeResult;
 	Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* ___OnStorePackageExchangeList;
 	Action_1_t32BC4852D3539E109FDE79548C9D0E6749E7121F* ___OnAllPointChange;
 	Action_3_t13C36FC47644D45AD9F766074A53331CF6C110A6* ___OnAllSkillPtChange;
@@ -1200,6 +1210,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnPpCardResult;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnGenieTime;
 	Action_1_t300D9A559311CF7D2AE5D29B63E8C4DE0D49BCD8* ___OnGenieOptions;
+	Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6* ___OnResourceNotice;
 	Action_3_tA912172538913603A6A011830620FA170785C920* ___OnRightTopNotice;
 	Action_1_tE20624984406F0B4ADC27276FCBE8D9496974FA9* ___OnKnightsMemberList;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnKnightsResult;
@@ -1663,6 +1674,98 @@ struct KoSelCharResult_t8EAB6CBCB1F325857DC2850AB38B68EA50FC0D3C  : public Runti
 struct KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82  : public RuntimeObject
 {
 };
+struct KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3  : public RuntimeObject
+{
+	Dictionary_2_t8275B658682222A9A6B8745CF3074B8C92FF0BF0* ____byId;
+	List_1_t7CEE329CCF08FD89C1239AAD52EC859A39A61778* ____ordered;
+	bool ____loaded;
+	int32_t ____loadPhase;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____typeN;
+};
+struct KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380  : public RuntimeObject
+{
+	uint32_t ___dwID;
+	String_t* ___szEngName;
+	String_t* ___szName;
+	String_t* ___szDesc;
+	int32_t ___iNeedLevel;
+	int32_t ___iNeedSkill;
+	int32_t ___iExhaustMSP;
+	int32_t ___iExhaustHP;
+	uint32_t ___dwNeedItem;
+	uint32_t ___dwExhaustItem;
+	int32_t ___iCastTime;
+	int32_t ___iReCastTime;
+	int32_t ___iPercentSuccess;
+	uint32_t ___dw1stTableType;
+	uint32_t ___dw2ndTableType;
+	int32_t ___iValidDist;
+	int32_t ___iTarget;
+	int32_t ___iSelfAnimID1;
+	int32_t ___iSelfAnimID2;
+	int32_t ___iSelfFX1;
+	int32_t ___iSelfPart1;
+	int32_t ___iSelfFX2;
+	int32_t ___iSelfPart2;
+	int32_t ___iFlyingFX;
+	int32_t ___iTargetFX;
+	int32_t ___iTargetPart;
+	int32_t ___iAct1;
+	int32_t ___iAct2;
+	int32_t ___iAct3;
+	int32_t ___iNumCombo;
+	int32_t ___iDuration;
+	int32_t ___iMoveSpeed;
+	int32_t ___iAttackSpeed;
+	int32_t ___iBuffType;
+	int32_t ___iAddDist;
+	int32_t ___iNumArrow;
+	int32_t ___iDelay;
+	int32_t ___iPower;
+	int32_t ___iDDType;
+	int32_t ___iStartDamage;
+	int32_t ___iDuraDamage;
+	int32_t ___iAttribute;
+	int32_t ___iRadius;
+	int32_t ___iMaxHP;
+	int32_t ___iMaxMP;
+	int32_t ___iType5;
+	int32_t ___iExpRecover;
+	int32_t ___iTransformID;
+	int32_t ___iWarpType;
+	int32_t ___iKickDistance;
+	int32_t ___iStateChange;
+	int32_t ___iStatus;
+	uint32_t ___dwIconID;
+	int32_t ___iSoulGemCount;
+	int32_t ___iExhaustSP;
+	uint32_t ___dwExhaustItem2;
+	int32_t ___iExhaustItemCount1;
+	int32_t ___iExhaustItemCount2;
+	int32_t ___iCastingFailRate;
+	int32_t ___iBlockCastingFail;
+	int32_t ___iTypeCancelDuration;
+	int32_t ___iQuestID;
+	String_t* ___szClass;
+	int32_t ___iValidAngle;
+	int32_t ___iAct4;
+	int32_t ___iSuccessType;
+	int32_t ___iType3Duration;
+	int32_t ___iType3Radius;
+	int32_t ___iType4Duration;
+	int32_t ___iType4Radius;
+	int32_t ___iNeedStone;
+	int32_t ___iTransformSize;
+	int32_t ___iTransformSpeed;
+	int32_t ___iUserSkillUse;
+	int32_t ___iTransformNeedItem;
+	int32_t ___iType7Radius;
+	int32_t ___iType7TargetChange;
+	int32_t ___iType8Radius;
+	int32_t ___iType9Duration;
+	int32_t ___iType9TargetChange;
+	_TABLE_SKILL_MAGIC_MAIN_tB904E965D8ECAD6292D59409E7DFA28497A2667F* ___Table;
+};
 struct String_t  : public RuntimeObject
 {
 	int32_t ____stringLength;
@@ -1688,7 +1791,7 @@ struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 struct U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C  : public RuntimeObject
 {
 };
-struct U3CU3Ec__DisplayClass823_0_t99E9FF2AA47A23A06AF871B9482BFF569B87AAFC  : public RuntimeObject
+struct U3CU3Ec__DisplayClass832_0_tDDF0804240A655B01396DF8A704F8BDC614CDA0D  : public RuntimeObject
 {
 	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* ___state;
 };
@@ -2640,7 +2743,7 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
 	};
 };
-struct U3CU3Ec__DisplayClass746_0_t4F5C66AF2187A3AACBC8FD0A1F53288F7369F8DB 
+struct U3CU3Ec__DisplayClass755_0_t8A9A944082171CE08EAD997BD1B8FE5F8F670BB0 
 {
 	KoByteBuffer_tF33B7C81E02ABC0755237F352ED42BA9FFDF10AA* ___body;
 	StringBuilder_t* ___notes;
@@ -3707,6 +3810,10 @@ struct KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields
 	bool ___ShowNpcNames;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
 };
+struct KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_StaticFields
+{
+	KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* ___U3CInstanceU3Ek__BackingField;
+};
 struct String_t_StaticFields
 {
 	String_t* ___Empty;
@@ -3714,8 +3821,8 @@ struct String_t_StaticFields
 struct U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C_StaticFields
 {
 	U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C* ___U3CU3E9;
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___U3CU3E9__486_0;
-	Comparison_1_t1BFD2CA67F0D44ACC0D42361241607E7BA6E7DC8* ___U3CU3E9__789_0;
+	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___U3CU3E9__492_0;
+	Comparison_1_t1BFD2CA67F0D44ACC0D42361241607E7BA6E7DC8* ___U3CU3E9__798_0;
 };
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
 {
@@ -5806,14 +5913,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoByteBuffer_WriteBool_mF60CC52B3FF1D9C2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52 (int32_t ___0_val1, int32_t ___1_val2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PutU32_m2060D692F210D982330C70380B24FBC06DD21183 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_a, int32_t ___1_o, uint32_t ___2_v, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_a, int32_t ___1_o, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t KoGenieWire_SkillNotPotion_mAC21E93DC765FBE75207C665F837CD6C6A17D192 (uint32_t ___0_id, const RuntimeMethod* method) ;
 inline uint32_t Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_inline (Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* __this, int32_t ___0_arg, const RuntimeMethod* method)
 {
 	return ((  uint32_t (*) (Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45*, int32_t, const RuntimeMethod*))Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_gshared_inline)(__this, ___0_arg, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KoGenieOptions_VitalWireIndex_mFC6B505F36C4A42EE3BF91FF499A6989023424B8 (uint32_t ___0_itemId, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoGenieWire_SlotHolds_m6493402D6CFB3EBC45921783F9C5EE330592583F (Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* ___0_skillAtUi, int32_t ___1_from, int32_t ___2_to, uint32_t ___3_id, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoSkillDatabase_EnsureLoaded_m7FE98E54DF35A1F557BCEDCDDDF41CD64106E725 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* KoSkillDatabase_get_Instance_m6450348065DE0EC78DECB4BDC0B56B199CD0F799_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* KoSkillDatabase_Find_mA7DADC6076840FB3985A55DE166F1A69286A2B05 (KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* __this, uint32_t ___0_id, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoGenieOptions_IsAttackSkill_mBB24223AF7C4979D1354B19C279EA329306AEB91 (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PlaceEmpty_m90224223BA26C2F49FBAFC39375BDDB5AB672250 (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ___0_list, uint32_t ___1_id, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillRow_get_IsHpVitalSkill_m6BC42D3CFCB77F473D0234D363E3678C2CA3A419 (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillRow_get_IsMpVitalSkill_mC46171A5D771D7524A7E179C79E533765D327B7F (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoGenieOptions_IsSupportBuff_m1E88590873A21922F8B3018FEFBEE1FD1F3DDA7D (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, const RuntimeMethod* method) ;
 inline void Action_2_Invoke_mD75515336866B7D40A917B3DCCB20005128E5B6E_inline (Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F* __this, int32_t ___0_arg1, uint32_t ___1_arg2, const RuntimeMethod* method)
 {
 	((  void (*) (Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F*, int32_t, uint32_t, const RuntimeMethod*))Action_2_Invoke_mD75515336866B7D40A917B3DCCB20005128E5B6E_gshared_inline)(__this, ___0_arg1, ___1_arg2, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoGenieOptions_IsPotionItem_mF5661D1A9CAFCDA4C0AEE643B1DB4E5AEA1056FF (uint32_t ___0_itemId, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoItemUpgradePacket__ctor_m6C969F9A5A64809D7B799E8090D1341A6B238D24 (KoItemUpgradePacket_t274B9793B200D3C6D656CAD63B1EFE3A8C979C91* __this, const RuntimeMethod* method) ;
 inline void ValueTuple_2__ctor_m8292B1243B521B504AE2CEBF13B074976B011368 (ValueTuple_2_t263C3F09B1EA794C1C0BAE9DA003C76AFE45AE1B* __this, uint32_t ___0_item1, int8_t ___1_item2, const RuntimeMethod* method)
 {
@@ -18389,7 +18508,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6D6A40F6FB22C7D6F3C3DC024
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3C_ctorU3Eb__486_0_m674DC9907D44ABDBD3E3ED492B78A052978EBD36 (U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C* __this, String_t* ___0_msg, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3C_ctorU3Eb__492_0_mD2DB7C0C4017D68E12E1D5E04AA1CCFF2E12A452 (U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C* __this, String_t* ___0_msg, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -18407,7 +18526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3C_ctorU3Eb__486_0_m674DC9907D4
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSendItemUpgradeU3Eb__789_0_m860EE1326DA352B21C0190A187B523207071A247 (U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C* __this, ValueTuple_2_t263C3F09B1EA794C1C0BAE9DA003C76AFE45AE1B ___0_a, ValueTuple_2_t263C3F09B1EA794C1C0BAE9DA003C76AFE45AE1B ___1_b, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSendItemUpgradeU3Eb__798_0_m1F93FEB387AA7433E00785704A1DA1ED3BB673F5 (U3CU3Ec_t974BFC3041D28B36110C781A37FA67344A03FE7C* __this, ValueTuple_2_t263C3F09B1EA794C1C0BAE9DA003C76AFE45AE1B ___0_a, ValueTuple_2_t263C3F09B1EA794C1C0BAE9DA003C76AFE45AE1B ___1_b, const RuntimeMethod* method) 
 {
 	{
 		uint32_t* L_0 = (uint32_t*)(&(&___1_b)->___Item1);
@@ -18434,14 +18553,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CSendItemUpgradeU3Eb__789_0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass823_0__ctor_mD108DE3613E7071E495182FE2A4A732F364E1B8B (U3CU3Ec__DisplayClass823_0_t99E9FF2AA47A23A06AF871B9482BFF569B87AAFC* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass832_0__ctor_m4C49EA36D4BB2E71A0F284399DF32EFE2A8DCD03 (U3CU3Ec__DisplayClass832_0_tDDF0804240A655B01396DF8A704F8BDC614CDA0D* __this, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass823_0_U3CHandleItemCountChangeU3Eb__0_m647EF812E0D86707D0347D27224DB48D4089E4FC (U3CU3Ec__DisplayClass823_0_t99E9FF2AA47A23A06AF871B9482BFF569B87AAFC* __this, uint8_t ___0_district, uint8_t ___1_index, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass832_0_U3CHandleItemCountChangeU3Eb__0_m139B751020DF2E1CBAF85052B3D402A7ADBAA5A4 (U3CU3Ec__DisplayClass832_0_tDDF0804240A655B01396DF8A704F8BDC614CDA0D* __this, uint8_t ___0_district, uint8_t ___1_index, const RuntimeMethod* method) 
 {
 	{
 		KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* L_0 = __this->___state;
@@ -28127,17 +28246,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KoGenieWire_tE20C685637B813B8DD669D6044C192CF
 		s_Il2CppMethodInitialized = true;
 	}
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* V_0 = NULL;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
+	uint16_t V_1 = 0;
+	uint16_t V_2 = 0;
+	uint8_t V_3 = 0x0;
+	uint8_t V_4 = 0x0;
 	int32_t V_5 = 0;
+	int32_t V_6 = 0;
+	int32_t V_7 = 0;
+	int32_t V_8 = 0;
+	int32_t V_9 = 0;
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B2_0 = NULL;
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B1_0 = NULL;
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B7_0 = NULL;
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B6_0 = NULL;
 	int32_t G_B8_0 = 0;
 	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B8_1 = NULL;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B18_0 = NULL;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B17_0 = NULL;
+	int32_t G_B19_0 = 0;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B19_1 = NULL;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B21_0 = NULL;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B20_0 = NULL;
+	int32_t G_B22_0 = 0;
+	KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* G_B22_1 = NULL;
 	{
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_0 = ___1_baseline;
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_1 = L_0;
@@ -28271,33 +28402,33 @@ IL_0039:
 		uint8_t L_44 = (L_42)->GetAt(static_cast<il2cpp_array_size_t>(L_43));
 		NullCheck(L_41);
 		L_41->___AssistMode = (bool)((!(((uint32_t)L_44) <= ((uint32_t)0)))? 1 : 0);
-		V_1 = 0;
-		goto IL_00a6;
+		V_5 = 0;
+		goto IL_00ab;
 	}
 
-IL_0092:
+IL_0093:
 	{
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_45 = V_0;
 		NullCheck(L_45);
 		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_46 = L_45->___AssistParty;
-		int32_t L_47 = V_1;
+		int32_t L_47 = V_5;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_48 = ___0_raw;
-		int32_t L_49 = V_1;
+		int32_t L_49 = V_5;
 		NullCheck(L_48);
 		int32_t L_50 = ((int32_t)il2cpp_codegen_add(8, L_49));
 		uint8_t L_51 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_50));
 		NullCheck(L_46);
 		(L_46)->SetAt(static_cast<il2cpp_array_size_t>(L_47), (bool)((!(((uint32_t)L_51) <= ((uint32_t)0)))? 1 : 0));
-		int32_t L_52 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_52, 1));
+		int32_t L_52 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_52, 1));
 	}
 
-IL_00a6:
+IL_00ab:
 	{
-		int32_t L_53 = V_1;
+		int32_t L_53 = V_5;
 		if ((((int32_t)L_53) < ((int32_t)((int32_t)12))))
 		{
-			goto IL_0092;
+			goto IL_0093;
 		}
 	}
 	{
@@ -28349,25 +28480,25 @@ IL_00a6:
 		uint8_t L_80 = (L_78)->GetAt(static_cast<il2cpp_array_size_t>(L_79));
 		NullCheck(L_77);
 		(L_77)->SetAt(static_cast<il2cpp_array_size_t>(2), (uint8_t)L_80);
-		V_2 = 0;
-		goto IL_010a;
+		V_6 = 0;
+		goto IL_0116;
 	}
 
-IL_00f1:
+IL_00f8:
 	{
-		int32_t L_81 = V_2;
+		int32_t L_81 = V_6;
 		if ((((int32_t)L_81) == ((int32_t)4)))
 		{
-			goto IL_0106;
+			goto IL_0110;
 		}
 	}
 	{
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_82 = V_0;
 		NullCheck(L_82);
 		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_83 = L_82->___Other;
-		int32_t L_84 = V_2;
+		int32_t L_84 = V_6;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_85 = ___0_raw;
-		int32_t L_86 = V_2;
+		int32_t L_86 = V_6;
 		NullCheck(L_85);
 		int32_t L_87 = ((int32_t)il2cpp_codegen_add(((int32_t)26), L_86));
 		uint8_t L_88 = (L_85)->GetAt(static_cast<il2cpp_array_size_t>(L_87));
@@ -28375,18 +28506,18 @@ IL_00f1:
 		(L_83)->SetAt(static_cast<il2cpp_array_size_t>(L_84), (bool)((!(((uint32_t)L_88) <= ((uint32_t)0)))? 1 : 0));
 	}
 
-IL_0106:
+IL_0110:
 	{
-		int32_t L_89 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_89, 1));
+		int32_t L_89 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_89, 1));
 	}
 
-IL_010a:
+IL_0116:
 	{
-		int32_t L_90 = V_2;
+		int32_t L_90 = V_6;
 		if ((((int32_t)L_90) < ((int32_t)((int32_t)9))))
 		{
-			goto IL_00f1;
+			goto IL_00f8;
 		}
 	}
 	{
@@ -28409,127 +28540,628 @@ IL_010a:
 		NullCheck(L_97);
 		(L_97)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)10)), (bool)((!(((uint32_t)L_100) <= ((uint32_t)0)))? 1 : 0));
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_101 = V_0;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_102 = ___0_raw;
-		NullCheck(L_102);
-		int32_t L_103 = ((int32_t)35);
-		uint8_t L_104 = (L_102)->GetAt(static_cast<il2cpp_array_size_t>(L_103));
 		NullCheck(L_101);
-		L_101->___HpItemCount = L_104;
-		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_105 = V_0;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_106 = ___0_raw;
-		NullCheck(L_106);
-		int32_t L_107 = ((int32_t)36);
-		uint8_t L_108 = (L_106)->GetAt(static_cast<il2cpp_array_size_t>(L_107));
-		NullCheck(L_105);
-		L_105->___MpItemCount = L_108;
+		uint16_t L_102 = L_101->___HpItemCount;
+		V_1 = L_102;
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_103 = V_0;
+		NullCheck(L_103);
+		uint16_t L_104 = L_103->___MpItemCount;
+		V_2 = L_104;
+		uint16_t L_105 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		int32_t L_106;
+		L_106 = Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52(((int32_t)255), L_105, NULL);
+		V_3 = (uint8_t)((int32_t)(uint8_t)L_106);
+		uint16_t L_107 = V_2;
+		int32_t L_108;
+		L_108 = Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52(((int32_t)255), L_107, NULL);
+		V_4 = (uint8_t)((int32_t)(uint8_t)L_108);
 		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_109 = V_0;
-		NullCheck(L_109);
-		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_110 = L_109->___Other;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_111 = ___0_raw;
-		NullCheck(L_111);
-		int32_t L_112 = ((int32_t)37);
-		uint8_t L_113 = (L_111)->GetAt(static_cast<il2cpp_array_size_t>(L_112));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_110 = ___0_raw;
 		NullCheck(L_110);
-		(L_110)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (bool)((!(((uint32_t)L_113) <= ((uint32_t)0)))? 1 : 0));
+		int32_t L_111 = ((int32_t)35);
+		uint8_t L_112 = (L_110)->GetAt(static_cast<il2cpp_array_size_t>(L_111));
+		uint8_t L_113 = V_3;
+		if ((((int32_t)L_112) == ((int32_t)L_113)))
+		{
+			G_B18_0 = L_109;
+			goto IL_0171;
+		}
+		G_B17_0 = L_109;
+	}
+	{
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_114 = ___0_raw;
 		NullCheck(L_114);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_114)->max_length))) < ((int32_t)((int32_t)100))))
+		int32_t L_115 = ((int32_t)35);
+		uint8_t L_116 = (L_114)->GetAt(static_cast<il2cpp_array_size_t>(L_115));
+		G_B19_0 = ((int32_t)(L_116));
+		G_B19_1 = G_B17_0;
+		goto IL_0172;
+	}
+
+IL_0171:
+	{
+		uint16_t L_117 = V_1;
+		G_B19_0 = ((int32_t)(L_117));
+		G_B19_1 = G_B18_0;
+	}
+
+IL_0172:
+	{
+		NullCheck(G_B19_1);
+		G_B19_1->___HpItemCount = (uint16_t)G_B19_0;
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_118 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_119 = ___0_raw;
+		NullCheck(L_119);
+		int32_t L_120 = ((int32_t)36);
+		uint8_t L_121 = (L_119)->GetAt(static_cast<il2cpp_array_size_t>(L_120));
+		uint8_t L_122 = V_4;
+		if ((((int32_t)L_121) == ((int32_t)L_122)))
 		{
-			goto IL_01c9;
+			G_B21_0 = L_118;
+			goto IL_0186;
+		}
+		G_B20_0 = L_118;
+	}
+	{
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_123 = ___0_raw;
+		NullCheck(L_123);
+		int32_t L_124 = ((int32_t)36);
+		uint8_t L_125 = (L_123)->GetAt(static_cast<il2cpp_array_size_t>(L_124));
+		G_B22_0 = ((int32_t)(L_125));
+		G_B22_1 = G_B20_0;
+		goto IL_0187;
+	}
+
+IL_0186:
+	{
+		uint16_t L_126 = V_2;
+		G_B22_0 = ((int32_t)(L_126));
+		G_B22_1 = G_B21_0;
+	}
+
+IL_0187:
+	{
+		NullCheck(G_B22_1);
+		G_B22_1->___MpItemCount = (uint16_t)G_B22_0;
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_127 = V_0;
+		NullCheck(L_127);
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_128 = L_127->___Other;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_129 = ___0_raw;
+		NullCheck(L_129);
+		int32_t L_130 = ((int32_t)37);
+		uint8_t L_131 = (L_129)->GetAt(static_cast<il2cpp_array_size_t>(L_130));
+		NullCheck(L_128);
+		(L_128)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)9)), (bool)((!(((uint32_t)L_131) <= ((uint32_t)0)))? 1 : 0));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_132 = ___0_raw;
+		NullCheck(L_132);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_132)->max_length))) < ((int32_t)((int32_t)100))))
+		{
+			goto IL_0227;
+		}
+	}
+	{
+		V_7 = 0;
+		goto IL_01cc;
+	}
+
+IL_01ab:
+	{
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_133 = V_0;
+		NullCheck(L_133);
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_134 = L_133->___AttackSkill;
+		int32_t L_135 = V_7;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_136 = ___0_raw;
+		int32_t L_137 = V_7;
+		uint32_t L_138;
+		L_138 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_136, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(L_137, 4)))), NULL);
+		uint32_t L_139;
+		L_139 = KoGenieWire_SkillNotPotion_mAC21E93DC765FBE75207C665F837CD6C6A17D192(L_138, NULL);
+		NullCheck(L_134);
+		(L_134)->SetAt(static_cast<il2cpp_array_size_t>(L_135), (uint32_t)L_139);
+		int32_t L_140 = V_7;
+		V_7 = ((int32_t)il2cpp_codegen_add(L_140, 1));
+	}
+
+IL_01cc:
+	{
+		int32_t L_141 = V_7;
+		if ((((int32_t)L_141) < ((int32_t)8)))
+		{
+			goto IL_01ab;
+		}
+	}
+	{
+		V_8 = 0;
+		goto IL_01f9;
+	}
+
+IL_01d6:
+	{
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_142 = V_0;
+		NullCheck(L_142);
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_143 = L_142->___RecoverySkill;
+		int32_t L_144 = V_8;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_145 = ___0_raw;
+		int32_t L_146 = V_8;
+		uint32_t L_147;
+		L_147 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_145, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(8, L_146)), 4)))), NULL);
+		uint32_t L_148;
+		L_148 = KoGenieWire_SkillNotPotion_mAC21E93DC765FBE75207C665F837CD6C6A17D192(L_147, NULL);
+		NullCheck(L_143);
+		(L_143)->SetAt(static_cast<il2cpp_array_size_t>(L_144), (uint32_t)L_148);
+		int32_t L_149 = V_8;
+		V_8 = ((int32_t)il2cpp_codegen_add(L_149, 1));
+	}
+
+IL_01f9:
+	{
+		int32_t L_150 = V_8;
+		if ((((int32_t)L_150) < ((int32_t)3)))
+		{
+			goto IL_01d6;
+		}
+	}
+	{
+		V_9 = 0;
+		goto IL_0222;
+	}
+
+IL_0203:
+	{
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_151 = V_0;
+		NullCheck(L_151);
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_152 = L_151->___AssistSkill;
+		int32_t L_153 = V_9;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_154 = ___0_raw;
+		int32_t L_155 = V_9;
+		uint32_t L_156;
+		L_156 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_154, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(((int32_t)11), L_155)), 4)))), NULL);
+		NullCheck(L_152);
+		(L_152)->SetAt(static_cast<il2cpp_array_size_t>(L_153), (uint32_t)L_156);
+		int32_t L_157 = V_9;
+		V_9 = ((int32_t)il2cpp_codegen_add(L_157, 1));
+	}
+
+IL_0222:
+	{
+		int32_t L_158 = V_9;
+		if ((((int32_t)L_158) < ((int32_t)4)))
+		{
+			goto IL_0203;
+		}
+	}
+
+IL_0227:
+	{
+		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_159 = V_0;
+		return L_159;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PullSlotMap_m12F8D09560464623AB8E2F8453EAFC4042D8BC7C (KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* __this, Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* ___0_skillAtUi, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* V_0 = NULL;
+	UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* V_1 = NULL;
+	bool V_2 = false;
+	uint32_t V_3 = 0;
+	KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* V_4 = NULL;
+	int32_t V_5 = 0;
+	uint32_t V_6 = 0;
+	int32_t V_7 = 0;
+	int32_t V_8 = 0;
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_0 = ___0_skillAtUi;
+		if (L_0)
+		{
+			goto IL_0004;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0004:
+	{
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_1 = (BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4*)(BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4*)SZArrayNew(BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4_il2cpp_TypeInfo_var, (uint32_t)3);
+		V_0 = L_1;
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_2 = (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA*)SZArrayNew(UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA_il2cpp_TypeInfo_var, (uint32_t)3);
+		V_1 = L_2;
+		V_2 = (bool)0;
+		V_5 = 5;
+		goto IL_004e;
+	}
+
+IL_0019:
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_3 = ___0_skillAtUi;
+		int32_t L_4 = V_5;
+		NullCheck(L_3);
+		uint32_t L_5;
+		L_5 = Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_inline(L_3, L_4, NULL);
+		V_6 = L_5;
+		uint32_t L_6 = V_6;
+		if (L_6)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		V_2 = (bool)1;
+	}
+
+IL_0029:
+	{
+		uint32_t L_7 = V_6;
+		int32_t L_8;
+		L_8 = KoGenieOptions_VitalWireIndex_mFC6B505F36C4A42EE3BF91FF499A6989023424B8(L_7, NULL);
+		V_7 = L_8;
+		int32_t L_9 = V_7;
+		if ((((int32_t)L_9) < ((int32_t)0)))
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_10 = V_0;
+		int32_t L_11 = V_7;
+		NullCheck(L_10);
+		int32_t L_12 = L_11;
+		uint8_t L_13 = (uint8_t)(L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
+		if (L_13)
+		{
+			goto IL_0048;
+		}
+	}
+	{
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_14 = V_0;
+		int32_t L_15 = V_7;
+		NullCheck(L_14);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(L_15), (bool)1);
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_16 = V_1;
+		int32_t L_17 = V_7;
+		uint32_t L_18 = V_6;
+		NullCheck(L_16);
+		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(L_17), (uint32_t)L_18);
+	}
+
+IL_0048:
+	{
+		int32_t L_19 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_19, 1));
+	}
+
+IL_004e:
+	{
+		int32_t L_20 = V_5;
+		if ((((int32_t)L_20) <= ((int32_t)((int32_t)12))))
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		V_8 = 0;
+		goto IL_0095;
+	}
+
+IL_0059:
+	{
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_21 = V_0;
+		int32_t L_22 = V_8;
+		NullCheck(L_21);
+		int32_t L_23 = L_22;
+		uint8_t L_24 = (uint8_t)(L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
+		if (!L_24)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_25 = __this->___VitalSkill;
+		int32_t L_26 = V_8;
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_27 = V_1;
+		int32_t L_28 = V_8;
+		NullCheck(L_27);
+		int32_t L_29 = L_28;
+		uint32_t L_30 = (L_27)->GetAt(static_cast<il2cpp_array_size_t>(L_29));
+		NullCheck(L_25);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(L_26), (uint32_t)L_30);
+		goto IL_008f;
+	}
+
+IL_006e:
+	{
+		bool L_31 = V_2;
+		if (!L_31)
+		{
+			goto IL_008f;
+		}
+	}
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_32 = ___0_skillAtUi;
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_33 = __this->___VitalSkill;
+		int32_t L_34 = V_8;
+		NullCheck(L_33);
+		int32_t L_35 = L_34;
+		uint32_t L_36 = (L_33)->GetAt(static_cast<il2cpp_array_size_t>(L_35));
+		bool L_37;
+		L_37 = KoGenieWire_SlotHolds_m6493402D6CFB3EBC45921783F9C5EE330592583F(L_32, 5, ((int32_t)12), L_36, NULL);
+		if (L_37)
+		{
+			goto IL_008f;
+		}
+	}
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_38 = __this->___VitalSkill;
+		int32_t L_39 = V_8;
+		NullCheck(L_38);
+		(L_38)->SetAt(static_cast<il2cpp_array_size_t>(L_39), (uint32_t)0);
+	}
+
+IL_008f:
+	{
+		int32_t L_40 = V_8;
+		V_8 = ((int32_t)il2cpp_codegen_add(L_40, 1));
+	}
+
+IL_0095:
+	{
+		int32_t L_41 = V_8;
+		if ((((int32_t)L_41) < ((int32_t)3)))
+		{
+			goto IL_0059;
+		}
+	}
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_42 = ___0_skillAtUi;
+		NullCheck(L_42);
+		uint32_t L_43;
+		L_43 = Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_inline(L_42, ((int32_t)12), NULL);
+		V_3 = L_43;
+		uint32_t L_44 = V_3;
+		if (!L_44)
+		{
+			goto IL_00af;
+		}
+	}
+	{
+		uint32_t L_45 = V_3;
+		int32_t L_46;
+		L_46 = KoGenieOptions_VitalWireIndex_mFC6B505F36C4A42EE3BF91FF499A6989023424B8(L_45, NULL);
+		if ((((int32_t)L_46) < ((int32_t)0)))
+		{
+			goto IL_00b0;
+		}
+	}
+
+IL_00af:
+	{
+		return;
+	}
+
+IL_00b0:
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var);
+		KoSkillDatabase_EnsureLoaded_m7FE98E54DF35A1F557BCEDCDDDF41CD64106E725(NULL);
+		KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* L_47;
+		L_47 = KoSkillDatabase_get_Instance_m6450348065DE0EC78DECB4BDC0B56B199CD0F799_inline(NULL);
+		uint32_t L_48 = V_3;
+		NullCheck(L_47);
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_49;
+		L_49 = KoSkillDatabase_Find_mA7DADC6076840FB3985A55DE166F1A69286A2B05(L_47, L_48, NULL);
+		V_4 = L_49;
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_50 = V_4;
+		if (L_50)
+		{
+			goto IL_00c7;
+		}
+	}
+	{
+		return;
+	}
+
+IL_00c7:
+	{
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_51 = V_4;
+		bool L_52;
+		L_52 = KoGenieOptions_IsAttackSkill_mBB24223AF7C4979D1354B19C279EA329306AEB91(L_51, NULL);
+		if (!L_52)
+		{
+			goto IL_00dd;
+		}
+	}
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_53 = __this->___AttackSkill;
+		uint32_t L_54 = V_3;
+		KoGenieWire_PlaceEmpty_m90224223BA26C2F49FBAFC39375BDDB5AB672250(L_53, L_54, NULL);
+		return;
+	}
+
+IL_00dd:
+	{
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_55 = V_4;
+		NullCheck(L_55);
+		bool L_56;
+		L_56 = KoSkillRow_get_IsHpVitalSkill_m6BC42D3CFCB77F473D0234D363E3678C2CA3A419(L_55, NULL);
+		if (L_56)
+		{
+			goto IL_00f8;
+		}
+	}
+	{
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_57 = V_4;
+		NullCheck(L_57);
+		bool L_58;
+		L_58 = KoSkillRow_get_IsMpVitalSkill_mC46171A5D771D7524A7E179C79E533765D327B7F(L_57, NULL);
+		if (L_58)
+		{
+			goto IL_00f8;
+		}
+	}
+	{
+		KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* L_59 = V_4;
+		bool L_60;
+		L_60 = KoGenieOptions_IsSupportBuff_m1E88590873A21922F8B3018FEFBEE1FD1F3DDA7D(L_59, NULL);
+		if (!L_60)
+		{
+			goto IL_0104;
+		}
+	}
+
+IL_00f8:
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_61 = __this->___RecoverySkill;
+		uint32_t L_62 = V_3;
+		KoGenieWire_PlaceEmpty_m90224223BA26C2F49FBAFC39375BDDB5AB672250(L_61, L_62, NULL);
+	}
+
+IL_0104:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PushVitals_m930EE67E61DE2F31E015FAE8FC031F16FA79D136 (KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* __this, Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F* ___0_setSkill, Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* ___1_getSkill, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____6DA17E477BD491EE17F20B42CC7669458BC3D798DD5E41A42C06C23DF1179348_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_0 = NULL;
+	int32_t V_1 = 0;
+	uint32_t V_2 = 0;
+	int32_t V_3 = 0;
+	{
+		Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F* L_0 = ___0_setSkill;
+		if (!L_0)
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_1 = ___1_getSkill;
+		if (L_1)
+		{
+			goto IL_0007;
+		}
+	}
+
+IL_0006:
+	{
+		return;
+	}
+
+IL_0007:
+	{
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_2 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)8);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = L_2;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_4 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____6DA17E477BD491EE17F20B42CC7669458BC3D798DD5E41A42C06C23DF1179348_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_3, L_4, NULL);
+		V_0 = L_3;
+		V_1 = 0;
+		goto IL_005e;
+	}
+
+IL_001d:
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_5 = __this->___VitalSkill;
+		int32_t L_6 = V_1;
+		NullCheck(L_5);
+		int32_t L_7 = L_6;
+		uint32_t L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		V_2 = L_8;
+		uint32_t L_9 = V_2;
+		if (!L_9)
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_10 = ___1_getSkill;
+		uint32_t L_11 = V_2;
+		bool L_12;
+		L_12 = KoGenieWire_SlotHolds_m6493402D6CFB3EBC45921783F9C5EE330592583F(L_10, 5, ((int32_t)12), L_11, NULL);
+		if (L_12)
+		{
+			goto IL_005a;
 		}
 	}
 	{
 		V_3 = 0;
-		goto IL_0174;
+		goto IL_0054;
 	}
 
-IL_015c:
+IL_0039:
 	{
-		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_115 = V_0;
-		NullCheck(L_115);
-		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_116 = L_115->___AttackSkill;
-		int32_t L_117 = V_3;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_118 = ___0_raw;
-		int32_t L_119 = V_3;
-		uint32_t L_120;
-		L_120 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_118, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(L_119, 4)))), NULL);
-		NullCheck(L_116);
-		(L_116)->SetAt(static_cast<il2cpp_array_size_t>(L_117), (uint32_t)L_120);
-		int32_t L_121 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_121, 1));
-	}
-
-IL_0174:
-	{
-		int32_t L_122 = V_3;
-		if ((((int32_t)L_122) < ((int32_t)8)))
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_13 = ___1_getSkill;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_14 = V_0;
+		int32_t L_15 = V_3;
+		NullCheck(L_14);
+		int32_t L_16 = L_15;
+		int32_t L_17 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
+		NullCheck(L_13);
+		uint32_t L_18;
+		L_18 = Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_inline(L_13, L_17, NULL);
+		if (L_18)
 		{
-			goto IL_015c;
+			goto IL_0050;
 		}
 	}
 	{
-		V_4 = 0;
-		goto IL_019b;
+		Action_2_t3D4B7BEC36B153A795F4740DF46E16C2E4F9478F* L_19 = ___0_setSkill;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_20 = V_0;
+		int32_t L_21 = V_3;
+		NullCheck(L_20);
+		int32_t L_22 = L_21;
+		int32_t L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+		uint32_t L_24 = V_2;
+		NullCheck(L_19);
+		Action_2_Invoke_mD75515336866B7D40A917B3DCCB20005128E5B6E_inline(L_19, L_23, L_24, NULL);
+		goto IL_005a;
 	}
 
-IL_017d:
+IL_0050:
 	{
-		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_123 = V_0;
-		NullCheck(L_123);
-		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_124 = L_123->___RecoverySkill;
-		int32_t L_125 = V_4;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_126 = ___0_raw;
-		int32_t L_127 = V_4;
-		uint32_t L_128;
-		L_128 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_126, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(8, L_127)), 4)))), NULL);
-		NullCheck(L_124);
-		(L_124)->SetAt(static_cast<il2cpp_array_size_t>(L_125), (uint32_t)L_128);
-		int32_t L_129 = V_4;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_129, 1));
+		int32_t L_25 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 	}
 
-IL_019b:
+IL_0054:
 	{
-		int32_t L_130 = V_4;
-		if ((((int32_t)L_130) < ((int32_t)3)))
+		int32_t L_26 = V_3;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_27 = V_0;
+		NullCheck(L_27);
+		if ((((int32_t)L_26) < ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)))))
 		{
-			goto IL_017d;
-		}
-	}
-	{
-		V_5 = 0;
-		goto IL_01c4;
-	}
-
-IL_01a5:
-	{
-		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_131 = V_0;
-		NullCheck(L_131);
-		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_132 = L_131->___AssistSkill;
-		int32_t L_133 = V_5;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_134 = ___0_raw;
-		int32_t L_135 = V_5;
-		uint32_t L_136;
-		L_136 = KoGenieWire_GetU32_mB225D3DED5648F726C477A66D7E51608BFBF78DC(L_134, ((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(((int32_t)11), L_135)), 4)))), NULL);
-		NullCheck(L_132);
-		(L_132)->SetAt(static_cast<il2cpp_array_size_t>(L_133), (uint32_t)L_136);
-		int32_t L_137 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_137, 1));
-	}
-
-IL_01c4:
-	{
-		int32_t L_138 = V_5;
-		if ((((int32_t)L_138) < ((int32_t)4)))
-		{
-			goto IL_01a5;
+			goto IL_0039;
 		}
 	}
 
-IL_01c9:
+IL_005a:
 	{
-		KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* L_139 = V_0;
-		return L_139;
+		int32_t L_28 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_28, 1));
+	}
+
+IL_005e:
+	{
+		int32_t L_29 = V_1;
+		if ((((int32_t)L_29) < ((int32_t)3)))
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PullAssistTail_mBBFD1697B183598CDBC45E9441AEF0B7DEC5A581 (KoGenieWire_tE20C685637B813B8DD669D6044C192CFB7B18D72* __this, Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* ___0_skillAtUi, const RuntimeMethod* method) 
@@ -28620,6 +29252,181 @@ IL_001e:
 		if ((((int32_t)L_8) < ((int32_t)((int32_t)12))))
 		{
 			goto IL_0008;
+		}
+	}
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t KoGenieWire_SkillNotPotion_mAC21E93DC765FBE75207C665F837CD6C6A17D192 (uint32_t ___0_id, const RuntimeMethod* method) 
+{
+	{
+		uint32_t L_0 = ___0_id;
+		bool L_1;
+		L_1 = KoGenieOptions_IsPotionItem_mF5661D1A9CAFCDA4C0AEE643B1DB4E5AEA1056FF(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_000a;
+		}
+	}
+	{
+		uint32_t L_2 = ___0_id;
+		return L_2;
+	}
+
+IL_000a:
+	{
+		return 0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoGenieWire_SlotHolds_m6493402D6CFB3EBC45921783F9C5EE330592583F (Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* ___0_skillAtUi, int32_t ___1_from, int32_t ___2_to, uint32_t ___3_id, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		uint32_t L_0 = ___3_id;
+		if (!L_0)
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_1 = ___0_skillAtUi;
+		if (L_1)
+		{
+			goto IL_0008;
+		}
+	}
+
+IL_0006:
+	{
+		return (bool)0;
+	}
+
+IL_0008:
+	{
+		int32_t L_2 = ___1_from;
+		V_0 = L_2;
+		goto IL_001c;
+	}
+
+IL_000c:
+	{
+		Func_2_t8D70BB6E58587A1FC4BCF217E4EA943F8DA52D45* L_3 = ___0_skillAtUi;
+		int32_t L_4 = V_0;
+		NullCheck(L_3);
+		uint32_t L_5;
+		L_5 = Func_2_Invoke_m68584133A3C6A21DF0497C42C874AA47AA1F0E74_inline(L_3, L_4, NULL);
+		uint32_t L_6 = ___3_id;
+		if ((!(((uint32_t)L_5) == ((uint32_t)L_6))))
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		return (bool)1;
+	}
+
+IL_0018:
+	{
+		int32_t L_7 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_7, 1));
+	}
+
+IL_001c:
+	{
+		int32_t L_8 = V_0;
+		int32_t L_9 = ___2_to;
+		if ((((int32_t)L_8) <= ((int32_t)L_9)))
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		return (bool)0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoGenieWire_PlaceEmpty_m90224223BA26C2F49FBAFC39375BDDB5AB672250 (UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* ___0_list, uint32_t ___1_id, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	{
+		V_0 = 0;
+		goto IL_000f;
+	}
+
+IL_0004:
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_0 = ___0_list;
+		int32_t L_1 = V_0;
+		NullCheck(L_0);
+		int32_t L_2 = L_1;
+		uint32_t L_3 = (L_0)->GetAt(static_cast<il2cpp_array_size_t>(L_2));
+		uint32_t L_4 = ___1_id;
+		if ((!(((uint32_t)L_3) == ((uint32_t)L_4))))
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		return;
+	}
+
+IL_000b:
+	{
+		int32_t L_5 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_5, 1));
+	}
+
+IL_000f:
+	{
+		int32_t L_6 = V_0;
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_7 = ___0_list;
+		NullCheck(L_7);
+		if ((((int32_t)L_6) < ((int32_t)((int32_t)(((RuntimeArray*)L_7)->max_length)))))
+		{
+			goto IL_0004;
+		}
+	}
+	{
+		V_1 = 0;
+		goto IL_0027;
+	}
+
+IL_0019:
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_8 = ___0_list;
+		int32_t L_9 = V_1;
+		NullCheck(L_8);
+		int32_t L_10 = L_9;
+		uint32_t L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
+		if (L_11)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_12 = ___0_list;
+		int32_t L_13 = V_1;
+		uint32_t L_14 = ___1_id;
+		NullCheck(L_12);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(L_13), (uint32_t)L_14);
+		return;
+	}
+
+IL_0023:
+	{
+		int32_t L_15 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_15, 1));
+	}
+
+IL_0027:
+	{
+		int32_t L_16 = V_1;
+		UInt32U5BU5D_t02FBD658AD156A17574ECE6106CF1FBFCC9807FA* L_17 = ___0_list;
+		NullCheck(L_17);
+		if ((((int32_t)L_16) < ((int32_t)((int32_t)(((RuntimeArray*)L_17)->max_length)))))
+		{
+			goto IL_0019;
 		}
 	}
 	{
@@ -32424,6 +33231,20 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint32_t KoNpcInfoPacket_get_Gate
 {
 	{
 		uint8_t L_0 = __this->___Status;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* KoSkillDatabase_get_Instance_m6450348065DE0EC78DECB4BDC0B56B199CD0F799_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var);
+		KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3* L_0 = ((KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_StaticFields*)il2cpp_codegen_static_fields_for(KoSkillDatabase_tCA0AEE347530C24D84FEDC33EFEF06139496F9E3_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }

@@ -2406,7 +2406,6 @@ struct KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1  : public 
 	bool ___PasswordSet;
 	bool ___HasKey;
 	uint32_t ___Expiration;
-	bool ___PasswordAccepted;
 	uint8_t ___PasswordFailCount;
 	List_1_t23860A0F90F2CB83A12CE9F4060A51E92B4A8836* ___Items;
 };
@@ -19058,7 +19057,7 @@ IL_0137:
 		uint16_t L_61 = V_1;
 		if ((((int32_t)L_60) >= ((int32_t)L_61)))
 		{
-			goto IL_01b4;
+			goto IL_01a8;
 		}
 	}
 	{
@@ -19072,7 +19071,7 @@ IL_0137:
 		}
 	}
 	{
-		goto IL_01b4;
+		goto IL_01a8;
 	}
 
 IL_014a:
@@ -19120,7 +19119,7 @@ IL_014a:
 		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_75 = V_0;
 		NullCheck(L_75);
 		L_75->___HasKey = (bool)1;
-		goto IL_01b4;
+		goto IL_01a8;
 	}
 
 IL_0180:
@@ -19130,49 +19129,42 @@ IL_0180:
 		uint8_t L_77 = L_76->___Opcode;
 		if ((!(((uint32_t)L_77) == ((uint32_t)((int32_t)11)))))
 		{
-			goto IL_01b4;
+			goto IL_01a8;
 		}
 	}
 	{
 		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_78 = V_0;
-		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_79 = V_0;
-		NullCheck(L_79);
-		bool L_80;
-		L_80 = KoVipWarehousePacket_get_Ok_m7A0B8FE766244787314BFBE712D02CF67A8661DB(L_79, NULL);
 		NullCheck(L_78);
-		L_78->___PasswordAccepted = L_80;
-		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_81 = V_0;
-		NullCheck(L_81);
-		uint8_t L_82 = L_81->___Result;
-		if ((!(((uint32_t)L_82) == ((uint32_t)2))))
+		uint8_t L_79 = L_78->___Result;
+		if ((!(((uint32_t)L_79) == ((uint32_t)2))))
 		{
-			goto IL_01b4;
+			goto IL_01a8;
 		}
 	}
 	{
+		KoByteBuffer_tF33B7C81E02ABC0755237F352ED42BA9FFDF10AA* L_80 = ___0_b;
+		NullCheck(L_80);
+		int32_t L_81;
+		L_81 = KoByteBuffer_get_Remaining_m2F458D20077BD17352948E6C9ED1840073755530(L_80, NULL);
+		if ((((int32_t)L_81) < ((int32_t)1)))
+		{
+			goto IL_01a8;
+		}
+	}
+	{
+		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_82 = V_0;
 		KoByteBuffer_tF33B7C81E02ABC0755237F352ED42BA9FFDF10AA* L_83 = ___0_b;
 		NullCheck(L_83);
-		int32_t L_84;
-		L_84 = KoByteBuffer_get_Remaining_m2F458D20077BD17352948E6C9ED1840073755530(L_83, NULL);
-		if ((((int32_t)L_84) < ((int32_t)1)))
-		{
-			goto IL_01b4;
-		}
-	}
-	{
-		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_85 = V_0;
-		KoByteBuffer_tF33B7C81E02ABC0755237F352ED42BA9FFDF10AA* L_86 = ___0_b;
-		NullCheck(L_86);
-		uint8_t L_87;
-		L_87 = KoByteBuffer_ReadByte_m93C4211E90957782A9BF1C8963FC9BB51522BAB9(L_86, NULL);
-		NullCheck(L_85);
-		L_85->___PasswordFailCount = L_87;
+		uint8_t L_84;
+		L_84 = KoByteBuffer_ReadByte_m93C4211E90957782A9BF1C8963FC9BB51522BAB9(L_83, NULL);
+		NullCheck(L_82);
+		L_82->___PasswordFailCount = L_84;
 	}
 
-IL_01b4:
+IL_01a8:
 	{
-		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_88 = V_0;
-		return L_88;
+		KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* L_85 = V_0;
+		return L_85;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoVipWarehousePacket__ctor_m49F7295409DD2423B7448F190347383B10971592 (KoVipWarehousePacket_tE7CDDBCFDF4DDEC14285002BF8635CCE11A0DEA1* __this, const RuntimeMethod* method) 

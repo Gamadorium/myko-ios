@@ -100,6 +100,7 @@ struct Action_2_tDD3370150B88824CEF2484F5BBF181DE3AAC0FCE;
 struct Action_2_t32B56BF7F936AEF9DDEA8298489B2CD41E2D985A;
 struct Action_2_t525594B032B7A51D06785FF1F108CF09C15FF495;
 struct Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8;
+struct Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6;
 struct Action_2_t4195ED8D681728C29103F36BCD591C0F089C9132;
 struct Action_2_t02AAD53A1C99EAA4247F8BB13BF08193EDE2E76F;
 struct Action_2_tB778CD3F7DB9016E5C58F78E56D8321C64ADBA1C;
@@ -123,6 +124,7 @@ struct Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608;
 struct Action_4_tF4C031EE347DF8ED16F73CE0495EADC5CC8DF81D;
 struct Action_4_t275F526A047ACDFDD89D73B6605209C1A1F1F0DF;
 struct Action_4_tBBBD9590618F66561D2340A393C5EAC7883C00F9;
+struct Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144;
 struct Action_6_t6782B69C2D91D145050753D50439CA266E7CABF8;
 struct Action_6_t64FB3100462539F42F498B60368F7B767B0B6192;
 struct Dictionary_2_tEFB58B94EC6538A02BF971B8D74E6E0A03F8069D;
@@ -616,6 +618,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralAB0743C70BE0EC11B0A64FCACB0333A5118E553F
 IL2CPP_EXTERN_C String_t* _stringLiteralAD594DEC09352E1A6C880E312A46BC220D2E531E;
 IL2CPP_EXTERN_C String_t* _stringLiteralB3B279D43BF70305FB867B4F74F84F0605DF35A2;
 IL2CPP_EXTERN_C String_t* _stringLiteralB3F14BF976EFD974E34846B742502C802FABAE9D;
+IL2CPP_EXTERN_C String_t* _stringLiteralB47E2113CC484924527986ED374C09FA8B9AF3A5;
 IL2CPP_EXTERN_C String_t* _stringLiteralB55D766361B1BBDE0F12C226F5EF00B096D7A996;
 IL2CPP_EXTERN_C String_t* _stringLiteralB5DF3B9FA65C8DB336FE0D91640D388900DC60F2;
 IL2CPP_EXTERN_C String_t* _stringLiteralB6389E2FEA3A8209E96D379599C0E5F5731416AC;
@@ -1112,6 +1115,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnChallenge;
 	Action_1_t1BE9FFD7ABE2F9A84A2AAC659087F565C1B12DDD* ___OnEventSchedule;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnStoreResult;
+	Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144* ___OnPersonalCapeResult;
 	Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* ___OnStorePackageExchangeList;
 	Action_1_t32BC4852D3539E109FDE79548C9D0E6749E7121F* ___OnAllPointChange;
 	Action_3_t13C36FC47644D45AD9F766074A53331CF6C110A6* ___OnAllSkillPtChange;
@@ -1129,6 +1133,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnPpCardResult;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnGenieTime;
 	Action_1_t300D9A559311CF7D2AE5D29B63E8C4DE0D49BCD8* ___OnGenieOptions;
+	Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6* ___OnResourceNotice;
 	Action_3_tA912172538913603A6A011830620FA170785C920* ___OnRightTopNotice;
 	Action_1_tE20624984406F0B4ADC27276FCBE8D9496974FA9* ___OnKnightsMemberList;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnKnightsResult;
@@ -16086,6 +16091,143 @@ IL_000b:
 IL_0079:
 	{
 		KoOtherPlayer_RefreshNameplate_m3C2B9BF374BDA033EB980DA0BA81B9686C346AF0(__this, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoOtherPlayer_SetWornCape_mC2CA6DA9B92A3713DF0F126BE90AD9ADBE853ECF (KoOtherPlayer_t99CBBA8780347324ACC89B8D807AC2BFBB941629* __this, uint8_t ___0_capeType, uint8_t ___1_symbolType, int16_t ___2_capeId, uint32_t ___3_rgba, uint8_t ___4_anim, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerEquipApplier_t4535A5C88F04540EA2A3C0E68708CBD9BC76E7E5_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Exception_t* V_0 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_0 = __this->____info;
+		if (L_0)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0009:
+	{
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_1 = __this->____info;
+		uint8_t L_2 = ___0_capeType;
+		NullCheck(L_1);
+		L_1->___CapeType = L_2;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_3 = __this->____info;
+		uint8_t L_4 = ___1_symbolType;
+		NullCheck(L_3);
+		L_3->___CapeSymbolType = L_4;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_5 = __this->____info;
+		int16_t L_6 = ___2_capeId;
+		NullCheck(L_5);
+		L_5->___CapeId = L_6;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_7 = __this->____info;
+		uint32_t L_8 = ___3_rgba;
+		NullCheck(L_7);
+		L_7->___CapeColor = L_8;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_9 = __this->____info;
+		uint8_t L_10 = ___4_anim;
+		NullCheck(L_9);
+		L_9->___CapeAnim = L_10;
+		bool L_11 = __this->____dressPending;
+		if (!L_11)
+		{
+			goto IL_0050;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0050:
+	{
+	}
+	try
+	{
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
+		L_12 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		String_t* L_13;
+		L_13 = KoOtherPlayer_get_AvatarId_m192436699CFE37A5548C1015D27F0EE4D1D400A4_inline(__this, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_14 = __this->____info;
+		NullCheck(L_14);
+		int16_t L_15 = L_14->___KnightsId;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_16 = __this->____info;
+		NullCheck(L_16);
+		uint8_t L_17 = L_16->___Nation;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_18 = __this->____info;
+		NullCheck(L_18);
+		uint8_t L_19 = L_18->___KnightsGrade;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_20 = __this->____info;
+		NullCheck(L_20);
+		uint8_t L_21 = L_20->___KnightsRank;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_22 = __this->____info;
+		NullCheck(L_22);
+		int16_t L_23 = L_22->___CapeId;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_24 = __this->____info;
+		NullCheck(L_24);
+		uint8_t L_25;
+		L_25 = KoUserInfoPacket_get_CapeR_m47F2F27BB829D67D911A428C0F652DF47869CAA9(L_24, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_26 = __this->____info;
+		NullCheck(L_26);
+		uint8_t L_27;
+		L_27 = KoUserInfoPacket_get_CapeG_m526F8448CA43F105B330C25292C5A587FD2AB085(L_26, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_28 = __this->____info;
+		NullCheck(L_28);
+		uint8_t L_29;
+		L_29 = KoUserInfoPacket_get_CapeB_m572E062065A5E53E11459E0D794995A2C6500F61(L_28, NULL);
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_30 = __this->____info;
+		NullCheck(L_30);
+		uint8_t L_31 = L_30->___CapeType;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_32 = __this->____info;
+		NullCheck(L_32);
+		uint8_t L_33 = L_32->___CapeAnim;
+		KoUserInfoPacket_t6BE9D9D66C43E77BF0DF166C86D15FD5C82B1089* L_34 = __this->____info;
+		NullCheck(L_34);
+		String_t* L_35 = L_34->___KnightsName;
+		uint8_t L_36;
+		L_36 = KoOtherPlayer_get_Level_m39613F15CAD33BA4AEE81D6710897D8BE69E1BCF_inline(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoPlayerEquipApplier_t4535A5C88F04540EA2A3C0E68708CBD9BC76E7E5_il2cpp_TypeInfo_var);
+		KoPlayerEquipApplier_ApplyClanVisuals_m77CF557D9040B98868385421CD16DE605E46C250(L_12, L_13, L_15, L_17, L_19, L_21, L_23, L_25, L_27, L_29, L_31, L_33, L_35, L_36, NULL);
+		goto IL_0106;
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_00e3;
+		}
+		throw e;
+	}
+
+CATCH_00e3:
+	{
+		Exception_t* L_37 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		V_0 = L_37;
+		String_t* L_38;
+		L_38 = KoOtherPlayer_get_DisplayName_m2305690842ADEF0264C2E559F7D79118A71C4609_inline(__this, NULL);
+		Exception_t* L_39 = V_0;
+		NullCheck(L_39);
+		String_t* L_40;
+		L_40 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_39);
+		String_t* L_41;
+		L_41 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB47E2113CC484924527986ED374C09FA8B9AF3A5)), L_38, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9816E74B93E1C26A72AD4D2196C8A3C7A3C28924)), L_40, NULL);
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_41, NULL);
+		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+		goto IL_0106;
+	}
+
+IL_0106:
+	{
 		return;
 	}
 }

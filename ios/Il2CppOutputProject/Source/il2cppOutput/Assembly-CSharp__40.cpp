@@ -164,6 +164,7 @@ struct Action_2_tDD3370150B88824CEF2484F5BBF181DE3AAC0FCE;
 struct Action_2_t32B56BF7F936AEF9DDEA8298489B2CD41E2D985A;
 struct Action_2_t525594B032B7A51D06785FF1F108CF09C15FF495;
 struct Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8;
+struct Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6;
 struct Action_2_t4195ED8D681728C29103F36BCD591C0F089C9132;
 struct Action_2_t02AAD53A1C99EAA4247F8BB13BF08193EDE2E76F;
 struct Action_2_tB778CD3F7DB9016E5C58F78E56D8321C64ADBA1C;
@@ -187,6 +188,7 @@ struct Action_4_t6A8F865A0D9AB32F1AA0B51B75B6C1C43615A608;
 struct Action_4_tF4C031EE347DF8ED16F73CE0495EADC5CC8DF81D;
 struct Action_4_t275F526A047ACDFDD89D73B6605209C1A1F1F0DF;
 struct Action_4_tBBBD9590618F66561D2340A393C5EAC7883C00F9;
+struct Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144;
 struct Action_6_t6782B69C2D91D145050753D50439CA266E7CABF8;
 struct Action_6_t64FB3100462539F42F498B60368F7B767B0B6192;
 struct Dictionary_2_t3767CFA0DF8A77E6FBCFC15122F787131FE9509F;
@@ -852,6 +854,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnChallenge;
 	Action_1_t1BE9FFD7ABE2F9A84A2AAC659087F565C1B12DDD* ___OnEventSchedule;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnStoreResult;
+	Action_5_t3791A10116F31F069454B6F152616D4A2DBB8144* ___OnPersonalCapeResult;
 	Action_1_t994D9DE9DA80A2CCC5F2533BA91F1AB8ED945425* ___OnStorePackageExchangeList;
 	Action_1_t32BC4852D3539E109FDE79548C9D0E6749E7121F* ___OnAllPointChange;
 	Action_3_t13C36FC47644D45AD9F766074A53331CF6C110A6* ___OnAllSkillPtChange;
@@ -869,6 +872,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnPpCardResult;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnGenieTime;
 	Action_1_t300D9A559311CF7D2AE5D29B63E8C4DE0D49BCD8* ___OnGenieOptions;
+	Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6* ___OnResourceNotice;
 	Action_3_tA912172538913603A6A011830620FA170785C920* ___OnRightTopNotice;
 	Action_1_tE20624984406F0B4ADC27276FCBE8D9496974FA9* ___OnKnightsMemberList;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnKnightsResult;
@@ -7456,197 +7460,232 @@ IL_00fc:
 		uint32_t L_31 = ___0_itemId;
 		if ((((int32_t)L_31) == ((int32_t)((int32_t)379021000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_32 = ___0_itemId;
 		if ((((int32_t)L_32) == ((int32_t)((int32_t)379022000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_33 = ___0_itemId;
 		if ((((int32_t)L_33) == ((int32_t)((int32_t)379023000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_34 = ___0_itemId;
 		if ((((int32_t)L_34) == ((int32_t)((int32_t)379024000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_35 = ___0_itemId;
 		if ((((int32_t)L_35) == ((int32_t)((int32_t)379025000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_36 = ___0_itemId;
 		if ((((int32_t)L_36) == ((int32_t)((int32_t)379030000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_37 = ___0_itemId;
 		if ((((int32_t)L_37) == ((int32_t)((int32_t)379031000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_38 = ___0_itemId;
 		if ((((int32_t)L_38) == ((int32_t)((int32_t)379032000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_39 = ___0_itemId;
 		if ((((int32_t)L_39) == ((int32_t)((int32_t)379033000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_40 = ___0_itemId;
 		if ((((int32_t)L_40) == ((int32_t)((int32_t)379034000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_41 = ___0_itemId;
 		if ((((int32_t)L_41) == ((int32_t)((int32_t)379035000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_42 = ___0_itemId;
 		if ((((int32_t)L_42) == ((int32_t)((int32_t)379138000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_43 = ___0_itemId;
 		if ((((int32_t)L_43) == ((int32_t)((int32_t)379139000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_44 = ___0_itemId;
 		if ((((int32_t)L_44) == ((int32_t)((int32_t)379140000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_45 = ___0_itemId;
 		if ((((int32_t)L_45) == ((int32_t)((int32_t)379141000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_46 = ___0_itemId;
 		if ((((int32_t)L_46) == ((int32_t)((int32_t)379016000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_47 = ___0_itemId;
 		if ((((int32_t)L_47) == ((int32_t)((int32_t)379020000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_48 = ___0_itemId;
 		if ((((int32_t)L_48) == ((int32_t)((int32_t)379018000))))
 		{
-			goto IL_019d;
+			goto IL_01d4;
 		}
 	}
 	{
 		uint32_t L_49 = ___0_itemId;
-		if ((!(((uint32_t)L_49) == ((uint32_t)((int32_t)379019000)))))
+		if ((((int32_t)L_49) == ((int32_t)((int32_t)379019000))))
 		{
-			goto IL_019f;
+			goto IL_01d4;
+		}
+	}
+	{
+		uint32_t L_50 = ___0_itemId;
+		if ((((int32_t)L_50) == ((int32_t)((int32_t)379017000))))
+		{
+			goto IL_01d4;
+		}
+	}
+	{
+		uint32_t L_51 = ___0_itemId;
+		if ((((int32_t)L_51) == ((int32_t)((int32_t)379026000))))
+		{
+			goto IL_01d4;
+		}
+	}
+	{
+		uint32_t L_52 = ___0_itemId;
+		if ((((int32_t)L_52) == ((int32_t)((int32_t)379027000))))
+		{
+			goto IL_01d4;
+		}
+	}
+	{
+		uint32_t L_53 = ___0_itemId;
+		if ((((int32_t)L_53) == ((int32_t)((int32_t)379028000))))
+		{
+			goto IL_01d4;
+		}
+	}
+	{
+		uint32_t L_54 = ___0_itemId;
+		if ((!(((uint32_t)L_54) == ((uint32_t)((int32_t)379029000)))))
+		{
+			goto IL_01d6;
 		}
 	}
 
-IL_019d:
+IL_01d4:
 	{
 		return (uint8_t)(3);
 	}
 
-IL_019f:
+IL_01d6:
 	{
-		uint32_t L_50 = ___0_itemId;
-		if ((!(((uint32_t)L_50) == ((uint32_t)((int32_t)379256000)))))
+		uint32_t L_55 = ___0_itemId;
+		if ((!(((uint32_t)L_55) == ((uint32_t)((int32_t)379256000)))))
 		{
-			goto IL_01a9;
+			goto IL_01e0;
 		}
 	}
 	{
 		return (uint8_t)(4);
 	}
 
-IL_01a9:
+IL_01e0:
 	{
-		uint32_t L_51 = ___0_itemId;
-		if ((!(((uint32_t)L_51) == ((uint32_t)((int32_t)379257000)))))
+		uint32_t L_56 = ___0_itemId;
+		if ((!(((uint32_t)L_56) == ((uint32_t)((int32_t)379257000)))))
 		{
-			goto IL_01b3;
+			goto IL_01ea;
 		}
 	}
 	{
 		return (uint8_t)(5);
 	}
 
-IL_01b3:
+IL_01ea:
 	{
-		uint32_t L_52 = ___0_itemId;
-		if ((!(((uint32_t)L_52) >= ((uint32_t)((int32_t)379159000)))))
+		uint32_t L_57 = ___0_itemId;
+		if ((!(((uint32_t)L_57) >= ((uint32_t)((int32_t)379159000)))))
 		{
-			goto IL_01c5;
+			goto IL_01fc;
 		}
 	}
 	{
-		uint32_t L_53 = ___0_itemId;
-		if ((!(((uint32_t)L_53) <= ((uint32_t)((int32_t)379164000)))))
+		uint32_t L_58 = ___0_itemId;
+		if ((!(((uint32_t)L_58) <= ((uint32_t)((int32_t)379164000)))))
 		{
-			goto IL_01c5;
+			goto IL_01fc;
 		}
 	}
 	{
 		return (uint8_t)(6);
 	}
 
-IL_01c5:
+IL_01fc:
 	{
-		uint32_t L_54 = ___0_itemId;
-		if ((!(((uint32_t)L_54) == ((uint32_t)((int32_t)379152000)))))
+		uint32_t L_59 = ___0_itemId;
+		if ((!(((uint32_t)L_59) == ((uint32_t)((int32_t)379152000)))))
 		{
-			goto IL_01cf;
+			goto IL_0206;
 		}
 	}
 	{
 		return (uint8_t)(7);
 	}
 
-IL_01cf:
+IL_0206:
 	{
 		return (uint8_t)(0);
 	}
