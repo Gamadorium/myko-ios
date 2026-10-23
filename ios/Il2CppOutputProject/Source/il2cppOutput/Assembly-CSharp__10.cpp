@@ -1472,6 +1472,7 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	bool ___HasMyInfo;
 	bool ___IsDead;
 	bool ___RegeneSent;
+	int16_t ____pendingDeadSid;
 	uint32_t ___PlayerId;
 	uint8_t ___HairR;
 	uint8_t ___HairG;

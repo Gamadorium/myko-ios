@@ -40,7 +40,7 @@ struct Action_1_t0E5AFCE7F4007F3355FFD38047EE235FA2FE5C10;
 struct Action_1_tB48A29F57F4A52B11D2D5B34BF3360AA8B927428;
 struct Action_1_tA9792E6ACD9316150CDB4C8E773DAA592419F04F;
 struct Action_1_t1BE9FFD7ABE2F9A84A2AAC659087F565C1B12DDD;
-struct Action_1_t300D9A559311CF7D2AE5D29B63E8C4DE0D49BCD8;
+struct Action_1_t5439CAB6DF93B6A7A29E473D9B2A9943E580CAF8;
 struct Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C;
 struct Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094;
 struct Action_1_t720CD352BE4A24CBF2F8FC3C5A1528DBB961D6F2;
@@ -54,6 +54,7 @@ struct Action_1_t4A162B97EC2FF91D2DE229CE574E0D5BEC3EA363;
 struct Action_1_t40679DE720E7AD14DDCD4CC6CE0ADB9A3361F91B;
 struct Action_1_t58D9FA82951C138FF0C3586CEE02ED9C2DB2B35C;
 struct Action_1_tBC366903FE88D879EC46A214338857F2114C867F;
+struct Action_1_tA8349ED8E5EB70F8690F6BE4F8B277784754F312;
 struct Action_1_t71F3C28DAB4E4D2B9CE29BB21FD29BF89A5A7188;
 struct Action_1_t7FA4486ADC404AEBB48A7A8D3AB13ADBB1D91A6B;
 struct Action_1_t5B7DE35668DA2A1981D80C96DFC3FC0976D1CF9C;
@@ -185,6 +186,7 @@ struct List_1_t36734ACA044956B5B61977FA4D7D11B59AB0202C;
 struct List_1_t73D48CFF6DF506A951FFE7705364E346ADACABD9;
 struct List_1_t30CEC27E3CBC142DC1C33F3A8011C7C89C3999A4;
 struct List_1_t527E107D52FB4961735B2EA7CA81E1E7131A2A06;
+struct List_1_t4B5D130E24C895EA6349F371C04BCA7DD933AFAC;
 struct List_1_tE11732E6177F0838D8035F0A0C860C92567D7F7C;
 struct List_1_tC93418EEBDF534A484DB56D2C8B5ED16402EC652;
 struct List_1_t4E7F6A919D208D0DCF62FA9806D588741C6DF2F3;
@@ -194,11 +196,13 @@ struct List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B;
 struct List_1_tE7BF6483BE3672A542F0E05185F357F7CF8832EE;
 struct List_1_t81C1A2F017B9EB323CD0FD3345B43F3A59B6607D;
 struct List_1_t7CEE329CCF08FD89C1239AAD52EC859A39A61778;
+struct List_1_tBF78862D52505D73A96D7EFC574ECF54D736FDB5;
 struct List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237;
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 struct List_1_t71D42023AC752E9A8DEFB9A9D2CAF5998F0616EA;
 struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD;
 struct List_1_t44EF1B9C71532303037AAC259AD8D405401724D8;
+struct List_1_t9B68833848E4C4D7F623C05F6B77F0449396354A;
 struct Queue_1_t7F967F4745763C43CF2971C70473ACF202815FB1;
 struct Stack_1_tA74F2FA4C24DD5BB36FC306EE71AEA1F12ACDDB7;
 struct Stack_1_tAD790A47551563636908E21E4F08C54C0C323EB5;
@@ -213,6 +217,7 @@ struct EntryU5BU5D_tD5077DAF292E14CA7800D37DB594D9F649B9BB74;
 struct EntryU5BU5D_tB95E9F56AC62EDF12A37D9C1A28139EEFC0EA23D;
 struct SlotU5BU5D_tC4D7CD3E804DC835CCF2F990797BC1D9AE4330D7;
 struct AnimationClipU5BU5D_t48CE1A495BA95608745A065C735F2D5BB8DE5A0F;
+struct BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4;
 struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 struct ClothU5BU5D_t60DBC3AD6A43E03CFADBE444C44BBE55FE56594C;
@@ -419,6 +424,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoEAni_t1FCE6E65B316A3D89DC784A18F7151766581633D_i
 IL2CPP_EXTERN_C RuntimeClass* KoFxBundleU5BU5D_tF06B52885A9889974F979BB618658A96B6C307C6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoGenieRuntime_t356BDDAB9703FF4E7BB6206197BB849F765B27A7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoGroundProbe_tA45ECE4C2AF57EA3C26B6442214F044186FB2033_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoInventoryLayout_t6A7C69958FE1A5E62E7009247E733018932BCF24_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoItemDatabase_t21BF522807320381B8427B4C61709C28987522E3_il2cpp_TypeInfo_var;
@@ -914,6 +920,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_1_t665B7DB0664BB84E844B72620B8B94EF33027D8B* ____allCharPending;
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ____newCharPending;
 	Action_1_t5CE5AA6DF797AD3264E1980B98ABECFAFB40295F* ____selCharPending;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ____afterSecondPassword;
 	Action_1_tC17B3BAED2B0A635CB1EC83D4F0FA64E2469C83D* ___OnMyInfo;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnPremiumInfo;
 	Action_1_t7FA4486ADC404AEBB48A7A8D3AB13ADBB1D91A6B* ___OnHpChange;
@@ -975,6 +982,10 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_1_t32BC4852D3539E109FDE79548C9D0E6749E7121F* ___OnAllPointChange;
 	Action_3_t13C36FC47644D45AD9F766074A53331CF6C110A6* ___OnAllSkillPtChange;
 	Action_2_tF54052701C009950D63B8B06D809E742E1B83763* ___OnNameChange;
+	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnSecondPassword;
+	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnHairResult;
+	Action_1_t5439CAB6DF93B6A7A29E473D9B2A9943E580CAF8* ___OnArrangeNames;
+	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnArrangeResult;
 	Action_1_t932A2A7AF9F8879B90DC13D138ABC119265FBF4B* ___OnNationTransfer;
 	Action_1_tA9792E6ACD9316150CDB4C8E773DAA592419F04F* ___OnWarpList;
 	Action_2_tD954A1A89EF81E7F177CE09128018E87FBE993DA* ___OnWarpListResult;
@@ -987,7 +998,7 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	Action_2_t616AF619D6509715FF51210230ED4A99A76F6785* ___OnCashChange;
 	Action_1_t676944A4ACFDAFCEF0AD8BE9C1AC84FAFD115094* ___OnPpCardResult;
 	Action_1_t2DE95E477A86F144593CC7965E86728C71D0E75D* ___OnGenieTime;
-	Action_1_t300D9A559311CF7D2AE5D29B63E8C4DE0D49BCD8* ___OnGenieOptions;
+	Action_1_tA8349ED8E5EB70F8690F6BE4F8B277784754F312* ___OnGenieOptions;
 	Action_2_t6AAF2E215E74E16A4EEF0A0749A4A325D99F5BA6* ___OnResourceNotice;
 	Action_3_tA912172538913603A6A011830620FA170785C920* ___OnRightTopNotice;
 	Action_1_tE20624984406F0B4ADC27276FCBE8D9496974FA9* ___OnKnightsMemberList;
@@ -1105,6 +1116,9 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55  : public RuntimeO
 	int32_t ____pendingBuyCount;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___OnFriendAddRequest;
 	HashSet_1_t0B39EF96E81D9617D3E4536032F30E1AE7610153* ____unhandledDumped;
+};
+struct KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319  : public RuntimeObject
+{
 };
 struct KoInventoryLayout_t6A7C69958FE1A5E62E7009247E733018932BCF24  : public RuntimeObject
 {
@@ -1347,6 +1361,7 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	bool ___HasMyInfo;
 	bool ___IsDead;
 	bool ___RegeneSent;
+	int16_t ____pendingDeadSid;
 	uint32_t ___PlayerId;
 	uint8_t ___HairR;
 	uint8_t ___HairG;
@@ -3346,6 +3361,89 @@ struct KoGameClient_t146D3232E54344D4F86B0DA283B639F1BFA29C55_StaticFields
 	bool ___U3CServerGenieActiveU3Ek__BackingField;
 	CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* ___NewlineChars;
 };
+struct KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_StaticFields
+{
+	uint8_t ___ServerNation;
+	int32_t ___DumpType;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___AccountClientData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___UserClientData;
+	uint8_t ___VoiceStatus;
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___VoiceMuted;
+	Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* ___VoiceMutedSid;
+	int32_t ___VoiceMutedCount;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___SocialLink;
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___SocialInApp;
+	uint8_t ___FlashType;
+	uint32_t ___FlashBonus;
+	uint32_t ___FlashTime;
+	int32_t ___ClanPremiumHours;
+	int16_t ___PremiumSwitchResult;
+	int16_t ___PremiumSwitchWaitSec;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___ServerBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___KingBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___ClanCapeBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___PersonalCapeBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___RebirthBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___RankBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___ItemBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___ZoneBonus;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ___SoulBonus;
+	bool ___ExpSealActive;
+	uint16_t ___BifrostRemain;
+	uint16_t ___StoneOrChaosRemain;
+	uint8_t ___BattleSuit;
+	bool ___WarScoreOpen;
+	uint32_t ___WarScoreRemain;
+	uint32_t ___WarKarusScore;
+	uint32_t ___WarElmoradScore;
+	uint8_t ___WarMapStatus;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___WarMapPercent;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___MonumentNation;
+	uint8_t ___RonarkServer;
+	uint16_t ___RonarkKarusClan;
+	uint16_t ___RonarkElmoradClan;
+	bool ___MadClassDead;
+	List_1_t4B5D130E24C895EA6349F371C04BCA7DD933AFAC* ___MadClass;
+	uint8_t ___SiegeWarStatus;
+	uint16_t ___SiegeClanId;
+	String_t* ___SiegeClanName;
+	int32_t ___SiegeRemain;
+	bool ___MiningPanelVisible;
+	String_t* ___MiningItemName;
+	uint32_t ___MiningFoundItem;
+	uint8_t ___MiningFoundType;
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___LootFilter;
+	int32_t ___LootGoldMin;
+	List_1_t9B68833848E4C4D7F623C05F6B77F0449396354A* ___LootBlacklist;
+	bool ___GambleActive;
+	String_t* ___GambleName;
+	uint16_t ___GambleRemain;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___GambleUsers;
+	uint32_t ___SlaveDuration;
+	bool ___SlaveOnline;
+	uint8_t ___SlaveMerchantType;
+	int32_t ___SlaveBalance;
+	int32_t ___SlaveCash;
+	int32_t ___SlaveGold;
+	List_1_tBF78862D52505D73A96D7EFC574ECF54D736FDB5* ___SlaveSlots;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___VanguardNames;
+	bool ___VanguardInvite;
+	uint32_t ___PollIndex;
+	String_t* ___PollQuestion;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___PollAnswers;
+	uint32_t ___AchievePlayTime;
+	uint32_t ___AchieveMonsterKills;
+	uint32_t ___AchieveUserKills;
+	uint32_t ___AchieveDeaths;
+	uint32_t ___AchievePoints;
+	uint16_t ___TimedQuestId;
+	uint16_t ___TimedCount1;
+	uint16_t ___TimedCount2;
+	bool ____hasRegene;
+	float ____regeneX;
+	float ____regeneY;
+	float ____regeneZ;
+};
 struct KoInventoryLayout_t6A7C69958FE1A5E62E7009247E733018932BCF24_StaticFields
 {
 	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___AllCharEquipToSlot;
@@ -3397,6 +3495,9 @@ struct KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields
 	float ___ControlsScale;
 	float ___AreaSkillsSensitivity;
 	float ___PartyScale;
+	float ___GeniePanelScale;
+	float ___PusPanelScale;
+	float ___PazarSectionScale;
 	float ___AreaSkillsCameraRotateSensitivity;
 	bool ___HideMyWings;
 	bool ___HideMyPathos;
@@ -4571,6 +4672,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_NotifyChanged_m006C027FB70
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoCharSelectInfo_get_IsEmpty_mF8DE801CE29DD2045734CEEABF4EE7840B6E269A (KoCharSelectInfo_t6C322E229AA2D44FEABC7EAAB160838C3AA5657D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KoCharSelectInfo_NationFromRace_m07D8774DFFB0759263E62E45260DBF58E096E782 (KoCharSelectInfo_t6C322E229AA2D44FEABC7EAAB160838C3AA5657D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_ApplyAllCharEquips_m963910CD5988C15A6AF94A550D912043B7D97D99 (KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* __this, KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* ___0_equips, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157 (int16_t ___0_sid, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_MarkDead_m090AE751AE82534AD30E0CD5B4E3CD27A5B25F16 (KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPusStore_ClearRefunds_mACEDD00087FCE5C9B8D38749553B74C630BA7E2F (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoItemData_get_IsEmpty_m6A1CBE229A577BEBFABA0374252BFC278117F774 (KoItemData_t975C9A0B4D4F450767300F9D9F336C9933B57E0C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___0_value, float ___1_min, float ___2_max, const RuntimeMethod* method) ;
@@ -4607,7 +4710,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoMyInfoPacket_get_HumanEslantMilitar
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t KoMyInfoPacket_get_MoradonMilitary_m78CF3A30B1B1467D197AA106FE240DF82549B639 (KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* KoWorldBootstrap_get_Instance_mC4897CE1CD2C781A37DD7A8E8BCDD30B5CBC368B_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoWorldBootstrap_RefreshPlayerEquipment_m3867A7D37819ECA3AA1FFBA0A013A68B5E5570A7 (KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_MarkDead_m090AE751AE82534AD30E0CD5B4E3CD27A5B25F16 (KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_ClearDead_m6978DEAE1BB9E563FDEB68D9798B80323DA1401E (KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* __this, const RuntimeMethod* method) ;
 inline KoPremiumEntry_t3DC3CD5E771D2B3381C35B38A8A683583E241D06* List_1_get_Item_mD9ED235EF2104D31DBCB10AF188EC81F5948AD2D (List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* __this, int32_t ___0_index, const RuntimeMethod* method)
 {
@@ -5214,7 +5316,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoText_get_SkillFailMp_m90B1CFB6A45
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillUse_CastRegionAt_m8CB3DDC30B1DC1676B5C9BCB644E0F8E77A2BFE5 (KoSkillUse_tCCD2CA7145841FF46775030AE59D8CDD5707CDCB* __this, KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_worldPos, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillUse_BeginRegionAim_m5D3CB4FDC1CD38F42C946038B50FA04DFCFD2775 (KoSkillUse_tCCD2CA7145841FF46775030AE59D8CDD5707CDCB* __this, KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillUse_TryResolveTarget_m64E0C58650BDDD09EB53B54FF2386E9F60386484 (KoSkillUse_tCCD2CA7145841FF46775030AE59D8CDD5707CDCB* __this, KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, int16_t* ___1_targetId, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1** ___2_targetGo, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157 (int16_t ___0_sid, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillUse_HasArrowsFor_mDC95B5E2E4EAE435BECE402A4E24A5ABD94084EF (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* KoText_get_SkillFailNoArrow_m424E496FC14D455D26DAFFCDAC4FE08D86FB6C88 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KoSkillUse_TargetStillLiving_m18AAF3A472DD0A541D4289A32F7F36D733B594B2 (KoSkillRow_t1986584D1031D345BBAA5878D77860CC925DB380* ___0_skill, int16_t ___1_targetId, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___2_targetGo, const RuntimeMethod* method) ;
@@ -8784,6 +8885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_SeedFromEnterGame_mB4EFEDB
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPusStore_t55B63008DCB9A0F7AFA54DE77856C3E562B11056_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -8864,7 +8966,7 @@ IL_0014:
 		KoCharSelectInfo_t6C322E229AA2D44FEABC7EAAB160838C3AA5657D* L_17 = ___1_select;
 		if (!L_17)
 		{
-			goto IL_010d;
+			goto IL_0128;
 		}
 	}
 	{
@@ -8874,7 +8976,7 @@ IL_0014:
 		L_19 = KoCharSelectInfo_get_IsEmpty_mF8DE801CE29DD2045734CEEABF4EE7840B6E269A(L_18, NULL);
 		if (L_19)
 		{
-			goto IL_010d;
+			goto IL_0128;
 		}
 	}
 	{
@@ -8963,79 +9065,206 @@ IL_00ed:
 		int32_t L_40;
 		L_40 = KoCharSelectInfo_NationFromRace_m07D8774DFFB0759263E62E45260DBF58E096E782(L_39, NULL);
 		__this->___Nation = (uint8_t)((int32_t)(uint8_t)L_40);
-		KoCharSelectInfo_t6C322E229AA2D44FEABC7EAAB160838C3AA5657D* L_41 = ___1_select;
-		NullCheck(L_41);
-		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_42 = L_41->___Equips;
-		KoPlayerState_ApplyAllCharEquips_m963910CD5988C15A6AF94A550D912043B7D97D99(__this, L_42, NULL);
-		goto IL_0121;
+		il2cpp_codegen_runtime_class_init_inline(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var);
+		uint8_t L_41 = ((KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_StaticFields*)il2cpp_codegen_static_fields_for(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var))->___ServerNation;
+		if ((((int32_t)L_41) == ((int32_t)1)))
+		{
+			goto IL_010f;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var);
+		uint8_t L_42 = ((KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_StaticFields*)il2cpp_codegen_static_fields_for(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var))->___ServerNation;
+		if ((!(((uint32_t)L_42) == ((uint32_t)2))))
+		{
+			goto IL_011a;
+		}
 	}
 
-IL_010d:
+IL_010f:
 	{
-		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_43 = ___0_ctx;
-		NullCheck(L_43);
-		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_44 = L_43->___Equips;
-		if (!L_44)
-		{
-			goto IL_0121;
-		}
-	}
-	{
-		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_45 = ___0_ctx;
-		NullCheck(L_45);
-		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_46 = L_45->___Equips;
-		KoPlayerState_ApplyAllCharEquips_m963910CD5988C15A6AF94A550D912043B7D97D99(__this, L_46, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var);
+		uint8_t L_43 = ((KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_StaticFields*)il2cpp_codegen_static_fields_for(KoIngressState_tFFA0C676DC89EF92002E5B81159706F9F7F73319_il2cpp_TypeInfo_var))->___ServerNation;
+		__this->___Nation = L_43;
 	}
 
-IL_0121:
+IL_011a:
 	{
-		bool L_47 = __this->___HasMyInfo;
-		if (L_47)
+		KoCharSelectInfo_t6C322E229AA2D44FEABC7EAAB160838C3AA5657D* L_44 = ___1_select;
+		NullCheck(L_44);
+		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_45 = L_44->___Equips;
+		KoPlayerState_ApplyAllCharEquips_m963910CD5988C15A6AF94A550D912043B7D97D99(__this, L_45, NULL);
+		goto IL_013c;
+	}
+
+IL_0128:
+	{
+		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_46 = ___0_ctx;
+		NullCheck(L_46);
+		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_47 = L_46->___Equips;
+		if (!L_47)
 		{
-			goto IL_01e0;
+			goto IL_013c;
 		}
 	}
 	{
-		int16_t L_48 = __this->___SocketId;
-		if (L_48)
+		KoEnterGameContext_tDC4ABA0CB372F5AD38BE125B3F39CF8B101FBBD1* L_48 = ___0_ctx;
+		NullCheck(L_48);
+		KoEquipSlotU5BU5D_t561A29BAEA1A74C8A80D82F7039EC510653E74BC* L_49 = L_48->___Equips;
+		KoPlayerState_ApplyAllCharEquips_m963910CD5988C15A6AF94A550D912043B7D97D99(__this, L_49, NULL);
+	}
+
+IL_013c:
+	{
+		bool L_50 = __this->___HasMyInfo;
+		if (L_50)
 		{
-			goto IL_01e0;
+			goto IL_01fb;
 		}
 	}
 	{
-		uint8_t L_49 = __this->___Level;
-		__this->___HpMax = ((int16_t)((int32_t)il2cpp_codegen_add(((int32_t)80), ((int32_t)il2cpp_codegen_multiply((int32_t)L_49, ((int32_t)20))))));
-		int32_t L_50 = __this->___HpMax;
-		__this->___ServerHpMax = L_50;
-		int32_t L_51 = __this->___HpMax;
-		__this->___Hp = L_51;
+		int16_t L_51 = __this->___SocketId;
+		if (L_51)
+		{
+			goto IL_01fb;
+		}
+	}
+	{
 		uint8_t L_52 = __this->___Level;
-		__this->___MpMax = ((int16_t)((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply((int32_t)L_52, ((int32_t)10))))));
-		int32_t L_53 = __this->___MpMax;
-		__this->___ServerMpMax = L_53;
-		int32_t L_54 = __this->___MpMax;
-		__this->___Mp = L_54;
+		__this->___HpMax = ((int16_t)((int32_t)il2cpp_codegen_add(((int32_t)80), ((int32_t)il2cpp_codegen_multiply((int32_t)L_52, ((int32_t)20))))));
+		int32_t L_53 = __this->___HpMax;
+		__this->___ServerHpMax = L_53;
+		int32_t L_54 = __this->___HpMax;
+		__this->___Hp = L_54;
 		uint8_t L_55 = __this->___Level;
-		int32_t L_56;
-		L_56 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(1, ((int32_t)il2cpp_codegen_multiply((int32_t)L_55, ((int32_t)1000))), NULL);
-		__this->___ExpNext = L_56;
-		uint32_t L_57 = __this->___ExpNext;
-		__this->___Exp = ((int32_t)((uint32_t)(int32_t)L_57/(uint32_t)(int32_t)4));
+		__this->___MpMax = ((int16_t)((int32_t)il2cpp_codegen_add(((int32_t)40), ((int32_t)il2cpp_codegen_multiply((int32_t)L_55, ((int32_t)10))))));
+		int32_t L_56 = __this->___MpMax;
+		__this->___ServerMpMax = L_56;
+		int32_t L_57 = __this->___MpMax;
+		__this->___Mp = L_57;
+		uint8_t L_58 = __this->___Level;
+		int32_t L_59;
+		L_59 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(1, ((int32_t)il2cpp_codegen_multiply((int32_t)L_58, ((int32_t)1000))), NULL);
+		__this->___ExpNext = L_59;
+		uint32_t L_60 = __this->___ExpNext;
+		__this->___Exp = ((int32_t)((uint32_t)(int32_t)L_60/(uint32_t)(int32_t)4));
 		__this->___WeightMax = (uint16_t)((int32_t)100);
 		__this->___Weight = (uint16_t)0;
-		uint8_t L_58 = __this->___Level;
-		__this->___Attack = ((int16_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_58, 3)));
-		uint8_t L_59 = __this->___Level;
-		__this->___Guard = ((int16_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_59, 2)));
+		uint8_t L_61 = __this->___Level;
+		__this->___Attack = ((int16_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_61, 3)));
+		uint8_t L_62 = __this->___Level;
+		__this->___Guard = ((int16_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_62, 2)));
 	}
 
-IL_01e0:
+IL_01fb:
 	{
-		__this->___IsDead = (bool)0;
+		int16_t L_63 = __this->____pendingDeadSid;
+		bool L_64;
+		L_64 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_63, NULL);
+		if (!L_64)
+		{
+			goto IL_024e;
+		}
+	}
+	{
+		int16_t L_65 = __this->___SocketId;
+		bool L_66;
+		L_66 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_65, NULL);
+		if (!L_66)
+		{
+			goto IL_023a;
+		}
+	}
+	{
+		int16_t L_67 = __this->____pendingDeadSid;
+		int16_t L_68 = __this->___SocketId;
+		if ((!(((uint32_t)L_67) == ((uint32_t)L_68))))
+		{
+			goto IL_023a;
+		}
+	}
+	{
+		__this->____pendingDeadSid = (int16_t)(-1);
+		bool L_69 = __this->___IsDead;
+		if (L_69)
+		{
+			goto IL_024e;
+		}
+	}
+	{
+		KoPlayerState_MarkDead_m090AE751AE82534AD30E0CD5B4E3CD27A5B25F16(__this, NULL);
+		goto IL_024e;
+	}
+
+IL_023a:
+	{
+		int16_t L_70 = __this->___SocketId;
+		bool L_71;
+		L_71 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_70, NULL);
+		if (!L_71)
+		{
+			goto IL_024e;
+		}
+	}
+	{
+		__this->____pendingDeadSid = (int16_t)(-1);
+	}
+
+IL_024e:
+	{
 		__this->___RegeneSent = (bool)0;
 		il2cpp_codegen_runtime_class_init_inline(KoPusStore_t55B63008DCB9A0F7AFA54DE77856C3E562B11056_il2cpp_TypeInfo_var);
 		KoPusStore_ClearRefunds_mACEDD00087FCE5C9B8D38749553B74C630BA7E2F(NULL);
 		KoPlayerState_NotifyChanged_m006C027FB706E78A3B1BC4FC98009135FEB933E7(__this, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_NoteUnresolvedDeath_m94CDA7BC01015E81396697BA45D39A9C842C65E8 (KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* __this, int16_t ___0_sid, const RuntimeMethod* method) 
+{
+	{
+		int16_t L_0 = ___0_sid;
+		bool L_1;
+		L_1 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_0009;
+		}
+	}
+	{
+		return;
+	}
+
+IL_0009:
+	{
+		int16_t L_2 = __this->___SocketId;
+		bool L_3;
+		L_3 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_2, NULL);
+		if (!L_3)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		int16_t L_4 = ___0_sid;
+		int16_t L_5 = __this->___SocketId;
+		if ((!(((uint32_t)L_4) == ((uint32_t)L_5))))
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		KoPlayerState_MarkDead_m090AE751AE82534AD30E0CD5B4E3CD27A5B25F16(__this, NULL);
+	}
+
+IL_0025:
+	{
+		return;
+	}
+
+IL_0026:
+	{
+		int16_t L_6 = ___0_sid;
+		__this->____pendingDeadSid = L_6;
 		return;
 	}
 }
@@ -9084,24 +9313,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_ClearDead_m6978DEAE1BB9E56
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B5_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B4_0 = NULL;
 	{
+		__this->____pendingDeadSid = (int16_t)(-1);
 		bool L_0 = __this->___IsDead;
 		if (L_0)
 		{
-			goto IL_0011;
+			goto IL_0018;
 		}
 	}
 	{
 		bool L_1 = __this->___RegeneSent;
 		if (L_1)
 		{
-			goto IL_0011;
+			goto IL_0018;
 		}
 	}
 	{
 		return;
 	}
 
-IL_0011:
+IL_0018:
 	{
 		__this->___IsDead = (bool)0;
 		__this->___RegeneSent = (bool)0;
@@ -9111,7 +9341,7 @@ IL_0011:
 		if (L_3)
 		{
 			G_B5_0 = L_3;
-			goto IL_0030;
+			goto IL_0037;
 		}
 		G_B4_0 = L_3;
 	}
@@ -9119,7 +9349,7 @@ IL_0011:
 		return;
 	}
 
-IL_0030:
+IL_0037:
 	{
 		NullCheck(G_B5_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B5_0, NULL);
@@ -9228,21 +9458,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState_ApplyMyInfo_m9750FAE3B2755
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	uint32_t V_0 = 0;
-	String_t* G_B4_0 = NULL;
-	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B4_1 = NULL;
-	String_t* G_B3_0 = NULL;
-	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B3_1 = NULL;
-	String_t* G_B6_0 = NULL;
-	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B6_1 = NULL;
-	String_t* G_B5_0 = NULL;
-	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B5_1 = NULL;
+	bool V_0 = false;
+	uint32_t V_1 = 0;
+	int32_t G_B5_0 = 0;
+	String_t* G_B9_0 = NULL;
+	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B9_1 = NULL;
+	String_t* G_B8_0 = NULL;
+	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B8_1 = NULL;
 	String_t* G_B11_0 = NULL;
 	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B11_1 = NULL;
 	String_t* G_B10_0 = NULL;
 	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B10_1 = NULL;
-	KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* G_B21_0 = NULL;
-	KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* G_B20_0 = NULL;
+	String_t* G_B16_0 = NULL;
+	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B16_1 = NULL;
+	String_t* G_B15_0 = NULL;
+	KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0* G_B15_1 = NULL;
+	KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* G_B26_0 = NULL;
+	KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* G_B25_0 = NULL;
 	{
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_0 = ___0_m;
 		if (L_0)
@@ -9260,622 +9492,658 @@ IL_0004:
 		NullCheck(L_1);
 		int16_t L_2 = L_1->___SocketId;
 		__this->___SocketId = L_2;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_3 = ___0_m;
-		NullCheck(L_3);
-		uint32_t L_4 = L_3->___PlayerId;
-		__this->___PlayerId = L_4;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_5 = ___0_m;
-		NullCheck(L_5);
-		String_t* L_6 = L_5->___Name;
-		String_t* L_7 = L_6;
-		if (L_7)
+		int16_t L_3 = __this->____pendingDeadSid;
+		bool L_4;
+		L_4 = KoSocketId_IsValid_mFEE6072DD6F23DF6FDB6DA926C14ED3C5E2E1157(L_3, NULL);
+		if (!L_4)
 		{
-			G_B4_0 = L_7;
-			G_B4_1 = __this;
-			goto IL_002c;
+			goto IL_002d;
 		}
-		G_B3_0 = L_7;
-		G_B3_1 = __this;
 	}
 	{
-		String_t* L_8 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B4_0 = L_8;
-		G_B4_1 = G_B3_1;
+		int16_t L_5 = __this->____pendingDeadSid;
+		int16_t L_6 = __this->___SocketId;
+		G_B5_0 = ((((int32_t)L_5) == ((int32_t)L_6))? 1 : 0);
+		goto IL_002e;
 	}
 
-IL_002c:
+IL_002d:
 	{
-		NullCheck(G_B4_1);
-		G_B4_1->___Name = G_B4_0;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B4_1->___Name), (void*)G_B4_0);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_9 = ___0_m;
-		NullCheck(L_9);
-		float L_10 = L_9->___X;
-		__this->___PosX = L_10;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_11 = ___0_m;
-		NullCheck(L_11);
-		float L_12 = L_11->___Y;
-		__this->___PosY = L_12;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_13 = ___0_m;
-		NullCheck(L_13);
-		float L_14 = L_13->___Z;
-		__this->___PosZ = L_14;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_15 = ___0_m;
-		NullCheck(L_15);
-		uint8_t L_16 = L_15->___Nation;
-		__this->___Nation = L_16;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_17 = ___0_m;
-		NullCheck(L_17);
-		uint8_t L_18 = L_17->___Race;
-		__this->___Race = L_18;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_19 = ___0_m;
-		NullCheck(L_19);
-		uint16_t L_20 = L_19->___ClassId;
-		__this->___ClassId = L_20;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_21 = ___0_m;
-		NullCheck(L_21);
-		uint8_t L_22 = L_21->___Face;
-		__this->___Face = L_22;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_23 = ___0_m;
-		NullCheck(L_23);
-		uint8_t L_24 = L_23->___Hair;
-		__this->___Hair = L_24;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_25 = ___0_m;
-		NullCheck(L_25);
-		uint8_t L_26 = L_25->___HairR;
-		__this->___HairR = L_26;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_27 = ___0_m;
-		NullCheck(L_27);
-		uint8_t L_28 = L_27->___HairG;
-		__this->___HairG = L_28;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_29 = ___0_m;
-		NullCheck(L_29);
-		uint8_t L_30 = L_29->___HairB;
-		__this->___HairB = L_30;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_31 = ___0_m;
-		NullCheck(L_31);
-		uint8_t L_32 = L_31->___Rank;
-		__this->___Rank = L_32;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_33 = ___0_m;
-		NullCheck(L_33);
-		String_t* L_34 = L_33->___Tag;
-		String_t* L_35 = L_34;
-		if (L_35)
-		{
-			G_B6_0 = L_35;
-			G_B6_1 = __this;
-			goto IL_00d1;
-		}
-		G_B5_0 = L_35;
-		G_B5_1 = __this;
-	}
-	{
-		String_t* L_36 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B6_0 = L_36;
-		G_B6_1 = G_B5_1;
+		G_B5_0 = 0;
 	}
 
-IL_00d1:
+IL_002e:
 	{
-		NullCheck(G_B6_1);
-		G_B6_1->___Tag = G_B6_0;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B6_1->___Tag), (void*)G_B6_0);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_37 = ___0_m;
-		NullCheck(L_37);
-		uint8_t L_38 = L_37->___TagA;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_39 = ___0_m;
-		NullCheck(L_39);
-		uint8_t L_40 = L_39->___TagR;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_41 = ___0_m;
-		NullCheck(L_41);
-		uint8_t L_42 = L_41->___TagG;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_43 = ___0_m;
-		NullCheck(L_43);
-		uint8_t L_44 = L_43->___TagB;
-		__this->___TagColorArgb = ((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_38<<((int32_t)24)))|((int32_t)((int32_t)L_40<<((int32_t)16)))))|((int32_t)((int32_t)L_42<<8))))|(int32_t)L_44));
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_45 = ___0_m;
-		NullCheck(L_45);
-		int16_t L_46 = L_45->___KnightsSymbol;
-		__this->___KnightsSymbol = L_46;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_47 = ___0_m;
-		NullCheck(L_47);
-		int16_t L_48 = L_47->___PersonalSymbol;
-		__this->___PersonalSymbol = L_48;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_49 = ___0_m;
-		NullCheck(L_49);
-		int16_t L_50 = L_49->___PersonalSymbol;
-		int32_t L_51;
-		L_51 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_50, ((int32_t)-128), ((int32_t)127), NULL);
-		__this->___PersonalRank = ((int8_t)L_51);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_52 = ___0_m;
-		NullCheck(L_52);
-		bool L_53 = L_52->___IsChicken;
-		__this->___IsChicken = L_53;
-		__this->___Title = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_54 = ___0_m;
-		NullCheck(L_54);
-		uint8_t L_55 = L_54->___Level;
-		__this->___Level = L_55;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_56 = ___0_m;
-		NullCheck(L_56);
-		int16_t L_57 = L_56->___BonusPoints;
-		int32_t L_58;
-		L_58 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_57, 0, ((int32_t)255), NULL);
-		__this->___BonusPoints = (uint8_t)((int32_t)(uint8_t)L_58);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_59 = ___0_m;
-		NullCheck(L_59);
-		int64_t L_60 = L_59->___ExpNext;
-		float L_61;
-		L_61 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)L_60), (1.0f), (4.2949673E+09f), NULL);
-		__this->___ExpNext = il2cpp_codegen_cast_floating_point<uint32_t, int32_t, float>(L_61);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_62 = ___0_m;
-		NullCheck(L_62);
-		int64_t L_63 = L_62->___Exp;
-		float L_64;
-		L_64 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)L_63), (0.0f), (4.2949673E+09f), NULL);
-		__this->___Exp = il2cpp_codegen_cast_floating_point<uint32_t, int32_t, float>(L_64);
-		uint32_t L_65 = __this->___Loyalty;
-		V_0 = L_65;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_66 = ___0_m;
-		NullCheck(L_66);
-		int32_t L_67 = L_66->___Loyalty;
-		int32_t L_68;
-		L_68 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_67, NULL);
-		__this->___Loyalty = L_68;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_69 = ___0_m;
-		NullCheck(L_69);
-		int32_t L_70 = L_69->___LoyaltyMonthly;
-		int32_t L_71;
-		L_71 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_70, NULL);
-		__this->___LoyaltyMonthly = L_71;
-		bool L_72 = __this->___HasMyInfo;
-		if (!L_72)
+		V_0 = (bool)G_B5_0;
+		bool L_7 = V_0;
+		if (!L_7)
 		{
-			goto IL_01e7;
+			goto IL_0039;
 		}
 	}
 	{
-		uint32_t L_73 = __this->___Loyalty;
-		uint32_t L_74 = V_0;
-		if ((!(((uint32_t)L_73) > ((uint32_t)L_74))))
-		{
-			goto IL_01e7;
-		}
-	}
-	{
-		uint32_t L_75 = __this->___Loyalty;
-		uint32_t L_76 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
-		KoPlayerState_LogNationalPointsGained_m709F93D153CC11869DAED72625096BCCC468EC2A(((int32_t)il2cpp_codegen_subtract((int32_t)L_75, (int32_t)L_76)), NULL);
+		__this->____pendingDeadSid = (int16_t)(-1);
 	}
 
-IL_01e7:
+IL_0039:
 	{
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_77 = ___0_m;
-		NullCheck(L_77);
-		uint16_t L_78 = L_77->___KnightsId;
-		__this->___KnightsId = ((int16_t)L_78);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_79 = ___0_m;
-		NullCheck(L_79);
-		uint8_t L_80 = L_79->___KnightDuty;
-		__this->___KnightDuty = L_80;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_81 = ___0_m;
-		NullCheck(L_81);
-		String_t* L_82 = L_81->___KnightsName;
-		String_t* L_83 = L_82;
-		if (L_83)
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_8 = ___0_m;
+		NullCheck(L_8);
+		uint32_t L_9 = L_8->___PlayerId;
+		__this->___PlayerId = L_9;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_10 = ___0_m;
+		NullCheck(L_10);
+		String_t* L_11 = L_10->___Name;
+		String_t* L_12 = L_11;
+		if (L_12)
 		{
-			G_B11_0 = L_83;
+			G_B9_0 = L_12;
+			G_B9_1 = __this;
+			goto IL_0055;
+		}
+		G_B8_0 = L_12;
+		G_B8_1 = __this;
+	}
+	{
+		String_t* L_13 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B9_0 = L_13;
+		G_B9_1 = G_B8_1;
+	}
+
+IL_0055:
+	{
+		NullCheck(G_B9_1);
+		G_B9_1->___Name = G_B9_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B9_1->___Name), (void*)G_B9_0);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_14 = ___0_m;
+		NullCheck(L_14);
+		float L_15 = L_14->___X;
+		__this->___PosX = L_15;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_16 = ___0_m;
+		NullCheck(L_16);
+		float L_17 = L_16->___Y;
+		__this->___PosY = L_17;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_18 = ___0_m;
+		NullCheck(L_18);
+		float L_19 = L_18->___Z;
+		__this->___PosZ = L_19;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_20 = ___0_m;
+		NullCheck(L_20);
+		uint8_t L_21 = L_20->___Nation;
+		__this->___Nation = L_21;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_22 = ___0_m;
+		NullCheck(L_22);
+		uint8_t L_23 = L_22->___Race;
+		__this->___Race = L_23;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_24 = ___0_m;
+		NullCheck(L_24);
+		uint16_t L_25 = L_24->___ClassId;
+		__this->___ClassId = L_25;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_26 = ___0_m;
+		NullCheck(L_26);
+		uint8_t L_27 = L_26->___Face;
+		__this->___Face = L_27;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_28 = ___0_m;
+		NullCheck(L_28);
+		uint8_t L_29 = L_28->___Hair;
+		__this->___Hair = L_29;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_30 = ___0_m;
+		NullCheck(L_30);
+		uint8_t L_31 = L_30->___HairR;
+		__this->___HairR = L_31;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_32 = ___0_m;
+		NullCheck(L_32);
+		uint8_t L_33 = L_32->___HairG;
+		__this->___HairG = L_33;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_34 = ___0_m;
+		NullCheck(L_34);
+		uint8_t L_35 = L_34->___HairB;
+		__this->___HairB = L_35;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_36 = ___0_m;
+		NullCheck(L_36);
+		uint8_t L_37 = L_36->___Rank;
+		__this->___Rank = L_37;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_38 = ___0_m;
+		NullCheck(L_38);
+		String_t* L_39 = L_38->___Tag;
+		String_t* L_40 = L_39;
+		if (L_40)
+		{
+			G_B11_0 = L_40;
 			G_B11_1 = __this;
-			goto IL_0210;
+			goto IL_00fa;
 		}
-		G_B10_0 = L_83;
+		G_B10_0 = L_40;
 		G_B10_1 = __this;
 	}
 	{
-		String_t* L_84 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
-		G_B11_0 = L_84;
+		String_t* L_41 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B11_0 = L_41;
 		G_B11_1 = G_B10_1;
+	}
+
+IL_00fa:
+	{
+		NullCheck(G_B11_1);
+		G_B11_1->___Tag = G_B11_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B11_1->___Tag), (void*)G_B11_0);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_42 = ___0_m;
+		NullCheck(L_42);
+		uint8_t L_43 = L_42->___TagA;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_44 = ___0_m;
+		NullCheck(L_44);
+		uint8_t L_45 = L_44->___TagR;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_46 = ___0_m;
+		NullCheck(L_46);
+		uint8_t L_47 = L_46->___TagG;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_48 = ___0_m;
+		NullCheck(L_48);
+		uint8_t L_49 = L_48->___TagB;
+		__this->___TagColorArgb = ((int32_t)(((int32_t)(((int32_t)(((int32_t)((int32_t)L_43<<((int32_t)24)))|((int32_t)((int32_t)L_45<<((int32_t)16)))))|((int32_t)((int32_t)L_47<<8))))|(int32_t)L_49));
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_50 = ___0_m;
+		NullCheck(L_50);
+		int16_t L_51 = L_50->___KnightsSymbol;
+		__this->___KnightsSymbol = L_51;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_52 = ___0_m;
+		NullCheck(L_52);
+		int16_t L_53 = L_52->___PersonalSymbol;
+		__this->___PersonalSymbol = L_53;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_54 = ___0_m;
+		NullCheck(L_54);
+		int16_t L_55 = L_54->___PersonalSymbol;
+		int32_t L_56;
+		L_56 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_55, ((int32_t)-128), ((int32_t)127), NULL);
+		__this->___PersonalRank = ((int8_t)L_56);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_57 = ___0_m;
+		NullCheck(L_57);
+		bool L_58 = L_57->___IsChicken;
+		__this->___IsChicken = L_58;
+		__this->___Title = (uint8_t)0;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_59 = ___0_m;
+		NullCheck(L_59);
+		uint8_t L_60 = L_59->___Level;
+		__this->___Level = L_60;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_61 = ___0_m;
+		NullCheck(L_61);
+		int16_t L_62 = L_61->___BonusPoints;
+		int32_t L_63;
+		L_63 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_62, 0, ((int32_t)255), NULL);
+		__this->___BonusPoints = (uint8_t)((int32_t)(uint8_t)L_63);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_64 = ___0_m;
+		NullCheck(L_64);
+		int64_t L_65 = L_64->___ExpNext;
+		float L_66;
+		L_66 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)L_65), (1.0f), (4.2949673E+09f), NULL);
+		__this->___ExpNext = il2cpp_codegen_cast_floating_point<uint32_t, int32_t, float>(L_66);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_67 = ___0_m;
+		NullCheck(L_67);
+		int64_t L_68 = L_67->___Exp;
+		float L_69;
+		L_69 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)L_68), (0.0f), (4.2949673E+09f), NULL);
+		__this->___Exp = il2cpp_codegen_cast_floating_point<uint32_t, int32_t, float>(L_69);
+		uint32_t L_70 = __this->___Loyalty;
+		V_1 = L_70;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_71 = ___0_m;
+		NullCheck(L_71);
+		int32_t L_72 = L_71->___Loyalty;
+		int32_t L_73;
+		L_73 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_72, NULL);
+		__this->___Loyalty = L_73;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_74 = ___0_m;
+		NullCheck(L_74);
+		int32_t L_75 = L_74->___LoyaltyMonthly;
+		int32_t L_76;
+		L_76 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_75, NULL);
+		__this->___LoyaltyMonthly = L_76;
+		bool L_77 = __this->___HasMyInfo;
+		if (!L_77)
+		{
+			goto IL_0210;
+		}
+	}
+	{
+		uint32_t L_78 = __this->___Loyalty;
+		uint32_t L_79 = V_1;
+		if ((!(((uint32_t)L_78) > ((uint32_t)L_79))))
+		{
+			goto IL_0210;
+		}
+	}
+	{
+		uint32_t L_80 = __this->___Loyalty;
+		uint32_t L_81 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		KoPlayerState_LogNationalPointsGained_m709F93D153CC11869DAED72625096BCCC468EC2A(((int32_t)il2cpp_codegen_subtract((int32_t)L_80, (int32_t)L_81)), NULL);
 	}
 
 IL_0210:
 	{
-		NullCheck(G_B11_1);
-		G_B11_1->___KnightsName = G_B11_0;
-		Il2CppCodeGenWriteBarrier((void**)(&G_B11_1->___KnightsName), (void*)G_B11_0);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_85 = ___0_m;
-		NullCheck(L_85);
-		uint8_t L_86 = L_85->___KnightDuty;
-		__this->___Fame = L_86;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_87 = ___0_m;
-		NullCheck(L_87);
-		uint16_t L_88 = L_87->___AllianceId;
-		__this->___AllianceId = ((int16_t)L_88);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_89 = ___0_m;
-		NullCheck(L_89);
-		uint8_t L_90 = L_89->___KnightsFlag;
-		__this->___KnightsFlag = L_90;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_91 = ___0_m;
-		NullCheck(L_91);
-		uint8_t L_92 = L_91->___KnightsGrade;
-		__this->___KnightsGrade = L_92;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_93 = ___0_m;
-		NullCheck(L_93);
-		uint8_t L_94 = L_93->___KnightsRank;
-		__this->___KnightsRank = L_94;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_95 = ___0_m;
-		NullCheck(L_95);
-		uint16_t L_96 = L_95->___MarkVersion;
-		__this->___MarkVersion = ((int16_t)L_96);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_97 = ___0_m;
-		NullCheck(L_97);
-		int32_t L_98 = L_97->___ClanLoyalty;
-		__this->___ClanLoyalty = L_98;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_99 = ___0_m;
-		NullCheck(L_99);
-		uint8_t L_100 = L_99->___CapeType;
-		__this->___CapeType = L_100;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_101 = ___0_m;
-		NullCheck(L_101);
-		uint8_t L_102 = L_101->___CapeSymbolType;
-		__this->___CapeSymbolType = L_102;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_103 = ___0_m;
-		NullCheck(L_103);
-		int16_t L_104 = L_103->___CapeId;
-		__this->___CapeId = L_104;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_105 = ___0_m;
-		NullCheck(L_105);
-		uint32_t L_106 = L_105->___CapeColor;
-		__this->___CapeColor = L_106;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_107 = ___0_m;
-		NullCheck(L_107);
-		uint8_t L_108 = L_107->___CapeAnim;
-		__this->___CapeAnim = L_108;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_109 = ___0_m;
-		NullCheck(L_109);
-		uint16_t L_110 = L_109->___UserMarkVersion;
-		__this->___UserMarkVersion = L_110;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_111 = ___0_m;
-		NullCheck(L_111);
-		uint8_t L_112;
-		L_112 = KoMyInfoPacket_get_CapeR_mDA4D1CBF1020EEA1E5DCA2D1A6664C51F736C051(L_111, NULL);
-		__this->___CapeR = L_112;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_113 = ___0_m;
-		NullCheck(L_113);
-		uint8_t L_114;
-		L_114 = KoMyInfoPacket_get_CapeG_mC3E60BEA425FA1CA9A7EF5AA5BF9760434A1B54C(L_113, NULL);
-		__this->___CapeG = L_114;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_115 = ___0_m;
-		NullCheck(L_115);
-		uint8_t L_116;
-		L_116 = KoMyInfoPacket_get_CapeB_m50F4DB8CBB9FA3D841566CEFF16F6BF7268CF862(L_115, NULL);
-		__this->___CapeB = L_116;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_117 = ___0_m;
-		NullCheck(L_117);
-		uint8_t L_118;
-		L_118 = KoMyInfoPacket_get_CapeFlag_mB697D80D68C4318CF9FA20B979B69BD78F5D8093_inline(L_117, NULL);
-		__this->___CapeFlag = L_118;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_119 = ___0_m;
-		NullCheck(L_119);
-		int32_t L_120 = L_119->___HpMax;
-		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
-		int32_t L_121;
-		L_121 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_120, NULL);
-		KoPlayerState_WriteHpMaxFromServer_m7ABA89EC14A73859EB9355730B883487BAB0B934(__this, L_121, NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_82 = ___0_m;
+		NullCheck(L_82);
+		uint16_t L_83 = L_82->___KnightsId;
+		__this->___KnightsId = ((int16_t)L_83);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_84 = ___0_m;
+		NullCheck(L_84);
+		uint8_t L_85 = L_84->___KnightDuty;
+		__this->___KnightDuty = L_85;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_86 = ___0_m;
+		NullCheck(L_86);
+		String_t* L_87 = L_86->___KnightsName;
+		String_t* L_88 = L_87;
+		if (L_88)
+		{
+			G_B16_0 = L_88;
+			G_B16_1 = __this;
+			goto IL_0239;
+		}
+		G_B15_0 = L_88;
+		G_B15_1 = __this;
+	}
+	{
+		String_t* L_89 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
+		G_B16_0 = L_89;
+		G_B16_1 = G_B15_1;
+	}
+
+IL_0239:
+	{
+		NullCheck(G_B16_1);
+		G_B16_1->___KnightsName = G_B16_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B16_1->___KnightsName), (void*)G_B16_0);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_90 = ___0_m;
+		NullCheck(L_90);
+		uint8_t L_91 = L_90->___KnightDuty;
+		__this->___Fame = L_91;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_92 = ___0_m;
+		NullCheck(L_92);
+		uint16_t L_93 = L_92->___AllianceId;
+		__this->___AllianceId = ((int16_t)L_93);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_94 = ___0_m;
+		NullCheck(L_94);
+		uint8_t L_95 = L_94->___KnightsFlag;
+		__this->___KnightsFlag = L_95;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_96 = ___0_m;
+		NullCheck(L_96);
+		uint8_t L_97 = L_96->___KnightsGrade;
+		__this->___KnightsGrade = L_97;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_98 = ___0_m;
+		NullCheck(L_98);
+		uint8_t L_99 = L_98->___KnightsRank;
+		__this->___KnightsRank = L_99;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_100 = ___0_m;
+		NullCheck(L_100);
+		uint16_t L_101 = L_100->___MarkVersion;
+		__this->___MarkVersion = ((int16_t)L_101);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_102 = ___0_m;
+		NullCheck(L_102);
+		int32_t L_103 = L_102->___ClanLoyalty;
+		__this->___ClanLoyalty = L_103;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_104 = ___0_m;
+		NullCheck(L_104);
+		uint8_t L_105 = L_104->___CapeType;
+		__this->___CapeType = L_105;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_106 = ___0_m;
+		NullCheck(L_106);
+		uint8_t L_107 = L_106->___CapeSymbolType;
+		__this->___CapeSymbolType = L_107;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_108 = ___0_m;
+		NullCheck(L_108);
+		int16_t L_109 = L_108->___CapeId;
+		__this->___CapeId = L_109;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_110 = ___0_m;
+		NullCheck(L_110);
+		uint32_t L_111 = L_110->___CapeColor;
+		__this->___CapeColor = L_111;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_112 = ___0_m;
+		NullCheck(L_112);
+		uint8_t L_113 = L_112->___CapeAnim;
+		__this->___CapeAnim = L_113;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_114 = ___0_m;
+		NullCheck(L_114);
+		uint16_t L_115 = L_114->___UserMarkVersion;
+		__this->___UserMarkVersion = L_115;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_116 = ___0_m;
+		NullCheck(L_116);
+		uint8_t L_117;
+		L_117 = KoMyInfoPacket_get_CapeR_mDA4D1CBF1020EEA1E5DCA2D1A6664C51F736C051(L_116, NULL);
+		__this->___CapeR = L_117;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_118 = ___0_m;
+		NullCheck(L_118);
+		uint8_t L_119;
+		L_119 = KoMyInfoPacket_get_CapeG_mC3E60BEA425FA1CA9A7EF5AA5BF9760434A1B54C(L_118, NULL);
+		__this->___CapeG = L_119;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_120 = ___0_m;
+		NullCheck(L_120);
+		uint8_t L_121;
+		L_121 = KoMyInfoPacket_get_CapeB_m50F4DB8CBB9FA3D841566CEFF16F6BF7268CF862(L_120, NULL);
+		__this->___CapeB = L_121;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_122 = ___0_m;
 		NullCheck(L_122);
-		int32_t L_123 = L_122->___Hp;
-		int32_t L_124;
-		L_124 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_123, NULL);
-		__this->___Hp = L_124;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_125 = ___0_m;
-		NullCheck(L_125);
-		int32_t L_126 = L_125->___MpMax;
-		int32_t L_127;
-		L_127 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_126, NULL);
-		KoPlayerState_WriteMpMaxFromServer_m2D793CCC9CCF78A607CBABE97AB831F80A9BE747(__this, L_127, NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_128 = ___0_m;
-		NullCheck(L_128);
-		int32_t L_129 = L_128->___Mp;
-		int32_t L_130;
-		L_130 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_129, NULL);
-		__this->___Mp = L_130;
-		int32_t L_131 = __this->___BuffHpMax;
-		if ((((int32_t)L_131) <= ((int32_t)0)))
-		{
-			goto IL_035d;
-		}
-	}
-	{
-		int32_t L_132 = __this->___Hp;
-		int32_t L_133 = __this->___ServerHpMax;
-		if ((((int32_t)L_132) > ((int32_t)L_133)))
-		{
-			goto IL_035d;
-		}
-	}
-	{
-		int32_t L_134 = __this->___HpMax;
-		int32_t L_135 = __this->___Hp;
+		uint8_t L_123;
+		L_123 = KoMyInfoPacket_get_CapeFlag_mB697D80D68C4318CF9FA20B979B69BD78F5D8093_inline(L_122, NULL);
+		__this->___CapeFlag = L_123;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_124 = ___0_m;
+		NullCheck(L_124);
+		int32_t L_125 = L_124->___HpMax;
+		il2cpp_codegen_runtime_class_init_inline(KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
+		int32_t L_126;
+		L_126 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_125, NULL);
+		KoPlayerState_WriteHpMaxFromServer_m7ABA89EC14A73859EB9355730B883487BAB0B934(__this, L_126, NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_127 = ___0_m;
+		NullCheck(L_127);
+		int32_t L_128 = L_127->___Hp;
+		int32_t L_129;
+		L_129 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_128, NULL);
+		__this->___Hp = L_129;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_130 = ___0_m;
+		NullCheck(L_130);
+		int32_t L_131 = L_130->___MpMax;
+		int32_t L_132;
+		L_132 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_131, NULL);
+		KoPlayerState_WriteMpMaxFromServer_m2D793CCC9CCF78A607CBABE97AB831F80A9BE747(__this, L_132, NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_133 = ___0_m;
+		NullCheck(L_133);
+		int32_t L_134 = L_133->___Mp;
+		int32_t L_135;
+		L_135 = KoPlayerState_ClampShort_m3632C909FE3A596B0DD22DB4BF2A048A1F2A910F(L_134, NULL);
+		__this->___Mp = L_135;
 		int32_t L_136 = __this->___BuffHpMax;
-		int32_t L_137;
-		L_137 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_134, ((int32_t)il2cpp_codegen_add(L_135, L_136)), NULL);
-		__this->___Hp = ((int16_t)L_137);
+		if ((((int32_t)L_136) <= ((int32_t)0)))
+		{
+			goto IL_0386;
+		}
+	}
+	{
+		int32_t L_137 = __this->___Hp;
+		int32_t L_138 = __this->___ServerHpMax;
+		if ((((int32_t)L_137) > ((int32_t)L_138)))
+		{
+			goto IL_0386;
+		}
+	}
+	{
+		int32_t L_139 = __this->___HpMax;
+		int32_t L_140 = __this->___Hp;
+		int32_t L_141 = __this->___BuffHpMax;
+		int32_t L_142;
+		L_142 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_139, ((int32_t)il2cpp_codegen_add(L_140, L_141)), NULL);
+		__this->___Hp = ((int16_t)L_142);
 	}
 
-IL_035d:
+IL_0386:
 	{
-		int32_t L_138 = __this->___BuffMpMax;
-		if ((((int32_t)L_138) <= ((int32_t)0)))
-		{
-			goto IL_0393;
-		}
-	}
-	{
-		int32_t L_139 = __this->___Mp;
-		int32_t L_140 = __this->___ServerMpMax;
-		if ((((int32_t)L_139) > ((int32_t)L_140)))
-		{
-			goto IL_0393;
-		}
-	}
-	{
-		int32_t L_141 = __this->___MpMax;
-		int32_t L_142 = __this->___Mp;
 		int32_t L_143 = __this->___BuffMpMax;
-		int32_t L_144;
-		L_144 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_141, ((int32_t)il2cpp_codegen_add(L_142, L_143)), NULL);
-		__this->___Mp = ((int16_t)L_144);
+		if ((((int32_t)L_143) <= ((int32_t)0)))
+		{
+			goto IL_03bc;
+		}
+	}
+	{
+		int32_t L_144 = __this->___Mp;
+		int32_t L_145 = __this->___ServerMpMax;
+		if ((((int32_t)L_144) > ((int32_t)L_145)))
+		{
+			goto IL_03bc;
+		}
+	}
+	{
+		int32_t L_146 = __this->___MpMax;
+		int32_t L_147 = __this->___Mp;
+		int32_t L_148 = __this->___BuffMpMax;
+		int32_t L_149;
+		L_149 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_146, ((int32_t)il2cpp_codegen_add(L_147, L_148)), NULL);
+		__this->___Mp = ((int16_t)L_149);
 	}
 
-IL_0393:
+IL_03bc:
 	{
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_145 = ___0_m;
-		NullCheck(L_145);
-		int32_t L_146 = L_145->___WeightMax;
-		int32_t L_147;
-		L_147 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_146, 0, ((int32_t)65535), NULL);
-		__this->___WeightMax = (uint16_t)((int32_t)(uint16_t)L_147);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_148 = ___0_m;
-		NullCheck(L_148);
-		int32_t L_149 = L_148->___Weight;
-		int32_t L_150;
-		L_150 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_149, 0, ((int32_t)65535), NULL);
-		__this->___Weight = (uint16_t)((int32_t)(uint16_t)L_150);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_151 = ___0_m;
-		NullCheck(L_151);
-		int16_t L_152;
-		L_152 = KoMyInfoPacket_get_Str_m88854887E126DE30EAF8935E8A0DC11E1E68AEAD(L_151, NULL);
-		int32_t L_153;
-		L_153 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_152, 0, ((int32_t)255), NULL);
-		__this->___Str = (uint8_t)((int32_t)(uint8_t)L_153);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_150 = ___0_m;
+		NullCheck(L_150);
+		int32_t L_151 = L_150->___WeightMax;
+		int32_t L_152;
+		L_152 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_151, 0, ((int32_t)65535), NULL);
+		__this->___WeightMax = (uint16_t)((int32_t)(uint16_t)L_152);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_153 = ___0_m;
+		NullCheck(L_153);
+		int32_t L_154 = L_153->___Weight;
+		int32_t L_155;
+		L_155 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_154, 0, ((int32_t)65535), NULL);
+		__this->___Weight = (uint16_t)((int32_t)(uint16_t)L_155);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_156 = ___0_m;
+		NullCheck(L_156);
+		int16_t L_157;
+		L_157 = KoMyInfoPacket_get_Str_m88854887E126DE30EAF8935E8A0DC11E1E68AEAD(L_156, NULL);
+		int32_t L_158;
+		L_158 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_157, 0, ((int32_t)255), NULL);
+		__this->___Str = (uint8_t)((int32_t)(uint8_t)L_158);
 		__this->___StrItem = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_154 = ___0_m;
-		NullCheck(L_154);
-		int16_t L_155;
-		L_155 = KoMyInfoPacket_get_Sta_mE3F4A341E86A14B7620A7B2548259EA8D3789168(L_154, NULL);
-		int32_t L_156;
-		L_156 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_155, 0, ((int32_t)255), NULL);
-		__this->___Sta = (uint8_t)((int32_t)(uint8_t)L_156);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_159 = ___0_m;
+		NullCheck(L_159);
+		int16_t L_160;
+		L_160 = KoMyInfoPacket_get_Sta_mE3F4A341E86A14B7620A7B2548259EA8D3789168(L_159, NULL);
+		int32_t L_161;
+		L_161 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_160, 0, ((int32_t)255), NULL);
+		__this->___Sta = (uint8_t)((int32_t)(uint8_t)L_161);
 		__this->___StaItem = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_157 = ___0_m;
-		NullCheck(L_157);
-		int16_t L_158;
-		L_158 = KoMyInfoPacket_get_Dex_m7988BECB1CE80C9322B07D782E2994C30CC53748(L_157, NULL);
-		int32_t L_159;
-		L_159 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_158, 0, ((int32_t)255), NULL);
-		__this->___Dex = (uint8_t)((int32_t)(uint8_t)L_159);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_162 = ___0_m;
+		NullCheck(L_162);
+		int16_t L_163;
+		L_163 = KoMyInfoPacket_get_Dex_m7988BECB1CE80C9322B07D782E2994C30CC53748(L_162, NULL);
+		int32_t L_164;
+		L_164 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_163, 0, ((int32_t)255), NULL);
+		__this->___Dex = (uint8_t)((int32_t)(uint8_t)L_164);
 		__this->___DexItem = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_160 = ___0_m;
-		NullCheck(L_160);
-		int16_t L_161;
-		L_161 = KoMyInfoPacket_get_Intel_mBEF15F415F6E0CB81E70E1E67853B2DF2AD32500(L_160, NULL);
-		int32_t L_162;
-		L_162 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_161, 0, ((int32_t)255), NULL);
-		__this->___Intel = (uint8_t)((int32_t)(uint8_t)L_162);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_165 = ___0_m;
+		NullCheck(L_165);
+		int16_t L_166;
+		L_166 = KoMyInfoPacket_get_Intel_mBEF15F415F6E0CB81E70E1E67853B2DF2AD32500(L_165, NULL);
+		int32_t L_167;
+		L_167 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_166, 0, ((int32_t)255), NULL);
+		__this->___Intel = (uint8_t)((int32_t)(uint8_t)L_167);
 		__this->___IntelItem = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_163 = ___0_m;
-		NullCheck(L_163);
-		int16_t L_164;
-		L_164 = KoMyInfoPacket_get_Cha_m749DE413C58EC6ECD26F29E899E4A4FBE8709409(L_163, NULL);
-		int32_t L_165;
-		L_165 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_164, 0, ((int32_t)255), NULL);
-		__this->___Cha = (uint8_t)((int32_t)(uint8_t)L_165);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_168 = ___0_m;
+		NullCheck(L_168);
+		int16_t L_169;
+		L_169 = KoMyInfoPacket_get_Cha_m749DE413C58EC6ECD26F29E899E4A4FBE8709409(L_168, NULL);
+		int32_t L_170;
+		L_170 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_169, 0, ((int32_t)255), NULL);
+		__this->___Cha = (uint8_t)((int32_t)(uint8_t)L_170);
 		__this->___ChaItem = (uint8_t)0;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_166 = ___0_m;
-		NullCheck(L_166);
-		int32_t L_167 = L_166->___Gold;
-		int32_t L_168;
-		L_168 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_167, NULL);
-		__this->___Gold = L_168;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_169 = ___0_m;
-		NullCheck(L_169);
-		uint8_t L_170 = L_169->___Authority;
-		__this->___Authority = L_170;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_171 = ___0_m;
 		NullCheck(L_171);
-		int32_t L_172 = L_171->___MannerPoint;
+		int32_t L_172 = L_171->___Gold;
 		int32_t L_173;
 		L_173 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_172, NULL);
-		__this->___MannerPoint = L_173;
+		__this->___Gold = L_173;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_174 = ___0_m;
 		NullCheck(L_174);
-		uint8_t L_175 = L_174->___RebirthLevel;
-		__this->___RebirthLevel = L_175;
+		uint8_t L_175 = L_174->___Authority;
+		__this->___Authority = L_175;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_176 = ___0_m;
 		NullCheck(L_176);
-		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_177 = L_176->___RebirthStat;
-		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_178 = __this->___RebirthStat;
-		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_179 = __this->___RebirthStat;
+		int32_t L_177 = L_176->___MannerPoint;
+		int32_t L_178;
+		L_178 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_177, NULL);
+		__this->___MannerPoint = L_178;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_179 = ___0_m;
 		NullCheck(L_179);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_177, (RuntimeArray*)L_178, ((int32_t)(((RuntimeArray*)L_179)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_180 = ___0_m;
-		NullCheck(L_180);
-		int64_t L_181 = L_180->___ExpSeal;
-		__this->___ExpSeal = L_181;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_182 = ___0_m;
-		NullCheck(L_182);
-		uint16_t L_183 = L_182->___CoverTitle;
-		__this->___CoverTitle = L_183;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_184 = ___0_m;
+		uint8_t L_180 = L_179->___RebirthLevel;
+		__this->___RebirthLevel = L_180;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_181 = ___0_m;
+		NullCheck(L_181);
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_182 = L_181->___RebirthStat;
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_183 = __this->___RebirthStat;
+		Int16U5BU5D_t8175CE8DD9C9F9FB0CF4F58E45BC570575B43CFB* L_184 = __this->___RebirthStat;
 		NullCheck(L_184);
-		uint16_t L_185 = L_184->___SkillTitle;
-		__this->___SkillTitle = L_185;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_186 = ___0_m;
-		NullCheck(L_186);
-		bool L_187 = L_186->___ReturnKnight;
-		__this->___ReturnKnight = L_187;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_188 = ___0_m;
-		NullCheck(L_188);
-		int32_t L_189 = L_188->___GameCash;
-		int32_t L_190;
-		L_190 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_189, NULL);
-		__this->___KnightCash = L_190;
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_182, (RuntimeArray*)L_183, ((int32_t)(((RuntimeArray*)L_184)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_185 = ___0_m;
+		NullCheck(L_185);
+		int64_t L_186 = L_185->___ExpSeal;
+		__this->___ExpSeal = L_186;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_187 = ___0_m;
+		NullCheck(L_187);
+		uint16_t L_188 = L_187->___CoverTitle;
+		__this->___CoverTitle = L_188;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_189 = ___0_m;
+		NullCheck(L_189);
+		uint16_t L_190 = L_189->___SkillTitle;
+		__this->___SkillTitle = L_190;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_191 = ___0_m;
 		NullCheck(L_191);
-		int32_t L_192 = L_191->___RexeBalance;
-		int32_t L_193;
-		L_193 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_192, NULL);
-		__this->___TlBalance = L_193;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_194 = ___0_m;
-		NullCheck(L_194);
-		int16_t L_195 = L_194->___SoulPointRemain;
-		__this->___SoulPointRemain = L_195;
+		bool L_192 = L_191->___ReturnKnight;
+		__this->___ReturnKnight = L_192;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_193 = ___0_m;
+		NullCheck(L_193);
+		int32_t L_194 = L_193->___GameCash;
+		int32_t L_195;
+		L_195 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_194, NULL);
+		__this->___KnightCash = L_195;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_196 = ___0_m;
 		NullCheck(L_196);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_197 = L_196->___SoulPoints;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_198 = __this->___SoulPoints;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_199 = __this->___SoulPoints;
+		int32_t L_197 = L_196->___RexeBalance;
+		int32_t L_198;
+		L_198 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_197, NULL);
+		__this->___TlBalance = L_198;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_199 = ___0_m;
 		NullCheck(L_199);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_197, (RuntimeArray*)L_198, ((int32_t)(((RuntimeArray*)L_199)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_200 = ___0_m;
-		NullCheck(L_200);
-		uint16_t L_201 = L_200->___GenieHours;
-		__this->___GenieHours = L_201;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_202 = ___0_m;
-		NullCheck(L_202);
-		uint8_t L_203;
-		L_203 = KoMyInfoPacket_get_PremiumType_m97E14A1C4DE633B7CAED1A20BC596A2235931BE8(L_202, NULL);
-		__this->___PremiumType = L_203;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_204 = ___0_m;
+		int16_t L_200 = L_199->___SoulPointRemain;
+		__this->___SoulPointRemain = L_200;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_201 = ___0_m;
+		NullCheck(L_201);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_202 = L_201->___SoulPoints;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_203 = __this->___SoulPoints;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_204 = __this->___SoulPoints;
 		NullCheck(L_204);
-		int16_t L_205;
-		L_205 = KoMyInfoPacket_get_PremiumTime_mB6D26D05EDCEE4411C743967504F2B8F059B87DF(L_204, NULL);
-		__this->___PremiumTime = L_205;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_206 = ___0_m;
-		NullCheck(L_206);
-		uint8_t L_207;
-		L_207 = KoMyInfoPacket_get_PremiumInUse_mF0C4623D121D920174F7A4060ACDEDA9752A234E(L_206, NULL);
-		__this->___PremiumInUse = L_207;
-		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_208 = __this->___Premiums;
-		NullCheck(L_208);
-		List_1_Clear_m90103DE6E13E2783BB4E63B8166A023DAB865421_inline(L_208, List_1_Clear_m90103DE6E13E2783BB4E63B8166A023DAB865421_RuntimeMethod_var);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_202, (RuntimeArray*)L_203, ((int32_t)(((RuntimeArray*)L_204)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_205 = ___0_m;
+		NullCheck(L_205);
+		uint16_t L_206 = L_205->___GenieHours;
+		__this->___GenieHours = L_206;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_207 = ___0_m;
+		NullCheck(L_207);
+		uint8_t L_208;
+		L_208 = KoMyInfoPacket_get_PremiumType_m97E14A1C4DE633B7CAED1A20BC596A2235931BE8(L_207, NULL);
+		__this->___PremiumType = L_208;
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_209 = ___0_m;
 		NullCheck(L_209);
-		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_210 = L_209->___Premiums;
-		if (!L_210)
-		{
-			goto IL_0580;
-		}
-	}
-	{
-		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_211 = __this->___Premiums;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_212 = ___0_m;
-		NullCheck(L_212);
-		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_213 = L_212->___Premiums;
+		int16_t L_210;
+		L_210 = KoMyInfoPacket_get_PremiumTime_mB6D26D05EDCEE4411C743967504F2B8F059B87DF(L_209, NULL);
+		__this->___PremiumTime = L_210;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_211 = ___0_m;
 		NullCheck(L_211);
-		List_1_AddRange_mFCD21315AF36CA4DA1ADC1F98F68C3EF8D321D0C(L_211, L_213, List_1_AddRange_mFCD21315AF36CA4DA1ADC1F98F68C3EF8D321D0C_RuntimeMethod_var);
-	}
-
-IL_0580:
-	{
+		uint8_t L_212;
+		L_212 = KoMyInfoPacket_get_PremiumInUse_mF0C4623D121D920174F7A4060ACDEDA9752A234E(L_211, NULL);
+		__this->___PremiumInUse = L_212;
+		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_213 = __this->___Premiums;
+		NullCheck(L_213);
+		List_1_Clear_m90103DE6E13E2783BB4E63B8166A023DAB865421_inline(L_213, List_1_Clear_m90103DE6E13E2783BB4E63B8166A023DAB865421_RuntimeMethod_var);
 		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_214 = ___0_m;
 		NullCheck(L_214);
-		uint8_t L_215;
-		L_215 = KoMyInfoPacket_get_KarusMilitary_mD143B3C8FE904BCBCD8B31B430FAA37FCE5D268B(L_214, NULL);
-		__this->___KarusMilitary = L_215;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_216 = ___0_m;
-		NullCheck(L_216);
-		uint8_t L_217;
-		L_217 = KoMyInfoPacket_get_HumanMilitary_m853829605F17A7AFB1B6AD3910F0C703956B3333(L_216, NULL);
-		__this->___HumanMilitary = L_217;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_218 = ___0_m;
-		NullCheck(L_218);
-		uint8_t L_219;
-		L_219 = KoMyInfoPacket_get_KarusEslantMilitary_m71C45FD3B718488B6144FB0687BC844DEFB449C0(L_218, NULL);
-		__this->___KarusEslantMilitary = L_219;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_220 = ___0_m;
-		NullCheck(L_220);
-		uint8_t L_221;
-		L_221 = KoMyInfoPacket_get_HumanEslantMilitary_mCF0DE423A744EF50C8A2F94FA0DD67A1DFF40651(L_220, NULL);
-		__this->___HumanEslantMilitary = L_221;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_222 = ___0_m;
-		NullCheck(L_222);
-		uint8_t L_223;
-		L_223 = KoMyInfoPacket_get_MoradonMilitary_m78CF3A30B1B1467D197AA106FE240DF82549B639(L_222, NULL);
-		__this->___MoradonMilitary = L_223;
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_224 = ___0_m;
-		NullCheck(L_224);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_225 = L_224->___Skills;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_226 = __this->___Skills;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_227 = __this->___Skills;
-		NullCheck(L_227);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_225, (RuntimeArray*)L_226, ((int32_t)(((RuntimeArray*)L_227)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_228 = ___0_m;
-		NullCheck(L_228);
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_229 = L_228->___Equipped;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_230 = __this->___Equipped;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_231 = __this->___Equipped;
-		NullCheck(L_231);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_229, (RuntimeArray*)L_230, ((int32_t)(((RuntimeArray*)L_231)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_232 = ___0_m;
-		NullCheck(L_232);
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_233 = L_232->___Inventory;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_234 = __this->___Inventory;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_235 = __this->___Inventory;
-		NullCheck(L_235);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_233, (RuntimeArray*)L_234, ((int32_t)(((RuntimeArray*)L_235)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_236 = ___0_m;
-		NullCheck(L_236);
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_237 = L_236->___Cospre;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_238 = __this->___Cospre;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_239 = __this->___Cospre;
-		NullCheck(L_239);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_237, (RuntimeArray*)L_238, ((int32_t)(((RuntimeArray*)L_239)->max_length)), NULL);
-		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_240 = ___0_m;
-		NullCheck(L_240);
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_241 = L_240->___MagicBags;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_242 = __this->___MagicBags;
-		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_243 = __this->___MagicBags;
-		NullCheck(L_243);
-		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_241, (RuntimeArray*)L_242, ((int32_t)(((RuntimeArray*)L_243)->max_length)), NULL);
-		__this->___HasMyInfo = (bool)1;
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_244;
-		L_244 = KoWorldBootstrap_get_Instance_mC4897CE1CD2C781A37DD7A8E8BCDD30B5CBC368B_inline(NULL);
-		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_245 = L_244;
-		if (L_245)
+		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_215 = L_214->___Premiums;
+		if (!L_215)
 		{
-			G_B21_0 = L_245;
-			goto IL_064b;
+			goto IL_05a9;
 		}
-		G_B20_0 = L_245;
 	}
 	{
-		goto IL_0650;
-	}
-
-IL_064b:
-	{
-		NullCheck(G_B21_0);
-		KoWorldBootstrap_RefreshPlayerEquipment_m3867A7D37819ECA3AA1FFBA0A013A68B5E5570A7(G_B21_0, NULL);
+		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_216 = __this->___Premiums;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_217 = ___0_m;
+		NullCheck(L_217);
+		List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B* L_218 = L_217->___Premiums;
+		NullCheck(L_216);
+		List_1_AddRange_mFCD21315AF36CA4DA1ADC1F98F68C3EF8D321D0C(L_216, L_218, List_1_AddRange_mFCD21315AF36CA4DA1ADC1F98F68C3EF8D321D0C_RuntimeMethod_var);
 	}
 
-IL_0650:
+IL_05a9:
 	{
-		int32_t L_246 = __this->___Hp;
-		if ((((int32_t)L_246) > ((int32_t)0)))
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_219 = ___0_m;
+		NullCheck(L_219);
+		uint8_t L_220;
+		L_220 = KoMyInfoPacket_get_KarusMilitary_mD143B3C8FE904BCBCD8B31B430FAA37FCE5D268B(L_219, NULL);
+		__this->___KarusMilitary = L_220;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_221 = ___0_m;
+		NullCheck(L_221);
+		uint8_t L_222;
+		L_222 = KoMyInfoPacket_get_HumanMilitary_m853829605F17A7AFB1B6AD3910F0C703956B3333(L_221, NULL);
+		__this->___HumanMilitary = L_222;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_223 = ___0_m;
+		NullCheck(L_223);
+		uint8_t L_224;
+		L_224 = KoMyInfoPacket_get_KarusEslantMilitary_m71C45FD3B718488B6144FB0687BC844DEFB449C0(L_223, NULL);
+		__this->___KarusEslantMilitary = L_224;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_225 = ___0_m;
+		NullCheck(L_225);
+		uint8_t L_226;
+		L_226 = KoMyInfoPacket_get_HumanEslantMilitary_mCF0DE423A744EF50C8A2F94FA0DD67A1DFF40651(L_225, NULL);
+		__this->___HumanEslantMilitary = L_226;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_227 = ___0_m;
+		NullCheck(L_227);
+		uint8_t L_228;
+		L_228 = KoMyInfoPacket_get_MoradonMilitary_m78CF3A30B1B1467D197AA106FE240DF82549B639(L_227, NULL);
+		__this->___MoradonMilitary = L_228;
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_229 = ___0_m;
+		NullCheck(L_229);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_230 = L_229->___Skills;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_231 = __this->___Skills;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_232 = __this->___Skills;
+		NullCheck(L_232);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_230, (RuntimeArray*)L_231, ((int32_t)(((RuntimeArray*)L_232)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_233 = ___0_m;
+		NullCheck(L_233);
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_234 = L_233->___Equipped;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_235 = __this->___Equipped;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_236 = __this->___Equipped;
+		NullCheck(L_236);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_234, (RuntimeArray*)L_235, ((int32_t)(((RuntimeArray*)L_236)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_237 = ___0_m;
+		NullCheck(L_237);
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_238 = L_237->___Inventory;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_239 = __this->___Inventory;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_240 = __this->___Inventory;
+		NullCheck(L_240);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_238, (RuntimeArray*)L_239, ((int32_t)(((RuntimeArray*)L_240)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_241 = ___0_m;
+		NullCheck(L_241);
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_242 = L_241->___Cospre;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_243 = __this->___Cospre;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_244 = __this->___Cospre;
+		NullCheck(L_244);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_242, (RuntimeArray*)L_243, ((int32_t)(((RuntimeArray*)L_244)->max_length)), NULL);
+		KoMyInfoPacket_tD091365820036126F8B647581EBFEA70EC489EFA* L_245 = ___0_m;
+		NullCheck(L_245);
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_246 = L_245->___MagicBags;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_247 = __this->___MagicBags;
+		KoItemDataU5BU5D_t102101F14462AC1DABD9EA7A6EDFC62099CB98F9* L_248 = __this->___MagicBags;
+		NullCheck(L_248);
+		Array_Copy_m4233828B4E6288B6D815F539AAA38575DE627900((RuntimeArray*)L_246, (RuntimeArray*)L_247, ((int32_t)(((RuntimeArray*)L_248)->max_length)), NULL);
+		__this->___HasMyInfo = (bool)1;
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_249;
+		L_249 = KoWorldBootstrap_get_Instance_mC4897CE1CD2C781A37DD7A8E8BCDD30B5CBC368B_inline(NULL);
+		KoWorldBootstrap_t2304EA13EBC94DEC58B9B3AA8CDB03375316803F* L_250 = L_249;
+		if (L_250)
 		{
-			goto IL_0660;
+			G_B26_0 = L_250;
+			goto IL_0674;
+		}
+		G_B25_0 = L_250;
+	}
+	{
+		goto IL_0679;
+	}
+
+IL_0674:
+	{
+		NullCheck(G_B26_0);
+		KoWorldBootstrap_RefreshPlayerEquipment_m3867A7D37819ECA3AA1FFBA0A013A68B5E5570A7(G_B26_0, NULL);
+	}
+
+IL_0679:
+	{
+		int32_t L_251 = __this->___Hp;
+		bool L_252 = V_0;
+		if (!((int32_t)(((((int32_t)((((int32_t)L_251) > ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0)|(int32_t)L_252)))
+		{
+			goto IL_0690;
 		}
 	}
 	{
@@ -9883,12 +10151,12 @@ IL_0650:
 		return;
 	}
 
-IL_0660:
+IL_0690:
 	{
-		bool L_247 = __this->___IsDead;
-		if (!L_247)
+		bool L_253 = __this->___IsDead;
+		if (!L_253)
 		{
-			goto IL_066f;
+			goto IL_069f;
 		}
 	}
 	{
@@ -9896,7 +10164,7 @@ IL_0660:
 		return;
 	}
 
-IL_066f:
+IL_069f:
 	{
 		KoPlayerState_NotifyChanged_m006C027FB706E78A3B1BC4FC98009135FEB933E7(__this, NULL);
 		return;
@@ -12742,6 +13010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoPlayerState__ctor_m521237270E25901C608
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		__this->___Skills = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Skills), (void*)L_7);
+		__this->____pendingDeadSid = (int16_t)(-1);
 		String_t* L_8 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->___Empty;
 		__this->___Tag = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Tag), (void*)L_8);
