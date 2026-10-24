@@ -208,6 +208,7 @@ struct List_1_tC93418EEBDF534A484DB56D2C8B5ED16402EC652;
 struct List_1_t4E7F6A919D208D0DCF62FA9806D588741C6DF2F3;
 struct List_1_t7BB17090EC55C1F2A8432F1E4A05F6A996292C5B;
 struct List_1_t9F51BC0832C9F855508FE22E86FA6A35BF170A0B;
+struct List_1_t34641ED50BDFBEDA3FB64331953D801D3C3653CB;
 struct List_1_tD433E28397A4330D48CEB58A9BFE138CB609DC6C;
 struct List_1_t81C1A2F017B9EB323CD0FD3345B43F3A59B6607D;
 struct List_1_t8B2D061DC4F76833214D72251D7FD9721A44F237;
@@ -562,6 +563,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoKomExportNpcDialogue_t4012F18F90FF24BC2954A580A1
 IL2CPP_EXTERN_C RuntimeClass* KoMerchantListItemU5BU5D_tA2ED150DA90B3FF7E30D22127E22DDFE9602B194_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMobilePerf_t63FD7C6DECF620547C8D3A1967C39C99590B3A3A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMobileTouchControls_t0ABBD2BBC6A97F5B79B83F14630643FBDB3718CD_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNpcCatalog_t5E2B9A00763061AF3D7BC52348A061633BDA2B4E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNpcUiController_t47ED7E0F85A05B8350368EAF26968B97B22CD117_il2cpp_TypeInfo_var;
@@ -569,6 +571,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoNpcWorld_t7BF02816BB7DCCB6F3B09B0A91F3A8D9E8D155
 IL2CPP_EXTERN_C RuntimeClass* KoPack_t2221576D497529D3669E782E54866F96B2665B13_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPazarGosterHud_tFF7BC54BCC65BCA5A0C043F3ECAC5CEE9AE0D8BB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoRankingsHud_t5D8617F52EF6CA0B8A30AFF87E895CE1DD570B0C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoRexeTables_tB25F62403B4A626F979C15B57CFD7251A44C60FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoSlavePazarHud_t1F5AA9C2277AE9CCD5728A75698DFDB565B9C98F_il2cpp_TypeInfo_var;
@@ -1628,6 +1631,8 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	int16_t ___RivalSocket;
 	String_t* ___RivalName;
 	uint16_t ___RivalClanId;
+	String_t* ___RivalClanName;
+	float ___RivalUntil;
 	uint8_t ___AngerGauge;
 	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
@@ -1641,10 +1646,11 @@ struct KoRankList_tD5EE47F27637F10B6D1ECA4A998AB91FC5C5E73C  : public RuntimeObj
 	List_1_tD433E28397A4330D48CEB58A9BFE138CB609DC6C* ___Elmorad;
 	uint16_t ___MyRank;
 	uint32_t ___MyScore;
-	uint16_t ___MyPremium;
+	uint32_t ___MyPremium;
 	int64_t ___GainedExp;
 	int64_t ___PremiumExp;
 	int32_t ___RemainingSeconds;
+	List_1_t34641ED50BDFBEDA3FB64331953D801D3C3653CB* ___Rewards;
 };
 struct KoRankRow_t5D0790074F9381D2637CF1ED326AC1ABA70103EB  : public RuntimeObject
 {
@@ -1654,7 +1660,7 @@ struct KoRankRow_t5D0790074F9381D2637CF1ED326AC1ABA70103EB  : public RuntimeObje
 	uint16_t ___MarkVersion;
 	String_t* ___ClanName;
 	uint32_t ___Score;
-	uint16_t ___PremiumBonus;
+	uint32_t ___PremiumBonus;
 	int8_t ___SymbolRank;
 	uint16_t ___Kills;
 	uint16_t ___Deaths;
@@ -1739,6 +1745,7 @@ struct ScheduleEntry_tCA5DFF980C8C3F4A8A96042011AC03424E7FFAFF  : public Runtime
 	uint8_t ___Minute;
 	String_t* ___Name;
 	String_t* ___Desc;
+	bool ___EveryDay;
 };
 struct TimeSlot_tE7822D1556AD7AD5ABE95FB686FE0E061114B2B9  : public RuntimeObject
 {
@@ -3437,6 +3444,8 @@ struct KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2  : public MonoBehavio
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeRt;
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____lastNoticeTextRt;
 	bool ____noticeOn;
+	String_t* ____noticeWait;
+	float ____fittedLineWidth;
 	float ____noticeFromX;
 	float ____noticeToX;
 	float ____noticeT;
@@ -4594,6 +4603,7 @@ struct KoMobilePerf_t63FD7C6DECF620547C8D3A1967C39C99590B3A3A_StaticFields
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___Horizon;
 	bool ___VerboseLog;
+	float ___ViewDistanceScale;
 	int32_t ___StatPlayerStates;
 	int32_t ___StatPlayerVisuals;
 	int32_t ___StatTierNear;
@@ -4633,6 +4643,12 @@ struct KoSettings_t9DC82AE88F6F3924E494326A4C79604A84835C82_StaticFields
 	float ___GeniePanelScale;
 	float ___PusPanelScale;
 	float ___PazarSectionScale;
+	bool ___LimitPazarSections;
+	bool ___LimitView;
+	bool ___LimitPazarView;
+	bool ___Fog;
+	float ___FogDistance;
+	bool ___ShowPazarCharacters;
 	float ___AreaSkillsCameraRotateSensitivity;
 	bool ___HideMyWings;
 	bool ___HideMyPathos;
@@ -4811,6 +4827,7 @@ struct KoBdwScreenHud_tFDD79223C3D0F3D508503B6E7A78D9EA79BAD553_StaticFields
 struct KoChatHud_tECD5C823C7C5163FF3A374797994E697772B7AC2_StaticFields
 {
 	List_1_t3B44F45C4A4898F8B4393197495F3FFBED50DE39* ___Early;
+	Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* ___KillIdLine;
 };
 struct KoGameUi_t8572A3104EB74AB92D087BCFDD1FE99DD2F016D3_StaticFields
 {
@@ -4829,6 +4846,7 @@ struct KoNameplate_t33D033A59BDBCBBDB86567B6A1C8300C682E0BB7_StaticFields
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___ColorHostileNpc;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___ColorClan;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___ColorChicken;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___ColorSlaveMerchant;
 	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ____canvas;
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____canvasRt;
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ____civcivSprite;
@@ -24051,7 +24069,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m905B8F42D4AC3955E91572249
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CPreparePanelU3Eb__13_0_m31B50D016B4BE1D8AEADECC11100302550399128 (U3CU3Ec_t3EE3BF974BAE917F6A8608C6726BE3C328194248* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoRankingsHud_t5D8617F52EF6CA0B8A30AFF87E895CE1DD570B0C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(KoRankingsHud_t5D8617F52EF6CA0B8A30AFF87E895CE1DD570B0C_il2cpp_TypeInfo_var);
 		KoRankingsHud_Hide_mAF32463D20A1D868EFEEEE316E73418A40B23B3C(NULL);
 		return;
 	}
@@ -26137,6 +26162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarGosterUI_PMToSlaveMerchantOwner_mF1
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral261612CCD2732D826004AB4D6F79CA8C111146D0);
 		s_Il2CppMethodInitialized = true;
@@ -26183,6 +26209,7 @@ IL_001a:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral261612CCD2732D826004AB4D6F79CA8C111146D0, NULL);
 		return;
 	}
@@ -27793,6 +27820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_BeginPlace_m6138ECCEDA82EFEF2
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KomPazarUtil_tBD61C8C6DF6FB6969361023C685CF12E17AE6A8E_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PazarKurUI_OnPriceOk_m76E58E3A8768CE8C0C1A22823B3B0286A6FFF173_RuntimeMethod_var);
@@ -27851,6 +27879,7 @@ IL_001f:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral587E7EE95FC8389C9EEC674123E3D9C85F3D04AF, NULL);
 		return;
 	}
@@ -27959,6 +27988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_OnPriceOk_m76E58E3A8768CE8C0C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KomPazarUtil_tBD61C8C6DF6FB6969361023C685CF12E17AE6A8E_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PazarKurUI_OnAmountOk_mA3B951345F58E2A2EB57D4447BDFE7240D1BB434_RuntimeMethod_var);
@@ -28051,6 +28081,7 @@ IL_0061:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral426288E84580F6BBBA1B9F5808FA5949971D1615, NULL);
 		return;
 	}
@@ -28172,6 +28203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_OnAmountOk_mA3B951345F58E2A2E
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Regex_tE773142C2BE45C5D362B0F815AFF831707A51772_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
@@ -28268,6 +28300,7 @@ IL_0063:
 		RuntimeObject* L_19 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_18);
 		String_t* L_20;
 		L_20 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral5C2A88D2094FA538BAA2C202A438E756AE47DCEB, L_19, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(L_20, NULL);
 		return;
 	}
@@ -28363,6 +28396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_HandleItemAdd_mF6203D31CE0158
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral01082F399ED9EAE03008EF608113D3CCBE5355AE);
 		s_Il2CppMethodInitialized = true;
@@ -28389,6 +28423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_HandleItemAdd_mF6203D31CE0158
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral01082F399ED9EAE03008EF608113D3CCBE5355AE, NULL);
 		__this->____pendingItemId = 0;
 		return;
@@ -28540,6 +28575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_HandleItemCancel_m1A0F34F3FF6
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBCF1D1E70B1E266B1CE83BEB31AB575B8D06CD72);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -28558,6 +28594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_HandleItemCancel_m1A0F34F3FF6
 		RuntimeObject* L_3 = Box(Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175_il2cpp_TypeInfo_var, &L_2);
 		String_t* L_4;
 		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralBCF1D1E70B1E266B1CE83BEB31AB575B8D06CD72, L_3, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(L_4, NULL);
 		return;
 	}
@@ -28845,6 +28882,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_PazariAcClicked_m367FD6C875AE
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral17E22C7E9B69BD8D07CAFB32FF6E4ABD5D9353D0);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -28859,6 +28897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_PazariAcClicked_m367FD6C875AE
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral17E22C7E9B69BD8D07CAFB32FF6E4ABD5D9353D0, NULL);
 		return;
 	}
@@ -28903,10 +28942,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PazarKurUI_TeleportToMySlaveMerchant_m2E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral509C4A8D9D301C0CE5CA03C12B2C7D6917666EE8);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral509C4A8D9D301C0CE5CA03C12B2C7D6917666EE8, NULL);
 		return;
 	}

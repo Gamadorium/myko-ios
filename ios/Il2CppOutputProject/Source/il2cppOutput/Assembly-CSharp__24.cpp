@@ -506,6 +506,7 @@ IL2CPP_EXTERN_C RuntimeClass* KoMerchantRegistry_tE5D8CA6411CC593027F201ECB2C443
 IL2CPP_EXTERN_C RuntimeClass* KoMerchantScreen_t039CBED433B4524E93C7E579089B842354BA7E27_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMerchantScrollScreen_tFB8203B1D9033C9062CC39E2D47921D4FE6F1235_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoMerchantStall_t905E19C37BE509A52A8FDDA0151D56A9B01D432E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNationTransferPacket_t9D22300C722D9850DF7E1C1D95FBBBA8DE7C2262_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNetSession_t471FE62F2E0D2AAB77AC3287BC6ABD108E181AF6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KoNotify_t7848136BBB25D4057545987BB1C2F0A09470CD81_il2cpp_TypeInfo_var;
@@ -1633,6 +1634,8 @@ struct KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0  : public Runtime
 	int16_t ___RivalSocket;
 	String_t* ___RivalName;
 	uint16_t ___RivalClanId;
+	String_t* ___RivalClanName;
+	float ___RivalUntil;
 	uint8_t ___AngerGauge;
 	bool ___AngerFull;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___Changed;
@@ -14164,6 +14167,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoLootButtonHud_OnClick_m38C3B9FF3D83599
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4858DB268F24E5C2C1198CFE189EFA084BA09E05);
 		s_Il2CppMethodInitialized = true;
@@ -14203,6 +14207,7 @@ IL_0010:
 
 IL_0019:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral4858DB268F24E5C2C1198CFE189EFA084BA09E05, NULL);
 		return;
 	}
@@ -18461,6 +18466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_RequestOpen_m74D0
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1637010E60A701F96A563A727187A3FE93BE0691);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral24DB4E186F4506E1FD91940E7A05437E02DEC227);
@@ -18486,6 +18492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_RequestOpen_m74D0
 
 IL_000b:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralDE3016714C87AC166F5698B044F1115716E6C172, NULL);
 		return;
 	}
@@ -18513,6 +18520,7 @@ IL_0016:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral1637010E60A701F96A563A727187A3FE93BE0691, NULL);
 		return;
 	}
@@ -18530,6 +18538,7 @@ IL_0033:
 		int16_t L_10 = ___0_merchantSid;
 		NullCheck(L_9);
 		KoGameClient_SendMerchantItemList_mF8358A8C75B80922DFCD295AFDDD6112CE89B391(L_9, L_10, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral24DB4E186F4506E1FD91940E7A05437E02DEC227, NULL);
 		KoMerchantBrowseScreen_RestartListWait_mABCB81D58E77889F7BFB04C5BC7878E424228D7B(__this, NULL);
 		return;
@@ -18541,6 +18550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_HandleList_m28BC0
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m1912000ECC77485225E85E320738EEE0C7694092_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD37CD0F88A924CD146E29837293A3921601E5A1D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_set_Item_m18290E83CD0FF041ED962DE8919B08BE3CF85FC8_RuntimeMethod_var);
@@ -18605,6 +18615,7 @@ IL_0025:
 
 IL_002a:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(G_B4_0, NULL);
 		return;
 	}
@@ -18650,6 +18661,7 @@ IL_0042:
 
 IL_0052:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(G_B10_0, NULL);
 		return;
 	}
@@ -18844,6 +18856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_HandleBuy_mA7118B
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisKoInventoryScreen_t0626F81B1091718E2C308E623ABF6E55590E3DF9_m1CE16861F85D6384CC52E9B7AF4D5016418CB905_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m1912000ECC77485225E85E320738EEE0C7694092_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD37CD0F88A924CD146E29837293A3921601E5A1D_RuntimeMethod_var);
@@ -18869,6 +18882,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_HandleBuy_mA7118B
 	}
 	{
 		KoMerchantBrowseScreen_SetStatus_mF7BAFE3F17CE6F21D8D7153FE6FAB6F4B1292B02(__this, _stringLiteral22DC5F433CD567178144E76A320D6D46F535FF12, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral0E5F1B0CF8102C102067A8DAC211E37CBF0BFB10, NULL);
 		return;
 	}
@@ -18935,6 +18949,7 @@ IL_007c:
 	{
 		KoMerchantBrowseScreen_RefreshLabels_m5EF821FFC2B8EAEE783B62439562BE3935E46367(__this, NULL);
 		KoMerchantBrowseScreen_SetStatus_mF7BAFE3F17CE6F21D8D7153FE6FAB6F4B1292B02(__this, _stringLiteral9C661E253241C294E59F6408C77E69C065AA550E, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral5BAB823BA1036BEB915B184701C1AD39C512AE97, NULL);
 		KoGameUi_t8572A3104EB74AB92D087BCFDD1FE99DD2F016D3* L_13;
 		L_13 = KoGameUi_get_Instance_m66B10D02544EB09D2F02648EB6269A96150CFB66_inline(NULL);
@@ -18997,6 +19012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_HandleMerchantGon
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8470FB683F297BDA8019D028B2F8A8DB03EA3517);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -19022,6 +19038,7 @@ IL_000a:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral8470FB683F297BDA8019D028B2F8A8DB03EA3517, NULL);
 		KoMerchantBrowseScreen_CloseLocal_mFE39621FF1307330BA2C1683AB54D973E56A425B(__this, (bool)0, NULL);
 	}
@@ -19036,6 +19053,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantBrowseScreen_OnClickBuy_m71C5C
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m1912000ECC77485225E85E320738EEE0C7694092_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD37CD0F88A924CD146E29837293A3921601E5A1D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1556DF6018BE5CF1BBE4502AD077CFFB4D949D09);
@@ -19117,6 +19135,7 @@ IL_0039:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralA4D57E91957F92164E222E030392C795B4DDAEA3, NULL);
 		return;
 	}
@@ -19135,6 +19154,7 @@ IL_004c:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral1556DF6018BE5CF1BBE4502AD077CFFB4D949D09, NULL);
 		return;
 	}
@@ -20667,6 +20687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCoListTimeoutU3Ed__37_MoveNext_m26957
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD7CD2BA1B28CE245A88CF0BE62DD8F00E22507C2);
 		s_Il2CppMethodInitialized = true;
@@ -20722,6 +20743,7 @@ IL_0037:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralD7CD2BA1B28CE245A88CF0BE62DD8F00E22507C2, NULL);
 	}
 
@@ -21040,6 +21062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_BeginOpen_m468452A97232
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral01ACC76E97310766B6DA98D2F905FFC660C20263);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralABEA91BD7DFA33F925D922879AD7AD3FC162CE16);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDE3016714C87AC166F5698B044F1115716E6C172);
@@ -21054,6 +21077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_BeginOpen_m468452A97232
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralDE3016714C87AC166F5698B044F1115716E6C172, NULL);
 		return;
 	}
@@ -21076,6 +21100,7 @@ IL_0012:
 
 IL_0022:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral01ACC76E97310766B6DA98D2F905FFC660C20263, NULL);
 		return;
 	}
@@ -21092,6 +21117,7 @@ IL_002d:
 		L_4 = KoNetSession_get_Game_mFA811B65A0401B4666E88B1C27EAA06BD448915A_inline(L_3, NULL);
 		NullCheck(L_4);
 		KoGameClient_SendMerchantOpen_m9614CBDA41617353C395F43B6BBFD93B52F89B74(L_4, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralABEA91BD7DFA33F925D922879AD7AD3FC162CE16, NULL);
 		return;
 	}
@@ -21103,6 +21129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_HandleOpenResult_m41B39
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int16_tB8EF286A9C33492FA6E6D6E67320BE93E794A175_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0F3843A3D215AE7E946206449ED4EBCBAADBA994);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1CEAE3F58CEB74087DE81F1CAF1837F26695ABA9);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2D2A35D331B060143383740BE6E7B33156A6C3A9);
@@ -21155,6 +21182,7 @@ IL_0036:
 		__this->____preparing = (bool)1;
 		KoMerchantScreen_Show_mFA407A0E498B0F9BE1BD41E2C7BCFC06A6BD282F(__this, NULL);
 		KoMerchantScreen_Refresh_m13CC1D4A4DD329AD6D5389D3E6D61D7D254FD2DB(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral448D885A150906B8D936AF1ADB6FD899F66C3A26, NULL);
 		return;
 	}
@@ -21284,6 +21312,7 @@ IL_00e4:
 IL_00f5:
 	{
 		String_t* L_14 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(L_14, NULL);
 		return;
 	}
@@ -21294,6 +21323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_HandleClosed_m86D81DCB0
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMerchantRegistry_tE5D8CA6411CC593027F201ECB2C4439F59B7A40B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m970604C9DDEDCB30698827A82812169D01B3F40F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8470FB683F297BDA8019D028B2F8A8DB03EA3517);
@@ -21382,6 +21412,7 @@ IL_0074:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral8470FB683F297BDA8019D028B2F8A8DB03EA3517, NULL);
 	}
 
@@ -21396,6 +21427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_HandleItemAdd_mF2CBD98F
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral05C9A70693519F7E83D1DE29F8D9D52B9879F547);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral48FE11C6E77DDE2A83E7806D4966096CDF7C2019);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA60098C5AA88D7ACB134ED9535013231575AB983);
@@ -21490,6 +21522,7 @@ IL_003e:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral05C9A70693519F7E83D1DE29F8D9D52B9879F547, NULL);
 		KoItemData_t975C9A0B4D4F450767300F9D9F336C9933B57E0C* L_7 = (KoItemData_t975C9A0B4D4F450767300F9D9F336C9933B57E0C*)(&__this->____pendingItem);
 		il2cpp_codegen_initobj(L_7, sizeof(KoItemData_t975C9A0B4D4F450767300F9D9F336C9933B57E0C));
@@ -21664,6 +21697,7 @@ IL_010c:
 		RuntimeObject* L_38 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_37);
 		String_t* L_39;
 		L_39 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralA60098C5AA88D7ACB134ED9535013231575AB983, L_38, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(L_39, NULL);
 		return;
 	}
@@ -21676,6 +21710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_HandleInserted_m86DD3DC
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisKoInventoryScreen_t0626F81B1091718E2C308E623ABF6E55590E3DF9_m1CE16861F85D6384CC52E9B7AF4D5016418CB905_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMerchantStall_t905E19C37BE509A52A8FDDA0151D56A9B01D432E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m970604C9DDEDCB30698827A82812169D01B3F40F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral13B3DE04583DD99828A746059E8E2598011B6A9A);
@@ -21788,6 +21823,7 @@ IL_0082:
 
 IL_009a:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral13B3DE04583DD99828A746059E8E2598011B6A9A, NULL);
 		return;
 	}
@@ -22219,6 +22255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_PromptAddFromBag_mB0CAF
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMerchantScreen_U3CPromptAddFromBagU3Eb__49_0_m264324542B594D57DAB871E4EDDB77667F8F2522_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral52117C369B7443759F50ECE25898D6C1640603A5);
@@ -22293,6 +22330,7 @@ IL_002c:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral769AEFBB9A90E5B39ECD7FFEDCC68692F8735758, NULL);
 		return;
 	}
@@ -22463,6 +22501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_SendPendingAdd_m6F98117
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral48FE11C6E77DDE2A83E7806D4966096CDF7C2019);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD15E24F5AB6B23C3D1189FE78D16EBBB6DC59F7B);
 		s_Il2CppMethodInitialized = true;
@@ -22541,6 +22580,7 @@ IL_001d:
 		uint8_t L_15 = __this->____pendingDst;
 		NullCheck(L_9);
 		KoGameClient_SendMerchantItemAdd_mEF68F211D189D0053083308DD2D9C9B16AFA1479(L_9, L_11, L_12, L_13, L_14, L_15, (uint8_t)0, (uint8_t)0, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralD15E24F5AB6B23C3D1189FE78D16EBBB6DC59F7B, NULL);
 		MonoBehaviour_CancelInvoke_m268FFD58AFF64C07FD4C9B9B8B85F58BD86F3A01(__this, _stringLiteral48FE11C6E77DDE2A83E7806D4966096CDF7C2019, NULL);
 		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral48FE11C6E77DDE2A83E7806D4966096CDF7C2019, (5.0f), NULL);
@@ -22552,6 +22592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_ClearAddInFlight_m3403E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBA198779C2464322095B7B6B72113D4C6E500817);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -22569,6 +22610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_ClearAddInFlight_m3403E
 IL_0009:
 	{
 		__this->____addInFlight = (bool)0;
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralBA198779C2464322095B7B6B72113D4C6E500817, NULL);
 		return;
 	}
@@ -22705,6 +22747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_OnClickInsert_mCC8A1C25
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisKoLocalPlayer_t3EFECDEE125A5BE12D3983ADF0E4D094702BD978_m970604C9DDEDCB30698827A82812169D01B3F40F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&String_t_il2cpp_TypeInfo_var);
@@ -22744,6 +22787,7 @@ IL_0009:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralE6F104541B9443C0A574451ADA5C3B179B0B0915, NULL);
 		return;
 	}
@@ -22758,6 +22802,7 @@ IL_001c:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral17E22C7E9B69BD8D07CAFB32FF6E4ABD5D9353D0, NULL);
 		return;
 	}
@@ -22849,6 +22894,7 @@ IL_006e:
 
 IL_0073:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral24DB4E186F4506E1FD91940E7A05437E02DEC227, NULL);
 		return;
 	}
@@ -22925,6 +22971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_Show_mFA407A0E498B0F9BE
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral688BD80B82F8229732BA5EEB5562FC088E065406);
 		s_Il2CppMethodInitialized = true;
@@ -22941,6 +22988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScreen_Show_mFA407A0E498B0F9BE
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral688BD80B82F8229732BA5EEB5562FC088E065406, NULL);
 		return;
 	}
@@ -25192,6 +25240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_Open_m506913CCECC
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC60B69A74BB69FD30ACE3936D91BBF38EFC169EA);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDE3016714C87AC166F5698B044F1115716E6C172);
@@ -25206,6 +25255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_Open_m506913CCECC
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralDE3016714C87AC166F5698B044F1115716E6C172, NULL);
 		return;
 	}
@@ -25223,6 +25273,7 @@ IL_0012:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralC60B69A74BB69FD30ACE3936D91BBF38EFC169EA, NULL);
 		return;
 	}
@@ -25282,6 +25333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_HandleList_m3FD5B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m848B49C7B4A5E44E6AF451272948BF9EE4BD1B38_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mAD08784BE33321C4885E29F9F2DDF16D423C5848_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mE377C88BA01F1215FE491BC3052C7EC95D3679ED_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KomPazarUtil_tBD61C8C6DF6FB6969361023C685CF12E17AE6A8E_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m810C5FF54F93F86CF6DBA15D9B507BED2A18F1C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_mDBEAE4D18AED0507C50D8B68AEBE694E22F36E59_RuntimeMethod_var);
@@ -25464,6 +25516,7 @@ IL_00b7:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral8F47AFDEB45ABB30F728F2731CF288648535C6EE, NULL);
 	}
 
@@ -25477,6 +25530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_HandleFail_m9C676
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral818DF2F64C116AD6A6195DA64A36D96A92E1437C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral83C5BADB2AA6329C9F5DE2A89A8077FB03A3FBE0);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9253F8C944D59F057D183F0C912A6B76D3C402F9);
@@ -25517,30 +25571,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_HandleFail_m9C676
 
 IL_0023:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralAB1D11B18DE45DBF92899B122D2B29EE7C9B96E2, NULL);
 		return;
 	}
 
 IL_002e:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral9253F8C944D59F057D183F0C912A6B76D3C402F9, NULL);
 		return;
 	}
 
 IL_0039:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralD4FCF84FACB4349ACDF1F83FD1041AFD94E03C0D, NULL);
 		return;
 	}
 
 IL_0044:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral83C5BADB2AA6329C9F5DE2A89A8077FB03A3FBE0, NULL);
 		return;
 	}
 
 IL_004f:
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral818DF2F64C116AD6A6195DA64A36D96A92E1437C, NULL);
 		return;
 	}
@@ -25552,6 +25611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_Request_m4D5088DC
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoItemDatabase_t21BF522807320381B8427B4C61709C28987522E3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoItemService_t1300785E0F99282F051847FE6348BC154CEA9E4D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral75886461C96FF6868B0B76ADF825760200705C8B);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -25575,6 +25635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KoMerchantScrollScreen_Request_m4D5088DC
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteral75886461C96FF6868B0B76ADF825760200705C8B, NULL);
 		return;
 	}
@@ -26760,6 +26821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass27_0_U3CSpawnRowU3E
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KoPlayerState_tC742905535909C62414C98383CC876D2F88C15C0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1675D6425A9D1DF5F36821091541750969A98CBC);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4E90F16383300AFCAC84B781CD3422B17A7D6D5D);
@@ -26807,6 +26869,7 @@ IL_001b:
 		}
 	}
 	{
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(_stringLiteralAB1D11B18DE45DBF92899B122D2B29EE7C9B96E2, NULL);
 		return;
 	}
@@ -26825,6 +26888,7 @@ IL_002a:
 		String_t* L_8 = L_7->___Merchant;
 		String_t* L_9;
 		L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral1675D6425A9D1DF5F36821091541750969A98CBC, L_8, _stringLiteral4E90F16383300AFCAC84B781CD3422B17A7D6D5D, NULL);
+		il2cpp_codegen_runtime_class_init_inline(KoMsgBus_t7B8FE4520F639E39DBDB73FD50B746BCA9729AF4_il2cpp_TypeInfo_var);
 		KoMsgBus_System_m6222F029CC41D1E869AC1FCA8BD4E380129C0D5C(L_9, NULL);
 		KoMerchantScrollScreen_tFB8203B1D9033C9062CC39E2D47921D4FE6F1235* L_10 = __this->___U3CU3E4__this;
 		NullCheck(L_10);
